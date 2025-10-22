@@ -18,7 +18,7 @@
 | Projet | Description | Tech |
 |---------|--------------|------|
 | [Vision+ (YOLOv8)](https://github.com/Abelchrf/vision-plus) | Détection d’objets en temps réel (YOLOv8, PyTorch) | Computer Vision |
-| [TweetSentiment](https://github.com/abelcharef/tweet-sentiment) | Fine-tuning de DistilBERT pour analyser les sentiments de tweets | NLP |
+| [TweetSentiment](https://github.com/Abelchrf/TweetSentiment) | Fine-tuning de DistilBERT pour analyser les sentiments de tweets | NLP |
 | [HousePrice-ML](https://github.com/abelcharef/house-price-ml) | Prédiction de prix de maisons (Random Forest, Kaggle) | Machine Learning |
 
 ---
@@ -31,4 +31,4 @@
 ---
 
 📫 **Contact :**  
-[LinkedIn](https://www.linkedin.com/in/abel-charef-a27162307) • [Email](mailto:m11.beloufa@gmail.com)
+[LinkedIn](https://www.linkedin.com/in/abel-charef-a27162307) • [Email](m11.beloufa@gmail.com)
