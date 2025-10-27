@@ -1,8 +1,8 @@
-# 👋 Salut, moi c’est Abel
+# Abel — Data Science & Machine Learning
 
-🎯 Développeur Python & Intelligence Artificielle — actuellement en formation OpenClassrooms  
-💡 Passionné par le Machine Learning, la Computer Vision et le NLP  
-🚀 Objectif : devenir Data Scientist et construire des solutions IA concrètes  
+Étudiant en formation OpenClassrooms, je conçois des projets autour de la Data Science et de l’apprentissage automatique.  
+Je m’intéresse particulièrement au NLP, à la Computer Vision et aux modèles prédictifs.  
+🎯 Mon objectif : rejoindre une entreprise en alternance pour mettre mes compétences en pratique sur des projets réels.
 
 ---
 
