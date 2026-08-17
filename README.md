@@ -1,6 +1,6 @@
 # Abel Charef — Cloud / DevOps en construction (cap Cloud Security)
 
-Développeur orienté **Python, Cloud et DevOps**, en Bachelor Intelligence Artificielle à l'ETNA.
+En Bachelor à l'ETNA.
 Certifié **AWS Cloud Practitioner**, je construis des projets autour de l'**Infrastructure as Code**,
 des **pipelines CI/CD sécurisés (DevSecOps)** et du **déploiement cloud**.
 
