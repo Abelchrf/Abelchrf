@@ -1,6 +1,0 @@
-# portrait-only (not needed by the daily workflow):
--r requirements.txt
-pillow
-numpy
-opencv-python
-rembg[cpu]

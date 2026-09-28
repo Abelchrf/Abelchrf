@@ -7,17 +7,6 @@
 
 <h3><code>abel@github ~ $ whoami</code></h3>
 <img src="./info-card.svg" width="490" alt="Carte neofetch : Cloud / DevOps, cap Cloud Security" />
-<!-- Portrait ASCII : une fois abel-ascii.svg généré (voir scripts/prep_photo.py
-     puis scripts/make_ascii_svg.py, puis relancer make_info_card.py), remplacer
-     l'image ci-dessus par :
-<table>
-  <tr>
-    <td valign="top"><img src="./abel-ascii.svg" width="370" alt="Portrait ASCII d'Abel" /></td>
-    <td valign="top"><img src="./info-card.svg" width="490" alt="Carte neofetch : Cloud / DevOps, cap Cloud Security" /></td>
-  </tr>
-</table>
--->
-
 
 <br>
 

@@ -2,21 +2,15 @@
 
 Edit INFO below when your details change, then re-run. Each line fades and
 slides in on a short stagger; STATIC=1 emits a frozen frame for previews.
-If the ASCII portrait exists, the card's height is matched to it so the two
-columns line up in the README.
 """
-import re
 from pathlib import Path
 
 from terminal import BLUE, FONT, FG, GREEN, MUTED, STATIC, TITLE_H, esc, open_svg
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "info-card.svg"
-PORTRAIT = ROOT / "abel-ascii.svg"
 
 WIDTH = 490
-# README display widths; used to match the portrait's rendered height
-CARD_DISPLAY_W, PORTRAIT_DISPLAY_W = 490, 370
 
 USER, HOST = "abel", "github"
 INFO = [
@@ -49,17 +43,6 @@ CHAR_W = FONT_SIZE * 0.6
 STAGGER_MS = 70
 
 
-def portrait_height() -> float | None:
-    if not PORTRAIT.exists():
-        return None
-    m = re.search(r'viewBox="0 0 ([\d.]+) ([\d.]+)"', PORTRAIT.read_text(encoding="utf-8"))
-    if not m:
-        return None
-    pw, ph = map(float, m.groups())
-    displayed = ph * PORTRAIT_DISPLAY_W / pw
-    return displayed * WIDTH / CARD_DISPLAY_W
-
-
 def render() -> str:
     header = f"{USER}@{HOST}"
     lines = [
@@ -78,8 +61,7 @@ def render() -> str:
         val_x = PAD_X + KEY_W * CHAR_W
         lines.append(f'{key_part}<tspan x="{val_x:g}" fill="{FG}">{esc(value)}</tspan>')
 
-    content_h = TITLE_H + 26 + len(lines) * LINE_H + 40
-    height = max(content_h, round(portrait_height() or 0))
+    height = TITLE_H + 26 + len(lines) * LINE_H + 40
 
     out = open_svg(WIDTH, height, f"{header}: ~ — neofetch", f"{USER} — neofetch-style profile card")
     if not STATIC:
