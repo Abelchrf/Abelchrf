@@ -1,40 +1,35 @@
-# Abel Charef — Cloud / DevOps en construction (cap Cloud Security)
+<div align="center">
 
-En Bachelor à l'ETNA.
-Certifié **AWS Cloud Practitioner**, je construis des projets autour de l'**Infrastructure as Code**,
-des **pipelines CI/CD sécurisés (DevSecOps)** et du **déploiement cloud**.
+<h3><code>abel@github ~ $ ./contributions.sh</code></h3>
+<img src="./contrib-heatmap.svg" width="860" alt="Graphe des contributions GitHub de la dernière année" />
 
-🎯 **Objectif :** une alternance **Cloud / DevOps / DevSecOps**, comme tremplin vers le métier de **Cloud Security Engineer**.
+<br><br>
 
----
+<h3><code>abel@github ~ $ whoami</code></h3>
+<img src="./info-card.svg" width="490" alt="Carte neofetch : Cloud / DevOps, cap Cloud Security" />
+<!-- Portrait ASCII : une fois abel-ascii.svg généré (voir scripts/prep_photo.py
+     puis scripts/make_ascii_svg.py, puis relancer make_info_card.py), remplacer
+     l'image ci-dessus par :
+<table>
+  <tr>
+    <td valign="top"><img src="./abel-ascii.svg" width="370" alt="Portrait ASCII d'Abel" /></td>
+    <td valign="top"><img src="./info-card.svg" width="490" alt="Carte neofetch : Cloud / DevOps, cap Cloud Security" /></td>
+  </tr>
+</table>
+-->
 
-### 🛠️ Stack
 
-- **Cloud & IaC :** AWS (IAM, S3, EC2, CloudTrail, KMS), Terraform
-- **DevSecOps & CI/CD :** Docker, GitHub Actions, Trivy, gitleaks, Bandit
-- **Langages :** Python, SQL, Bash
-- **Data / IA (socle) :** scikit-learn, PyTorch, FastAPI
-- **Systèmes :** Linux / Unix
+<br>
 
----
+<h3><code>abel@github ~ $ ls projects/</code></h3>
 
-### 📂 Projets
+<a href="https://github.com/Abelchrf/aws-secure-baseline"><code>aws-secure-baseline</code></a> ·
+<a href="https://github.com/Abelchrf/devsecops-ml-api"><code>devsecops-ml-api</code></a> ·
+<a href="https://github.com/Abelchrf/vision-plus"><code>vision-plus</code></a> ·
+<a href="https://github.com/Abelchrf/TweetSentiment"><code>TweetSentiment</code></a>
 
-| Projet | Description | Stack |
-| --- | --- | --- |
-| [aws-secure-baseline](https://github.com/Abelchrf/aws-secure-baseline) | Baseline de sécurité AWS en Terraform : CloudTrail, KMS, S3 chiffré, IAM moindre privilège | Terraform, AWS |
-| [devsecops-ml-api](https://github.com/Abelchrf/devsecops-ml-api) | API conteneurisée + pipeline DevSecOps (scan image/secrets, SAST) | Docker, GitHub Actions, FastAPI |
-| [vision-plus](https://github.com/Abelchrf/vision-plus) | Détection d'objets en temps réel | PyTorch, YOLOv8 |
-| [TweetSentiment](https://github.com/Abelchrf/TweetSentiment) | Analyse de sentiments par fine-tuning | NLP, DistilBERT |
+<br><br>
 
----
+<a href="https://www.linkedin.com/in/abel-charef-a27162307"><code>linkedin.com/in/abel-charef</code></a>
 
-### 🌱 En ce moment
-
-- Bachelor **Intelligence Artificielle** à l'ETNA (en alternance)
-- Montée en compétences **Cloud Security** : Terraform, DevSecOps, durcissement AWS
-- Prochaines certifications visées : **AWS Solutions Architect Associate**, **CompTIA Security+**
-
-### 📫 Contact
-
-- LinkedIn : https://www.linkedin.com/in/abel-charef-a27162307
+</div>
