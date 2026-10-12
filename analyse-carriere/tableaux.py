@@ -69,6 +69,10 @@ ACCENTS = [
     ("Audioprothesiste", "Audioprothésiste"), ("capacite", "capacité"), ("pres du", "près du"), ("condition d'age", "condition d'âge"),
     ("meme ordre", "même ordre"), ("### A moins", "### À moins"), ("inférieur a 0", "inférieur à 0"),
     ("jusqu'a ", "jusqu'à "),
+    ("cloud et DevOps", "cloud et DevOps"), ("cybersecurite", "cybersécurité"), ("methodes-industrialisation", "méthodes-industrialisation"),
+    ("administration systemes", "administration systèmes"), ("mastere", "mastère"), ("donnees", "données"), ("sources privees", "sources privées"),
+    ("specialites", "spécialités"), ("specialite cloud", "spécialité cloud"), ("confirme)", "confirmé)"), ("a pourvoir", "à pourvoir"),
+    ("de 2019 a 2024", "de 2019 à 2024"), ("poste 24", "posté 24"), ("bas de fourchette", "bas de fourchette"), ("a 5-10 ans", "à 5-10 ans"),
     ("kEUR", "k€"), ("EUR", "€"),
 ]
 
@@ -107,7 +111,7 @@ out = []
 A = out.append
 
 # --- Pool ---------------------------------------------------------------------
-A("### Pool (79 triplets)\n")
+A(f"### Pool ({len(T)} triplets)\n")
 A("| ID | Triplet | ID | Triplet |")
 A("|---|---|---|---|")
 half = (len(T) + 1) // 2

@@ -6,7 +6,7 @@
 | T15 Orthophoniste × libéral × France | Deuxième, presque à égalité avec le dentiste, porté par une charge légère et une pénurie qui garantit l'emploi, malgré un revenu modeste (31 k€) et 3,29 % d'admis en 2025. |
 | T09 Sage-femme × libéral × France | S de justesse (marge 0,03, moins de 0,1 de la frontière) mais barrière la plus basse des trois (entrée à 31 ans, p estimé 16 %), avec 40 k€ médians à 40 ans. |
 
-Lecture : les trois S sont des professions de santé libérales françaises, parce que les poids (contrôle 24, charge 21) récompensent l'autonomie bien plus que le revenu. Diviser le poids du sens par deux (v2) ne change pas le palier S et ne déplace le top 10 que d'un rang (T76 et T02 s'échangent) ; l'ingénieur en apprentissage (T41) entre au 12e rang. Aucun triplet hors de France n'atteint S ; le médecin généraliste indépendant en Suisse (T30) passe en S avec des poids égaux, et seuls T05 et T30 restent S si le revenu pèse 30. Une note de moins en contrôle, charge, relations ou sécurité fait tomber T05 et T15 en A ; n'importe quelle note de moins fait tomber T09.
+Lecture : les trois S sont des professions de santé libérales françaises, parce que les poids (contrôle 24, charge 21) récompensent l'autonomie bien plus que le revenu. Diviser le poids du sens par deux (v2) ne change pas le palier S et ne déplace le top 10 que d'un rang (T76 et T02 s'échangent). Avec les métiers IT précis (v2.1), l'ingénieur cybersécurité (T83) entre au 10e rang et l'ingénieur cloud et DevOps freelance (T81) au 12e, à égalité avec l'ergothérapeute (T77) ; l'ingénieur cloud salarié (T80) reste 28e à cause des astreintes (13e sans astreintes). Aucun triplet hors de France n'atteint S ; le médecin généraliste indépendant en Suisse (T30) passe en S avec des poids égaux, et seuls T05 et T30 restent S si le revenu pèse 30. Une note de moins en contrôle, charge, relations ou sécurité fait tomber T05 et T15 en A ; n'importe quelle note de moins fait tomber T09.
 
 ## 7. Ce qui est vérifiable et ce qui est mon opinion
 
@@ -18,13 +18,14 @@ Lecture : les trois S sont des professions de santé libérales françaises, par
 | Poids des critères | Opinion fondée sur des tailles d'effet publiées ; aucun consensus chiffré. |
 | Probabilités de réussite p | Estimations personnelles ancrées sur des taux d'admission publiés ; ne tiennent pas compte d'une préparation intensive ni d'aptitudes réelles différentes de la moyenne. |
 | Scénarios IA | Bornes de scénario, poids de preuve faible ; ne sont pas des prévisions. |
-| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 33 triplets sur 79 sont à moins de 0,1 d'une frontière en v2. |
+| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 36 triplets sur 85 sont à moins de 0,1 d'une frontière en v2.1. |
 
 Règle de révision : un palier ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée dans les entrées ci-dessus, jamais sur une simple contestation.
 
 ## 8. Cellules revenu manquantes ou estimées
 
-- Sans source directe, estimées sur grille, structure ou proxy : T06 pharmacien adjoint, T16 orthoptiste, T20 psychologue, T22 ostéopathe, T32 médecin de famille au Québec, T46 actuaire, T48 et T51 artisans du bâtiment, T59 sapeur-pompier, T66 sous-officier, T71 magistrat, T73 agent immobilier, T74 pilote, T78 diététicien.
+- Sans source directe, estimées sur grille, structure ou proxy : T06 pharmacien adjoint, T16 orthoptiste, T20 psychologue, T22 ostéopathe, T32 médecin de famille au Québec, T46 actuaire, T48 et T51 artisans du bâtiment, T59 sapeur-pompier, T66 sous-officier, T71 magistrat, T73 agent immobilier, T74 pilote, T78 diététicien, T84 analyste SOC.
+- Sourcées seulement par des sources privées (cabinets de recrutement, baromètres déclaratifs) : T80 à T83 ; aucune série officielle par spécialité IT n'a été trouvée.
 - Sourcées mais ajustées (ancienneté du sujet, passage au net, proxy de branche) : toutes les autres cellules marquées « est. » dans le tableau final.
 - Tous les P80 sont estimés par ratio, sauf T23, T24 (haut de fourchette HUG), T28 (troisième quartile québécois), T36 (TJM au-delà de 15 ans) et T67 (dispersion des avocats).
 - Revenus non récupérés qui amélioreraient le plus la fiabilité : tableau INSEE des non-salariés 2024 par activité (médecine générale, dentaires, BTP, vétérinaires), jeu DREES 2026 des libéraux non médecins (orthophonistes, orthoptistes, podologues), tableau OFS T17 de l'ESS 2024 par profession, grille FHL par ancienneté, données RAMQ des médecins de famille.
@@ -101,3 +102,10 @@ Règle de révision : un palier ne changera que sur une donnée nouvelle (par ex
 | S69 | DGE, fiche pédicure-podologue : https://www.entreprises.gouv.fr/files/files/directions_services/pedicure-podologue.pdf |
 | S70 | INSEE Hauts-de-France, forte demande psychologique des cadres : https://www.insee.fr/fr/statistiques/5542513 |
 | S71 | DEPP 2016, enseignants et risques psychosociaux : https://cache.media.education.gouv.fr/file/revue_92/07/8/depp-2016-EF-92-enseignants-face-aux-risques-psychosociaux-comparaison-des-enseignants-avec-certains-cadres-prive-et-fonction-publique-2013_686078.pdf |
+| S72 | Robert Half, ingénieur DevOps à Paris : https://www.roberthalf.com/fr/fr/details-emploi/ingenieur-devops/paris |
+| S73 | Salaire ingénieur DevOps (moyenne Indeed 49 000 €) : https://recruteurindependant.com/salaire-ingenieur-devops/ |
+| S74 | Free-Work, baromètre déclaratif : https://www.free-work.com/fr/tech-it/barometer/contributions/106137 |
+| S75 | TJM IT 2025 (étude Morgan Philips) : https://www.blogdumoderateur.com/freelances-taux-journaliers-moyens-it-france |
+| S76 | Salaire ingénieur cybersécurité : https://salerya.fr/metiers/tech/ingenieur-cybersecurite/ |
+| S77 | Michael Page, salaires en cybersécurité : https://www.michaelpage.fr/advice/m%C3%A9tiers/syst%C3%A8mes-dinformation/quel-salaire-pour-un-expert-en-cybers%C3%A9curit%C3%A9 |
+| S78 | Pénurie cyber (observatoire ANSSI 2025, OPIIEC, CESIN) : https://www.it-connect.fr/la-penurie-de-competences-cyber-samplifie-en-france/ |

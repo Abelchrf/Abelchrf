@@ -1,47 +1,50 @@
-### Pool (79 triplets)
+### Pool (85 triplets)
 
 | ID | Triplet | ID | Triplet |
 |---|---|---|---|
-| T01 | Médecin généraliste × libéral × France | T41 | Ingénieur × salarié × France |
-| T02 | Médecin généraliste × salarié (centre de santé) × France | T42 | Ingénieur × salarié × Suisse (frontalier) |
-| T03 | Médecin spécialiste (rang médian) × libéral × France | T43 | Ingénieur × salarié × Allemagne |
-| T04 | Praticien hospitalier × statut PH (public) × France | T44 | Technicien de maintenance industrielle × salarié × France |
-| T05 | Chirurgien-dentiste × libéral × France | T45 | Technicien réseaux et cybersécurité × salarié × France |
-| T06 | Pharmacien adjoint × salarié × France | T46 | Actuaire × salarié × France |
-| T07 | Pharmacien titulaire × indépendant × France | T47 | Électricien × salarié × France |
-| T08 | Sage-femme × fonctionnaire FPH × France | T48 | Électricien × artisan × France |
-| T09 | Sage-femme × libéral × France | T49 | Électricien × salarié × Suisse (frontalier) |
-| T10 | Masseur-kinésithérapeute × libéral × France | T50 | Électricien × salarié × Canada (Québec) |
-| T11 | Masseur-kinésithérapeute × fonctionnaire FPH × France | T51 | Plombier-chauffagiste × artisan × France |
-| T12 | Infirmier × fonctionnaire FPH × France | T52 | Frigoriste (CVC) × salarié × France |
-| T13 | Infirmier × libéral × France | T53 | Conducteur de train × salarié (SNCF) × France |
-| T14 | Infirmier anesthésiste (IADE) × fonctionnaire FPH × France | T54 | Conducteur de train × salarié × Suisse (résident) |
-| T15 | Orthophoniste × libéral × France | T55 | Conducteur poids lourd × salarié × France |
-| T16 | Orthoptiste × salarié × France | T56 | Professeur des écoles × fonctionnaire × France |
-| T17 | Manipulateur radio (MERM) × fonctionnaire FPH × France | T57 | Professeur certifié × fonctionnaire × France |
-| T18 | Audioprothésiste × salarié × France | T58 | Gardien de la paix × fonctionnaire × France |
-| T19 | Vétérinaire × libéral × France | T59 | Sapeur-pompier professionnel × fonctionnaire territorial × France |
-| T20 | Psychologue × contractuel FPH × France | T60 | Attaché d'administration × fonctionnaire × France |
-| T21 | Aide-soignant × fonctionnaire FPH × France | T61 | Inspecteur des finances publiques × fonctionnaire × France |
-| T22 | Ostéopathe × libéral × France | T62 | Contrôleur des finances publiques × fonctionnaire × France |
-| T23 | Infirmier × salarié × Suisse (résident) | T63 | Contrôleur aérien (ICNA) × fonctionnaire × France |
-| T24 | Infirmier × salarié × Suisse (frontalier) | T64 | Administrateur UE (AD) × fonctionnaire européen × Luxembourg (résident) |
-| T25 | Infirmier × salarié × Luxembourg (frontalier) | T65 | Agent contractuel UE (GF II-III) × contractuel × Luxembourg (frontalier) |
-| T26 | Infirmier × salarié × Luxembourg (résident) | T66 | Sous-officier × militaire × France |
-| T27 | Infirmier × salarié × Allemagne | T67 | Avocat × libéral × France |
-| T28 | Infirmier × salarié × Canada (Québec) | T68 | Expert-comptable × libéral × France |
-| T29 | Médecin × salarié (hôpital) × Suisse (résident) | T69 | Comptable × salarié × France |
-| T30 | Médecin généraliste × indépendant × Suisse (résident) | T70 | Comptable × salarié × Luxembourg (frontalier) |
-| T31 | Médecin × salarié (hôpital) × Allemagne | T71 | Magistrat × fonctionnaire × France |
-| T32 | Médecin de famille × libéral (RAMQ) × Canada (Québec) | T76 | Pédicure-podologue × libéral × France |
-| T33 | Aide-soignant (ASSC) × salarié × Suisse (frontalier) | T77 | Ergothérapeute × fonctionnaire FPH × France |
-| T34 | Masseur-kinésithérapeute × salarié × Suisse (frontalier) | T78 | Diététicien × libéral × France |
-| T35 | Développeur × salarié × France | T79 | Opticien × salarié × France |
-| T36 | Développeur × indépendant (freelance) × France | T72 | Commercial B2B × salarié × France |
-| T37 | Développeur × salarié × Suisse (frontalier) | T73 | Agent immobilier × indépendant (mandataire) × France |
-| T38 | Développeur × salarié × Allemagne | T74 | Pilote de ligne × salarié × France |
-| T39 | Développeur × salarié × Luxembourg (frontalier) | T75 | Employé commerce ou accueil (référence) × salarié × France |
-| T40 | Développeur × salarié × Canada (Québec) |  |  |
+| T01 | Médecin généraliste × libéral × France | T44 | Technicien de maintenance industrielle × salarié × France |
+| T02 | Médecin généraliste × salarié (centre de santé) × France | T45 | Technicien réseaux et cybersécurité × salarié × France |
+| T03 | Médecin spécialiste (rang médian) × libéral × France | T46 | Actuaire × salarié × France |
+| T04 | Praticien hospitalier × statut PH (public) × France | T47 | Électricien × salarié × France |
+| T05 | Chirurgien-dentiste × libéral × France | T48 | Électricien × artisan × France |
+| T06 | Pharmacien adjoint × salarié × France | T49 | Électricien × salarié × Suisse (frontalier) |
+| T07 | Pharmacien titulaire × indépendant × France | T50 | Électricien × salarié × Canada (Québec) |
+| T08 | Sage-femme × fonctionnaire FPH × France | T51 | Plombier-chauffagiste × artisan × France |
+| T09 | Sage-femme × libéral × France | T52 | Frigoriste (CVC) × salarié × France |
+| T10 | Masseur-kinésithérapeute × libéral × France | T53 | Conducteur de train × salarié (SNCF) × France |
+| T11 | Masseur-kinésithérapeute × fonctionnaire FPH × France | T54 | Conducteur de train × salarié × Suisse (résident) |
+| T12 | Infirmier × fonctionnaire FPH × France | T55 | Conducteur poids lourd × salarié × France |
+| T13 | Infirmier × libéral × France | T56 | Professeur des écoles × fonctionnaire × France |
+| T14 | Infirmier anesthésiste (IADE) × fonctionnaire FPH × France | T57 | Professeur certifié × fonctionnaire × France |
+| T15 | Orthophoniste × libéral × France | T58 | Gardien de la paix × fonctionnaire × France |
+| T16 | Orthoptiste × salarié × France | T59 | Sapeur-pompier professionnel × fonctionnaire territorial × France |
+| T17 | Manipulateur radio (MERM) × fonctionnaire FPH × France | T60 | Attaché d'administration × fonctionnaire × France |
+| T18 | Audioprothésiste × salarié × France | T61 | Inspecteur des finances publiques × fonctionnaire × France |
+| T19 | Vétérinaire × libéral × France | T62 | Contrôleur des finances publiques × fonctionnaire × France |
+| T20 | Psychologue × contractuel FPH × France | T63 | Contrôleur aérien (ICNA) × fonctionnaire × France |
+| T21 | Aide-soignant × fonctionnaire FPH × France | T64 | Administrateur UE (AD) × fonctionnaire européen × Luxembourg (résident) |
+| T22 | Ostéopathe × libéral × France | T65 | Agent contractuel UE (GF II-III) × contractuel × Luxembourg (frontalier) |
+| T23 | Infirmier × salarié × Suisse (résident) | T66 | Sous-officier × militaire × France |
+| T24 | Infirmier × salarié × Suisse (frontalier) | T67 | Avocat × libéral × France |
+| T25 | Infirmier × salarié × Luxembourg (frontalier) | T68 | Expert-comptable × libéral × France |
+| T26 | Infirmier × salarié × Luxembourg (résident) | T69 | Comptable × salarié × France |
+| T27 | Infirmier × salarié × Allemagne | T70 | Comptable × salarié × Luxembourg (frontalier) |
+| T28 | Infirmier × salarié × Canada (Québec) | T71 | Magistrat × fonctionnaire × France |
+| T29 | Médecin × salarié (hôpital) × Suisse (résident) | T76 | Pédicure-podologue × libéral × France |
+| T30 | Médecin généraliste × indépendant × Suisse (résident) | T77 | Ergothérapeute × fonctionnaire FPH × France |
+| T31 | Médecin × salarié (hôpital) × Allemagne | T78 | Diététicien × libéral × France |
+| T32 | Médecin de famille × libéral (RAMQ) × Canada (Québec) | T79 | Opticien × salarié × France |
+| T33 | Aide-soignant (ASSC) × salarié × Suisse (frontalier) | T80 | Ingénieur cloud et DevOps × salarié × France |
+| T34 | Masseur-kinésithérapeute × salarié × Suisse (frontalier) | T81 | Ingénieur cloud et DevOps × indépendant (freelance) × France |
+| T35 | Développeur × salarié × France | T82 | Ingénieur cloud et DevOps × salarié × Suisse (frontalier) |
+| T36 | Développeur × indépendant (freelance) × France | T83 | Ingénieur cybersécurité (hors SOC) × salarié × France |
+| T37 | Développeur × salarié × Suisse (frontalier) | T84 | Analyste SOC (cybersécurité) × salarié × France |
+| T38 | Développeur × salarié × Allemagne | T85 | Data engineer × salarié × France |
+| T39 | Développeur × salarié × Luxembourg (frontalier) | T72 | Commercial B2B × salarié × France |
+| T40 | Développeur × salarié × Canada (Québec) | T73 | Agent immobilier × indépendant (mandataire) × France |
+| T41 | Ingénieur méthodes-industrialisation × salarié × France | T74 | Pilote de ligne × salarié × France |
+| T42 | Ingénieur méthodes-industrialisation × salarié × Suisse (frontalier) | T75 | Employé commerce ou accueil (référence) × salarié × France |
+| T43 | Ingénieur méthodes-industrialisation × salarié × Allemagne |  |  |
 
 ### Éliminés (dominés dans les deux scénarios IA)
 
@@ -58,8 +61,8 @@
 | T31 Médecin × salarié (hôpital) × Allemagne | T32 | T32 : relations, revenu, p 7 % au lieu de 6 % |
 | T44 Technicien de maintenance industrielle × salarié × France | T52 | T52 : sens, revenu |
 | T60 Attaché d'administration × fonctionnaire × France | T61 | T61 : revenu, p 15 % au lieu de 10 % |
-| T67 Avocat × libéral × France | T49 | T49 : sens, revenu, entrée 28 ans au lieu de 32, années perdues 0,5 au lieu de 6,5, p 45 % au lieu de 25 % |
-| (conservé) T42 Ingénieur × salarié × Suisse (frontalier) | T37 sans IA seulement | domination perdue dans le scénario IA fort |
+| T67 Avocat × libéral × France | T49, T80 | T49 : sens, revenu, entrée 28 ans au lieu de 32, années perdues 0,5 au lieu de 6,5, p 45 % au lieu de 25 % |
+| (conservé) T42 Ingénieur méthodes-industrialisation × salarié × Suisse (frontalier) | T37 sans IA seulement | domination perdue dans le scénario IA fort |
 
 ### Tableau final (non dominés, triés par score interne décroissant)
 
@@ -74,20 +77,25 @@
 | T01 | Médecin généraliste × libéral × France | A | 76 / 76 | S02,S05 ; est. | 100 / 100 | est. | 932 | 4 | 3 | 4 | 5 | 5 | 35 ans | Licence portail santé (rentrée 2027) puis 9 ans ; internat rémunéré ; bourses | 2 candidatures ; PASS 2024 : 33,8 % admis en 1 an ; p estimé 10 % | 5,4 | 3,43 | faible, A |
 | T76 | Pédicure-podologue × libéral × France | A | 33 / 33 | S69 ; est. | 45 / 45 | est. | 528 | 5 | 4 | 4 | 4 | 4 | 28 ans | DE 3 ans (instituts surtout privés, 6 à 8 k€/an) | p estimé 25 % | 3,8 | 2,66 | faible, A |
 | T02 | Médecin généraliste × salarié (centre de santé) × France | A | 64 / 64 | S09 ; est. | 76 / 76 | est. | 829 | 3 | 4 | 4 | 5 | 5 | 35 ans | Idem T01 | p estimé 10 % | 5,4 | 3,43 | faible, A |
+| T83 | Ingénieur cybersécurité (hors SOC) × salarié × France | A | 48 / 48 | S76,S77 ; est. | 61 / 61 | est. | 807 | 4 | 4 | 4 | 4 | 4 | 30 ans | BTS SIO option SISR puis bachelor ou mastère cybersécurité, tout en alternance | Offres cyber +49 % de 2019 à 2024 (ANSSI), 25 000 postes à pourvoir d'ici 2028 (OPIIEC) ; p estimé 25 % | 0,5 | 1,92 | moyenne, A* |
 | T77 | Ergothérapeute × fonctionnaire FPH × France | A | 30 / 30 | S65 | 34 / 34 | est. | 515 | 3 | 5 | 4 | 5 | 5 | 28 ans | DE 3 ans (Parcoursup ou après année santé) | Sélectif ; p estimé 8 % | 3,0 | 2,60 | faible, A |
+| T81 | Ingénieur cloud et DevOps × indépendant (freelance) × France | A | 69 / 69 | S74,S75 ; est. | 90 / 90 | est. | 1107 | 5 | 4 | 3 | 3 | 3 | 34 ans | Comme T80 + 5 ans salarié | p estimé 25 % | 0,5 | 2,24 | moyenne, A* |
 | T34 | Masseur-kinésithérapeute × salarié × Suisse (frontalier) | A | 80 / 73 | S22 ; est. | 89 / 81 | est. | 1124 | 3 | 3 | 4 | 5 | 5 | 30 ans | Kiné en France + reconnaissance | p estimé 6 % | 5,0 | 3,34 | faible, A |
-| T41 | Ingénieur × salarié × France | A | 45 / 45 | S16 ; est. | 56 / 56 | est. | 736 | 4 | 4 | 4 | 4 | 3 | 31 ans | BUT puis école d'ingénieurs en apprentissage (29 ans révolus ; dérogation jusqu'à 35 ans en enchaînement) | p estimé 30 % | 1,2 | 2,04 | moyenne, B* |
+| T41 | Ingénieur méthodes-industrialisation × salarié × France | A | 45 / 45 | S16 ; est. | 56 / 56 | est. | 736 | 4 | 4 | 4 | 4 | 3 | 31 ans | BUT puis école d'ingénieurs en apprentissage (29 ans révolus ; dérogation jusqu'à 35 ans en enchaînement) | p estimé 30 % | 1,2 | 2,04 | moyenne, B* |
 | T64 | Administrateur UE (AD) × fonctionnaire européen × Luxembourg (résident) | A | 99 / 82 | S31 ; est. | 109 / 91 | est. | 1335 | 3 | 4 | 3 | 5 | 3 | 29 ans | Licence + concours EPSO AD5 (C1 + B2) | 2026 : environ 3 % de réussite ; p estimé 3 % | 3,0 | 2,94 | moyenne, A* |
 | T46 | Actuaire × salarié × France | A | 52 / 52 | est. | 66 / 66 | est. | 795 | 4 | 4 | 4 | 4 | 2 | 30 ans | Licence de mathématiques + master d'actuariat | p estimé 6 % | 4,0 | 2,98 | élevée, B |
 | T57 | Professeur certifié × fonctionnaire × France | A | 29 / 29 | S11 | 35 / 35 | est. | 509 | 4 | 4 | 3 | 5 | 5 | 30 ans | Licence puis CAPES à bac+3 + 2 ans rémunérés | p estimé 35 % | 3,1 | 2,41 | moyenne, A* |
 | T71 | Magistrat × fonctionnaire × France | A* | 52 / 52 | est. | 60 / 60 | est. | 711 | 4 | 3 | 3 | 5 | 5 | 33 ans | Licence + M1 + concours ENM + 31 mois rémunérés | Environ 10,5 % de réussite ; p estimé 8 % | 5,0 | 3,27 | faible, A* |
-| T43 | Ingénieur × salarié × Allemagne | A* | 58 / 60 | S33 ; est. | 70 / 71 | est. | 927 | 4 | 4 | 3 | 4 | 3 | 31 ans | Idem T41 + allemand | p estimé 15 % | 1,2 | 2,47 | moyenne, B |
+| T43 | Ingénieur méthodes-industrialisation × salarié × Allemagne | A* | 58 / 60 | S33 ; est. | 70 / 71 | est. | 927 | 4 | 4 | 3 | 4 | 3 | 31 ans | Idem T41 + allemand | p estimé 15 % | 1,2 | 2,47 | moyenne, B |
 | T56 | Professeur des écoles × fonctionnaire × France | A* | 27 / 27 | S11,S12,S44 | 32 / 32 | est. | 484 | 4 | 4 | 3 | 5 | 5 | 30 ans | Licence puis CRPE à bac+3 + 2 ans de master rémunérés (1 400 puis 1 800 € net) | p estimé 40 % | 3,1 | 2,37 | moyenne, A* |
 | T13 | Infirmier × libéral × France | A* | 50 / 50 | S03 | 66 / 66 | est. | 825 | 4 | 2 | 4 | 5 | 5 | 30 ans | IFSI + 24 mois d'exercice salarié avant installation | p estimé 22 % | 2,8 | 2,49 | faible, A* |
 | T40 | Développeur × salarié × Canada (Québec) | A* | 55 / 54 | S35 ; est. | 66 / 65 | est. | 940 | 4 | 4 | 4 | 3 | 3 | 29 ans | Idem T35 + immigration | p estimé 25 % | 0,5 | 2,08 | élevée, B |
 | T37 | Développeur × salarié × Suisse (frontalier) | A* | 98 / 89 | S26 | 116 / 105 | est. | 1488 | 4 | 3 | 4 | 3 | 3 | 30 ans | Idem T35 + 3 ans d'expérience ; permis G | p estimé 25 % | 0,5 | 2,16 | élevée, B |
-| T42 | Ingénieur × salarié × Suisse (frontalier) | A* | 98 / 89 | S28 ; est. | 120 / 109 | est. | 1354 | 4 | 3 | 4 | 3 | 3 | 31 ans | Idem T41 + permis G | p estimé 20 % | 1,2 | 2,39 | moyenne, B |
+| T42 | Ingénieur méthodes-industrialisation × salarié × Suisse (frontalier) | A* | 98 / 89 | S28 ; est. | 120 / 109 | est. | 1354 | 4 | 3 | 4 | 3 | 3 | 31 ans | Idem T41 + permis G | p estimé 20 % | 1,2 | 2,39 | moyenne, B |
+| T82 | Ingénieur cloud et DevOps × salarié × Suisse (frontalier) | A* | 107 / 97 | S26 ; est. | 124 / 113 | est. | 1558 | 4 | 2 | 4 | 4 | 3 | 31 ans | Comme T80 + 2 ans d'expérience ; permis G | p estimé 20 % | 0,5 | 2,30 | moyenne, B |
 | T36 | Développeur × indépendant (freelance) × France | A* | 58 / 58 | S19 | 76 / 76 | S19 (TJM 15 ans et plus : 672 €) ; est. | 969 | 5 | 4 | 3 | 2 | 3 | 32 ans | Idem T35 + 5 ans salarié | p estimé 30 % | 0,5 | 2,03 | élevée, B |
+| T85 | Data engineer × salarié × France | B* | 47 / 47 | S17 ; est. | 56 / 56 | est. | 809 | 4 | 4 | 4 | 3 | 3 | 28 ans | BUT informatique ou science des données en alternance | p estimé 30 % | 1,1 | 1,78 | élevée, B |
+| T80 | Ingénieur cloud et DevOps × salarié × France | B* | 51 / 51 | S72,S73 ; est. | 62 / 62 | est. | 897 | 4 | 3 | 4 | 4 | 3 | 29 ans | BTS SIO option SISR en alternance + 2 ans d'administration systèmes + certifications cloud | p estimé 35 % | 0,5 | 1,74 | moyenne, B |
 | T16 | Orthoptiste × salarié × France | B* | 31 / 31 | est. | 36 / 36 | est. | 535 | 3 | 4 | 4 | 5 | 4 | 28 ans | Certificat de capacité 3 ans | Sélectif ; p estimé 10 % | 3,0 | 2,55 | moyenne, B |
 | T62 | Contrôleur des finances publiques × fonctionnaire × France | B* | 31 / 31 | S66 ; est. | 36 / 36 | est. | 603 | 3 | 5 | 3 | 5 | 3 | 26 ans | Concours de niveau bac + formation rémunérée | p estimé 30 % | 0,0 | 1,47 | moyenne, B* |
 | T22 | Ostéopathe × libéral × France | B* | 32 / 32 | est. | 45 / 45 | est. | 415 | 5 | 4 | 4 | 2 | 4 | 30 ans | École privée 5 ans, 7 à 10 k€/an (prêt) | Peu sélectif ; marché saturé ; p estimé 65 % | 7,2 | 3,25 | faible, B* |
@@ -120,16 +128,17 @@
 | T48 | Électricien × artisan × France | C* | 31 / 31 | est. | 45 / 45 | est. | 581 | 4 | 2 | 3 | 3 | 4 | 31 ans | Idem T47 + 5 ans salarié + création (outillage, véhicule) | p estimé 45 % (survie à 5 ans) | 0,5 | 2,34 | faible, C* |
 | T51 | Plombier-chauffagiste × artisan × France | C* | 31 / 31 | est. | 45 / 45 | est. | 581 | 4 | 2 | 3 | 3 | 4 | 31 ans | CAP adulte + 5 ans salarié + création | p estimé 45 % | 0,5 | 2,34 | faible, C* |
 | T65 | Agent contractuel UE (GF II-III) × contractuel × Luxembourg (frontalier) | C* | 46 / 44 | S31 ; est. | 57 / 54 | est. | 827 | 2 | 4 | 3 | 3 | 3 | 26 ans | CAST permanent (bac + 3 ans d'expérience, C1 + B2), inscription continue | p estimé 15 % | 0,0 | 1,65 | élevée, C |
+| T84 | Analyste SOC (cybersécurité) × salarié × France | C* | 39 / 39 | S76 ; est. | 47 / 47 | est. | 708 | 2 | 3 | 3 | 4 | 4 | 27 ans | BTS SIO option SISR en alternance | p estimé 45 % | 0,5 | 1,51 | élevée, C |
 | T79 | Opticien × salarié × France | C* | 27 / 27 | S08 ; est. | 32 / 32 | est. | 523 | 2 | 4 | 3 | 4 | 3 | 27 ans | BTS OL en alternance | p estimé 70 % | 0,5 | 1,40 | faible, C* |
-| T53 | Conducteur de train × salarié (SNCF) × France | C* | 37 / 37 | S15 ; est. | 46 / 46 | est. | 685 | 2 | 3 | 3 | 4 | 4 | 26 ans | Recrutement + 12 mois de formation rémunérée | Tests psychotechniques ; p estimé 30 % | 0,0 | 1,47 | faible, C* |
+| T53 | Conducteur de train × salarié (SNCF) × France | C | 37 / 37 | S15 ; est. | 46 / 46 | est. | 685 | 2 | 3 | 3 | 4 | 4 | 26 ans | Recrutement + 12 mois de formation rémunérée | Tests psychotechniques ; p estimé 30 % | 0,0 | 1,47 | faible, C |
 | T06 | Pharmacien adjoint × salarié × France | C | 40 / 40 | est. | 48 / 48 | est. | 599 | 2 | 2 | 3 | 5 | 4 | 31 ans | Licence portail santé + 5 ans | Places de pharmacie souvent non pourvues ; p estimé 25 % | 5,8 | 2,92 | faible, C |
 | T66 | Sous-officier × militaire × France | C | 33 / 33 | est. | 40 / 40 | est. | 622 | 2 | 2 | 4 | 4 | 4 | 26 ans | École de sous-officiers 8 mois (moins de 32 ans, bac) | p estimé 70 % | 0,0 | 1,26 | faible, C |
 | T12 | Infirmier × fonctionnaire FPH × France | C | 35 / 35 | S09,S10 | 40 / 40 | est. | 600 | 2 | 2 | 3 | 5 | 4 | 28 ans | IFSI 3 ans (Parcoursup, ou voie FPC avec 3 ans de cotisations ; Transition Pro possible) | 2025 : 116 000 candidats pour 25 000 places ; p estimé 25 % | 2,8 | 2,29 | faible, C |
 | T74 | Pilote de ligne × salarié × France | C | 84 / 84 | est. | 110 / 110 | est. | 1183 | 2 | 2 | 3 | 3 | 3 | 28 ans | ATPL intégré (environ 100 k€) ou EPL (condition d'âge non vérifiée) | p estimé 10 % | 8,5 | 3,92 | faible, C |
 | T58 | Gardien de la paix × fonctionnaire × France | C | 34 / 34 | S13 | 40 / 40 | est. | 665 | 2 | 2 | 2 | 5 | 4 | 26 ans | Concours (bac) + 12 mois rémunérés (1 570 à 1 617 € net) | p estimé 30 % | 0,0 | 1,47 | faible, C |
 | T73 | Agent immobilier × indépendant (mandataire) × France | C | 24 / 24 | est. | 45 / 45 | est. | 465 | 4 | 3 | 3 | 1 | 2 | 26 ans | Statut d'agent commercial, formation courte | p estimé 50 % (survie) | 0,5 | 1,40 | moyenne, C |
-| T33 | Aide-soignant (ASSC) × salarié × Suisse (frontalier) | C | 61 / 56 | S22 ; est. | 67 / 61 | est. | 1084 | 1 | 1 | 3 | 4 | 5 | 26 ans | IFAS + reconnaissance Croix-Rouge suisse | p estimé 55 % | 1,0 | 1,44 | faible, C |
 | T21 | Aide-soignant × fonctionnaire FPH × France | C | 27 / 27 | S12,S14 | 30 / 30 | est. | 523 | 1 | 2 | 3 | 5 | 4 | 26 ans | IFAS 1 an (apprentissage possible) | p estimé 75 % | 1,0 | 1,37 | faible, C |
+| T33 | Aide-soignant (ASSC) × salarié × Suisse (frontalier) | C | 61 / 56 | S22 ; est. | 67 / 61 | est. | 1084 | 1 | 1 | 3 | 4 | 5 | 26 ans | IFAS + reconnaissance Croix-Rouge suisse | p estimé 55 % | 1,0 | 1,44 | faible, C |
 | T75 | Employé commerce ou accueil (référence) × salarié × France | C | 21 / 21 | S08,S43 | 25 / 25 | est. | 438 | 2 | 3 | 2 | 3 | 2 | 24 ans | Aucune | p 100 % | 0,0 | 1,00 | moyenne, C |
 | T55 | Conducteur poids lourd × salarié × France | C | 26 / 26 | S08 ; est. | 31 / 31 | est. | 539 | 2 | 1 | 2 | 4 | 3 | 25 ans | Permis C/CE + FIMO (3 mois, financés) | p estimé 85 % | 0,0 | 1,12 | moyenne, C |
 
@@ -146,20 +155,25 @@
 | T01 | Médecin généraliste × libéral × France | A | 76 / 76 | S02,S05 ; est. | 100 / 100 | est. | 932 | 4 | 3 | 4 | 5 | 5 |
 | T76 | Pédicure-podologue × libéral × France | A | 33 / 33 | S69 ; est. | 45 / 45 | est. | 528 | 5 | 4 | 4 | 4 | 4 |
 | T02 | Médecin généraliste × salarié (centre de santé) × France | A | 64 / 64 | S09 ; est. | 76 / 76 | est. | 829 | 3 | 4 | 4 | 5 | 5 |
+| T83 | Ingénieur cybersécurité (hors SOC) × salarié × France | A | 48 / 48 | S76,S77 ; est. | 61 / 61 | est. | 807 | 4 | 4 | 4 | 4 | 4 |
 | T77 | Ergothérapeute × fonctionnaire FPH × France | A | 30 / 30 | S65 | 34 / 34 | est. | 515 | 3 | 5 | 4 | 5 | 5 |
+| T81 | Ingénieur cloud et DevOps × indépendant (freelance) × France | A | 69 / 69 | S74,S75 ; est. | 90 / 90 | est. | 1107 | 5 | 4 | 3 | 3 | 3 |
 | T34 | Masseur-kinésithérapeute × salarié × Suisse (frontalier) | A | 80 / 73 | S22 ; est. | 89 / 81 | est. | 1124 | 3 | 3 | 4 | 5 | 5 |
-| T41 | Ingénieur × salarié × France | A | 45 / 45 | S16 ; est. | 56 / 56 | est. | 736 | 4 | 4 | 4 | 4 | 3 |
+| T41 | Ingénieur méthodes-industrialisation × salarié × France | A | 45 / 45 | S16 ; est. | 56 / 56 | est. | 736 | 4 | 4 | 4 | 4 | 3 |
 | T64 | Administrateur UE (AD) × fonctionnaire européen × Luxembourg (résident) | A | 99 / 82 | S31 ; est. | 109 / 91 | est. | 1335 | 3 | 4 | 3 | 5 | 3 |
 | T46 | Actuaire × salarié × France | A | 52 / 52 | est. | 66 / 66 | est. | 795 | 4 | 4 | 4 | 4 | 2 |
 | T57 | Professeur certifié × fonctionnaire × France | A | 29 / 29 | S11 | 35 / 35 | est. | 509 | 4 | 4 | 3 | 5 | 5 |
 | T71 | Magistrat × fonctionnaire × France | A* | 52 / 52 | est. | 60 / 60 | est. | 711 | 4 | 3 | 3 | 5 | 5 |
-| T43 | Ingénieur × salarié × Allemagne | A* | 58 / 60 | S33 ; est. | 70 / 71 | est. | 927 | 4 | 4 | 3 | 4 | 3 |
+| T43 | Ingénieur méthodes-industrialisation × salarié × Allemagne | A* | 58 / 60 | S33 ; est. | 70 / 71 | est. | 927 | 4 | 4 | 3 | 4 | 3 |
 | T56 | Professeur des écoles × fonctionnaire × France | A* | 27 / 27 | S11,S12,S44 | 32 / 32 | est. | 484 | 4 | 4 | 3 | 5 | 5 |
 | T13 | Infirmier × libéral × France | A* | 50 / 50 | S03 | 66 / 66 | est. | 825 | 4 | 2 | 4 | 5 | 5 |
 | T40 | Développeur × salarié × Canada (Québec) | A* | 55 / 54 | S35 ; est. | 66 / 65 | est. | 940 | 4 | 4 | 4 | 3 | 3 |
 | T37 | Développeur × salarié × Suisse (frontalier) | A* | 98 / 89 | S26 | 116 / 105 | est. | 1488 | 4 | 3 | 4 | 3 | 3 |
-| T42 | Ingénieur × salarié × Suisse (frontalier) | A* | 98 / 89 | S28 ; est. | 120 / 109 | est. | 1354 | 4 | 3 | 4 | 3 | 3 |
+| T42 | Ingénieur méthodes-industrialisation × salarié × Suisse (frontalier) | A* | 98 / 89 | S28 ; est. | 120 / 109 | est. | 1354 | 4 | 3 | 4 | 3 | 3 |
+| T82 | Ingénieur cloud et DevOps × salarié × Suisse (frontalier) | A* | 107 / 97 | S26 ; est. | 124 / 113 | est. | 1558 | 4 | 2 | 4 | 4 | 3 |
 | T36 | Développeur × indépendant (freelance) × France | A* | 58 / 58 | S19 | 76 / 76 | S19 (TJM 15 ans et plus : 672 €) ; est. | 969 | 5 | 4 | 3 | 2 | 3 |
+| T85 | Data engineer × salarié × France | B* | 47 / 47 | S17 ; est. | 56 / 56 | est. | 809 | 4 | 4 | 4 | 3 | 3 |
+| T80 | Ingénieur cloud et DevOps × salarié × France | B* | 51 / 51 | S72,S73 ; est. | 62 / 62 | est. | 897 | 4 | 3 | 4 | 4 | 3 |
 | T16 | Orthoptiste × salarié × France | B* | 31 / 31 | est. | 36 / 36 | est. | 535 | 3 | 4 | 4 | 5 | 4 |
 | T62 | Contrôleur des finances publiques × fonctionnaire × France | B* | 31 / 31 | S66 ; est. | 36 / 36 | est. | 603 | 3 | 5 | 3 | 5 | 3 |
 | T22 | Ostéopathe × libéral × France | B* | 32 / 32 | est. | 45 / 45 | est. | 415 | 5 | 4 | 4 | 2 | 4 |
@@ -192,16 +206,17 @@
 | T48 | Électricien × artisan × France | C* | 31 / 31 | est. | 45 / 45 | est. | 581 | 4 | 2 | 3 | 3 | 4 |
 | T51 | Plombier-chauffagiste × artisan × France | C* | 31 / 31 | est. | 45 / 45 | est. | 581 | 4 | 2 | 3 | 3 | 4 |
 | T65 | Agent contractuel UE (GF II-III) × contractuel × Luxembourg (frontalier) | C* | 46 / 44 | S31 ; est. | 57 / 54 | est. | 827 | 2 | 4 | 3 | 3 | 3 |
+| T84 | Analyste SOC (cybersécurité) × salarié × France | C* | 39 / 39 | S76 ; est. | 47 / 47 | est. | 708 | 2 | 3 | 3 | 4 | 4 |
 | T79 | Opticien × salarié × France | C* | 27 / 27 | S08 ; est. | 32 / 32 | est. | 523 | 2 | 4 | 3 | 4 | 3 |
-| T53 | Conducteur de train × salarié (SNCF) × France | C* | 37 / 37 | S15 ; est. | 46 / 46 | est. | 685 | 2 | 3 | 3 | 4 | 4 |
+| T53 | Conducteur de train × salarié (SNCF) × France | C | 37 / 37 | S15 ; est. | 46 / 46 | est. | 685 | 2 | 3 | 3 | 4 | 4 |
 | T06 | Pharmacien adjoint × salarié × France | C | 40 / 40 | est. | 48 / 48 | est. | 599 | 2 | 2 | 3 | 5 | 4 |
 | T66 | Sous-officier × militaire × France | C | 33 / 33 | est. | 40 / 40 | est. | 622 | 2 | 2 | 4 | 4 | 4 |
 | T12 | Infirmier × fonctionnaire FPH × France | C | 35 / 35 | S09,S10 | 40 / 40 | est. | 600 | 2 | 2 | 3 | 5 | 4 |
 | T74 | Pilote de ligne × salarié × France | C | 84 / 84 | est. | 110 / 110 | est. | 1183 | 2 | 2 | 3 | 3 | 3 |
 | T58 | Gardien de la paix × fonctionnaire × France | C | 34 / 34 | S13 | 40 / 40 | est. | 665 | 2 | 2 | 2 | 5 | 4 |
 | T73 | Agent immobilier × indépendant (mandataire) × France | C | 24 / 24 | est. | 45 / 45 | est. | 465 | 4 | 3 | 3 | 1 | 2 |
-| T33 | Aide-soignant (ASSC) × salarié × Suisse (frontalier) | C | 61 / 56 | S22 ; est. | 67 / 61 | est. | 1084 | 1 | 1 | 3 | 4 | 5 |
 | T21 | Aide-soignant × fonctionnaire FPH × France | C | 27 / 27 | S12,S14 | 30 / 30 | est. | 523 | 1 | 2 | 3 | 5 | 4 |
+| T33 | Aide-soignant (ASSC) × salarié × Suisse (frontalier) | C | 61 / 56 | S22 ; est. | 67 / 61 | est. | 1084 | 1 | 1 | 3 | 4 | 5 |
 | T75 | Employé commerce ou accueil (référence) × salarié × France | C | 21 / 21 | S08,S43 | 25 / 25 | est. | 438 | 2 | 3 | 2 | 3 | 2 |
 | T55 | Conducteur poids lourd × salarié × France | C | 26 / 26 | S08 ; est. | 31 / 31 | est. | 539 | 2 | 1 | 2 | 4 | 3 |
 
@@ -218,7 +233,9 @@
 | T01 | 35 ans | Licence portail santé (rentrée 2027) puis 9 ans ; internat rémunéré ; bourses | 2 candidatures ; PASS 2024 : 33,8 % admis en 1 an ; p estimé 10 % | 5,4 | 3,43 | faible, A |
 | T76 | 28 ans | DE 3 ans (instituts surtout privés, 6 à 8 k€/an) | p estimé 25 % | 3,8 | 2,66 | faible, A |
 | T02 | 35 ans | Idem T01 | p estimé 10 % | 5,4 | 3,43 | faible, A |
+| T83 | 30 ans | BTS SIO option SISR puis bachelor ou mastère cybersécurité, tout en alternance | Offres cyber +49 % de 2019 à 2024 (ANSSI), 25 000 postes à pourvoir d'ici 2028 (OPIIEC) ; p estimé 25 % | 0,5 | 1,92 | moyenne, A* |
 | T77 | 28 ans | DE 3 ans (Parcoursup ou après année santé) | Sélectif ; p estimé 8 % | 3,0 | 2,60 | faible, A |
+| T81 | 34 ans | Comme T80 + 5 ans salarié | p estimé 25 % | 0,5 | 2,24 | moyenne, A* |
 | T34 | 30 ans | Kiné en France + reconnaissance | p estimé 6 % | 5,0 | 3,34 | faible, A |
 | T41 | 31 ans | BUT puis école d'ingénieurs en apprentissage (29 ans révolus ; dérogation jusqu'à 35 ans en enchaînement) | p estimé 30 % | 1,2 | 2,04 | moyenne, B* |
 | T64 | 29 ans | Licence + concours EPSO AD5 (C1 + B2) | 2026 : environ 3 % de réussite ; p estimé 3 % | 3,0 | 2,94 | moyenne, A* |
@@ -231,7 +248,10 @@
 | T40 | 29 ans | Idem T35 + immigration | p estimé 25 % | 0,5 | 2,08 | élevée, B |
 | T37 | 30 ans | Idem T35 + 3 ans d'expérience ; permis G | p estimé 25 % | 0,5 | 2,16 | élevée, B |
 | T42 | 31 ans | Idem T41 + permis G | p estimé 20 % | 1,2 | 2,39 | moyenne, B |
+| T82 | 31 ans | Comme T80 + 2 ans d'expérience ; permis G | p estimé 20 % | 0,5 | 2,30 | moyenne, B |
 | T36 | 32 ans | Idem T35 + 5 ans salarié | p estimé 30 % | 0,5 | 2,03 | élevée, B |
+| T85 | 28 ans | BUT informatique ou science des données en alternance | p estimé 30 % | 1,1 | 1,78 | élevée, B |
+| T80 | 29 ans | BTS SIO option SISR en alternance + 2 ans d'administration systèmes + certifications cloud | p estimé 35 % | 0,5 | 1,74 | moyenne, B |
 | T16 | 28 ans | Certificat de capacité 3 ans | Sélectif ; p estimé 10 % | 3,0 | 2,55 | moyenne, B |
 | T62 | 26 ans | Concours de niveau bac + formation rémunérée | p estimé 30 % | 0,0 | 1,47 | moyenne, B* |
 | T22 | 30 ans | École privée 5 ans, 7 à 10 k€/an (prêt) | Peu sélectif ; marché saturé ; p estimé 65 % | 7,2 | 3,25 | faible, B* |
@@ -264,16 +284,17 @@
 | T48 | 31 ans | Idem T47 + 5 ans salarié + création (outillage, véhicule) | p estimé 45 % (survie à 5 ans) | 0,5 | 2,34 | faible, C* |
 | T51 | 31 ans | CAP adulte + 5 ans salarié + création | p estimé 45 % | 0,5 | 2,34 | faible, C* |
 | T65 | 26 ans | CAST permanent (bac + 3 ans d'expérience, C1 + B2), inscription continue | p estimé 15 % | 0,0 | 1,65 | élevée, C |
+| T84 | 27 ans | BTS SIO option SISR en alternance | p estimé 45 % | 0,5 | 1,51 | élevée, C |
 | T79 | 27 ans | BTS OL en alternance | p estimé 70 % | 0,5 | 1,40 | faible, C* |
-| T53 | 26 ans | Recrutement + 12 mois de formation rémunérée | Tests psychotechniques ; p estimé 30 % | 0,0 | 1,47 | faible, C* |
+| T53 | 26 ans | Recrutement + 12 mois de formation rémunérée | Tests psychotechniques ; p estimé 30 % | 0,0 | 1,47 | faible, C |
 | T06 | 31 ans | Licence portail santé + 5 ans | Places de pharmacie souvent non pourvues ; p estimé 25 % | 5,8 | 2,92 | faible, C |
 | T66 | 26 ans | École de sous-officiers 8 mois (moins de 32 ans, bac) | p estimé 70 % | 0,0 | 1,26 | faible, C |
 | T12 | 28 ans | IFSI 3 ans (Parcoursup, ou voie FPC avec 3 ans de cotisations ; Transition Pro possible) | 2025 : 116 000 candidats pour 25 000 places ; p estimé 25 % | 2,8 | 2,29 | faible, C |
 | T74 | 28 ans | ATPL intégré (environ 100 k€) ou EPL (condition d'âge non vérifiée) | p estimé 10 % | 8,5 | 3,92 | faible, C |
 | T58 | 26 ans | Concours (bac) + 12 mois rémunérés (1 570 à 1 617 € net) | p estimé 30 % | 0,0 | 1,47 | faible, C |
 | T73 | 26 ans | Statut d'agent commercial, formation courte | p estimé 50 % (survie) | 0,5 | 1,40 | moyenne, C |
-| T33 | 26 ans | IFAS + reconnaissance Croix-Rouge suisse | p estimé 55 % | 1,0 | 1,44 | faible, C |
 | T21 | 26 ans | IFAS 1 an (apprentissage possible) | p estimé 75 % | 1,0 | 1,37 | faible, C |
+| T33 | 26 ans | IFAS + reconnaissance Croix-Rouge suisse | p estimé 55 % | 1,0 | 1,44 | faible, C |
 | T75 | 24 ans | Aucune | p 100 % | 0,0 | 1,00 | moyenne, C |
 | T55 | 25 ans | Permis C/CE + FIMO (3 mois, financés) | p estimé 85 % | 0,0 | 1,12 | moyenne, C |
 
@@ -287,36 +308,36 @@
 | 4 | T69 | Comptable × salarié × France | 1,38 | B | +0,01 point de score pour +0,12 de barrière |
 | 5 | T45 | Technicien réseaux et cybersécurité × salarié × France | 1,44 | B | +0,02 point de score pour +0,06 de barrière |
 | 6 | T62 | Contrôleur des finances publiques × fonctionnaire × France | 1,47 | B* | +0,33 point de score pour +0,04 de barrière |
-| 7 | T36 | Développeur × indépendant (freelance) × France | 2,03 | A* | +0,04 point de score pour +0,56 de barrière |
-| 8 | T41 | Ingénieur × salarié × France | 2,04 | A | +0,12 point de score pour +0,01 de barrière |
-| 9 | T77 | Ergothérapeute × fonctionnaire FPH × France | 2,60 | A | +0,10 point de score pour +0,56 de barrière |
-| 10 | T76 | Pédicure-podologue × libéral × France | 2,66 | A | +0,09 point de score pour +0,06 de barrière |
+| 7 | T80 | Ingénieur cloud et DevOps × salarié × France | 1,74 | B* | +0,02 point de score pour +0,27 de barrière |
+| 8 | T85 | Data engineer × salarié × France | 1,78 | B* | +0,01 point de score pour +0,04 de barrière |
+| 9 | T83 | Ingénieur cybersécurité (hors SOC) × salarié × France | 1,92 | A | +0,24 point de score pour +0,13 de barrière |
+| 10 | T76 | Pédicure-podologue × libéral × France | 2,66 | A | +0,09 point de score pour +0,75 de barrière |
 | 11 | T09 | Sage-femme × libéral × France | 3,02 | S* | +0,30 point de score pour +0,36 de barrière |
 | 12 | T15 | Orthophoniste × libéral × France | 3,27 | S | +0,11 point de score pour +0,25 de barrière |
 | 13 | T05 | Chirurgien-dentiste × libéral × France | 3,56 | S | +0,01 point de score pour +0,29 de barrière |
 
 ### À moins de 0,1 d'une frontière de palier
 
-T09 (S), T71 (A), T43 (A), T56 (A), T13 (A), T40 (A), T37 (A), T42 (A), T36 (A), T11 (A), T16 (B), T62 (B), T22 (B), T35 (B), T32 (B), T20 (B), T68 (B), T38 (B), T39 (B), T52 (B), T23 (B), T67 (B), T54 (B), T59 (C), T24 (C), T25 (C), T44 (C), T48 (C), T51 (C), T65 (C), T07 (C), T79 (C), T53 (C)
+T09 (S), T71 (A), T43 (A), T56 (A), T13 (A), T40 (A), T37 (A), T42 (A), T82 (A), T11 (A), T36 (A), T85 (B), T80 (B), T16 (B), T62 (B), T22 (B), T35 (B), T32 (B), T20 (B), T68 (B), T38 (B), T39 (B), T52 (B), T23 (B), T67 (B), T54 (B), T59 (C), T24 (C), T44 (C), T25 (C), T48 (C), T51 (C), T65 (C), T07 (C), T84 (C), T79 (C)
 
 ### Égalités (écart de score interne inférieur à 0,005)
 
-T41 = T64, T43 = T56, T36 = T11, T16 = T62, T20 = T68, T20 = T38, T68 = T38, T18 = T29, T61 = T50, T61 = T63, T50 = T63, T50 = T19, T63 = T19, T70 = T49, T25 = T44, T48 = T51, T48 = T65, T51 = T65, T66 = T12, T33 = T21
+T83 = T77, T77 = T81, T43 = T56, T11 = T36, T16 = T62, T32 = T20, T68 = T38, T61 = T50, T50 = T63, T50 = T19, T63 = T19, T70 = T49, T44 = T25, T48 = T51, T07 = T84, T07 = T79, T84 = T79, T28 = T06, T66 = T12, T21 = T33
 
 ### Sensibilité des paliers aux poids (opinion, pas consensus)
 
 | Variante | Palier S | Nombre S/A/B/C |
 |---|---|---|
-| Base v2 (24/21/16/16/7/16) | T05, T09, T15 | 3/21/33/22 |
-| Poids v1 (22/20/15/15/13/15), notes v2 | T05, T09, T15 | 3/22/37/17 |
-| Poids égaux | T05, T09, T15, T30 | 4/20/43/12 |
-| Revenu 30 (17/15/13/13/12/30) | T05, T30 | 2/15/41/21 |
+| Base v2 (24/21/16/16/7/16) | T05, T09, T15 | 3/24/35/23 |
+| Poids v1 (22/20/15/15/13/15), notes v2 | T05, T09, T15 | 3/24/40/18 |
+| Poids égaux | T05, T09, T15, T30 | 4/22/47/12 |
+| Revenu 30 (17/15/13/13/12/30) | T05, T30 | 2/18/43/22 |
 
 ### Marge des triplets S au-dessus de 4,2
 
-- T05 : marge 0,15 ; une note de moins sur contrôle, charge, relations, sécurité le fait passer en A.
+- T05 : marge 0,14 ; une note de moins sur contrôle, charge, relations, sécurité le fait passer en A.
 - T15 : marge 0,14 ; une note de moins sur contrôle, charge, relations, sécurité le fait passer en A.
-- T09 : marge 0,03 ; une note de moins sur contrôle, charge, relations, sécurité, sens le fait passer en A.
+- T09 : marge 0,02 ; une note de moins sur contrôle, charge, relations, sécurité, sens le fait passer en A.
 
 ### Cellules revenu sans source directe (estimées)
 
@@ -324,5 +345,5 @@ T06, T16, T20, T22, T32, T46, T48, T51, T59, T66, T71, T78, T73, T74
 
 ### Cellules revenu sourcées mais ajustées (ancienneté, conversion net, proxy)
 
-T01, T02, T03, T04, T07, T10, T11, T14, T15, T17, T19, T23, T24, T25, T26, T29, T30, T31, T33, T34, T35, T39, T40, T41, T42, T43, T44, T45, T47, T49, T50, T52, T53, T54, T55, T60, T61, T62, T63, T64, T65, T68, T69, T70, T76, T79, T72
+T01, T02, T03, T04, T07, T10, T11, T14, T15, T17, T19, T23, T24, T25, T26, T29, T30, T31, T33, T34, T35, T39, T40, T41, T42, T43, T44, T45, T47, T49, T50, T52, T53, T54, T55, T60, T61, T62, T63, T64, T65, T68, T69, T70, T76, T79, T80, T81, T82, T83, T84, T85, T72
 

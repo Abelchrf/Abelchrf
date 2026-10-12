@@ -295,17 +295,17 @@ add(id="T40", metier="Developpeur", statut="salarie", pays="Canada (Quebec)", cu
     src="S35 (QC : mediane 45,67 CAD/h) ; estime 50 CAD x 1 950 h x 0,918",
     fin="Idem T35 + immigration", sel="p estime 25 %")
 ING_PRE = [(25, 25, 0), (26, 27, 17300), (28, 30, 18500)]
-add(id="T41", metier="Ingenieur", statut="salarie", pays="France",
+add(id="T41", metier="Ingenieur methodes-industrialisation", statut="salarie", pays="France",
     E=31, start=35000, m40=45000, p80=56000, pre=ING_PRE,
     C=4, Ch=4, R=4, Se=4, Sn=3, p=0.30, cap=1, ia="moyenne",
-    src="S16 (IESF 2025 : mediane 67 000 EUR brut tous ages) ; estime 10 ans d'experience 58 000 EUR x 0,775",
+    src="S16 (IESF 2025 : mediane 67 000 EUR brut tous ages, toutes specialites, proxy) ; estime 10 ans d'experience 58 000 EUR x 0,775",
     fin="BUT puis ecole d'ingenieurs en apprentissage (29 ans revolus ; derogation jusqu'a 35 ans en enchainement)", sel="p estime 30 %")
-add(id="T42", metier="Ingenieur", statut="salarie", pays="Suisse (frontalier)", cur="CHF", resid="FR-GE",
+add(id="T42", metier="Ingenieur methodes-industrialisation", statut="salarie", pays="Suisse (frontalier)", cur="CHF", resid="FR-GE",
     E=31, start=72000, m40=91200, p80=112000, pre=ING_PRE,
     C=4, Ch=3, R=4, Se=3, Sn=3, p=0.20, cap=2, ia="moyenne",
     src="S28 (ESS 2022 : diplomes HES 9 000 CHF/mois) ; estime 114 000 CHF x 0,80",
     fin="Idem T41 + permis G", sel="p estime 20 %")
-add(id="T43", metier="Ingenieur", statut="salarie", pays="Allemagne", cur="EUR", resid="DE",
+add(id="T43", metier="Ingenieur methodes-industrialisation", statut="salarie", pays="Allemagne", cur="EUR", resid="DE",
     E=31, start=42900, m40=58500, p80=70200, pre=ING_PRE,
     C=4, Ch=4, R=3, Se=4, Sn=3, p=0.15, cap=2, ia="moyenne",
     src="S33 (BA 2024 : IKT 6 114 EUR/mois, proxy) ; estime 75 000 EUR x 0,78",
@@ -479,6 +479,40 @@ add(id="T79", metier="Opticien", statut="salarie", pays="France",
     C=2, Ch=4, R=3, Se=4, Sn=3, p=0.70, cap=1, ia="faible",
     src="S08 (PI mediane 2 440 EUR) ; estime 2 250 EUR/mois",
     fin="BTS OL en alternance", sel="p estime 70 %")
+
+# --- Metiers IT precis, ajoutes en version 2.1 -------------------------------------
+IT_PRE = ALT2 + [(27, 27, 30000), (28, 28, 31500)]
+add(id="T80", metier="Ingenieur cloud et DevOps", statut="salarie", pays="France",
+    E=29, start=38000, m40=50700, p80=62400, pre=IT_PRE,
+    C=4, Ch=3, R=4, Se=4, Sn=3, p=0.35, cap=1, ia="moyenne",
+    src="S72 (Robert Half Paris : P25 63 000, mediane 75 600, P75 84 000 EUR brut) + S73 (moyenne nationale 49 000 EUR brut) ; estime national a 40 ans 65 000 EUR brut x 0,78 ; sources privees",
+    fin="BTS SIO option SISR en alternance + 2 ans d'administration systemes + certifications cloud", sel="p estime 35 %")
+add(id="T81", metier="Ingenieur cloud et DevOps", statut="independant (freelance)", pays="France",
+    E=34, start=55000, m40=69000, p80=90000,
+    pre=IT_PRE + [(29, 29, 38000), (30, 30, 40500), (31, 31, 43000), (32, 32, 45500), (33, 33, 48000)],
+    C=5, Ch=4, R=3, Se=3, Sn=3, p=0.25, cap=1, ia="moyenne",
+    src="S74 (Free-Work : TJM 700 EUR en IDF a 5-10 ans, 450 EUR via ESN) + S75 (750 EUR en region pour un DevOps confirme) ; estime 650 EUR x 180 jours x 0,59 ; sources privees",
+    fin="Comme T80 + 5 ans salarie", sel="p estime 25 %")
+add(id="T82", metier="Ingenieur cloud et DevOps", statut="salarie", pays="Suisse (frontalier)", cur="CHF", resid="FR-GE",
+    E=31, start=80000, m40=100000, p80=116000, pre=IT_PRE + [(29, 29, 38000), (30, 30, 40500)],
+    C=4, Ch=2, R=4, Se=4, Sn=3, p=0.20, cap=2, ia="moyenne",
+    src="S26 (ESS 2024 TIC : 9 490 CHF/mois) ; estime specialite cloud 125 000 CHF x 0,80",
+    fin="Comme T80 + 2 ans d'experience ; permis G", sel="p estime 20 %")
+add(id="T83", metier="Ingenieur cybersecurite (hors SOC)", statut="salarie", pays="France",
+    E=30, start=35100, m40=48400, p80=60800, pre=ALT2 + [(27, 29, 18500)],
+    C=4, Ch=4, R=4, Se=4, Sn=4, p=0.25, cap=1, ia="moyenne",
+    src="S76 (mediane environ 50 000 EUR brut, 37 000 a 74 000 EUR) + S77 ; estime 62 000 EUR brut a 40 ans x 0,78 ; sources privees",
+    fin="BTS SIO option SISR puis bachelor ou mastere cybersecurite, tout en alternance", sel="Offres cyber +49 % de 2019 a 2024 (ANSSI), 25 000 postes a pourvoir d'ici 2028 (OPIIEC) ; p estime 25 %")
+add(id="T84", metier="Analyste SOC (cybersecurite)", statut="salarie", pays="France",
+    E=27, start=27300, m40=39000, p80=46800, pre=ALT2,
+    C=2, Ch=3, R=3, Se=4, Sn=4, p=0.45, cap=1, ia="elevee",
+    src="estime : S76 (bas de fourchette 37 000 EUR brut) ; 50 000 EUR brut a 40 ans x 0,78",
+    fin="BTS SIO option SISR en alternance", sel="p estime 45 %")
+add(id="T85", metier="Data engineer", statut="salarie", pays="France",
+    E=28, start=33000, m40=46800, p80=56200, pre=[(25, 25, 0), (26, 27, 17300)],
+    C=4, Ch=4, R=4, Se=3, Sn=3, p=0.30, cap=1, ia="elevee",
+    src="S17 (APEC 2025 : IT 35-45 ans 49 a 101 kEUR) ; estime 60 000 EUR brut x 0,78",
+    fin="BUT informatique ou science des donnees en alternance", sel="p estime 30 %")
 
 # --- Commerce et autres --------------------------------------------------------
 add(id="T72", metier="Commercial B2B", statut="salarie", pays="France",

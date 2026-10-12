@@ -30,9 +30,12 @@ def sec(prefixe):
 
 parties = [lire("entete.md").strip(), ""]
 parties += ["## 2. Pool (" + sec("Pool")[0].split("(")[1], "", sec("Pool")[1], ""]
-parties += ["## 3. Élimination", "", "Règle : section 1.5. Douze retraits ; un triplet dominé seulement sans IA est conservé.", "",
+import modele as _m
+n_elim = sum(1 for t in _m.T if t["domine_par"])
+n_fin = len(_m.T) - n_elim
+parties += ["## 3. Élimination", "", f"Règle : section 1.5. {n_elim} retraits ; un triplet dominé seulement sans IA est conservé.", "",
             sec("Éliminés")[1], ""]
-parties += ["## 4. Tableau final (67 triplets non dominés, triés par score interne décroissant)", "",
+parties += [f"## 4. Tableau final ({n_fin} triplets non dominés, triés par score interne décroissant)", "",
             "Notes : nom. = euros nominaux au change 2025 ; PPA = euros au niveau de prix français ; est. = valeur ajustée ou estimée ; * = à moins de 0,1 d'une frontière de palier.", ""]
 for prefixe in ("Tableau final, partie A", "Tableau final, partie B"):
     titre, corps = sec(prefixe)
