@@ -197,7 +197,8 @@ A("")
 
 # --- Sensibilite aux poids -------------------------------------------------------------
 VARIANTES = {
-    "Base (22/20/15/15/13/15)": m.POIDS,
+    "Base v2 (24/21/16/16/7/16)": m.POIDS,
+    "Poids v1 (22/20/15/15/13/15), notes v2": m.POIDS_V1,
     "Poids egaux": {kk: 100 / 6 for kk in m.POIDS},
     "Revenu 30 (17/15/13/13/12/30)": {"C": 17, "Ch": 15, "R": 13, "Se": 13, "Sn": 12, "Rev": 30},
 }

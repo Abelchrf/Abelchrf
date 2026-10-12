@@ -13,7 +13,14 @@ import os
 # ---------------------------------------------------------------------------
 # 1. Poids des criteres (opinion fondee sur la litterature, pas un consensus)
 # ---------------------------------------------------------------------------
-POIDS = {"C": 22, "Ch": 20, "R": 15, "Se": 15, "Sn": 13, "Rev": 15}
+# Version 2 (12 octobre 2026). Changements declares par rapport a la version 1 :
+# - Sens 13 -> 7 : au niveau d'un triplet, seule l'utilite de la tache est previsible ; l'adhesion a la
+#   mission depend de l'employeur. Les 6 points sont redistribues au prorata des autres poids.
+# - Controle : retrait du malus "affectation geographique imposee" (hors definition : temps et methode).
+# - Sens : moins 1 pour les soignants hospitaliers salaries ou la DARES documente des conflits de valeurs
+#   frequents (aides-soignants, infirmiers, sages-femmes ; S58).
+POIDS_V1 = {"C": 22, "Ch": 20, "R": 15, "Se": 15, "Sn": 13, "Rev": 15}
+POIDS = {"C": 24, "Ch": 21, "R": 16, "Se": 16, "Sn": 7, "Rev": 16}
 SEUILS = [("S", 4.2), ("A", 3.6), ("B", 3.0)]  # en dessous : C
 
 # ---------------------------------------------------------------------------
@@ -118,7 +125,7 @@ add(id="T07", metier="Pharmacien titulaire", statut="independant", pays="France"
     fin="Idem T06 + rachat d'officine (pret, apport)", sel="p estime 12 % (financement sans capital)")
 add(id="T08", metier="Sage-femme", statut="fonctionnaire FPH", pays="France",
     E=31, start=30000, m40=39600, p80=45000, pre=[(25, 27, 0), (28, 30, 1500)],
-    C=3, Ch=3, R=3, Se=5, Sn=5, p=0.18, cap=2, ia="faible",
+    C=3, Ch=3, R=3, Se=5, Sn=4, p=0.18, cap=2, ia="faible",
     src="S10 (DREES : sages-femmes hospitalieres 3 442 EUR/mois moy.)",
     fin="Licence portail sante + 5 ans (maieutique en 6 ans)", sel="p estime 18 %")
 add(id="T09", metier="Sage-femme", statut="liberal", pays="France",
@@ -138,7 +145,7 @@ add(id="T11", metier="Masseur-kinesitherapeute", statut="fonctionnaire FPH", pay
     fin="Idem T10", sel="p estime 7 %")
 add(id="T12", metier="Infirmier", statut="fonctionnaire FPH", pays="France",
     E=28, start=27000, m40=34800, p80=39600, pre=IFSI_PRE,
-    C=2, Ch=2, R=3, Se=5, Sn=5, p=0.25, cap=2, ia="faible",
+    C=2, Ch=2, R=3, Se=5, Sn=4, p=0.25, cap=2, ia="faible",
     src="S10 (DREES 2023 : infirmiers hopital public 2 872 EUR/mois moy.) + S09",
     fin="IFSI 3 ans (Parcoursup, ou voie FPC avec 3 ans de cotisations ; Transition Pro possible)", sel="2025 : 116 000 candidats pour 25 000 places ; p estime 25 %")
 add(id="T13", metier="Infirmier", statut="liberal", pays="France",
@@ -149,7 +156,7 @@ add(id="T13", metier="Infirmier", statut="liberal", pays="France",
 add(id="T14", metier="Infirmier anesthesiste (IADE)", statut="fonctionnaire FPH", pays="France",
     E=32, start=36000, m40=42000, p80=48000,
     pre=IFSI_PRE + [(28, 28, 27000), (29, 29, 28000), (30, 31, 29000)],
-    C=3, Ch=3, R=3, Se=5, Sn=5, p=0.09, cap=2, ia="faible",
+    C=3, Ch=3, R=3, Se=5, Sn=4, p=0.09, cap=2, ia="faible",
     src="estime : grille IADE FPH ; ancrage S09",
     fin="IFSI + 2 ans d'exercice + concours + 2 ans (promotion professionnelle remuneree)", sel="p estime 9 %")
 add(id="T15", metier="Orthophoniste", statut="liberal", pays="France",
@@ -184,7 +191,7 @@ add(id="T20", metier="Psychologue", statut="contractuel FPH", pays="France",
     fin="Licence + master selectif", sel="p estime 20 %")
 add(id="T21", metier="Aide-soignant", statut="fonctionnaire FPH", pays="France",
     E=26, start=22000, m40=27000, p80=30000, pre=[(25, 25, 0)],
-    C=1, Ch=2, R=3, Se=5, Sn=5, p=0.75, cap=1, ia="faible",
+    C=1, Ch=2, R=3, Se=5, Sn=4, p=0.75, cap=1, ia="faible",
     src="S14 (grille AS FPH 2025, IM 372 a 558) + CTI ; S12 (point 4,92278 EUR)",
     fin="IFAS 1 an (apprentissage possible)", sel="p estime 75 %")
 add(id="T22", metier="Osteopathe", statut="liberal", pays="France",
@@ -376,12 +383,12 @@ add(id="T56", metier="Professeur des ecoles", statut="fonctionnaire", pays="Fran
     fin="Licence puis CRPE a bac+3 + 2 ans de master remuneres (1 400 puis 1 800 EUR net)", sel="p estime 40 %")
 add(id="T57", metier="Professeur certifie", statut="fonctionnaire", pays="France",
     E=30, start=25800, m40=29400, p80=34800, pre=ENS_PRE,
-    C=3, Ch=4, R=3, Se=5, Sn=5, p=0.35, cap=2, ia="moyenne",
+    C=4, Ch=4, R=3, Se=5, Sn=5, p=0.35, cap=2, ia="moyenne",
     src="S11 (DEPP 2024 : certifies 3 130 EUR moy. tous ages) ; calcul grille 2 450 EUR",
     fin="Licence puis CAPES a bac+3 + 2 ans remuneres", sel="p estime 35 %")
 add(id="T58", metier="Gardien de la paix", statut="fonctionnaire", pays="France",
     E=26, start=26400, m40=34200, p80=39600, pre=[(25, 25, 19000)],
-    C=1, Ch=2, R=2, Se=5, Sn=4, p=0.30, cap=1, ia="faible",
+    C=2, Ch=2, R=2, Se=5, Sn=4, p=0.30, cap=1, ia="faible",
     src="S13 (grille brigadier-chef 2 550 a 2 678 EUR brut + ISSP 28,5 %)",
     fin="Concours (bac) + 12 mois remuneres (1 570 a 1 617 EUR net)", sel="p estime 30 %")
 add(id="T59", metier="Sapeur-pompier professionnel", statut="fonctionnaire territorial", pays="France",
@@ -391,22 +398,22 @@ add(id="T59", metier="Sapeur-pompier professionnel", statut="fonctionnaire terri
     fin="Volontariat + concours + recrutement par un SDIS", sel="p estime 8 %")
 add(id="T60", metier="Attache d'administration", statut="fonctionnaire", pays="France",
     E=29, start=27600, m40=33000, p80=42000, pre=[(25, 27, 0), (28, 28, 21600)],
-    C=2, Ch=4, R=3, Se=5, Sn=3, p=0.10, cap=2, ia="moyenne",
+    C=3, Ch=4, R=3, Se=5, Sn=3, p=0.10, cap=2, ia="moyenne",
     src="estime : grille attache + IFSE ; ancrage S66 (DGAFP : cat. A 3 321 EUR moy. 2023, via secondaire)",
     fin="Licence + concours IRA + 1 an remunere", sel="p estime 10 %")
 add(id="T61", metier="Inspecteur des finances publiques", statut="fonctionnaire", pays="France",
     E=29, start=30000, m40=38400, p80=48000, pre=[(25, 27, 0), (28, 28, 22800)],
-    C=2, Ch=4, R=3, Se=5, Sn=3, p=0.15, cap=2, ia="moyenne",
+    C=3, Ch=4, R=3, Se=5, Sn=3, p=0.15, cap=2, ia="moyenne",
     src="estime : grille + primes DGFiP ; ancrage S67 (INSEE FPE 2024 : cat. A 3 543 EUR moy.)",
     fin="Licence + concours + ENFiP remuneree", sel="p estime 15 %")
 add(id="T62", metier="Controleur des finances publiques", statut="fonctionnaire", pays="France",
     E=26, start=24000, m40=30600, p80=36000, pre=[(25, 25, 20400)],
-    C=2, Ch=5, R=3, Se=5, Sn=3, p=0.30, cap=1, ia="moyenne",
+    C=3, Ch=5, R=3, Se=5, Sn=3, p=0.30, cap=1, ia="moyenne",
     src="estime : grille B + primes DGFiP ; ancrage S66 (DGAFP : cat. B 2 588 EUR moy. 2023)",
     fin="Concours de niveau bac + formation remuneree", sel="p estime 30 %")
 add(id="T63", metier="Controleur aerien (ICNA)", statut="fonctionnaire", pays="France",
     E=30, start=48000, m40=66000, p80=78000, pre=[(25, 27, 21600), (28, 29, 30000)],
-    C=1, Ch=3, R=4, Se=5, Sn=4, p=0.01, cap=1, ia="faible",
+    C=2, Ch=3, R=4, Se=5, Sn=4, p=0.01, cap=1, ia="faible",
     src="estime : S68 (Cour des comptes 2010 via iFRAP : 5 000 EUR net/mois moy.), revalorise",
     fin="Concours externe : moins de 26 ans au 1er janvier, niveau CPGE ; formation remuneree", sel="Fenetre 2027-2028 seulement ; p estime 1 %")
 add(id="T64", metier="Administrateur UE (AD)", statut="fonctionnaire europeen", pays="Luxembourg (resident)", cur="EUR", resid="LU",
@@ -421,7 +428,7 @@ add(id="T65", metier="Agent contractuel UE (GF II-III)", statut="contractuel", p
     fin="CAST permanent (bac + 3 ans d'experience, C1 + B2), inscription continue", sel="p estime 15 %")
 add(id="T66", metier="Sous-officier", statut="militaire", pays="France",
     E=26, start=22800, m40=33000, p80=40000, pre=[(25, 25, 18000)],
-    C=1, Ch=2, R=4, Se=4, Sn=4, p=0.70, cap=1, ia="faible",
+    C=2, Ch=2, R=4, Se=4, Sn=4, p=0.70, cap=1, ia="faible",
     src="estime : grille de solde non recuperee",
     fin="Ecole de sous-officiers 8 mois (moins de 32 ans, bac)", sel="p estime 70 %")
 add(id="T67", metier="Avocat", statut="liberal", pays="France",
@@ -447,7 +454,7 @@ add(id="T70", metier="Comptable", statut="salarie", pays="Luxembourg (frontalier
     fin="BTS CG + emploi au Luxembourg", sel="p estime 45 %")
 add(id="T71", metier="Magistrat", statut="fonctionnaire", pays="France",
     E=33, start=40000, m40=51600, p80=60000, pre=[(25, 29, 0), (30, 32, 21600)],
-    C=3, Ch=3, R=3, Se=5, Sn=5, p=0.08, cap=2, ia="faible",
+    C=4, Ch=3, R=3, Se=5, Sn=5, p=0.08, cap=2, ia="faible",
     src="estime : grille magistrats + primes non recuperee",
     fin="Licence + M1 + concours ENM + 31 mois remuneres", sel="Environ 10,5 % de reussite ; p estime 8 %")
 

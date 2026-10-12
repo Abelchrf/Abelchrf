@@ -2,11 +2,11 @@
 
 | Triplet | En une phrase |
 |---|---|
-| T05 Chirurgien-dentiste × libéral × France | Meilleur score interne du pool grâce au contrôle maximal et au revenu le plus élevé de France à 40 ans (92 k€ médian), payé par moins de 5 % de chances d'accès estimées et 5,7 années de revenu perdues. |
-| T15 Orthophoniste × libéral × France | À égalité avec le dentiste (écart inférieur à 0,005), porté par une charge légère, une pénurie qui garantit l'emploi et un sens maximal, malgré un revenu modeste (31 k€) et 3,29 % d'admis en 2025. |
-| T09 Sage-femme × libéral × France | S de justesse (marge 0,07, moins de 0,1 de la frontière) mais barrière la plus basse des trois (entrée à 31 ans, p estimé 16 %), avec 40 k€ médians à 40 ans. |
+| T05 Chirurgien-dentiste × libéral × France | Premier en v1 comme en v2 grâce au contrôle maximal et au revenu le plus élevé de France à 40 ans (92 k€ médian), payé par moins de 5 % de chances d'accès estimées et 5,7 années de revenu perdues. |
+| T15 Orthophoniste × libéral × France | Deuxième, presque à égalité avec le dentiste, porté par une charge légère et une pénurie qui garantit l'emploi, malgré un revenu modeste (31 k€) et 3,29 % d'admis en 2025. |
+| T09 Sage-femme × libéral × France | S de justesse (marge 0,03, moins de 0,1 de la frontière) mais barrière la plus basse des trois (entrée à 31 ans, p estimé 16 %), avec 40 k€ médians à 40 ans. |
 
-Lecture : les trois S sont des professions de santé libérales françaises, parce que les poids (contrôle 22, charge 20) récompensent l'autonomie bien plus que le revenu. Aucun triplet hors de France n'atteint S avec ces poids ; le médecin généraliste indépendant en Suisse (T30) passe en S avec des poids égaux, et seuls T05 et T30 restent S si le revenu pèse 30. Une seule note de moins en contrôle ou en charge fait tomber T05 et T15 en A ; n'importe quelle note de moins fait tomber T09.
+Lecture : les trois S sont des professions de santé libérales françaises, parce que les poids (contrôle 24, charge 21) récompensent l'autonomie bien plus que le revenu. Diviser le poids du sens par deux (v2) ne change pas le palier S et ne déplace le top 10 que d'un rang (T76 et T02 s'échangent) ; l'ingénieur en apprentissage (T41) entre au 12e rang. Aucun triplet hors de France n'atteint S ; le médecin généraliste indépendant en Suisse (T30) passe en S avec des poids égaux, et seuls T05 et T30 restent S si le revenu pèse 30. Une note de moins en contrôle, charge, relations ou sécurité fait tomber T05 et T15 en A ; n'importe quelle note de moins fait tomber T09.
 
 ## 7. Ce qui est vérifiable et ce qui est mon opinion
 
@@ -18,7 +18,7 @@ Lecture : les trois S sont des professions de santé libérales françaises, par
 | Poids des critères | Opinion fondée sur des tailles d'effet publiées ; aucun consensus chiffré. |
 | Probabilités de réussite p | Estimations personnelles ancrées sur des taux d'admission publiés ; ne tiennent pas compte d'une préparation intensive ni d'aptitudes réelles différentes de la moyenne. |
 | Scénarios IA | Bornes de scénario, poids de preuve faible ; ne sont pas des prévisions. |
-| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 35 triplets sur 79 sont à moins de 0,1 d'une frontière. |
+| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 33 triplets sur 79 sont à moins de 0,1 d'une frontière en v2. |
 
 Règle de révision : un palier ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée dans les entrées ci-dessus, jamais sur une simple contestation.
 
