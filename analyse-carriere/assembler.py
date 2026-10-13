@@ -45,6 +45,8 @@ for prefixe in ("À moins de 0,1", "Égalités", "Sensibilité", "Marge"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
 parties += [lire("conclusion.md").strip(), ""]
+import choix_realiste  # ecrit choix_realiste.md
+parties += [lire("choix_realiste.md").strip(), ""]
 
 texte = "\n".join(parties)
 interdits = [c for c in texte if c in "‐‑‒–—―−"]
