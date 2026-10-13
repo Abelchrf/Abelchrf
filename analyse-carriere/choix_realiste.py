@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """Classement en deux temps demande le 13 octobre 2026 :
-1. garder les triplets ou l'on vit bien une fois dedans (palier S ou A, modele v2.1) ;
+1. garder les triplets ou l'on vit bien une fois dedans (palier S ou A, modele v3 depuis le 13 octobre) ;
 2. les classer par meilleur pari realiste (esperance de bien-etre avec les vraies chances).
 
 Hypotheses declarees avant calcul :
@@ -59,6 +59,7 @@ def ecrire_section(chemin="choix_realiste.md"):
     L = ["## 10. Classement en deux temps (13 octobre 2026)", "",
          "Demande : d'abord les métiers où l'on vit bien une fois dedans (palier S ou A), puis, parmi eux, le meilleur pari réaliste. Aucun filtre de domaine.", "",
          "Hypothèses déclarées avant calcul : espérance du score de bien-être annuel de 24 à 45 ans ; avant l'entrée, score de l'emploi actuel (T75) ; réussite avec la probabilité p du modèle ; en cas d'échec, connu à 26 ans (28 ou 29 ans pour les voies licence puis concours), 1 an de reconversion puis plan B = électricien salarié (T47) ; égalité si l'écart est inférieur à 0,01. Variantes : horizon 24 à 64 ans ; plan B = emploi actuel.", "",
+         "Limite : pour une variante à l'étranger (frontalier, résident en Suisse, États-Unis, Irlande), un échec à la dernière étape (permis, visa, équivalence) laisse en réalité la version française du métier, pas le plan B ; l'espérance de ces variantes est donc sous-estimée.", "",
          "| Rang | ID | Triplet | Palier une fois dedans | Chances p | Entrée | Médian 40 ans PPA k€ | Rang 24-64 ans | Rang si plan B = emploi actuel |",
          "|---|---|---|---|---|---|---|---|---|"]
     for i, t in enumerate(classes, 1):

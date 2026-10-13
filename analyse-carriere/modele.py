@@ -20,7 +20,12 @@ import os
 # - Sens : moins 1 pour les soignants hospitaliers salaries ou la DARES documente des conflits de valeurs
 #   frequents (aides-soignants, infirmiers, sages-femmes ; S58).
 POIDS_V1 = {"C": 22, "Ch": 20, "R": 15, "Se": 15, "Sn": 13, "Rev": 15}
-POIDS = {"C": 24, "Ch": 21, "R": 16, "Se": 16, "Sn": 7, "Rev": 16}
+POIDS_V2 = {"C": 24, "Ch": 21, "R": 16, "Se": 16, "Sn": 7, "Rev": 16}
+# Version 3 (13 octobre 2026) : ajout du critere L = autonomie sur le lieu de travail (teletravail),
+# poids 8, les autres poids v2 reduits au prorata. Appui : Gajendran et Harrison 2007 (effets du
+# teletravail faibles mais favorables, en partie via l'autonomie) ; part importante des ingenieurs
+# informatiques en teletravail (DARES 2023).
+POIDS = {"C": 22, "Ch": 19, "R": 15, "Se": 15, "Sn": 6, "Rev": 15, "L": 8}
 SEUILS = [("S", 4.2), ("A", 3.6), ("B", 3.0)]  # en dessous : C
 
 # ---------------------------------------------------------------------------
@@ -28,11 +33,11 @@ SEUILS = [("S", 4.2), ("A", 3.6), ("B", 3.0)]  # en dessous : C
 # ---------------------------------------------------------------------------
 # Indices de niveau de prix Eurostat 2024, consommation finale des menages, UE27=100.
 # CA : estime a partir du ratio OCDE (niveaux de prix PIB 2024 : Canada 105, France 95).
-PLI = {"FR": 111, "DE": 109, "LU": 133, "CH": 174, "CA": round(111 * 105 / 95)}
+PLI = {"FR": 111, "DE": 109, "LU": 133, "CH": 174, "CA": round(111 * 105 / 95), "IE": 138, "US": round(111 * 126 / 95)}
 # Taux de change moyens 2024 (BCE), unites de devise pour 1 euro, coherents avec les PLI 2024.
-XR2024 = {"EUR": 1.0, "CHF": 0.9526, "CAD": 1.4821}
+XR2024 = {"EUR": 1.0, "CHF": 0.9526, "CAD": 1.4821, "USD": 1.0824}  # USD : moyenne BCE 2024 (S84)
 # Taux de change aout-decembre 2025 (Banque de France, reference BCE) pour la valeur non ajustee.
-XR2025 = {"EUR": 1.0, "CHF": 0.933, "CAD": 1.619}
+XR2025 = {"EUR": 1.0, "CHF": 0.933, "CAD": 1.619, "USD": 1.16}  # USD : septembre 1,1732, octobre 1,1630, novembre 1,1560 (S38)
 # Surcout regional estime pour les frontaliers residant en France (pas de serie officielle).
 PRIME_REGION = {"FR-GE": 0.10, "FR-LO": 0.05}
 
@@ -514,6 +519,53 @@ add(id="T85", metier="Data engineer", statut="salarie", pays="France",
     src="S17 (APEC 2025 : IT 35-45 ans 49 a 101 kEUR) ; estime 60 000 EUR brut x 0,78",
     fin="BUT informatique ou science des donnees en alternance", sel="p estime 30 %")
 
+# --- Autres pays (version 3) ---------------------------------------------------------
+CLOUD_PRE = IT_PRE + [(29, 29, 38000), (30, 30, 40500)]
+CYBER_PRE = ALT2 + [(27, 29, 18500), (30, 30, 35100)]
+add(id="T86", metier="Ingenieur cloud et DevOps", statut="salarie", pays="Suisse (resident)", cur="CHF", resid="CH",
+    E=31, start=72000, m40=100000, p80=116000, pre=CLOUD_PRE,
+    C=4, Ch=3, R=4, Se=4, Sn=3, p=0.15, cap=2, ia="moyenne",
+    src="S26 (ESS 2024 TIC : 9 490 CHF/mois) ; estime specialite cloud 125 000 CHF brut x 0,80",
+    fin="Comme T80 + 2 ans d'experience + permis B de droit avec un contrat d'au moins un an (S90)", sel="p estime 15 %")
+add(id="T87", metier="Ingenieur cloud et DevOps", statut="salarie", pays="Irlande", cur="EUR", resid="IE",
+    E=31, start=56200, m40=83000, p80=100500, pre=CLOUD_PRE,
+    C=4, Ch=3, R=3, Se=3, Sn=3, p=0.15, cap=2, ia="moyenne",
+    src="S79 (Morgan McKinley : 65 000 a 80 000 EUR a Dublin ; mediane 79 000 EUR, P75 107 000 EUR) ; estime 60 000, 90 000 et 110 000 EUR brut moins PRSI 4,2 % et USC (S85) ; sources privees",
+    fin="Comme T80 + anglais courant", sel="p estime 15 %")
+add(id="T88", metier="Ingenieur cloud et DevOps", statut="salarie", pays="Etats-Unis", cur="USD", resid="US",
+    E=31, start=100100, m40=127400, p80=163800, pre=CLOUD_PRE,
+    C=4, Ch=3, R=3, Se=3, Sn=3, p=0.03, cap=3, ia="moyenne",
+    src="S80 (BLS mai 2024 : developpeurs logiciels, mediane 133 080 USD) ; estime 110 000, 140 000 et 180 000 USD brut x 0,91 ; donnee americaine",
+    fin="Comme T80 + visa de travail (loterie H-1B ponderee, 100 000 USD a la charge de l'employeur pour un candidat a l'etranger, S88)", sel="p estime 3 %")
+add(id="T89", metier="Ingenieur cybersecurite (hors SOC)", statut="salarie", pays="Suisse (resident)", cur="CHF", resid="CH",
+    E=31, start=72000, m40=96000, p80=112000, pre=CYBER_PRE,
+    C=4, Ch=4, R=4, Se=4, Sn=4, p=0.15, cap=2, ia="moyenne",
+    src="S26 (ESS 2024 TIC : 9 490 CHF/mois) ; estime 120 000 CHF brut x 0,80",
+    fin="Comme T83 + 1 an d'experience + permis B (S90)", sel="p estime 15 %")
+add(id="T90", metier="Ingenieur cybersecurite (hors SOC)", statut="salarie", pays="Etats-Unis", cur="USD", resid="US",
+    E=31, start=86450, m40=118300, p80=150150, pre=CYBER_PRE,
+    C=4, Ch=4, R=3, Se=4, Sn=4, p=0.03, cap=3, ia="moyenne",
+    src="S81 (BLS mai 2024 : analystes en securite de l'information, mediane 124 910 USD) ; estime 95 000, 130 000 et 165 000 USD brut x 0,91 ; Se 4 car croissance projetee +29 % de 2024 a 2034 (S87) ; donnee americaine",
+    fin="Comme T83 + visa de travail (S88)", sel="p estime 3 %")
+add(id="T91", metier="Chirurgien-dentiste", statut="liberal", pays="Suisse (resident)", cur="CHF", resid="CH",
+    E=33, start=110000, m40=145000, p80=220000,
+    pre=[(25, 27, 0), (28, 30, 2000), (31, 31, 55000), (32, 32, 60000)],
+    C=5, Ch=3, R=4, Se=5, Sn=5, p=0.04, cap=4, ia="faible",
+    src="estime : aucune statistique SSO trouvee ; proxy S24 (OFS 2019 : medecins independants, mediane 162 000 CHF nets d'AVS et de 2e pilier)",
+    fin="Dentaire en France + reconnaissance automatique UE + rachat ou creation de cabinet", sel="p estime 4 %")
+add(id="T92", metier="Chirurgien-dentiste", statut="liberal", pays="Etats-Unis", cur="USD", resid="US",
+    E=34, start=118300, m40=163800, p80=236600,
+    pre=[(25, 27, 0), (28, 30, 2000), (31, 31, 55000), (32, 33, -125000, "USD", "US")],
+    C=5, Ch=3, R=3, Se=5, Sn=5, p=0.02, cap=5, ia="faible",
+    src="S82 (BLS 2024 : dentistes, mediane 179 210 USD, salaries seulement) ; estime 130 000, 180 000 et 260 000 USD x 0,91 (convention salarie) ; proxy prudent pour un liberal ; donnee americaine",
+    fin="Dentaire en France + 2 a 3 ans d'advanced standing (environ 250 000 USD a Ohio State, S86) + INBDE + licence d'Etat + visa", sel="p estime 2 %")
+add(id="T93", metier="Orthophoniste", statut="salarie", pays="Etats-Unis", cur="USD", resid="US",
+    E=33, start=68250, m40=91000, p80=113750,
+    pre=[(25, 29, 0), (30, 31, 24000), (32, 32, -40000, "USD", "US")],
+    C=3, Ch=5, R=3, Se=5, Sn=5, p=0.02, cap=4, ia="faible",
+    src="S83 (BLS mai 2024 : orthophonistes, mediane 95 410 USD) ; estime 75 000, 100 000 et 125 000 USD brut x 0,91 ; donnee americaine",
+    fin="Orthophonie en France + equivalence de master ASHA, Praxis, 36 semaines de clinical fellowship (S89) + visa", sel="p estime 2 %")
+
 # --- Commerce et autres --------------------------------------------------------
 add(id="T72", metier="Commercial B2B", statut="salarie", pays="France",
     E=27, start=28000, m40=38400, p80=55000, pre=ALT2,
@@ -535,6 +587,32 @@ add(id="T75", metier="Employe commerce ou accueil (reference)", statut="salarie"
     C=2, Ch=3, R=2, Se=3, Sn=2, p=1.0, cap=1, ia="moyenne",
     src="S08 (employes mediane 1 800 EUR/mois) + SMIC 2026 1 823,03 EUR brut (S43)",
     fin="Aucune", sel="p 100 %")
+
+# Notes de lieu (critere L, version 3), estimations normatives sur l'usage courant du metier :
+# 5 lieu largement libre (independant qui choisit des missions a distance) ;
+# 4 teletravail regulier d'environ 2 a 3 jours par semaine (plafond de 3 jours de la fonction publique,
+#   60 % avec accord du chef d'unite dans les institutions de l'UE, 40 % pour les frontaliers en Suisse) ;
+# 3 environ 1 jour par semaine, ou part importante du travail faisable chez soi (preparation, redaction),
+#   ou frontalier au Luxembourg (seuil fiscal de 34 jours par an) ;
+# 2 teletravail rare, ou lieu fixe mais choisi par le travailleur (installation liberale ou artisanale) ;
+# 1 presence physique sur un lieu impose, sans teletravail.
+# Cas limites : T64 note 4 comme T60 a T62 (plafond de 3 jours par semaine dans les deux cas) ; T93 note 2
+# comme T15 (meme profession, telepratique non chiffree) ; T73 note 3 comme T72 (mandataire travaillant
+# depuis son domicile).
+L_NOTES = {
+    "T01": 2, "T02": 1, "T03": 2, "T04": 1, "T05": 2, "T06": 1, "T07": 2, "T08": 1, "T09": 2, "T10": 2,
+    "T11": 1, "T12": 1, "T13": 2, "T14": 1, "T15": 2, "T16": 1, "T17": 1, "T18": 1, "T19": 2, "T20": 3,
+    "T21": 1, "T22": 2, "T23": 1, "T24": 1, "T25": 1, "T26": 1, "T27": 1, "T28": 1, "T29": 1, "T30": 2,
+    "T31": 1, "T32": 2, "T33": 1, "T34": 1, "T35": 4, "T36": 5, "T37": 4, "T38": 4, "T39": 3, "T40": 4,
+    "T41": 2, "T42": 2, "T43": 2, "T44": 1, "T45": 3, "T46": 4, "T47": 1, "T48": 2, "T49": 1, "T50": 1,
+    "T51": 2, "T52": 1, "T53": 1, "T54": 1, "T55": 1, "T56": 3, "T57": 3, "T58": 1, "T59": 1, "T60": 4,
+    "T61": 4, "T62": 4, "T63": 1, "T64": 4, "T65": 4, "T66": 1, "T67": 3, "T68": 3, "T69": 4, "T70": 3,
+    "T71": 3, "T72": 3, "T73": 3, "T74": 1, "T75": 1, "T76": 2, "T77": 1, "T78": 3, "T79": 1, "T80": 4,
+    "T81": 5, "T82": 4, "T83": 4, "T84": 2, "T85": 4, "T86": 4, "T87": 4, "T88": 4, "T89": 4, "T90": 4,
+    "T91": 2, "T92": 2, "T93": 2,
+}
+for _t in T:
+    _t["L"] = L_NOTES[_t["id"]]
 
 # ---------------------------------------------------------------------------
 # 5. Calculs
@@ -622,7 +700,7 @@ def score_revenu(t, mult=1.0):
 
 def total(t, rev, se):
     return (POIDS["C"] * t["C"] + POIDS["Ch"] * t["Ch"] + POIDS["R"] * t["R"]
-            + POIDS["Se"] * se + POIDS["Sn"] * t["Sn"] + POIDS["Rev"] * rev) / 100
+            + POIDS["Se"] * se + POIDS["Sn"] * t["Sn"] + POIDS["Rev"] * rev + POIDS["L"] * t["L"]) / 100
 
 
 # Scenario IA fort (poids de preuve faible) : exposition moyenne = Securite -1 et revenus x 0,9 ;
@@ -641,8 +719,8 @@ for t in T:
     t["W_ia"] = total(t, t["Rev_ia"], t["Se_ia"])
     t["palier_ia"] = classer(t["W_ia"])
 
-CRIT = ("C", "Ch", "R", "Se", "Sn", "Rev")
-CRIT_IA = ("C", "Ch", "R", "Se_ia", "Sn", "Rev_ia")
+CRIT = ("C", "Ch", "R", "Se", "Sn", "Rev", "L")
+CRIT_IA = ("C", "Ch", "R", "Se_ia", "Sn", "Rev_ia", "L")
 
 
 def domine(y, x, crit=CRIT):

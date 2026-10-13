@@ -73,6 +73,11 @@ ACCENTS = [
     ("administration systemes", "administration systèmes"), ("mastere", "mastère"), ("donnees", "données"), ("sources privees", "sources privées"),
     ("specialites", "spécialités"), ("specialite cloud", "spécialité cloud"), ("confirme)", "confirmé)"), ("a pourvoir", "à pourvoir"),
     ("de 2019 a 2024", "de 2019 à 2024"), ("poste 24", "posté 24"), ("bas de fourchette", "bas de fourchette"), ("a 5-10 ans", "à 5-10 ans"),
+    ("Etats-Unis", "États-Unis"), ("americain", "américain"), ("developpeurs", "développeurs"), ("trouvee", "trouvée"),
+    ("projetee", "projetée"), ("ponderee", "pondérée"), ("a la charge de", "à la charge de"), ("a l'etranger", "à l'étranger"),
+    ("d'Etat", "d'État"), ("equivalence", "équivalence"), ("2 a 3 ans", "2 à 3 ans"), (" a Ohio State", " à Ohio State"),
+    ("de 2024 a 2034", "de 2024 à 2034"), (" a Dublin", " à Dublin"), ("65 000 a 80 000", "65 000 à 80 000"),
+    ("teletravail", "télétravail"),
     ("kEUR", "k€"), ("EUR", "€"),
 ]
 
@@ -125,7 +130,7 @@ A("")
 A("### Elimines (domines dans les deux scenarios IA)\n")
 A("| Elimine | Domine par | Pourquoi (le dominant fait au moins aussi bien partout, et mieux sur) |")
 A("|---|---|---|")
-noms = {"C": "controle", "Ch": "charge", "R": "relations", "Se": "securite", "Sn": "sens", "Rev": "revenu"}
+noms = {"C": "controle", "Ch": "charge", "R": "relations", "Se": "securite", "Sn": "sens", "Rev": "revenu", "L": "lieu"}
 for x in T:
     if not x["domine_par"]:
         continue
@@ -148,23 +153,23 @@ A("")
 
 # --- Tableau final ------------------------------------------------------------------
 A("### Tableau final (non domines, tries par score interne decroissant)\n")
-A("| ID | Triplet | Palier | Med. 40 ans nom./PPA kEUR | Src med. | P80 40 ans nom./PPA kEUR | Src P80 | Cumul 24-45 ans PPA kEUR | C | Ch | R | Se | Sn | Entree | Formation et financement | Selectivite | Annees perdues | Indice barriere | IA : exposition, palier si IA fort |")
-A("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+A("| ID | Triplet | Palier | Med. 40 ans nom./PPA kEUR | Src med. | P80 40 ans nom./PPA kEUR | Src P80 | Cumul 24-45 ans PPA kEUR | C | Ch | R | Se | Sn | L | Entree | Formation et financement | Selectivite | Annees perdues | Indice barriere | IA : exposition, palier si IA fort |")
+A("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 for t in sorted(FIN, key=lambda t: -t["W"]):
     A(f"| {t['id']} | {tri(t)} | {pal(t)} | {k(t['m40_nom'])} / {k(t['m40_ppa'])} | {codes(t['src'])} | "
       f"{k(t['p80_nom'])} / {k(t['p80_ppa'])} | {SRC80.get(t['id'], 'est.')} | {k(t['cum_ppa'])} | "
-      f"{t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['E']} ans | {t['fin']} | {t['sel']} | "
+      f"{t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} | {t['E']} ans | {t['fin']} | {t['sel']} | "
       f"{t['pertes']:.1f} | {t['B']:.2f} | {t['ia']}, {pal(t, 'W_ia', 'palier_ia')} |")
 A("")
 
 # --- Tableau final scinde (lecture sur ecran etroit) ------------------------------------
 A("### Tableau final, partie A : paliers, revenus et criteres\n")
-A("| ID | Triplet | Palier | Med. 40 ans nom./PPA kEUR | Src med. | P80 nom./PPA kEUR | Src P80 | Cumul 24-45 PPA kEUR | C | Ch | R | Se | Sn |")
-A("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+A("| ID | Triplet | Palier | Med. 40 ans nom./PPA kEUR | Src med. | P80 nom./PPA kEUR | Src P80 | Cumul 24-45 PPA kEUR | C | Ch | R | Se | Sn | L |")
+A("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 for t in sorted(FIN, key=lambda t: -t["W"]):
     A(f"| {t['id']} | {tri(t)} | {pal(t)} | {k(t['m40_nom'])} / {k(t['m40_ppa'])} | {codes(t['src'])} | "
       f"{k(t['p80_nom'])} / {k(t['p80_ppa'])} | {SRC80.get(t['id'], 'est.')} | {k(t['cum_ppa'])} | "
-      f"{t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} |")
+      f"{t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} |")
 A("")
 A("### Tableau final, partie B : barriere d'entree et risque IA (meme ordre)\n")
 A("| ID | Entree | Formation et financement | Selectivite | Annees perdues | Indice barriere | IA : exposition, palier si IA fort |")
@@ -201,10 +206,11 @@ A("")
 
 # --- Sensibilite aux poids -------------------------------------------------------------
 VARIANTES = {
-    "Base v2 (24/21/16/16/7/16)": m.POIDS,
-    "Poids v1 (22/20/15/15/13/15), notes v2": m.POIDS_V1,
-    "Poids egaux": {kk: 100 / 6 for kk in m.POIDS},
-    "Revenu 30 (17/15/13/13/12/30)": {"C": 17, "Ch": 15, "R": 13, "Se": 13, "Sn": 12, "Rev": 30},
+    "Base v3 (22/19/15/15/6/15, lieu 8)": m.POIDS,
+    "Poids v2 sans lieu (24/21/16/16/7/16)": m.POIDS_V2,
+    "Poids egaux (7 criteres)": {kk: 100 / len(m.POIDS) for kk in m.POIDS},
+    "Lieu 15 (20/18/14/14/5/14, lieu 15)": {"C": 20, "Ch": 18, "R": 14, "Se": 14, "Sn": 5, "Rev": 14, "L": 15},
+    "Revenu 30 (18/16/12/12/5/30, lieu 7)": {"C": 18, "Ch": 16, "R": 12, "Se": 12, "Sn": 5, "Rev": 30, "L": 7},
 }
 A("### Sensibilite des paliers aux poids (opinion, pas consensus)\n")
 A("| Variante | Palier S | Nombre S/A/B/C |")
@@ -212,7 +218,7 @@ A("|---|---|---|")
 for nom, P in VARIANTES.items():
     tiers = {}
     for t in T:
-        w = sum(P[c] * (t[c] if c != "Rev" else t["Rev"]) for c in m.POIDS) / 100
+        w = sum(P[c] * t[c] for c in P) / 100
         tiers[t["id"]] = m.classer(w)
     cnt = Counter(tiers.values())
     S_ids = [i for i, v in tiers.items() if v == "S"]
@@ -221,10 +227,13 @@ A("")
 
 # --- Marge des triplets S ------------------------------------------------------------------
 A("### Marge des triplets S au-dessus de 4,2\n")
+if not any(t["palier"] == "S" for t in T):
+    A("Aucun triplet S. Écart à la frontière des premiers : " + ", ".join(
+        f"{t['id']} {4.2 - t['W']:.2f}" for t in sorted(T, key=lambda t: -t["W"])[:4]) + ".")
 for t in sorted(T, key=lambda t: -t["W"]):
     if t["palier"] == "S":
         marge = t["W"] - 4.2
-        bascule = [noms[c] for c in ("C", "Ch", "R", "Se", "Sn") if m.POIDS[c] / 100 > marge]
+        bascule = [noms[c] for c in ("C", "Ch", "R", "Se", "Sn", "L") if m.POIDS[c] / 100 > marge]
         A(f"- {t['id']} : marge {marge:.2f} ; une note de moins sur {', '.join(bascule) if bascule else 'aucun critere seul'} le fait passer en A.")
 A("")
 

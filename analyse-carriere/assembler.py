@@ -36,7 +36,7 @@ n_fin = len(_m.T) - n_elim
 parties += ["## 3. Élimination", "", f"Règle : section 1.5. {n_elim} retraits ; un triplet dominé seulement sans IA est conservé.", "",
             sec("Éliminés")[1], ""]
 parties += [f"## 4. Tableau final ({n_fin} triplets non dominés, triés par score interne décroissant)", "",
-            "Notes : nom. = euros nominaux au change 2025 ; PPA = euros au niveau de prix français ; est. = valeur ajustée ou estimée ; * = à moins de 0,1 d'une frontière de palier.", ""]
+            "Notes : nom. = euros nominaux au change 2025 ; PPA = euros au niveau de prix français ; est. = valeur ajustée ou estimée ; * = à moins de 0,1 d'une frontière de palier ; C contrôle, Ch charge, R relations, Se sécurité, Sn sens, L lieu (télétravail).", ""]
 for prefixe in ("Tableau final, partie A", "Tableau final, partie B"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]

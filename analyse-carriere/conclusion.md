@@ -1,12 +1,13 @@
-## 6. Conclusion : palier S
+## 6. Conclusion : palier S vide en version 3, tête du palier A
 
 | Triplet | En une phrase |
 |---|---|
-| T05 Chirurgien-dentiste × libéral × France | Premier en v1 comme en v2 grâce au contrôle maximal et au revenu le plus élevé de France à 40 ans (92 k€ médian), payé par moins de 5 % de chances d'accès estimées et 5,7 années de revenu perdues. |
-| T15 Orthophoniste × libéral × France | Deuxième, presque à égalité avec le dentiste, porté par une charge légère et une pénurie qui garantit l'emploi, malgré un revenu modeste (31 k€) et 3,29 % d'admis en 2025. |
-| T09 Sage-femme × libéral × France | S de justesse (marge 0,03, moins de 0,1 de la frontière) mais barrière la plus basse des trois (entrée à 31 ans, p estimé 16 %), avec 40 k€ médians à 40 ans. |
+| T91 Chirurgien-dentiste × libéral × Suisse (résident) | Premier en v3, à 0,03 du palier S : mêmes notes que le dentiste français et 97 k€ PPA médians à 40 ans, mais un revenu estimé sans statistique propre aux dentistes suisses et 4 % de chances d'accès estimées. |
+| T05 Chirurgien-dentiste × libéral × France | Deuxième, 0,03 derrière : contrôle maximal, 92 k€ médians, pénurie qui garantit l'emploi, pénalisé comme tous les soignants par l'absence de télétravail. |
+| T15 Orthophoniste × libéral × France | Troisième, 0,008 derrière le dentiste français (pas une égalité, mais un écart minime) : charge la plus légère du classement malgré 31 k€ médians. |
+| T92 Chirurgien-dentiste × libéral × États-Unis | Quatrième avec le revenu le plus élevé du pool (114 k€ PPA, proxy prudent tiré des salariés), freiné par l'exercice en anglais ; donnée américaine peu transférable et 2 % de chances estimées. |
 
-Lecture : les trois S sont des professions de santé libérales françaises, parce que les poids (contrôle 24, charge 21) récompensent l'autonomie bien plus que le revenu. Diviser le poids du sens par deux (v2) ne change pas le palier S et ne déplace le top 10 que d'un rang (T76 et T02 s'échangent). Avec les métiers IT précis (v2.1), l'ingénieur cybersécurité (T83) entre au 10e rang et l'ingénieur cloud et DevOps freelance (T81) au 12e, à égalité avec l'ergothérapeute (T77) ; l'ingénieur cloud salarié (T80) reste 28e à cause des astreintes (13e sans astreintes). Aucun triplet hors de France n'atteint S ; le médecin généraliste indépendant en Suisse (T30) passe en S avec des poids égaux, et seuls T05 et T30 restent S si le revenu pèse 30. Une note de moins en contrôle, charge, relations ou sécurité fait tomber T05 et T15 en A ; n'importe quelle note de moins fait tomber T09.
+Lecture : le palier S est vide pour une seule raison : le critère lieu (poids 8) note 2 les soignants libéraux, qui ne peuvent pas télétravailler. Avec les poids v2 et les mêmes notes, T91, T15, T05, T09 et T92 seraient S ; avec un revenu pesant 30 (lieu 7), seul T91 passe en S. Le télétravail fait monter tous les métiers tech (rang sans le critère lieu, puis avec) : l'ingénieur cybersécurité résident en Suisse (T89) passe du 11e au 6e rang, l'ingénieur cloud et DevOps freelance (T81) du 17e au 7e, l'ingénieur cybersécurité aux États-Unis (T90) du 14e au 9e, ex aequo avec le kiné libéral (T10), le même en France (T83) du 16e au 12e. L'ingénieur cloud et DevOps salarié reste plus bas : 19e résident en Suisse, 23e frontalier, 27e en France, 37e aux États-Unis, 45e en Irlande, à cause des astreintes (charge 3, 2 pour le frontalier) et d'une sécurité de 3 aux États-Unis et en Irlande. Aucun triplet tech n'atteint S, même avec un poids de lieu de 15.
 
 ## 7. Ce qui est vérifiable et ce qui est mon opinion
 
@@ -14,21 +15,24 @@ Lecture : les trois S sont des professions de santé libérales françaises, par
 |---|---|
 | Revenus moyens ou médians cités (codes S), grilles de rémunération, indices de prix Eurostat, taux d'admission, règles d'âge et de tentatives | Vérifiable, mais lu ici à travers des résumés de moteur de recherche : à contrôler dans les tableaux primaires avant toute décision. |
 | Conversion du brut au net, surcoûts régionaux des frontaliers, ratios P80, trajectoires de revenu, frais de scolarité | Hypothèses déclarées (mon choix), modifiables dans `modele.py`. |
-| Notes de contrôle, charge, relations, sécurité, sens | Estimations normatives (mon jugement), guidées par DARES, DREES, INSEE, DEPP. |
+| Notes de contrôle, charge, relations, sécurité, sens, lieu | Estimations normatives (mon jugement), guidées par DARES, DREES, INSEE, DEPP et les règles de télétravail citées. |
+| Revenus et notes aux États-Unis | Revenus BLS vérifiables, mais transférabilité limitée : congés payés, assurance santé et protection contre le licenciement non comparables ; seul l'écart de prix est corrigé. |
 | Poids des critères | Opinion fondée sur des tailles d'effet publiées ; aucun consensus chiffré. |
 | Probabilités de réussite p | Estimations personnelles ancrées sur des taux d'admission publiés ; ne tiennent pas compte d'une préparation intensive ni d'aptitudes réelles différentes de la moyenne. |
 | Scénarios IA | Bornes de scénario, poids de preuve faible ; ne sont pas des prévisions. |
-| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 36 triplets sur 85 sont à moins de 0,1 d'une frontière en v2.1. |
+| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 29 triplets sur 93 sont à moins de 0,1 d'une frontière en v3. |
 
 Règle de révision : un palier ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée dans les entrées ci-dessus, jamais sur une simple contestation.
 
 ## 8. Cellules revenu manquantes ou estimées
 
 - Sans source directe, estimées sur grille, structure ou proxy : T06 pharmacien adjoint, T16 orthoptiste, T20 psychologue, T22 ostéopathe, T32 médecin de famille au Québec, T46 actuaire, T48 et T51 artisans du bâtiment, T59 sapeur-pompier, T66 sous-officier, T71 magistrat, T73 agent immobilier, T74 pilote, T78 diététicien, T84 analyste SOC.
-- Sourcées seulement par des sources privées (cabinets de recrutement, baromètres déclaratifs) : T80 à T83 ; aucune série officielle par spécialité IT n'a été trouvée.
+- Sourcées seulement par des sources privées (cabinets de recrutement, baromètres déclaratifs) : T80 à T83 et T87 ; aucune série officielle par spécialité IT n'a été trouvée.
+- Estimées sur un proxy : T91 (revenu des médecins indépendants suisses, aucune statistique de la SSO trouvée), T86 et T89 (médiane suisse des TIC ajustée à la spécialité), T92 (médiane BLS des dentistes salariés, appliquée à un libéral).
+- Données américaines (BLS), transférabilité limitée : T88, T90, T92, T93.
 - Sourcées mais ajustées (ancienneté du sujet, passage au net, proxy de branche) : toutes les autres cellules marquées « est. » dans le tableau final.
 - Tous les P80 sont estimés par ratio, sauf T23, T24 (haut de fourchette HUG), T28 (troisième quartile québécois), T36 (TJM au-delà de 15 ans) et T67 (dispersion des avocats).
-- Revenus non récupérés qui amélioreraient le plus la fiabilité : tableau INSEE des non-salariés 2024 par activité (médecine générale, dentaires, BTP, vétérinaires), jeu DREES 2026 des libéraux non médecins (orthophonistes, orthoptistes, podologues), tableau OFS T17 de l'ESS 2024 par profession, grille FHL par ancienneté, données RAMQ des médecins de famille.
+- Revenus non récupérés qui amélioreraient le plus la fiabilité : tableau INSEE des non-salariés 2024 par activité (médecine générale, dentaires, BTP, vétérinaires), jeu DREES 2026 des libéraux non médecins (orthophonistes, orthoptistes, podologues), tableau OFS T17 de l'ESS 2024 par profession, grille FHL par ancienneté, données RAMQ des médecins de famille, revenus des dentistes suisses (SSO ou Medisuisse), enquête de l'ADA sur le revenu des dentistes propriétaires de cabinet.
 
 ## 9. Sources
 
@@ -69,7 +73,7 @@ Règle de révision : un palier ne changera que sur une donnée nouvelle (par ex
 | S33 | Bundesagentur für Arbeit, Entgeltatlas 2024 : https://www.presseportal.de/pm/6776/6080481 ; https://statistik.arbeitsagentur.de/DE/Statischer-Content/Statistiken/Fachstatistiken/Beschaeftigung/Generische-Publikationen/Blickpunkt-Arbeitsmarkt-Analyse-zur-Entgeltstatistik.pdf?__blob=publicationFile |
 | S34 | TV-Ärzte VKA : https://www.praktischarzt.de/magazin/tv-aerzte-vka-mehr-gehalt-august-2025/ ; https://medizinio.de/blog/oberarzt-gehalt |
 | S35 | Guichet-Emplois et guide Québec 2024 : https://www.guichetemplois.gc.ca/rapportmarche/salaire-profession/993/QC ; https://cdn-contenu.quebec.ca/cdn-contenu/immigration/formulaires/fr/Embaucher_un_travailleur_temporaire/Guide_Salaires_par_professions_Edition_2024.pdf |
-| S36 | Eurostat, niveaux de prix 2024 (relais) : https://mail.actmedia.eu/daily/eurostat-household-consumption-price-levels-in-2024/114449 ; https://monstat.org/uploads/files/cijene/Komparativne/2/Comparative%20price%20levels%20in%202024.pdf |
+| S36 | Eurostat, niveaux de prix 2024 (relais) : https://mail.actmedia.eu/daily/eurostat-household-consumption-price-levels-in-2024/114449 ; https://monstat.org/uploads/files/cijene/Komparativne/2/Comparative%20price%20levels%20in%202024.pdf ; Irlande 138 : https://www.nsi.bg/en/press-release/ravnishta-na-potrebitelski-ceni-v-es-8317 |
 | S37 | OCDE, niveaux de prix 2024 via JILPT : https://www.jil.go.jp/kokunai/statistics/databook/2026/01/d2026_1T-16.pdf |
 | S38 | Banque de France, parités mensuelles 2025 : https://www.banque-france.fr/fr/statistiques/taux-et-cours/taux-de-change-parites-moyenne-mensuelle-2025-12 |
 | S39 | Règles PASS et LAS (AMU) : https://smpm.univ-amu.fr/sites/default/files/ressources_docs/M3C%20Acc%C3%A8s%20s%C3%A9lectif%202%C3%A8%20ann%C3%A9e%20MMOPK%202024-2025.pdf ; réussite 2024 : https://www.letudiant.fr/etudes/medecine-sante/reussite-en-pass-et-las-deux-etudiants-sur-cinq-integrent-les-etudes-de-sante-en-2024-1.html |
@@ -109,3 +113,21 @@ Règle de révision : un palier ne changera que sur une donnée nouvelle (par ex
 | S76 | Salaire ingénieur cybersécurité : https://salerya.fr/metiers/tech/ingenieur-cybersecurite/ |
 | S77 | Michael Page, salaires en cybersécurité : https://www.michaelpage.fr/advice/m%C3%A9tiers/syst%C3%A8mes-dinformation/quel-salaire-pour-un-expert-en-cybers%C3%A9curit%C3%A9 |
 | S78 | Pénurie cyber (observatoire ANSSI 2025, OPIIEC, CESIN) : https://www.it-connect.fr/la-penurie-de-competences-cyber-samplifie-en-france/ |
+| S79 | Ingénieur DevOps en Irlande : https://www.morganmckinley.com/ie/salary-guide/data/devops-engineer/dublin ; https://www.jobmentis.com/en/salaries/devops-engineer/ireland |
+| S80 | BLS, développeurs logiciels, mai 2024 (relais) : https://qz.com/career-salaries-entry-to-senior-level |
+| S81 | BLS, analystes en sécurité de l'information : https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm ; médiane mai 2024 relayée : https://wagedex.com/jobs/information-security-analysts/wisconsin |
+| S82 | BLS, dentistes, médiane 2024 (relais) : https://dentistry.louisville.edu/admission/explore-dentistry ; https://www.bls.gov/ooh/healthcare/home.htm |
+| S83 | BLS, orthophonistes, médiane mai 2024 (relais) : https://legacy.vault.com/industries-professions/professions/s/speech-language-pathologists-and-audiologists/earnings ; https://wagedex.com/jobs/speech-language-pathologists |
+| S84 | Change moyen 2024 de la BCE (Suomen Pankki) : https://www.suomenpankki.fi/en/statistics/interest-rates-and-exchange-rates/exchange-rates/average-annual-exchange-rates-for-the-year-2024 |
+| S85 | Irlande, USC et PRSI : https://lawsociety.ie/taxation/universal-social-charge-and-prsi ; https://vialtopartners.com/regional-alerts/ireland-employment-tax-budget-2025-key-measures-impacting-employers-and-employees/ |
+| S86 | Dentistes formés à l'étranger aux États-Unis : https://www.ada.org/en/resources/licensure/licensure-for-the-international-dentists ; https://dent.osu.edu/academics/programs/doctor-dental-surgery/advanced-standing-international |
+| S87 | BLS, projections d'emploi 2024 à 2034 : https://www.bls.gov/ooh/computer-and-information-technology/information-security-analysts.htm ; https://www.bls.gov/opub/ted/2026/artificial-intelligence-information-technology-and-employment-2024-34.htm |
+| S88 | H-1B, tirage pondéré et paiement de 100 000 USD : https://www.taftlaw.com/news-events/law-bulletins/the-2026-h-1b-cap-season-is-approaching-lottery-fees-and-new-selection-process/ ; https://www.employmentlawworldview.com/the-new-wage-rule-and-the-100k-proclamation-will-shape-the-2026-h%E2%80%911b-cap-season/ |
+| S89 | ASHA, candidats formés à l'étranger : https://www.asha.org/certification/international-applicants-for-ccc-slp/ ; https://www.andrews.edu/chhs/speech/graduate-program/certification-process-for-international-applicants.pdf |
+| S90 | Permis B des ressortissants de l'UE : https://www.weka.ch/themes/ressources-humaines/contrats-de-travail-et-reglements/permis-de-travail/article/permis-de-sejour-droit-de-sejour-de-cinq-ans/ ; https://www.kmu.admin.ch/kmu/fr/home/savoir-pratique/personnel/droit-du-travail/aspects-contractuels/permis-de-travail/libre-circulation-ue.html |
+| S91 | Gajendran et Harrison 2007, méta-analyse du télétravail : https://www.apa.org/news/press/releases/2007/11/telecommuting ; https://goal-lab.psych.umn.edu/orgpsych/readings/10.%20Work-Life%20Balance/Gajendran%20%26%20Harrison%20(2007).pdf |
+| S92 | Pratique du télétravail : https://www.insee.fr/fr/statistiques/8616841 ; DARES 2023 relayée : https://www.letribunaldunet.fr/lifestyle/metiers-teletravail-classement-france.html |
+| S93 | Télétravail des frontaliers : https://www.lesfrontaliers.lu/emploi/34-jours-de-teletravail-la-france-adopte-finalement-le-principe/ ; https://www.lesfrontaliers.lu/emploi/le-teletravail-des-frontaliers-tourne-au-ralenti/ |
+| S94 | Télétravail dans la fonction publique : https://www.fonction-publique.gouv.fr/etre-agent-public/mon-quotidien-au-travail/le-teletravail-dans-la-fonction-publique/le-cadre-juridique-du-teletravail-dans-la-fonction-publique ; https://www.cfdt-ufetam.org/wp-content/uploads/2022/02/protocole_teletravail_mte_23-02-22.pdf |
+| S95 | Commission européenne, décision C(2022) 1788 sur le travail hybride : https://u4unity.eu/-oldsite-/document/RefCard_WorkTime_draft_11052023.pdf ; https://www.ffpe-bxl.eu/sites/default/files/Working%20time%20and%20hybrid%20working%20decision.docx.pdf |
+| S96 | KFF, enquête 2024 sur l'assurance santé des employeurs : https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey |
