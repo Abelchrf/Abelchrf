@@ -1,4 +1,6 @@
 username,groups
-jdoe,dev;web
-hdubois,dev;admin
-sohara,web;support
+tbutchers,developpeurs;web
+bmattiazzo,developpeurs;admin
+mhotton,web;support
+hainley,admin;support
+amackeig,web

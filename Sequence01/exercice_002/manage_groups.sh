@@ -38,7 +38,18 @@ fi
 
 # --- Fonctions utilitaires (mêmes principes que l'exercice 001) --------------
 
-IFS=, read -r -a HEADER < <(head -n 1 "$CSV" | sed 's/^\xEF\xBB\xBF//' | tr -d '\r"' | tr 'A-Z' 'a-z')
+# Lit la première ligne (minuscules, sans BOM, sans guillemets ni \r).
+# Si elle commence par un nombre, il n'y a pas d'en-tête (cas du users.csv de
+# l'intranet : 1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023) :
+# on utilise alors l'ordre des colonnes de ce fichier.
+FIRST_LINE=$(head -n 1 "$CSV" | sed 's/^\xEF\xBB\xBF//' | tr -d '\r"' | tr 'A-Z' 'a-z')
+if [[ "$FIRST_LINE" =~ ^[0-9]+, ]]; then
+    HEADER=(id first_name last_name email gender department date)
+    START=1
+else
+    IFS=, read -r -a HEADER <<< "$FIRST_LINE"
+    START=2
+fi
 
 # col nom1 nom2 ... : index de la première colonne portant l'un de ces noms.
 col() {
@@ -139,7 +150,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     usermod -aG "$(IFS=,; echo "${valid[*]}")" "$login"
     echo "[MEMBRE] $login -> ${valid[*]}"
     memberships=$((memberships + ${#valid[@]}))
-done < <(tail -n +2 "$CSV")
+done < <(tail -n +"$START" "$CSV")
 
 echo
 echo "Groupes créés : $new_groups | Affectations : $memberships | Utilisateurs ignorés : $skipped"

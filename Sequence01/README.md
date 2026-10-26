@@ -41,8 +41,10 @@ pas ce qui existe déjà, il le met simplement en conformité.
 
 **Ce que fait le script, ligne par ligne du CSV :**
 
-1. **Trouver les colonnes** : il lit l'en-tête (`id,first_name,last_name,...`)
-   et repère les colonnes par leur nom, pas par leur position. Si le CSV a une
+1. **Trouver les colonnes** : le `users.csv` de l'intranet n'a pas de ligne
+   d'en-tête (`1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023`),
+   le script utilise alors l'ordre `id,first_name,last_name,email,gender,department,date`.
+   Si un CSV a un en-tête, les colonnes sont repérées par leur nom. Si le CSV a une
    colonne `username`, elle sert de login ; sinon le login est
    *initiale du prénom + nom* (`John Doe` → `jdoe`), sans accents ni caractères
    spéciaux (`Seán O'Hara` → `sohara`). Deux « John Doe » donnent `jdoe` et `jdoe2`.
@@ -85,12 +87,13 @@ séparés par `;`. Les logins doivent être ceux créés à l'exercice 001.
 
 ```
 username,groups
-jdoe,dev;web
-hdubois,dev;admin
+tbutchers,developpeurs;web
+bmattiazzo,developpeurs;admin
 ```
 
-Le script accepte aussi directement `users.csv` si celui-ci contient une
-colonne de groupes (`group`, `groups`, `department`...).
+Le script accepte aussi directement `users.csv` : chaque utilisateur est alors
+mis dans le groupe de son département (`Outdoors` → `outdoors`) :
+`sudo ./exercice_002/manage_groups.sh exercice_001/users.csv`.
 
 **Ce que fait le script :**
 

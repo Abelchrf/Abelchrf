@@ -44,8 +44,18 @@ fi
 
 # --- Fonctions utilitaires ----------------------------------------------------
 
-# Lit l'en-tête du CSV : minuscules, sans BOM, sans guillemets ni \r.
-IFS=, read -r -a HEADER < <(head -n 1 "$CSV" | sed 's/^\xEF\xBB\xBF//' | tr -d '\r"' | tr 'A-Z' 'a-z')
+# Lit la première ligne (minuscules, sans BOM, sans guillemets ni \r).
+# Si elle commence par un nombre, il n'y a pas d'en-tête (cas du users.csv de
+# l'intranet : 1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023) :
+# on utilise alors l'ordre des colonnes de ce fichier.
+FIRST_LINE=$(head -n 1 "$CSV" | sed 's/^\xEF\xBB\xBF//' | tr -d '\r"' | tr 'A-Z' 'a-z')
+if [[ "$FIRST_LINE" =~ ^[0-9]+, ]]; then
+    HEADER=(id first_name last_name email gender department date)
+    START=1
+else
+    IFS=, read -r -a HEADER <<< "$FIRST_LINE"
+    START=2
+fi
 
 # col nom1 nom2 ... : affiche l'index de la première colonne qui porte l'un de
 # ces noms (rien si aucune). On ne dépend donc pas de l'ordre des colonnes.
@@ -159,7 +169,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     echo "$login:$password" >> "$PASS_FILE"
     echo "[CREE]  $login ($fullname) home=$home shell=$shell"
     created=$((created + 1))
-done < <(tail -n +2 "$CSV")
+done < <(tail -n +"$START" "$CSV")
 
 echo
 echo "Créés : $created | Mis à jour : $updated | Échecs : $failed"
