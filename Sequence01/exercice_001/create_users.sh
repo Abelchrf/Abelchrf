@@ -42,15 +42,21 @@ if ! command -v pwgen >/dev/null; then
     }
 fi
 
+# Copie nettoyée du CSV : sans BOM ni \r (fichier Windows), et un utilisateur
+# par ligne. Dans users.csv, certaines lignes en contiennent deux collés
+# ("...,7/31/2024 5,Abeu,...") : on coupe avant chaque " <numéro>,".
+CLEAN=$(mktemp)
+trap 'rm -f "$CLEAN"' EXIT
+sed 's/^\xEF\xBB\xBF//' "$CSV" | tr -d '\r' | sed -E 's/[[:space:]]+([0-9]+,)/\n\1/g' > "$CLEAN"
+
 # --- Fonctions utilitaires ----------------------------------------------------
 
-# Lit la première ligne (minuscules, sans BOM, sans guillemets ni \r).
-# Si elle commence par un nombre, il n'y a pas d'en-tête (cas du users.csv de
-# l'intranet : 1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023) :
-# on utilise alors l'ordre des colonnes de ce fichier.
-FIRST_LINE=$(head -n 1 "$CSV" | sed 's/^\xEF\xBB\xBF//' | tr -d '\r"' | tr 'A-Z' 'a-z')
+# Lit la ligne d'en-tête (id,first_name,last_name,email,gender,group,last_login).
+# Si la première ligne commence par un nombre, il n'y a pas d'en-tête : on
+# suppose alors l'ordre des colonnes de users.csv.
+FIRST_LINE=$(head -n 1 "$CLEAN" | tr -d '"' | tr 'A-Z' 'a-z')
 if [[ "$FIRST_LINE" =~ ^[0-9]+, ]]; then
-    HEADER=(id first_name last_name email gender department date)
+    HEADER=(id first_name last_name email gender group last_login)
     START=1
 else
     IFS=, read -r -a HEADER <<< "$FIRST_LINE"
@@ -110,7 +116,6 @@ declare -A SEEN          # logins déjà attribués pendant cette exécution
 created=0; updated=0; failed=0
 
 while IFS= read -r line || [[ -n "$line" ]]; do
-    line="${line%$'\r'}"                      # fichiers au format Windows
     [[ -z "$line" ]] && continue
     IFS=, read -r -a F <<< "$line"
 
@@ -169,7 +174,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     echo "$login:$password" >> "$PASS_FILE"
     echo "[CREE]  $login ($fullname) home=$home shell=$shell"
     created=$((created + 1))
-done < <(tail -n +"$START" "$CSV")
+done < <(tail -n +"$START" "$CLEAN")
 
 echo
 echo "Créés : $created | Mis à jour : $updated | Échecs : $failed"

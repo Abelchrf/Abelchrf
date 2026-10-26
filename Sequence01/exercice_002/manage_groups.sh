@@ -3,17 +3,15 @@
 # Exercice 002 : Gestion des groupes à partir d'un fichier CSV
 #
 # Usage : sudo ./manage_groups.sh [fichier.csv]
-#         (par défaut : groups.csv placé à côté du script)
+#         (par défaut : ../exercice_001/users.csv)
 #
-# Format attendu : une ligne par utilisateur, ses groupes séparés par ";" (ou "|")
-#
-#     username,groups
-#     jdoe,dev;web
-#     asmith,dev;admin;support
-#
-# Le script accepte aussi directement users.csv s'il possède une colonne de
-# groupes (group, groups, groupe, department...) : le login est alors
-# construit comme dans l'exercice 001 (initiale du prénom + nom).
+# Utilise la colonne "group" de users.csv :
+#     id,first_name,last_name,email,gender,group,last_login
+#     1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023
+#   -> groupe "outdoors" créé, tbutchers ajouté dedans.
+# Le login est construit comme dans l'exercice 001 (initiale du prénom + nom).
+# Une case peut contenir plusieurs groupes séparés par ";" (Toys;Games).
+# Un CSV avec une colonne username (ou login) fonctionne aussi.
 #
 # Pour chaque ligne :
 #   1. chaque groupe absent du système est créé (groupadd) ;
@@ -22,7 +20,7 @@
 
 set -u
 
-CSV="${1:-$(dirname "$0")/groups.csv}"
+CSV="${1:-$(dirname "$0")/../exercice_001/users.csv}"
 
 # --- Vérifications préalables -------------------------------------------------
 
@@ -36,15 +34,21 @@ if [[ ! -r "$CSV" ]]; then
     exit 1
 fi
 
+# Copie nettoyée du CSV : sans BOM ni \r (fichier Windows), et un utilisateur
+# par ligne. Dans users.csv, certaines lignes en contiennent deux collés
+# ("...,7/31/2024 5,Abeu,...") : on coupe avant chaque " <numéro>,".
+CLEAN=$(mktemp)
+trap 'rm -f "$CLEAN"' EXIT
+sed 's/^\xEF\xBB\xBF//' "$CSV" | tr -d '\r' | sed -E 's/[[:space:]]+([0-9]+,)/\n\1/g' > "$CLEAN"
+
 # --- Fonctions utilitaires (mêmes principes que l'exercice 001) --------------
 
-# Lit la première ligne (minuscules, sans BOM, sans guillemets ni \r).
-# Si elle commence par un nombre, il n'y a pas d'en-tête (cas du users.csv de
-# l'intranet : 1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023) :
-# on utilise alors l'ordre des colonnes de ce fichier.
-FIRST_LINE=$(head -n 1 "$CSV" | sed 's/^\xEF\xBB\xBF//' | tr -d '\r"' | tr 'A-Z' 'a-z')
+# Lit la ligne d'en-tête (id,first_name,last_name,email,gender,group,last_login).
+# Si la première ligne commence par un nombre, il n'y a pas d'en-tête : on
+# suppose alors l'ordre des colonnes de users.csv.
+FIRST_LINE=$(head -n 1 "$CLEAN" | tr -d '"' | tr 'A-Z' 'a-z')
 if [[ "$FIRST_LINE" =~ ^[0-9]+, ]]; then
-    HEADER=(id first_name last_name email gender department date)
+    HEADER=(id first_name last_name email gender group last_login)
     START=1
 else
     IFS=, read -r -a HEADER <<< "$FIRST_LINE"
@@ -109,7 +113,6 @@ fi
 new_groups=0; memberships=0; skipped=0
 
 while IFS= read -r line || [[ -n "$line" ]]; do
-    line="${line%$'\r'}"
     [[ -z "$line" ]] && continue
     IFS=, read -r -a F <<< "$line"
 
@@ -150,7 +153,7 @@ while IFS= read -r line || [[ -n "$line" ]]; do
     usermod -aG "$(IFS=,; echo "${valid[*]}")" "$login"
     echo "[MEMBRE] $login -> ${valid[*]}"
     memberships=$((memberships + ${#valid[@]}))
-done < <(tail -n +"$START" "$CSV")
+done < <(tail -n +"$START" "$CLEAN")
 
 echo
 echo "Groupes créés : $new_groups | Affectations : $memberships | Utilisateurs ignorés : $skipped"

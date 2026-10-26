@@ -5,7 +5,7 @@ Rendu attendu dans le dépôt ETNA : `Sequence01/exercice_0xx/`.
 ```
 Sequence01/
 ├── exercice_001/create_users.sh    + users.csv (à copier depuis l'intranet)
-├── exercice_002/manage_groups.sh   + groups.csv (exemple, à adapter)
+├── exercice_002/manage_groups.sh   (utilise aussi exercice_001/users.csv)
 └── exercice_003/goinfre.sh
 ```
 
@@ -13,7 +13,7 @@ Tous les scripts se lancent **en root** sur la VM Debian 12, dans l'ordre :
 
 ```bash
 sudo ./exercice_001/create_users.sh            # lit exercice_001/users.csv
-sudo ./exercice_002/manage_groups.sh           # lit exercice_002/groups.csv
+sudo ./exercice_002/manage_groups.sh           # lit exercice_001/users.csv
 sudo ./exercice_003/goinfre.sh
 ```
 
@@ -41,10 +41,10 @@ pas ce qui existe déjà, il le met simplement en conformité.
 
 **Ce que fait le script, ligne par ligne du CSV :**
 
-1. **Trouver les colonnes** : le `users.csv` de l'intranet n'a pas de ligne
-   d'en-tête (`1,Thorndike,Butchers,tbutchers0@...,Male,Outdoors,11/25/2023`),
-   le script utilise alors l'ordre `id,first_name,last_name,email,gender,department,date`.
-   Si un CSV a un en-tête, les colonnes sont repérées par leur nom. Si le CSV a une
+1. **Lire le CSV** : l'en-tête est `id,first_name,last_name,email,gender,group,last_login`.
+   Le script repère les colonnes par leur nom. Piège du fichier : certaines
+   lignes contiennent deux utilisateurs collés (`...,7/31/2024 5,Abeu,...`),
+   le script les sépare avant de commencer. Si le CSV a une
    colonne `username`, elle sert de login ; sinon le login est
    *initiale du prénom + nom* (`John Doe` → `jdoe`), sans accents ni caractères
    spéciaux (`Seán O'Hara` → `sohara`). Deux « John Doe » donnent `jdoe` et `jdoe2`.
@@ -82,18 +82,10 @@ pas ce qui existe déjà, il le met simplement en conformité.
 
 ## Exercice 002 : gestion des groupes
 
-**Format du CSV** (`groups.csv`) : une ligne par utilisateur, ses groupes
-séparés par `;`. Les logins doivent être ceux créés à l'exercice 001.
-
-```
-username,groups
-tbutchers,developpeurs;web
-bmattiazzo,developpeurs;admin
-```
-
-Le script accepte aussi directement `users.csv` : chaque utilisateur est alors
-mis dans le groupe de son département (`Outdoors` → `outdoors`) :
-`sudo ./exercice_002/manage_groups.sh exercice_001/users.csv`.
+Le script lit la colonne `group` de `exercice_001/users.csv` :
+`1,Thorndike,Butchers,...,Outdoors,...` → groupe `outdoors` créé, `tbutchers`
+ajouté dedans. Le login est recalculé avec la même règle que l'exercice 001.
+Une case peut contenir plusieurs groupes séparés par `;` (`Toys;Games`).
 
 **Ce que fait le script :**
 
@@ -150,12 +142,12 @@ done
 
 ```bash
 # runuser (en root) exécute une commande sous l'identité d'un autre utilisateur
-runuser -u jdoe -- touch /Goinfre/dev/test   # OK si jdoe est dans dev
-runuser -u sohara -- ls /Goinfre/dev         # Permission denied si sohara n'y est pas
+runuser -u tbutchers -- touch /Goinfre/outdoors/test   # OK : tbutchers est dans outdoors
+runuser -u bmattiazzo -- ls /Goinfre/outdoors        # Permission denied : elle n'y est pas
 ls -l /Goinfre
 ```
 
-(`su jdoe` demanderait d'abord de changer le mot de passe, à cause du
+(`su tbutchers` demanderait d'abord de changer le mot de passe, à cause du
 `passwd -e` de l'exercice 001.)
 
 **Améliorations à mentionner en soutenance** (non demandées par le sujet) :
