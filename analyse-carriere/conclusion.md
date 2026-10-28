@@ -1,40 +1,46 @@
-## 6. Conclusion : palier S vide en version 3, tête du palier A
+## 7. Conclusion : palier S vide, tête du classement
 
-| Triplet | En une phrase |
-|---|---|
-| T91 Chirurgien-dentiste × libéral × Suisse (résident) | Premier en v3, à 0,03 du palier S : mêmes notes que le dentiste français et 97 k€ PPA médians à 40 ans, mais un revenu estimé sans statistique propre aux dentistes suisses et 4 % de chances d'accès estimées. |
-| T05 Chirurgien-dentiste × libéral × France | Deuxième, 0,03 derrière : contrôle maximal, 92 k€ médians, pénurie qui garantit l'emploi, pénalisé comme tous les soignants par l'absence de télétravail. |
-| T15 Orthophoniste × libéral × France | Troisième, 0,008 derrière le dentiste français (pas une égalité, mais un écart minime) : charge la plus légère du classement malgré 31 k€ médians. |
-| T92 Chirurgien-dentiste × libéral × États-Unis | Quatrième avec le revenu le plus élevé du pool (114 k€ PPA, proxy prudent tiré des salariés), freiné par l'exercice en anglais ; donnée américaine peu transférable et 2 % de chances estimées. |
+| Rang | Triplet | En une phrase |
+|---|---|---|
+| 1= | T05 Chirurgien-dentiste × libéral × France | Premier à égalité et à 0,03 du palier S : contrôle maximal, pénurie qui garantit l'emploi, 94 k€ médians nets (CARCDSF 2023) ; il égale ou dépasse le dentiste suisse sur les sept critères. |
+| 1= | T91 Chirurgien-dentiste × libéral × Suisse (résident) | Mêmes notes que le dentiste français, mais son revenu (90 k€ en PPA) n'a pas de source fiable : sans statistique de la SSO, c'est un revenu horaire d'enquête ; c'est la place la plus fragile du haut du classement. |
+| 3= | T92 Chirurgien-dentiste × libéral × États-Unis | Revenu le plus élevé du pool au P80 (184 k€ en PPA, ADA 2023), freiné par l'exercice en anglais (relations 3) ; donnée américaine peu transférable. |
+| 3= | T15 Orthophoniste × libéral × France | La charge la plus légère (5) et un emploi garanti compensent le revenu le plus bas du haut du classement : 22 k€ médians au temps réel, souvent partiel (source non officielle, UNASA). |
+| 5= | T09 Sage-femme × libéral × France | Contrôle 5 et charge 4 pour 34 k€ médians (DREES 2021, revenus en forte hausse depuis). |
+| 5= | T30 Médecin généraliste × indépendant × Suisse (résident) | Médian installé le plus élevé du pool en PPA (112 k€, OFS 2019), avec un contrôle de 4 et une charge de 3. |
 
-Lecture : le palier S est vide pour une seule raison : le critère lieu (poids 8) note 2 les soignants libéraux, qui ne peuvent pas télétravailler. Avec les poids v2 et les mêmes notes, T91, T15, T05, T09 et T92 seraient S ; avec un revenu pesant 30 (lieu 7), seul T91 passe en S. Le télétravail fait monter tous les métiers tech (rang sans le critère lieu, puis avec) : l'ingénieur cybersécurité résident en Suisse (T89) passe du 11e au 6e rang, l'ingénieur cloud et DevOps freelance (T81) du 17e au 7e, l'ingénieur cybersécurité aux États-Unis (T90) du 14e au 9e, ex aequo avec le kiné libéral (T10), le même en France (T83) du 16e au 12e. L'ingénieur cloud et DevOps salarié reste plus bas : 19e résident en Suisse, 23e frontalier, 27e en France, 37e aux États-Unis, 45e en Irlande, à cause des astreintes (charge 3, 2 pour le frontalier) et d'une sécurité de 3 aux États-Unis et en Irlande. Aucun triplet tech n'atteint S, même avec un poids de lieu de 15.
+Lecture :
+- Retirer la barrière fait monter les métiers à études longues, dont le cumul 24-45 ans était pénalisé : médecin généraliste libéral en France du 13e au 7e rang (ex aequo), médecin généraliste en Suisse du 8e au 5e, spécialiste du 11e au 7e.
+- Mesurer le revenu au temps de travail réel fait baisser l'orthophoniste (31 vers 22 k€) et la sage-femme (40 vers 34 k€), sans les faire sortir du haut du classement.
+- La tech reste dans le palier A : cybersécurité en Suisse du 6e au 7e rang (ex aequo), car la seule médiane officielle trouvée est celle de tous les spécialistes TIC ; cloud et DevOps freelance 7e (ex aequo) ; cybersécurité aux États-Unis du 9e au 12e (ex aequo) ; cybersécurité en France 12e (ex aequo).
+- Le palier S reste vide pour la même raison qu'en v3 : la note de lieu de 2 des soignants libéraux. Avec un poids de contrôle de 30, T05 et T91 passent en S.
 
-## 7. Ce qui est vérifiable et ce qui est mon opinion
+## 8. Ce qui est vérifiable et ce qui est mon opinion
 
 | Élément | Statut |
 |---|---|
-| Revenus moyens ou médians cités (codes S), grilles de rémunération, indices de prix Eurostat, taux d'admission, règles d'âge et de tentatives | Vérifiable, mais lu ici à travers des résumés de moteur de recherche : à contrôler dans les tableaux primaires avant toute décision. |
-| Conversion du brut au net, surcoûts régionaux des frontaliers, ratios P80, trajectoires de revenu, frais de scolarité | Hypothèses déclarées (mon choix), modifiables dans `modele.py`. |
+| Revenus médians ou moyens cités (codes S), grilles de rémunération, indices de prix Eurostat, temps de travail cités | Vérifiable, mais lu ici à travers des extraits de moteur de recherche : à contrôler dans les tableaux primaires avant toute décision. |
+| Passage au net, conversion d'une moyenne en médiane, P80 estimés, frais de scolarité, surcoûts régionaux des frontaliers | Hypothèses déclarées (sections 1.4 et 1.11), modifiables dans `revenus_v4.py`. |
 | Notes de contrôle, charge, relations, sécurité, sens, lieu | Estimations normatives (mon jugement), guidées par DARES, DREES, INSEE, DEPP et les règles de télétravail citées. |
-| Revenus et notes aux États-Unis | Revenus BLS vérifiables, mais transférabilité limitée : congés payés, assurance santé et protection contre le licenciement non comparables ; seul l'écart de prix est corrigé. |
+| Revenus et notes aux États-Unis | Revenus BLS et ADA vérifiables, mais transférabilité limitée : congés payés, assurance santé et protection contre le licenciement non comparables ; seul l'écart de prix est corrigé. |
 | Poids des critères | Opinion fondée sur des tailles d'effet publiées ; aucun consensus chiffré. |
-| Probabilités de réussite p | Estimations personnelles ancrées sur des taux d'admission publiés ; ne tiennent pas compte d'une préparation intensive ni d'aptitudes réelles différentes de la moyenne. |
-| Scénarios IA | Bornes de scénario, poids de preuve faible ; ne sont pas des prévisions. |
-| Seuils de paliers et frontières | Arbitraires (fixés par la consigne) ; 29 triplets sur 93 sont à moins de 0,1 d'une frontière en v3. |
+| Barrière d'entrée, probabilités p, scénarios IA | Informatifs, hors score ; p et IA sont des estimations à poids de preuve faible. |
+| Seuils de paliers, seuil d'égalité | Arbitraires ; 26 triplets sur 93 sont à moins de 0,1 d'une frontière de palier. |
 
-Règle de révision : un palier ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée dans les entrées ci-dessus, jamais sur une simple contestation.
+Règle de révision : un rang ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée, jamais sur une simple contestation.
 
-## 8. Cellules revenu manquantes ou estimées
+## 9. Cellules revenu non re-sourcées ou sans source fiable
 
-- Sans source directe, estimées sur grille, structure ou proxy : T06 pharmacien adjoint, T16 orthoptiste, T20 psychologue, T22 ostéopathe, T32 médecin de famille au Québec, T46 actuaire, T48 et T51 artisans du bâtiment, T59 sapeur-pompier, T66 sous-officier, T71 magistrat, T73 agent immobilier, T74 pilote, T78 diététicien, T84 analyste SOC.
-- Sourcées seulement par des sources privées (cabinets de recrutement, baromètres déclaratifs) : T80 à T83 et T87 ; aucune série officielle par spécialité IT n'a été trouvée.
-- Estimées sur un proxy : T91 (revenu des médecins indépendants suisses, aucune statistique de la SSO trouvée), T86 et T89 (médiane suisse des TIC ajustée à la spécialité), T92 (médiane BLS des dentistes salariés, appliquée à un libéral).
-- Données américaines (BLS), transférabilité limitée : T88, T90, T92, T93.
-- Sourcées mais ajustées (ancienneté du sujet, passage au net, proxy de branche) : toutes les autres cellules marquées « est. » dans le tableau final.
-- Tous les P80 sont estimés par ratio, sauf T23, T24 (haut de fourchette HUG), T28 (troisième quartile québécois), T36 (TJM au-delà de 15 ans) et T67 (dispersion des avocats).
-- Revenus non récupérés qui amélioreraient le plus la fiabilité : tableau INSEE des non-salariés 2024 par activité (médecine générale, dentaires, BTP, vétérinaires), jeu DREES 2026 des libéraux non médecins (orthophonistes, orthoptistes, podologues), tableau OFS T17 de l'ESS 2024 par profession, grille FHL par ancienneté, données RAMQ des médecins de famille, revenus des dentistes suisses (SSO ou Medisuisse), enquête de l'ADA sur le revenu des dentistes propriétaires de cabinet.
+- Non re-sourcées faute de quota de recherche (valeur v3 conservée, estimée à 40 ans pour le sujet, donc parfois sous-estimée pour un professionnel installé) : T02, T06, T11, T14, T16, T17, T18, T20, T22, T32, T35, T39, T43, T44, T45, T46, T47, T52, T53, T54, T58, T60, T61, T62, T63, T66, T69, T70, T71, T72, T74, T76, T78, T79, T84.
+- Sans source fiable : T91 (revenu horaire d'enquête, versions en conflit).
+- Sources non officielles : T15 (UNASA, confirmé par la FNO), T36 et T81 (tarifs journaliers Malt, Free-Work, Morgan Philips), T87 (guides de salaires privés).
+- Proxy (métier voisin ou champ plus large) : T04 (personnels médicaux de la FPH), T21 (avec les ASH), T33, T34, T42, T49 (niveaux de qualification suisses), T41 (tous ingénieurs), T48, T51 (toute la construction), T59 (tous agents des SDIS), T68 (activités juridiques et comptables), T73 (activités immobilières), T80, T85 (familles APEC voisines), T82, T86, T89 (tous spécialistes TIC suisses), T88 (architectes réseaux et cloud).
+- Données anciennes : T23 et T24 (2018, actualisées par la hausse de la médiane ESS), T29 (2014), T55 (2019, non actualisé).
+- P80 publiés ou interpolés : T88, T90, T93 (BLS) ; tous les autres sont estimés (log-normale, amplitude de grille ou rapport v3).
+- Temps de travail réel trouvé seulement pour T01 (46 h), T56 et T57 (42 à 43 h déclarées), T29 (50,7 h), T92 (36,1 h), T59 (plafonds annuels) et la durée contractuelle suisse (41 h 47).
+- À lire au tour suivant : jeux de données DREES (déciles par profession), fiche santé de l'Insee « Emploi et revenus des indépendants » 2025, portraits statistiques des métiers de la DARES, tableaux OFS de l'ESS par profession, revenus des dentistes suisses (SSO, Medisuisse), STATEC, Destatis et Bundesagentur für Arbeit, Guichet-Emplois et RAMQ.
 
-## 9. Sources
+## 10. Sources
 
 | Code | Source |
 |---|---|
@@ -131,3 +137,21 @@ Règle de révision : un palier ne changera que sur une donnée nouvelle (par ex
 | S94 | Télétravail dans la fonction publique : https://www.fonction-publique.gouv.fr/etre-agent-public/mon-quotidien-au-travail/le-teletravail-dans-la-fonction-publique/le-cadre-juridique-du-teletravail-dans-la-fonction-publique ; https://www.cfdt-ufetam.org/wp-content/uploads/2022/02/protocole_teletravail_mte_23-02-22.pdf |
 | S95 | Commission européenne, décision C(2022) 1788 sur le travail hybride : https://u4unity.eu/-oldsite-/document/RefCard_WorkTime_draft_11052023.pdf ; https://www.ffpe-bxl.eu/sites/default/files/Working%20time%20and%20hybrid%20working%20decision.docx.pdf |
 | S96 | KFF, enquête 2024 sur l'assurance santé des employeurs : https://www.kff.org/health-costs/report/2024-employer-health-benefits-survey |
+| S97 | Insee, définition du revenu d'activité des non-salariés (CSG et CRDS non déduites) : https://www.insee.fr/fr/metadonnees/definition/c1242 ; https://insee.fr/fr/statistiques/fichier/4470792/ERI20-D2.pdf |
+| S98 | CARMF, BNC 2022 par spécialité : https://www.carmf.fr/actualites/communiques/2023/communique-bnc-2023.pdf ; revenus 2024 relayés : https://infos-entreprises.fr/?p=3489 |
+| S99 | Insee, revenus des non-salariés par profession (dentistes, pharmaciens), relais : https://www.moneyvox.fr/votre-argent/actualites/109497/salaire-dentiste-medecin-pharmacien-taxi-quel-metier-independant-est-le-mieux-remunere ; https://www.previssima.fr/actualite/revenus-des-independants-quel-metier-non-salarie-rapporte-le-plus.html |
+| S100 | Insee-DREES, salaires de la FPH en 2024 : https://www.insee.fr/fr/statistiques/8986438 ; DREES, fiche 08, édition 2026 : https://drees.solidarites-sante.gouv.fr/sites/default/files/2026-07/ES%202026%20-%20Fiche%2008%20-%20Les%20salaires%20dans%20les%20%C3%A9tablissements%20de%20sant%C3%A9.pdf |
+| S101 | DEPP, salaires des enseignants en 2024 (NI 26.36) : https://www.education.gouv.fr/sites/default/files/document/depp-ni-2026-36pdf-519727.pdf ; temps de travail déclaré : https://www.education.gouv.fr/depp/la-moitie-des-enseignants-declare-travailler-au-moins-43-heures-par-semaine-452151 ; https://www.education.gouv.fr/les-enseignants-declarent-travailler-41-heures-30-en-moyenne-par-semaine-hors-vacances-scolaires-451702 |
+| S102 | Insee, salaires de la fonction publique territoriale 2023 (SDIS) : https://www.insee.fr/fr/statistiques/fichier/8611947/ip2066.pdf ; temps de présence des sapeurs-pompiers : https://questions.assemblee-nationale.fr/dyn/14/questions/QANR5L14QE53121.pdf |
+| S103 | APEC, rémunérations des cadres dans 111 familles de métiers 2025 : https://corporate.apec.fr/files/live/sites/corporate/files/Nos%20etudes/PDF/Les%20remunerations%20des%20cadres%20dans%20111%20familles%20de%20metiers%202025.pdf |
+| S104 | Médiane des salaires des fonctionnaires de l'État en 2024, d'après l'Insee (relais) : https://www.moneyvox.fr/votre-argent/actualites/108701/voici-evolution-du-salaire-des-fonctionnaires-du-service-public-expliquee-en-graphiques |
+| S105 | SDES, salaires nets du transport routier de marchandises : https://www.statistiques.developpement-durable.gouv.fr/edition-numerique/donnees-sociales-transport-routier-marchandises/8-32-les-salaires-nets |
+| S106 | Insee, revenus des non-salariés par secteur 2024 et 2023 : https://www.insee.fr/fr/statistiques/8733101?sommaire=8733125 ; https://www.insee.fr/fr/statistiques/fichier/version-html/8590189/IP2060.pdf |
+| S107 | CNBF, rapport 2024 : https://www.cnbf.fr/wp-content/uploads/2026/05/CNBF-Rapport-2024.pdf |
+| S108 | OFS, revenus des médecins indépendants 2019 : https://admin.ch/gov/en/start/documentation/media-releases.msg-id-85700.html ; https://www.bfs.admin.ch/bfs/fr/home/actualites/quoi-de-neuf.assetdetail.19704726.html ; relais premier recours : https://swissinfo.ch/eng/society/male-doctors-earn-25-more-than-their-female-counterparts/47088168 |
+| S109 | ASMAC, enquête 2023 sur le temps de travail des médecins assistants : https://vsao.ch/wp-content/uploads/2023/05/Sondage-membres-2023-Management-Summary_FR.pdf |
+| S110 | Revenu AVS médian des médecins salariés en 2014 (BASS pour l'OFSP), cité par l'ASSH : https://www.sagw.ch/fileadmin/redaktion_sagw/dokumente/Publikationen/Berichte/2021_Macht_Medizin/05_Lohnunterschiede_Eine_Soziologische_Perspektive.pdf |
+| S111 | ZHAW pour la FMH, revenus horaires des dentistes : https://www.zwp-online.info/zwpnews/dental-news/branchenmeldungen/schweizer-zahnaerzte-verdienen-73-franken-pro-stunde ; https://www.zwp-online.info/zwpnews/dental-news/branchenmeldungen/stundenlohn-schweizer-zahnarzte-verdienen-top |
+| S112 | OFS, durée du travail 2024 : https://www.kmu.admin.ch/kmu/en/home/new/news/2025/working-hours-stable.html ; prime LAMal moyenne 2025 : https://www.bag.admin.ch/dam/fr/sd-web/4T-CsX1ytzWE/PG26-FB-Mittlere%20Pr%C3%A4mie_FR.pdf |
+| S113 | BLS, Occupational Outlook Handbook et O*NET (mai 2024) : https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm ; https://www.onetonline.org/link/localwages/15-1241.00 ; https://www.onetonline.org/link/localwages/15-1212.00 ; https://www.bls.gov/ooh/healthcare/speech-language-pathologists.htm ; https://www.onetonline.org/link/localwages/29-1127.00 |
+| S114 | ADA Health Policy Institute, revenus et heures des dentistes : https://www.ada.org/resources/research/health-policy-institute/dental-practice-research/trends-in-dentist-income ; https://www.beckersdental.com/benchmarking/median-net-income-of-general-practice-dentists-hit-185k-in-2023 ; https://www.beckersdental.com/benchmarking/how-many-hours-do-dentists-work-per-week/ |

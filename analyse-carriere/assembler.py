@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Assemble rapport.md a partir de entete.md, tableaux.md (genere) et conclusion.md."""
+"""Assemble rapport.md a partir de entete.md, tableaux.md (genere) et conclusion.md (version 4)."""
 import os
 import re
 import subprocess
@@ -28,25 +28,33 @@ def sec(prefixe):
     raise KeyError(prefixe)
 
 
+import modele as _m  # noqa: E402
+
 parties = [lire("entete.md").strip(), ""]
 parties += ["## 2. Pool (" + sec("Pool")[0].split("(")[1], "", sec("Pool")[1], ""]
-import modele as _m
-n_elim = sum(1 for t in _m.T if t["domine_par"])
-n_fin = len(_m.T) - n_elim
-parties += ["## 3. Élimination", "", f"Règle : section 1.5. {n_elim} retraits ; un triplet dominé seulement sans IA est conservé.", "",
-            sec("Éliminés")[1], ""]
-parties += [f"## 4. Tableau final ({n_fin} triplets non dominés, triés par score interne décroissant)", "",
-            "Notes : nom. = euros nominaux au change 2025 ; PPA = euros au niveau de prix français ; est. = valeur ajustée ou estimée ; * = à moins de 0,1 d'une frontière de palier ; C contrôle, Ch charge, R relations, Se sécurité, Sn sens, L lieu (télétravail).", ""]
-for prefixe in ("Tableau final, partie A", "Tableau final, partie B"):
+parties += [f"## 3. Classement v4 ({len(_m.T)} triplets, qualité de vie une fois installé)", "",
+            "Lecture des colonnes : C contrôle, Ch charge, R relations, Se sécurité, Sn sens, L lieu (télétravail), notes entières de 1 à 5 ; "
+            "Rev = note de revenu de 1 à 5, seule note continue, calculée sur les valeurs ajustées en PPA ; poids entre parenthèses. "
+            "Palier : S ≥ 4,2, A ≥ 3,6, B ≥ 3,0, C en dessous ; * = à moins de 0,1 d'une frontière. "
+            "« 7= » : rang partagé par des triplets à égalité (écart inférieur à 0,03). "
+            "« X / Y k€ » : revenu net annuel en milliers d'euros, X au change 2025 sans ajustement, Y en parité de pouvoir d'achat (euros au niveau de prix français) ; le score utilise Y.", ""]
+for prefixe in ("Classement v4, partie A", "Classement v4, partie B", "Classement v4, partie C"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
-parties += ["## 5. Frontière de Pareto", "", sec("Frontière de Pareto")[1], ""]
-for prefixe in ("À moins de 0,1", "Égalités", "Sensibilité", "Marge"):
+parties += ["## 4. Égalités, frontières de palier, sensibilité aux poids", ""]
+for prefixe in ("Égalités", "À moins de 0,1", "Sensibilité"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
+titre, corps = sec("Pourquoi T89")
+parties += ["## 5. " + titre, "",
+            "Le contrôle a le plus gros poids (22 sur 100), mais le score est une moyenne pondérée, pas un ordre strict : "
+            "une note de contrôle en moins coûte 0,22, et une note de plus en relations et en sécurité rapporte 0,30. "
+            "Un salarié peut donc passer devant un indépendant mieux noté en contrôle s'il le dépasse ailleurs. "
+            "Si tu veux que le contrôle départage avant tout le reste, c'est un autre mode de calcul (ordre lexicographique), à décider explicitement.", "",
+            corps, ""]
+titre, corps = sec("Modifications de rang")
+parties += ["## 6. " + titre, "", corps, ""]
 parties += [lire("conclusion.md").strip(), ""]
-import choix_realiste  # ecrit choix_realiste.md
-parties += [lire("choix_realiste.md").strip(), ""]
 
 texte = "\n".join(parties)
 interdits = [c for c in texte if c in "‐‑‒–—―−"]

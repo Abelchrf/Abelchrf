@@ -135,7 +135,7 @@ A("")
 
 # --- Partie B : cellules revenu ------------------------------------------------------
 A("### Classement v4, partie B : cellules revenu (net, professionnel installe)\n")
-A("| Rang | ID | Median nom./PPA kEUR | Source du median | P80 nom./PPA kEUR | Source du P80 | Temps de travail reel | Fiabilite |")
+A("| Rang | ID | Médian nom./PPA k€ | Source du médian | P80 nom./PPA k€ | Source du P80 | Temps de travail réel | Fiabilité |")
 A("|---|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
     A(f"| {rg(t)} | {t['id']} | {k(t['med_nom'])} / {k(t['med_ppa'])} | {t['src_med']} | {k(t['p80i_nom'])} / {k(t['p80i_ppa'])} | {t['src_p80']} | {t['h']} | {t['fiab']} |")
@@ -143,7 +143,7 @@ A("")
 
 # --- Partie C : barriere informative --------------------------------------------------
 A("### Classement v4, partie C : barriere d'entree et risque IA (informatif, hors score)\n")
-A("| Rang | ID | Age d'entree | Formation et financement | Selectivite | Annees de revenu perdues | Cumul 24-45 ans PPA kEUR | IA : exposition, palier si IA fort | Domine sur les 7 criteres par |")
+A("| Rang | ID | Âge d'entrée | Formation et financement | Sélectivité | Années de revenu perdues | Cumul 24-45 ans PPA k€ | IA : exposition, palier si IA fort | Dominé sur les 7 critères par |")
 A("|---|---|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
     A(f"| {rg(t)} | {t['id']} | {t['E']} ans | {t['fin']} | {t['sel']} | {t['pertes']:.1f} | {k(t['cum_ppa'])} | {t['ia']}, {pal(t, 'W_ia', 'palier_ia')} | {', '.join(t['domine_par']) or 'aucun'} |")
@@ -168,7 +168,7 @@ VARIANTES = {
     "Base (22/19/15/15/6/15, lieu 8)": m.POIDS,
     "Poids egaux (7 criteres)": {kk: 100 / len(m.POIDS) for kk in m.POIDS},
     "Revenu 30 (18/16/12/12/5/30, lieu 7)": {"C": 18, "Ch": 16, "R": 12, "Se": 12, "Sn": 5, "Rev": 30, "L": 7},
-    "Controle 30 (30/17/13/13/5/14, lieu 8)": {"C": 30, "Ch": 17, "R": 13, "Se": 13, "Sn": 5, "Rev": 14, "L": 8},
+    "Contrôle 30 (30/17/13/13/5/14, lieu 8)": {"C": 30, "Ch": 17, "R": 13, "Se": 13, "Sn": 5, "Rev": 14, "L": 8},
 }
 A("### Sensibilite des paliers aux poids (opinion, pas consensus)\n")
 A("| Variante | Palier S | Nombre S/A/B/C | Premier |")
@@ -184,6 +184,7 @@ A("")
 
 # --- Pourquoi T89 devant des independants ------------------------------------------------
 cyb = ID["T89"]
+ORDRE = ("C", "Ch", "R", "Se", "Sn", "L", "Rev")
 A("### Pourquoi T89 (cybersecurite, salarie, Suisse) est devant des independants\n")
 A("Écart pondéré par critère (poids × différence de note, divisé par 100) entre T89 et chaque libéral, indépendant ou artisan classé sous lui ; un nombre positif favorise T89.\n")
 A("| Triplet classe sous T89 | Rang | C | Ch | R | Se | Sn | L | Rev | Total |")
@@ -191,8 +192,8 @@ A("|---|---|---|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
     if t["W"] >= cyb["W"] or not any(s in t["statut"] for s in ("liberal", "independant", "artisan")):
         continue
-    d = {c: m.POIDS[c] * (cyb[c] - t[c]) / 100 for c in m.CRIT}
-    A(f"| {t['id']} {tri(t)} | {rg(t)} | " + " | ".join(d2(d[c]) for c in m.CRIT) + f" | {d2(sum(d.values()))} |")
+    d = {c: m.POIDS[c] * (cyb[c] - t[c]) / 100 for c in ORDRE}
+    A(f"| {t['id']} {tri(t)} | {rg(t)} | " + " | ".join(d2(d[c]) for c in ORDRE) + f" | {d2(sum(d.values()))} |")
 A("")
 
 # --- Modifications de rang par rapport a la v3 ----------------------------------------------
@@ -222,7 +223,12 @@ for t in m.CLASSEMENT:
     parts = [("cumul 24-45 ans retire du score", w_a - d["W"])]
     for c, v in notes.items():
         parts.append((f"{NOMS[c]} {d[c]} vers {t[c]}", m.POIDS[c] * v / 100))
-    parts.append((f"revenu installé re-sourcé : médian {k(d['m40_ppa'])} vers {k(t['med_ppa'])} k€ PPA, P80 {k(d['p80_ppa'])} vers {k(t['p80i_ppa'])}", t["W"] - w_b))
+    inchange = abs(t["med_ppa"] - d["m40_ppa"]) < 500 and abs(t["p80i_ppa"] - d["p80_ppa"]) < 500
+    if t["fiab"] == "non re-sourcée" or inchange:
+        parts.append(("nouvelles bornes de l'échelle revenu (cellule v3 conservée)", t["W"] - w_b))
+    else:
+        code = re.search(r"S\d+", t["src_med"])
+        parts.append((f"revenu installé {'(' + code.group(0) + ') ' if code else ''}: médian {k(d['m40_ppa'])} vers {k(t['med_ppa'])} k€ PPA, P80 {k(d['p80_ppa'])} vers {k(t['p80i_ppa'])}", t["W"] - w_b))
     parts = [p for p in parts if abs(p[1]) >= 0.005]
     parts.sort(key=lambda p: -abs(p[1]))
     r_old, r_new = r3[t["id"]], (t["rang"], t["groupe"])
