@@ -228,12 +228,12 @@ add(id="T26", metier="Infirmier", statut="salarie", pays="Luxembourg (resident)"
     fin="IFSI + autorisation d'exercer (diplome exempte de reconnaissance)", sel="p estime 22 %")
 add(id="T27", metier="Infirmier", statut="salarie", pays="Allemagne", cur="EUR", resid="DE",
     E=29, start=35100, m40=45240, p80=51480, pre=IFSI_PRE + [(28, 28, 27000)],
-    C=2, Ch=2, R=2, Se=4, Sn=5, p=0.12, cap=2, ia="faible",
+    C=2, Ch=2, R=2, Se=5, Sn=5, p=0.12, cap=2, ia="faible",  # v4 : Se 4 -> 5 (clause integration retiree)
     src="S32 (Destatis avril 2024 : 4 310 EUR/mois brut) x 12,8 ; net = brut x 0,78",
     fin="IFSI + allemand B2 + Anerkennung", sel="p estime 12 %")
 add(id="T28", metier="Infirmier", statut="salarie", pays="Canada (Quebec)", cur="CAD", resid="CA",
     E=29, start=59070, m40=80555, p80=93085, pre=IFSI_PRE + [(28, 28, 27000)],
-    C=2, Ch=2, R=3, Se=4, Sn=5, p=0.18, cap=2, ia="faible",
+    C=2, Ch=2, R=3, Se=5, Sn=5, p=0.18, cap=2, ia="faible",  # v4 : Se 4 -> 5 (clause integration retiree)
     src="S35 (Guichet-Emplois QC : mediane 40 CAD/h, Q3 45 CAD/h) ; 45 CAD x 1 950 h x 0,918",
     fin="IFSI + ARM (stage d'adaptation 75 jours) + immigration", sel="p estime 18 %")
 add(id="T29", metier="Medecin", statut="salarie (hopital)", pays="Suisse (resident)", cur="CHF", resid="CH",
@@ -688,14 +688,29 @@ def echelle_log(vals):
     return lo, hi, (lambda x: max(1.0, min(5.0, 1 + 4 * (math.log(x) - math.log(lo)) / (math.log(hi) - math.log(lo)))))
 
 
+# Version 4 (28 octobre 2026) : le score ne contient plus aucune barriere d'entree.
+# - Revenu = revenu net d'un professionnel installe (mediane de la profession et P80, en PPA), sans la
+#   decote d'anciennete liee a l'entree tardive du sujet. Le cumul 24-45 ans, qui depend surtout de la
+#   duree des etudes, sort du score et reste une colonne informative.
+# - Les cellules revenu sont dans revenus_v4.py, une par triplet, avec source et temps de travail reel.
+from revenus_v4 import REV4  # noqa: E402
+
+for t in T:
+    r = REV4[t["id"]]
+    fp, fn = facteur_ppa(t["cur"], t["resid"]), facteur_nominal(t["cur"])
+    t.update(med=r["med"], p80i=r["p80"], h=r["h"], src_med=r["src_med"], src_p80=r["src_p80"],
+             fiab=r["fiab"])
+    t["med_nom"], t["p80i_nom"] = r["med"] * fn, r["p80"] * fn
+    t["med_ppa"], t["p80i_ppa"] = r["med"] * fp, r["p80"] * fp
+
+REV_CLES = ("med_ppa", "p80i_ppa")
 BORNES = {}
-for k in ("m40_ppa", "p80_ppa", "cum_ppa"):
-    lo, hi, f = echelle_log([t[k] for t in T])
-    BORNES[k] = (lo, hi, f)
+for k in REV_CLES + ("cum_ppa",):
+    BORNES[k] = echelle_log([t[k] for t in T])
 
 
 def score_revenu(t, mult=1.0):
-    return sum(BORNES[k][2](t[k] * mult) for k in ("m40_ppa", "p80_ppa", "cum_ppa")) / 3
+    return sum(BORNES[k][2](t[k] * mult) for k in REV_CLES) / len(REV_CLES)
 
 
 def total(t, rev, se):
@@ -720,37 +735,40 @@ for t in T:
     t["palier_ia"] = classer(t["W_ia"])
 
 CRIT = ("C", "Ch", "R", "Se", "Sn", "Rev", "L")
-CRIT_IA = ("C", "Ch", "R", "Se_ia", "Sn", "Rev_ia", "L")
+
+# Egalites : un ecart inferieur a 0,03 n'est pas interpretable (moitie du plus petit pas de note,
+# le sens a 6 points ; et effet d'une erreur de 10 % sur les deux revenus). Groupes formes depuis le
+# meilleur score : un groupe reunit les triplets a moins de 0,03 de son premier membre.
+SEUIL_EGALITE = 0.03
+
+
+def rangs_partages(ens, cle="W", seuil=SEUIL_EGALITE):
+    s = sorted(ens, key=lambda t: -t[cle])
+    out, i = {}, 0
+    while i < len(s):
+        j = i
+        while j < len(s) and s[i][cle] - s[j][cle] < seuil:
+            j += 1
+        for t in s[i:j]:
+            out[t["id"]] = (i + 1, j - i)
+        i = j
+    return out
+
+
+RANG = rangs_partages(T)
+for t in T:
+    t["rang"], t["groupe"] = RANG[t["id"]]
+CLASSEMENT = sorted(T, key=lambda t: (-t["W"], t["id"]))
 
 
 def domine(y, x, crit=CRIT):
-    """y domine x : au moins aussi bon sur les 6 criteres ET sur chaque composante brute de la
-    barriere (age d'entree, annees perdues, probabilite, capital), strictement meilleur une fois."""
-    py, px = round(y["pertes"], 1), round(x["pertes"], 1)
-    ge = (all(y[k] >= x[k] for k in crit) and y["E"] <= x["E"] and py <= px
-          and y["p"] >= x["p"] and y["cap"] <= x["cap"])
-    gt = (any(y[k] > x[k] for k in crit) or y["E"] < x["E"] or py < px
-          or y["p"] > x["p"] or y["cap"] < x["cap"])
-    return ge and gt
+    """y domine x sur la qualite de vie : au moins aussi bon sur les 7 criteres, strictement meilleur une fois."""
+    return all(y[k] >= x[k] for k in crit) and any(y[k] > x[k] for k in crit)
 
 
-# Elimination retenue seulement si la domination tient dans les deux scenarios IA.
+# Information seulement (aucun retrait) : triplets domines sur les 7 criteres.
 for x in T:
-    x["domine_par"] = [y["id"] for y in T if y is not x and domine(y, x) and domine(y, x, CRIT_IA)]
-    x["domine_base_seul"] = [y["id"] for y in T if y is not x and domine(y, x) and not domine(y, x, CRIT_IA)]
-
-finaux = [t for t in T if not t["domine_par"]]
-
-
-def pareto(ens):
-    out = []
-    for x in ens:
-        if not any((y["W"] >= x["W"] and y["B"] <= x["B"]) and (y["W"] > x["W"] or y["B"] < x["B"]) for y in ens if y is not x):
-            out.append(x)
-    return sorted(out, key=lambda t: t["B"])
-
-
-front = pareto(T)
+    x["domine_par"] = [y["id"] for y in T if y is not x and domine(y, x)]
 
 # ---------------------------------------------------------------------------
 # 6. Sorties
@@ -767,31 +785,15 @@ def triplet(t):
 lignes = []
 lignes.append("## Bornes de l'echelle log (EUR PPA France)\n")
 for key, (lo, hi, _) in BORNES.items():
-    lignes.append(f"- {key} : min {lo:,.0f}, max {hi:,.0f}")
+    lignes.append(f"- {key} : min {lo:,.0f}, max {hi:,.0f}" + (" (informatif, hors score)" if key == "cum_ppa" else ""))
 lignes.append("")
-lignes.append("## Pool\n")
-lignes.append("| ID | Triplet | C | Ch | R | Se | Sn | Med40 PPA kEUR | Cumul PPA kEUR | Barriere | W | Palier |")
-lignes.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
-for t in sorted(T, key=lambda t: -t["W"]):
-    lignes.append(f"| {t['id']} | {triplet(t)} | {t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {k(t['m40_ppa'])} | {k(t['cum_ppa'])} | {t['B']:.2f} | {t['W']:.3f} | {t['palier']}{'*' if t['proche'] else ''} |")
+lignes.append("## Classement v4 (score sans barriere d'entree)\n")
+lignes.append("| Rang | ID | Triplet | C | Ch | R | Se | Sn | L | Rev | W | Palier | Med inst. PPA kEUR | P80 inst. PPA kEUR | Heures | Fiabilite | Barriere (info) | Cumul PPA (info) | Domine par (info) |")
+lignes.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+for t in CLASSEMENT:
+    rg = f"{t['rang']}{'=' if t['groupe'] > 1 else ''}"
+    lignes.append(f"| {rg} | {t['id']} | {triplet(t)} | {t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} | {t['Rev']:.2f} | {t['W']:.3f} | {t['palier']}{'*' if t['proche'] else ''} | {k(t['med_ppa'])} | {k(t['p80i_ppa'])} | {t['h']} | {t['fiab']} | {t['B']:.2f} | {k(t['cum_ppa'])} | {', '.join(t['domine_par'])} |")
 lignes.append("")
-lignes.append("## Elimines (domines)\n")
-for t in T:
-    if t["domine_par"]:
-        lignes.append(f"- {t['id']} {triplet(t)} : domine par {', '.join(t['domine_par'])}")
-    elif t["domine_base_seul"]:
-        lignes.append(f"- (conserve) {t['id']} {triplet(t)} : domine seulement sans IA par {', '.join(t['domine_base_seul'])}")
-lignes.append("")
-lignes.append("## Frontiere de Pareto (W, B)\n")
-for t in front:
-    lignes.append(f"- {t['id']} {triplet(t)} : B={t['B']:.2f} W={t['W']:.3f} {t['palier']}")
-lignes.append("")
-lignes.append("## Detail revenus et barriere\n")
-lignes.append("| ID | Med40 nom | Med40 PPA | P80 nom | P80 PPA | Cumul nom | Cumul PPA | E | pertes | b | IA | Palier IA fort |")
-lignes.append("|---|---|---|---|---|---|---|---|---|---|---|---|")
-for t in T:
-    lignes.append(f"| {t['id']} | {k(t['m40_nom'])} | {k(t['m40_ppa'])} | {k(t['p80_nom'])} | {k(t['p80_ppa'])} | {k(t['cum_nom'])} | {k(t['cum_ppa'])} | {t['E']} | {t['pertes']:.1f} | {'/'.join(f'{v:.1f}' for v in t['b'])} | {t['ia']} | {t['palier_ia']} ({t['W_ia']:.2f}) |")
-
 ici = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(ici, "resultats.md"), "w", encoding="utf-8") as f:
     f.write("\n".join(lignes) + "\n")
@@ -800,6 +802,5 @@ with open(os.path.join(ici, "resultats.json"), "w", encoding="utf-8") as f:
 
 if __name__ == "__main__":
     from collections import Counter
-    print("Pool :", len(T), "triplets ; finaux :", len(finaux), "; frontiere :", len(front))
+    print("Pool :", len(T), "triplets")
     print("Paliers :", Counter(t["palier"] for t in T))
-    print("Paliers finaux :", Counter(t["palier"] for t in finaux))

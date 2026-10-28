@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
-"""Genere tableaux.md (tableaux du rapport) a partir de modele.py."""
+"""Genere tableaux.md (tableaux du rapport, version 4) a partir de modele.py."""
+import json
 import os
 import re
 from collections import Counter
@@ -7,16 +8,9 @@ from collections import Counter
 import modele as m
 
 T = m.T
-FIN = [t for t in T if not t["domine_par"]]
 ID = {t["id"]: t for t in T}
-
-# Sources du P80 quand elles different de la regle generale (ratio estime par statut).
-SRC80 = {
-    "T23": "S64 haut de fourchette ; est.", "T24": "S64 haut de fourchette ; est.",
-    "T28": "S35 (Q3 45 CAD/h)", "T36": "S19 (TJM 15 ans et plus : 672 EUR) ; est.",
-    "T67": "S18 ; est.", "T05": "S04 (ecart moyenne/mediane) ; est.",
-}
-
+ICI = os.path.dirname(os.path.abspath(__file__))
+NOMS = {"C": "controle", "Ch": "charge", "R": "relations", "Se": "securite", "Sn": "sens", "Rev": "revenu", "L": "lieu"}
 
 ACCENTS = [
     ("Medecine", "Médecine"), ("Medecin", "Médecin"), ("medecin", "médecin"), ("generaliste", "généraliste"),
@@ -78,6 +72,15 @@ ACCENTS = [
     ("d'Etat", "d'État"), ("equivalence", "équivalence"), ("2 a 3 ans", "2 à 3 ans"), (" a Ohio State", " à Ohio State"),
     ("de 2024 a 2034", "de 2024 à 2034"), (" a Dublin", " à Dublin"), ("65 000 a 80 000", "65 000 à 80 000"),
     ("teletravail", "télétravail"),
+    ("Fiabilite", "Fiabilité"), ("fiabilite", "fiabilité"), ("installe", "installé"), ("Installe", "Installé"),
+    ("officielle ajustee", "officielle ajustée"), ("privee", "privée"), ("estimee", "estimée"), ("Modifications", "Modifications"),
+    ("Egalites declarees", "Égalités déclarées"), ("ecart inferieur", "écart inférieur"), ("declare", "déclaré"),
+    ("criteres", "critères"), ("Variation", "Variation"), ("croise par", "croisé par"), ("score propre", "score propre"),
+    ("quasi inchange", "quasi inchangé"), ("retire", "retiré"), ("re-source", "re-sourcé"), ("notes modifiees", "notes modifiées"),
+    ("Rang v3", "Rang v3"), ("Rang v4", "Rang v4"), ("informatif", "informatif"), ("hors score", "hors score"),
+    ("Annees de revenu perdues", "Années de revenu perdues"), ("Age d'entree", "Âge d'entrée"),
+    ("par rapport a la", "par rapport à la"), ("regle d'egalite", "règle d'égalité"), ("nouvelle regle", "nouvelle règle"),
+    ("Decomposition de l'ecart", "Décomposition de l'écart"), ("Ecart pondere", "Écart pondéré"), ("classe sous", "classé sous"),
     ("kEUR", "k€"), ("EUR", "€"),
 ]
 
@@ -88,20 +91,8 @@ def fr(s):
     return s
 
 
-def codes(s):
-    c = sorted(set(re.findall(r"S\d\d", s)))
-    est = "estime" in s or "est." in s
-    if not c:
-        return "est."
-    return ",".join(c) + (" ; est." if est else "")
-
-
 def k(x):
     return f"{x / 1000:.0f}"
-
-
-def pct(p):
-    return f"{p * 100:.0f} %"
 
 
 def tri(t):
@@ -110,6 +101,14 @@ def tri(t):
 
 def pal(t, w="W", p="palier"):
     return t[p] + ("*" if m.proche_frontiere(t[w]) else "")
+
+
+def rg(t):
+    return f"{t['rang']}{'=' if t['groupe'] > 1 else ''}"
+
+
+def d2(x):
+    return f"{x:+.2f}"
 
 
 out = []
@@ -126,128 +125,128 @@ for i in range(half):
     A(f"| {a['id']} | {tri(a)} | {b['id'] if b else ''} | {tri(b) if b else ''} |")
 A("")
 
-# --- Elimination -----------------------------------------------------------------
-A("### Elimines (domines dans les deux scenarios IA)\n")
-A("| Elimine | Domine par | Pourquoi (le dominant fait au moins aussi bien partout, et mieux sur) |")
-A("|---|---|---|")
-noms = {"C": "controle", "Ch": "charge", "R": "relations", "Se": "securite", "Sn": "sens", "Rev": "revenu", "L": "lieu"}
-for x in T:
-    if not x["domine_par"]:
-        continue
-    restants = [i for i in x["domine_par"] if not ID[i]["domine_par"]]
-    y = ID[(restants or x["domine_par"])[0]]
-    mieux = [noms[c] for c in m.CRIT if y[c] > x[c] + 1e-9]
-    if y["E"] < x["E"]:
-        mieux.append(f"entree {y['E']} ans au lieu de {x['E']}")
-    if round(y["pertes"], 1) < round(x["pertes"], 1):
-        mieux.append(f"annees perdues {y['pertes']:.1f} au lieu de {x['pertes']:.1f}")
-    if y["p"] > x["p"]:
-        mieux.append(f"p {pct(y['p'])} au lieu de {pct(x['p'])}")
-    if y["cap"] < x["cap"]:
-        mieux.append("moins de capital")
-    A(f"| {x['id']} {tri(x)} | {', '.join(x['domine_par'])} | {y['id']} : {', '.join(mieux)} |")
-for x in T:
-    if not x["domine_par"] and x["domine_base_seul"]:
-        A(f"| (conserve) {x['id']} {tri(x)} | {', '.join(x['domine_base_seul'])} sans IA seulement | domination perdue dans le scenario IA fort |")
+# --- Classement v4, partie A : notes puis palier ----------------------------------
+A("### Classement v4, partie A : notes par critere, puis palier\n")
+A("| Rang | ID | Triplet | C (22) | Ch (19) | R (15) | Se (15) | Sn (6) | L (8) | Rev (15) | Palier |")
+A("|---|---|---|---|---|---|---|---|---|---|---|")
+for t in m.CLASSEMENT:
+    A(f"| {rg(t)} | {t['id']} | {tri(t)} | {t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} | {t['Rev']:.1f} | {pal(t)} |")
 A("")
 
-# --- Tableau final ------------------------------------------------------------------
-A("### Tableau final (non domines, tries par score interne decroissant)\n")
-A("| ID | Triplet | Palier | Med. 40 ans nom./PPA kEUR | Src med. | P80 40 ans nom./PPA kEUR | Src P80 | Cumul 24-45 ans PPA kEUR | C | Ch | R | Se | Sn | L | Entree | Formation et financement | Selectivite | Annees perdues | Indice barriere | IA : exposition, palier si IA fort |")
-A("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
-for t in sorted(FIN, key=lambda t: -t["W"]):
-    A(f"| {t['id']} | {tri(t)} | {pal(t)} | {k(t['m40_nom'])} / {k(t['m40_ppa'])} | {codes(t['src'])} | "
-      f"{k(t['p80_nom'])} / {k(t['p80_ppa'])} | {SRC80.get(t['id'], 'est.')} | {k(t['cum_ppa'])} | "
-      f"{t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} | {t['E']} ans | {t['fin']} | {t['sel']} | "
-      f"{t['pertes']:.1f} | {t['B']:.2f} | {t['ia']}, {pal(t, 'W_ia', 'palier_ia')} |")
+# --- Partie B : cellules revenu ------------------------------------------------------
+A("### Classement v4, partie B : cellules revenu (net, professionnel installe)\n")
+A("| Rang | ID | Median nom./PPA kEUR | Source du median | P80 nom./PPA kEUR | Source du P80 | Temps de travail reel | Fiabilite |")
+A("|---|---|---|---|---|---|---|---|")
+for t in m.CLASSEMENT:
+    A(f"| {rg(t)} | {t['id']} | {k(t['med_nom'])} / {k(t['med_ppa'])} | {t['src_med']} | {k(t['p80i_nom'])} / {k(t['p80i_ppa'])} | {t['src_p80']} | {t['h']} | {t['fiab']} |")
 A("")
 
-# --- Tableau final scinde (lecture sur ecran etroit) ------------------------------------
-A("### Tableau final, partie A : paliers, revenus et criteres\n")
-A("| ID | Triplet | Palier | Med. 40 ans nom./PPA kEUR | Src med. | P80 nom./PPA kEUR | Src P80 | Cumul 24-45 PPA kEUR | C | Ch | R | Se | Sn | L |")
-A("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
-for t in sorted(FIN, key=lambda t: -t["W"]):
-    A(f"| {t['id']} | {tri(t)} | {pal(t)} | {k(t['m40_nom'])} / {k(t['m40_ppa'])} | {codes(t['src'])} | "
-      f"{k(t['p80_nom'])} / {k(t['p80_ppa'])} | {SRC80.get(t['id'], 'est.')} | {k(t['cum_ppa'])} | "
-      f"{t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} |")
-A("")
-A("### Tableau final, partie B : barriere d'entree et risque IA (meme ordre)\n")
-A("| ID | Entree | Formation et financement | Selectivite | Annees perdues | Indice barriere | IA : exposition, palier si IA fort |")
-A("|---|---|---|---|---|---|---|")
-for t in sorted(FIN, key=lambda t: -t["W"]):
-    A(f"| {t['id']} | {t['E']} ans | {t['fin']} | {t['sel']} | {t['pertes']:.1f} | {t['B']:.2f} | {t['ia']}, {pal(t, 'W_ia', 'palier_ia')} |")
+# --- Partie C : barriere informative --------------------------------------------------
+A("### Classement v4, partie C : barriere d'entree et risque IA (informatif, hors score)\n")
+A("| Rang | ID | Age d'entree | Formation et financement | Selectivite | Annees de revenu perdues | Cumul 24-45 ans PPA kEUR | IA : exposition, palier si IA fort | Domine sur les 7 criteres par |")
+A("|---|---|---|---|---|---|---|---|---|")
+for t in m.CLASSEMENT:
+    A(f"| {rg(t)} | {t['id']} | {t['E']} ans | {t['fin']} | {t['sel']} | {t['pertes']:.1f} | {k(t['cum_ppa'])} | {t['ia']}, {pal(t, 'W_ia', 'palier_ia')} | {', '.join(t['domine_par']) or 'aucun'} |")
 A("")
 
-# --- Frontiere de Pareto -----------------------------------------------------------
-A("### Frontiere de Pareto (bien-etre pondere contre indice de barriere)\n")
-A("| Rang barriere | ID | Triplet | Indice barriere | Palier | Ce qu'on gagne en montant d'un cran |")
-A("|---|---|---|---|---|---|")
-prev = None
-for i, t in enumerate(m.front, 1):
-    gain = "" if prev is None else f"+{t['W'] - prev['W']:.2f} point de score pour +{t['B'] - prev['B']:.2f} de barriere"
-    A(f"| {i} | {t['id']} | {tri(t)} | {t['B']:.2f} | {pal(t)} | {gain} |")
-    prev = t
+# --- Egalites -------------------------------------------------------------------------
+A("### Egalites declarees (ecart inferieur a 0,03 avec le premier du groupe)\n")
+groupes = {}
+for t in m.CLASSEMENT:
+    groupes.setdefault(t["rang"], []).append(t["id"])
+lignes_eg = [f"rang {r} : {' = '.join(ids)}" for r, ids in groupes.items() if len(ids) > 1]
+A(" ; ".join(lignes_eg) if lignes_eg else "aucune")
 A("")
 
-# --- Frontieres de palier et egalites ------------------------------------------------
+# --- Frontieres de palier -------------------------------------------------------------
 A("### A moins de 0,1 d'une frontiere de palier\n")
-proches = [t for t in sorted(T, key=lambda t: -t["W"]) if m.proche_frontiere(t["W"])]
-A(", ".join(f"{t['id']} ({t['palier']})" for t in proches))
-A("")
-A("### Egalites (ecart de score interne inferieur a 0,005)\n")
-eg = []
-S_ = sorted(T, key=lambda t: -t["W"])
-for i in range(len(S_)):
-    for j in range(i + 1, len(S_)):
-        if abs(S_[i]["W"] - S_[j]["W"]) < 0.005:
-            eg.append(f"{S_[i]['id']} = {S_[j]['id']}")
-A(", ".join(eg) if eg else "aucune")
+A(", ".join(f"{t['id']} ({t['palier']})" for t in m.CLASSEMENT if m.proche_frontiere(t["W"])))
 A("")
 
-# --- Sensibilite aux poids -------------------------------------------------------------
+# --- Sensibilite aux poids --------------------------------------------------------------
 VARIANTES = {
-    "Base v3 (22/19/15/15/6/15, lieu 8)": m.POIDS,
-    "Poids v2 sans lieu (24/21/16/16/7/16)": m.POIDS_V2,
+    "Base (22/19/15/15/6/15, lieu 8)": m.POIDS,
     "Poids egaux (7 criteres)": {kk: 100 / len(m.POIDS) for kk in m.POIDS},
-    "Lieu 15 (20/18/14/14/5/14, lieu 15)": {"C": 20, "Ch": 18, "R": 14, "Se": 14, "Sn": 5, "Rev": 14, "L": 15},
     "Revenu 30 (18/16/12/12/5/30, lieu 7)": {"C": 18, "Ch": 16, "R": 12, "Se": 12, "Sn": 5, "Rev": 30, "L": 7},
+    "Controle 30 (30/17/13/13/5/14, lieu 8)": {"C": 30, "Ch": 17, "R": 13, "Se": 13, "Sn": 5, "Rev": 14, "L": 8},
 }
 A("### Sensibilite des paliers aux poids (opinion, pas consensus)\n")
-A("| Variante | Palier S | Nombre S/A/B/C |")
-A("|---|---|---|")
+A("| Variante | Palier S | Nombre S/A/B/C | Premier |")
+A("|---|---|---|---|")
 for nom, P in VARIANTES.items():
-    tiers = {}
-    for t in T:
-        w = sum(P[c] * t[c] for c in P) / 100
-        tiers[t["id"]] = m.classer(w)
+    sc = {t["id"]: sum(P[c] * t[c] for c in P) / 100 for t in T}
+    tiers = {i: m.classer(w) for i, w in sc.items()}
     cnt = Counter(tiers.values())
-    S_ids = [i for i, v in tiers.items() if v == "S"]
-    A(f"| {nom} | {', '.join(S_ids) if S_ids else 'aucun'} | {cnt.get('S', 0)}/{cnt.get('A', 0)}/{cnt.get('B', 0)}/{cnt.get('C', 0)} |")
+    s_ids = [i for i, v in sorted(tiers.items(), key=lambda kv: -sc[kv[0]]) if v == "S"]
+    premier = max(sc, key=sc.get)
+    A(f"| {nom} | {', '.join(s_ids) if s_ids else 'aucun'} | {cnt.get('S', 0)}/{cnt.get('A', 0)}/{cnt.get('B', 0)}/{cnt.get('C', 0)} | {premier} |")
 A("")
 
-# --- Marge des triplets S ------------------------------------------------------------------
-A("### Marge des triplets S au-dessus de 4,2\n")
-if not any(t["palier"] == "S" for t in T):
-    A("Aucun triplet S. Écart à la frontière des premiers : " + ", ".join(
-        f"{t['id']} {4.2 - t['W']:.2f}" for t in sorted(T, key=lambda t: -t["W"])[:4]) + ".")
-for t in sorted(T, key=lambda t: -t["W"]):
-    if t["palier"] == "S":
-        marge = t["W"] - 4.2
-        bascule = [noms[c] for c in ("C", "Ch", "R", "Se", "Sn", "L") if m.POIDS[c] / 100 > marge]
-        A(f"- {t['id']} : marge {marge:.2f} ; une note de moins sur {', '.join(bascule) if bascule else 'aucun critere seul'} le fait passer en A.")
+# --- Pourquoi T89 devant des independants ------------------------------------------------
+cyb = ID["T89"]
+A("### Pourquoi T89 (cybersecurite, salarie, Suisse) est devant des independants\n")
+A("Écart pondéré par critère (poids × différence de note, divisé par 100) entre T89 et chaque libéral, indépendant ou artisan classé sous lui ; un nombre positif favorise T89.\n")
+A("| Triplet classe sous T89 | Rang | C | Ch | R | Se | Sn | L | Rev | Total |")
+A("|---|---|---|---|---|---|---|---|---|---|")
+for t in m.CLASSEMENT:
+    if t["W"] >= cyb["W"] or not any(s in t["statut"] for s in ("liberal", "independant", "artisan")):
+        continue
+    d = {c: m.POIDS[c] * (cyb[c] - t[c]) / 100 for c in m.CRIT}
+    A(f"| {t['id']} {tri(t)} | {rg(t)} | " + " | ".join(d2(d[c]) for c in m.CRIT) + f" | {d2(sum(d.values()))} |")
 A("")
 
-# --- Cellules estimees -------------------------------------------------------------------
-A("### Cellules revenu sans source directe (estimees)\n")
-A(", ".join(t["id"] for t in T if codes(t["src"]) == "est."))
+# --- Modifications de rang par rapport a la v3 ----------------------------------------------
+v3 = json.load(open(os.path.join(ICI, "rangs_v3.json"), encoding="utf-8"))
+r3 = m.rangs_partages([{"id": i, "W": d["W"]} for i, d in v3.items()], seuil=0.005)
+lo_m, hi_m = min(d["m40_ppa"] for d in v3.values()), max(d["m40_ppa"] for d in v3.values())
+lo_p, hi_p = min(d["p80_ppa"] for d in v3.values()), max(d["p80_ppa"] for d in v3.values())
+
+
+def ech(x, lo, hi):
+    import math
+    return max(1.0, min(5.0, 1 + 4 * (math.log(x) - math.log(lo)) / (math.log(hi) - math.log(lo))))
+
+
+A("### Modifications de rang par rapport a la version 3\n")
+A("Décomposition de l'écart de score de chaque triplet : (1) cumul 24-45 ans retiré du score revenu ; (2) notes modifiées ; (3) cellules revenu re-sourcées (médian et P80 installés, nouvelles bornes). Rang v3 avec la règle d'égalité de la v3 (écart inférieur à 0,005), rang v4 avec la nouvelle règle (0,03). Seuls les triplets dont le rang change sont listés.\n")
+A("| ID | Triplet | Rang v3 | Rang v4 | Variation | Cellule qui l'explique |")
+A("|---|---|---|---|---|---|")
+pos4 = {t["id"]: i for i, t in enumerate(m.CLASSEMENT, 1)}
+pos3 = {i: d["pos"] for i, d in v3.items()}
+for t in m.CLASSEMENT:
+    d = v3[t["id"]]
+    rev_a = (ech(d["m40_ppa"], lo_m, hi_m) + ech(d["p80_ppa"], lo_p, hi_p)) / 2
+    w_a = d["W"] + m.POIDS["Rev"] * (rev_a - d["Rev"]) / 100
+    notes = {c: t[c] - d[c] for c in ("C", "Ch", "R", "Se", "Sn", "L") if t[c] != d[c]}
+    w_b = w_a + sum(m.POIDS[c] * v for c, v in notes.items()) / 100
+    parts = [("cumul 24-45 ans retire du score", w_a - d["W"])]
+    for c, v in notes.items():
+        parts.append((f"{NOMS[c]} {d[c]} vers {t[c]}", m.POIDS[c] * v / 100))
+    parts.append((f"revenu installé re-sourcé : médian {k(d['m40_ppa'])} vers {k(t['med_ppa'])} k€ PPA, P80 {k(d['p80_ppa'])} vers {k(t['p80i_ppa'])}", t["W"] - w_b))
+    parts = [p for p in parts if abs(p[1]) >= 0.005]
+    parts.sort(key=lambda p: -abs(p[1]))
+    r_old, r_new = r3[t["id"]], (t["rang"], t["groupe"])
+    s_old = f"{r_old[0]}{'=' if r_old[1] > 1 else ''}"
+    var = r_old[0] - t["rang"]
+    if var == 0 and s_old == rg(t):
+        continue
+    croise = [i for i in pos3 if (pos3[i] < pos3[t["id"]]) != (pos4[i] < pos4[t["id"]]) and i != t["id"]]
+    expl = " ; ".join(f"{n} ({d2(v)})" for n, v in parts) or "score propre quasi inchange"
+    if croise and len(croise) <= 4:
+        expl += " ; croise par " + ", ".join(sorted(croise, key=lambda i: pos4[i]))
+    elif croise:
+        expl += f" ; croise par {len(croise)} triplets"
+    A(f"| {t['id']} | {tri(t)} | {s_old} | {rg(t)} | {'+' if var > 0 else ''}{var} | {expl} |")
 A("")
-A("### Cellules revenu sourcees mais ajustees (anciennete, conversion net, proxy)\n")
-A(", ".join(t["id"] for t in T if codes(t["src"]).endswith("est.") and codes(t["src"]) != "est."))
+
+# --- Cellules sans source fiable -----------------------------------------------------------
+A("### Cellules revenu sans source fiable\n")
+A(", ".join(f"{t['id']} ({t['fiab']})" for t in T if t["fiab"] in ("estimee", "sans source fiable", "privee", "provisoire")) or "aucune")
 A("")
 
 texte = fr("\n".join(out) + "\n")
 texte = re.sub(r"(?<=\d)\.(?=\d)", ",", texte)  # decimales a la francaise
 texte = texte.replace(" x ", " × ")
-with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "tableaux.md"), "w", encoding="utf-8") as f:
+with open(os.path.join(ICI, "tableaux.md"), "w", encoding="utf-8") as f:
     f.write(texte)
-print("ok", len(FIN), "finaux")
+print("ok", len(T), "triplets")
