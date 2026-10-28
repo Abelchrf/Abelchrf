@@ -84,7 +84,7 @@ H_FR = "35 h légales (non mesurée)"
 H_CH = "41 h 47 contractuelles, tous salariés (OFS 2024, S112)"
 H_US = "40 h usuelles (non mesurée)"
 
-REV4 = {
+REV = {
     # --- Santé, France : médecins, dentistes, pharmaciens, vétérinaires -------------------------
     "T01": lib(98300 * NET_BNC * MED_MOY_LIB, "46 h (DREES, ER 1381, données 2025, S07)",
                "DREES 2021 (S02) : omnipraticiens, revenu d'activité moyen 98 300 € ; × 0,96 × 0,85 ; recoupement CARMF 2024 (S98) : 97 099 € moy.",
@@ -262,4 +262,4 @@ REV4 = {
                "Insee 2023 (S08) : employés, médiane 1 800 €/mois net", "officielle"),
 }
 
-A_RESOURCER = [i for i, r in REV4.items() if r["fiab"] in ("non re-sourcée", "sans source fiable", "non officielle")]
+A_RESOURCER = [i for i, r in REV.items() if r["fiab"] in ("non re-sourcée", "sans source fiable", "non officielle")]

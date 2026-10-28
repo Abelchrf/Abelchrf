@@ -692,18 +692,33 @@ def echelle_log(vals):
 # - Revenu = revenu net d'un professionnel installe (mediane de la profession et P80, en PPA), sans la
 #   decote d'anciennete liee a l'entree tardive du sujet. Le cumul 24-45 ans, qui depend surtout de la
 #   duree des etudes, sort du score et reste une colonne informative.
-# - Les cellules revenu sont dans revenus_v4.py, une par triplet, avec source et temps de travail reel.
-from revenus_v4 import REV4  # noqa: E402
+# - Les cellules revenu sont dans revenus.py, une par triplet, avec source et temps de travail reel.
+from revenus import REV  # noqa: E402
 
 for t in T:
-    r = REV4[t["id"]]
+    r = REV[t["id"]]
     fp, fn = facteur_ppa(t["cur"], t["resid"]), facteur_nominal(t["cur"])
     t.update(med=r["med"], p80i=r["p80"], h=r["h"], src_med=r["src_med"], src_p80=r["src_p80"],
              fiab=r["fiab"])
     t["med_nom"], t["p80i_nom"] = r["med"] * fn, r["p80"] * fn
     t["med_ppa"], t["p80i_ppa"] = r["med"] * fp, r["p80"] * fp
 
-REV_CLES = ("med_ppa", "p80i_ppa")
+import eurofound as EU  # noqa: E402
+
+# Version 5 (28 octobre 2026) : grille Eurofound a 7 dimensions, poids egaux ; revenu en equivalent temps
+# plein. Quotite q = min(1, heures reelles / 35) quand les heures sont connues (35 h : seuil du temps plein
+# du BLS et duree legale francaise) ; q = 1 si la source est deja en equivalent temps plein ; sinon q = 1
+# et la cellule est signalee.
+for t in T:
+    r = REV[t["id"]]
+    t["q"] = r.get("q", 1.0)
+    t["etp"] = r.get("etp", "temps de travail non trouvé")
+    t["etp_ok"] = r.get("etp_ok", False)
+    for a, b in (("med", "med"), ("p80i", "p80")):
+        t[f"{b}_etp_nom"] = t[f"{a}_nom"] / t["q"]
+        t[f"{b}_etp_ppa"] = t[f"{a}_ppa"] / t["q"]
+
+REV_CLES = ("med_etp_ppa", "p80_etp_ppa")
 BORNES = {}
 for k in REV_CLES + ("cum_ppa",):
     BORNES[k] = echelle_log([t[k] for t in T])
@@ -713,32 +728,40 @@ def score_revenu(t, mult=1.0):
     return sum(BORNES[k][2](t[k] * mult) for k in REV_CLES) / len(REV_CLES)
 
 
-def total(t, rev, se):
-    return (POIDS["C"] * t["C"] + POIDS["Ch"] * t["Ch"] + POIDS["R"] * t["R"]
-            + POIDS["Se"] * se + POIDS["Sn"] * t["Sn"] + POIDS["Rev"] * rev + POIDS["L"] * t["L"]) / 100
+POIDS5 = {d: 1 for d in EU.DIMS}
+VARIANTES5 = {"Poids égaux": POIDS5}
+for _d in EU.DIMS:
+    VARIANTES5[f"{EU.NOMS_DIMS[_d]} doublé"] = {d: (2 if d == _d else 1) for d in EU.DIMS}
 
 
-# Scenario IA fort (poids de preuve faible) : exposition moyenne = Securite -1 et revenus x 0,9 ;
-# exposition elevee = Securite -2 et revenus x 0,8. Scenario IA faible = scenario de base.
+def score(t, P, ps=None, re_=None):
+    v = dict((d, t[d]) for d in EU.DIMS)
+    if ps is not None:
+        v["PS"] = ps
+    if re_ is not None:
+        v["RE"] = re_
+    return sum(P[d] * v[d] for d in P) / sum(P.values())
+
+
+# Scenario IA fort (poids de preuve faible) : exposition moyenne = perspectives -1 et revenus x 0,9 ;
+# exposition elevee = perspectives -2 et revenus x 0,8 ; fonctionnaires : choc reduit d'un cran.
 IA_FORT = {"faible": (0, 1.0), "moyenne": (1, 0.9), "elevee": (2, 0.8)}
 for t in T:
-    t["Rev"] = score_revenu(t)
-    t["W"] = total(t, t["Rev"], t["Se"])
+    t.update(EU.dimensions(t))
+    t["RE"] = score_revenu(t)
+    t["W"] = score(t, POIDS5)
     t["palier"] = classer(t["W"])
     t["proche"] = proche_frontiere(t["W"])
     d_se, mult = IA_FORT[t["ia"]]
-    if "fonctionnaire" in t["statut"]:  # statut protege : choc de securite reduit d'un cran
+    if "fonctionnaire" in t["statut"]:
         d_se = max(0, d_se - 1)
-    t["Se_ia"] = max(1, t["Se"] - d_se)
-    t["Rev_ia"] = score_revenu(t, mult)
-    t["W_ia"] = total(t, t["Rev_ia"], t["Se_ia"])
+    t["W_ia"] = score(t, POIDS5, ps=max(1, t["PS"] - d_se), re_=score_revenu(t, mult))
     t["palier_ia"] = classer(t["W_ia"])
 
-CRIT = ("C", "Ch", "R", "Se", "Sn", "Rev", "L")
+CRIT = EU.DIMS
 
-# Egalites : un ecart inferieur a 0,03 n'est pas interpretable (moitie du plus petit pas de note,
-# le sens a 6 points ; et effet d'une erreur de 10 % sur les deux revenus). Groupes formes depuis le
-# meilleur score : un groupe reunit les triplets a moins de 0,03 de son premier membre.
+# Egalites : ecart inferieur a 0,03 (effet d'une erreur de 10 % sur les deux revenus). Groupes formes
+# depuis le meilleur score : un groupe reunit les triplets a moins de 0,03 de son premier membre.
 SEUIL_EGALITE = 0.03
 
 
@@ -760,13 +783,28 @@ for t in T:
     t["rang"], t["groupe"] = RANG[t["id"]]
 CLASSEMENT = sorted(T, key=lambda t: (-t["W"], t["id"]))
 
+# Robustesse : haut du classement = 10 premiers (rangs partages compris) dans chaque configuration.
+TOP = 10
+for nom, P in VARIANTES5.items():
+    for t in T:
+        t["_w"] = score(t, P)
+    rg = rangs_partages(T, cle="_w")
+    for t in T:
+        t.setdefault("rangs_var", {})[nom] = rg[t["id"]][0]
+for t in T:
+    t.pop("_w", None)
+    t["nb_top"] = sum(1 for r in t["rangs_var"].values() if r <= TOP)
+    t["rang_min"], t["rang_max"] = min(t["rangs_var"].values()), max(t["rangs_var"].values())
+ROBUSTES = [t for t in CLASSEMENT if t["nb_top"] == len(VARIANTES5)]
+UNE_SEULE = [t for t in CLASSEMENT if t["nb_top"] == 1]
+
 
 def domine(y, x, crit=CRIT):
-    """y domine x sur la qualite de vie : au moins aussi bon sur les 7 criteres, strictement meilleur une fois."""
+    """y domine x : au moins aussi bon sur les 7 dimensions, strictement meilleur une fois."""
     return all(y[k] >= x[k] for k in crit) and any(y[k] > x[k] for k in crit)
 
 
-# Information seulement (aucun retrait) : triplets domines sur les 7 criteres.
+# Information seulement (aucun retrait) : triplets domines sur les 7 dimensions.
 for x in T:
     x["domine_par"] = [y["id"] for y in T if y is not x and domine(y, x)]
 
@@ -787,12 +825,12 @@ lignes.append("## Bornes de l'echelle log (EUR PPA France)\n")
 for key, (lo, hi, _) in BORNES.items():
     lignes.append(f"- {key} : min {lo:,.0f}, max {hi:,.0f}" + (" (informatif, hors score)" if key == "cum_ppa" else ""))
 lignes.append("")
-lignes.append("## Classement v4 (score sans barriere d'entree)\n")
-lignes.append("| Rang | ID | Triplet | C | Ch | R | Se | Sn | L | Rev | W | Palier | Med inst. PPA kEUR | P80 inst. PPA kEUR | Heures | Fiabilite | Barriere (info) | Cumul PPA (info) | Domine par (info) |")
-lignes.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+lignes.append("## Classement v5 (Eurofound, poids egaux)\n")
+lignes.append("| Rang | ID | Triplet | EP | IT | QT | ES | CA | PS | RE | W | Palier | Med ETP PPA kEUR | P80 ETP PPA kEUR | Quotite | Top 10 (sur 8) | Rangs min-max | Fiabilite revenu |")
+lignes.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 for t in CLASSEMENT:
     rg = f"{t['rang']}{'=' if t['groupe'] > 1 else ''}"
-    lignes.append(f"| {rg} | {t['id']} | {triplet(t)} | {t['C']} | {t['Ch']} | {t['R']} | {t['Se']} | {t['Sn']} | {t['L']} | {t['Rev']:.2f} | {t['W']:.3f} | {t['palier']}{'*' if t['proche'] else ''} | {k(t['med_ppa'])} | {k(t['p80i_ppa'])} | {t['h']} | {t['fiab']} | {t['B']:.2f} | {k(t['cum_ppa'])} | {', '.join(t['domine_par'])} |")
+    lignes.append(f"| {rg} | {t['id']} | {triplet(t)} | {t['EP']} | {t['IT']} | {t['QT']} | {t['ES']} | {t['CA']:.2f} | {t['PS']} | {t['RE']:.2f} | {t['W']:.3f} | {t['palier']}{'*' if t['proche'] else ''} | {k(t['med_etp_ppa'])} | {k(t['p80_etp_ppa'])} | {t['q']:.2f} | {t['nb_top']} | {t['rang_min']}-{t['rang_max']} | {t['fiab']} |")
 lignes.append("")
 ici = os.path.dirname(os.path.abspath(__file__))
 with open(os.path.join(ici, "resultats.md"), "w", encoding="utf-8") as f:

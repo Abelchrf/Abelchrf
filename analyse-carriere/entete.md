@@ -1,6 +1,6 @@
 # Classement de triplets métier × statut × pays
 
-Sujet de référence : 24 ans, nationalité française, bac général, aucun diplôme du supérieur, quelques années d'emploi peu qualifié, aptitudes moyennes, ni réseau ni capital, sans charge de famille. Date de l'analyse : 11 octobre 2026. Version 3 du 13 octobre 2026 : critère lieu (télétravail) et nouveaux pays, Suisse en résident, Irlande, États-Unis (section 1.10). Version 4 du 28 octobre 2026 : classement par qualité de vie une fois installé, sans aucune barrière d'entrée dans le score, cellules revenu re-sourcées une par une (section 1.11).
+Sujet de référence : 24 ans, nationalité française, bac général, aucun diplôme du supérieur, quelques années d'emploi peu qualifié, aptitudes moyennes, ni réseau ni capital, sans charge de famille. Date de l'analyse : 11 octobre 2026. Version 3 du 13 octobre 2026 : critère lieu (télétravail) et nouveaux pays, Suisse en résident, Irlande, États-Unis (section 1.10). Version 4 du 28 octobre 2026 : classement par qualité de vie une fois installé, sans aucune barrière d'entrée dans le score, cellules revenu re-sourcées une par une (section 1.11). Version 5 du 28 octobre 2026 : grille de qualité de l'emploi d'Eurofound, 7 dimensions à poids égaux, revenu en équivalent temps plein, robustesse testée sur 8 pondérations (section 1.12) ; elle remplace la pondération personnelle.
 
 Reproductibilité : tout le calcul est dans `modele.py` (entrées) et `tableaux.py` (sorties). Changer une entrée et relancer `python3 assembler.py` régénère les tableaux et le rapport.
 
@@ -24,7 +24,7 @@ Reproductibilité : tout le calcul est dans `modele.py` (entrées) et `tableaux.
 | Revenus en formation | 0 € pour les études à temps plein ; stipendiums d'externat, salaire d'interne, apprentissage (53 % puis 100 % du SMIC, S43), traitements de stagiaire selon les règles de chaque voie. Frais de scolarité élevés comptés en négatif (ostéopathie, pilote, podologie). |
 | Après l'entrée | Montée linéaire du revenu de début vers le médian à 40 ans, puis +0,5 %/an réel. |
 
-### 1.2 Poids (opinion, pas consensus chiffré) : version 3, inchangés en version 4
+### 1.2 Poids des versions 1 à 4 (opinion, pas consensus chiffré), remplacés en version 5 par la grille Eurofound (1.12)
 
 | Critère | Poids v3 | Poids v2 | Poids v1 | Appui |
 |---|---|---|---|---|
@@ -150,3 +150,19 @@ Ces multiplicateurs sont des bornes de scénario, pas une prévision. L'expositi
 | Égalité sous un écart de 0,03 (section 1.5) | Un écart plus petit ne peut venir que du revenu, dont l'incertitude est d'au moins 10 % : départager serait artificiel. | Tous |
 | Plus d'élimination, de frontière de Pareto ni de classement en deux temps | Ils utilisaient la barrière. | Tous |
 | Poids inchangés : contrôle 22, charge 19, relations 15, sécurité 15, revenu 15, lieu 8, sens 6 | Consigne. Le revenu est 3e à égalité avec les relations et la sécurité ; le dernier critère est le sens. | Aucun |
+
+### 1.12 Changements de la version 5 (28 octobre 2026), déclarés avant recalcul
+
+| Changement | Justification | Triplets touchés |
+|---|---|---|
+| Critères : les 7 dimensions de qualité de l'emploi d'Eurofound (environnement physique EP, intensité du travail IT, qualité du temps de travail QT, environnement social ES, compétences et autonomie CA, perspectives et sécurité PS, revenu RE), à poids égaux (1/7 chacune). La pondération personnelle est supprimée. | Consigne du 28 octobre. Eurofound a retenu ces dimensions pour leur effet démontré sur la santé et le bien-être des travailleurs (S116). Des poids égaux restent un choix : d'où le test de robustesse. | Tous |
+| EP : grille par groupe de métiers (5 bureau ou cabinet ; 4 contraintes légères ; 3 postures contraignantes ou risques biologiques, chimiques, rayonnements ; 2 manutention de personnes ou de charges, postures pénibles ; 1 cumul fort) | Reprend et gradue le facteur F4 (pénibilité) de l'ancienne charge. | Tous |
+| IT : grille par groupe de métiers (5 rythme libre ; 4 pression modérée ; 3 forte exigence de délais, d'objectifs ou de patients ; 2 urgence, vigilance de sécurité ou tension forte et fréquente ; 1 cumul extrême) | Reprend et gradue le facteur F2 (intensité, exigences émotionnelles). | Tous |
+| QT = 5 - F1 (plus de 45 h) - F3 (nuits, week-ends, astreintes) - H (horaires imposés, contrôle v4 de 3 ou moins), plancher 1 | Composantes de l'indice Eurofound : durée, horaires atypiques, aménagement des horaires. | Tous |
+| ES = relations v4 ; PS = sécurité v4 | Même contenu ; les perspectives de carrière ne sont pas notées à part (limite). | Tous |
+| CA = moyenne du contrôle v4 (latitude de décision) et du niveau de compétence CITP-08 de l'OIT (niveau 4 : 5 ; 3 : 3,67 ; 2 : 2,33 ; 1 : 1) | Eurofound réunit la latitude de décision et l'usage des compétences ; le niveau CITP-08 est une classification publiée (S115). | Tous |
+| Facteurs F1 à F5 explicités pour chaque triplet (section 3, tableau de conversion) | 5 moins leur nombre redonne les 93 notes de charge v4 (contrôle automatique) : la conversion est traçable. | Tous |
+| Sortis du score : sens, lieu (télétravail), trajet (F5) | Absents des 7 indices d'Eurofound. Ils restent visibles dans le tableau de conversion. | Tous |
+| RE : revenu en équivalent temps plein, ajusté en PPA ; quotité = heures réelles / 35, plafonnée à 1 | Consigne. 35 h = seuil du temps plein retenu par le BLS et durée légale française. Source déjà en équivalent temps plein (EQTP, temps complet, salaire horaire × durée à temps plein) : quotité 1. Heures non trouvées : quotité 1 et cellule signalée. | Tous |
+| Robustesse : 8 configurations (poids égaux, puis chacune des 7 dimensions doublée) ; haut du classement = 10 premiers, rangs partagés compris ; classement final = triplets présents dans le haut du classement dans toutes les configurations | Consigne (au moins 3 variantes). Doubler chaque dimension à tour de rôle évite de choisir celles à favoriser ; les 3 variantes citées (revenu, autonomie, sécurité) en font partie. | Tous |
+| Paliers calculés sur le score à poids égaux ; égalité sous un écart de 0,03 | Inchangé : 0,03 correspond toujours à l'effet d'une erreur de 10 % sur le revenu. | Tous |
