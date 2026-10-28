@@ -714,6 +714,7 @@ for t in T:
     t["q"] = r.get("q", 1.0)
     t["etp"] = r.get("etp", "temps de travail non trouvé")
     t["etp_ok"] = r.get("etp_ok", False)
+    t["h_src"] = r.get("h_src", "")
     for a, b in (("med", "med"), ("p80i", "p80")):
         t[f"{b}_etp_nom"] = t[f"{a}_nom"] / t["q"]
         t[f"{b}_etp_ppa"] = t[f"{a}_ppa"] / t["q"]

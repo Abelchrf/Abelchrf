@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Assemble rapport.md a partir de entete.md, tableaux.md (genere) et conclusion.md (version 4)."""
+"""Assemble rapport.md a partir de entete.md, tableaux.md (genere) et conclusion.md (version 5)."""
 import os
 import re
 import subprocess
@@ -32,28 +32,30 @@ import modele as _m  # noqa: E402
 
 parties = [lire("entete.md").strip(), ""]
 parties += ["## 2. Pool (" + sec("Pool")[0].split("(")[1], "", sec("Pool")[1], ""]
-parties += [f"## 3. Classement v4 ({len(_m.T)} triplets, qualité de vie une fois installé)", "",
-            "Lecture des colonnes : C contrôle, Ch charge, R relations, Se sécurité, Sn sens, L lieu (télétravail), notes entières de 1 à 5 ; "
-            "Rev = note de revenu de 1 à 5, seule note continue, calculée sur les valeurs ajustées en PPA ; poids entre parenthèses. "
+parties += [f"## 3. Classement v5 ({len(_m.T)} triplets, grille Eurofound à poids égaux)", "",
+            "Lecture des colonnes : EP environnement physique, IT intensité du travail, QT qualité du temps de travail, ES environnement social, "
+            "CA compétences et autonomie, PS perspectives et sécurité, RE revenu ; notes de 1 (mauvais) à 5 (bon), poids égaux. "
+            "CA et RE sont des notes continues (moyenne ou échelle logarithmique), les autres sont entières. "
             "Palier : S ≥ 4,2, A ≥ 3,6, B ≥ 3,0, C en dessous ; * = à moins de 0,1 d'une frontière. "
-            "« 7= » : rang partagé par des triplets à égalité (écart inférieur à 0,03). "
-            "« X / Y k€ » : revenu net annuel en milliers d'euros, X au change 2025 sans ajustement, Y en parité de pouvoir d'achat (euros au niveau de prix français) ; le score utilise Y.", ""]
-for prefixe in ("Classement v4, partie A", "Classement v4, partie B", "Classement v4, partie C"):
+            "« 7= » : rang partagé (écart inférieur à 0,03). "
+            "« X / Y k€ » : revenu net annuel en milliers d'euros, X au change 2025 sans ajustement, Y en parité de pouvoir d'achat ; le score utilise Y en équivalent temps plein.", ""]
+for prefixe in ("Classement v5, partie A", "Classement v5, partie B", "Classement v5, partie C", "Classement v5, partie D"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
-parties += ["## 4. Égalités, frontières de palier, sensibilité aux poids", ""]
-for prefixe in ("Égalités", "À moins de 0,1", "Sensibilité"):
+parties += ["## 4. Robustesse aux pondérations", ""]
+for prefixe in ("Robustesse", "Noyau robuste"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
-titre, corps = sec("Pourquoi T89")
-parties += ["## 5. " + titre, "",
-            "Le contrôle a le plus gros poids (22 sur 100), mais le score est une moyenne pondérée, pas un ordre strict : "
-            "une note de contrôle en moins coûte 0,22, et une note de plus en relations et en sécurité rapporte 0,30. "
-            "Un salarié peut donc passer devant un indépendant mieux noté en contrôle s'il le dépasse ailleurs. "
-            "Si tu veux que le contrôle départage avant tout le reste, c'est un autre mode de calcul (ordre lexicographique), à décider explicitement.", "",
-            corps, ""]
-titre, corps = sec("Modifications de rang")
+parties += ["## 5. Égalités et frontières de palier", ""]
+for prefixe in ("Égalités", "À moins de 0,1"):
+    titre, corps = sec(prefixe)
+    parties += ["### " + titre, "", corps, ""]
+titre, corps = sec("Conversion des notes")
 parties += ["## 6. " + titre, "", corps, ""]
+titre, corps = sec("Modifications de rang")
+parties += ["## 7. " + titre, "", corps, ""]
+titre, corps = sec("Cellules revenu sans source fiable")
+parties += ["## 8. " + titre, "", corps, ""]
 parties += [lire("conclusion.md").strip(), ""]
 
 texte = "\n".join(parties)

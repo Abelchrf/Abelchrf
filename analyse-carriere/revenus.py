@@ -263,3 +263,35 @@ REV = {
 }
 
 A_RESOURCER = [i for i, r in REV.items() if r["fiab"] in ("non re-sourcée", "sans source fiable", "non officielle")]
+
+
+# --- Equivalent temps plein (version 5) -------------------------------------------------------------
+# q = quotite (heures reelles / 35, plafonnee a 1). etp_ok = temps de travail reel connu, ou source deja
+# exprimee en equivalent temps plein. h_src = code de la source des heures, quand une duree reelle est citee.
+SOURCE_ETP = "source en équivalent temps plein"
+ETP = {}
+for _i in ("T08", "T12", "T21", "T04", "T59", "T55", "T75"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (EQTP)", True, "")
+for _i in ("T56", "T57"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (temps complet) ; 42 à 43 h déclarées", True, "S101")
+for _i in ("T23", "T24", "T33", "T34", "T37", "T42", "T49", "T82", "T86", "T89"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (salaire standardisé de l'ESS)", True, "")
+for _i in ("T88", "T90", "T93"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (salaire horaire × 2 080 h)", True, "")
+for _i in ("T28", "T40", "T50"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (salaire horaire × durée à temps plein)", True, "")
+for _i in ("T27", "T38", "T80", "T83", "T85", "T41"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (salariés à temps plein)", True, "")
+for _i in ("T25", "T26", "T31", "T64", "T65", "T77"):
+    ETP[_i] = (1.0, SOURCE_ETP + " (grille à temps plein)", True, "")
+for _i in ("T36", "T81"):
+    ETP[_i] = (1.0, "estimation à temps plein (170 à 180 jours facturés)", True, "")
+ETP["T87"] = (1.0, SOURCE_ETP + " (salaire annuel à temps plein)", True, "")
+ETP["T01"] = (1.0, "46 h par semaine, au moins 35 h", True, "S07")
+ETP["T92"] = (1.0, "36,1 h par semaine, au moins 35 h", True, "S114")
+ETP["T29"] = (1.0, "50,7 h par semaine (médecins assistants)", True, "S109")
+ETP["T91"] = (1.0, "temps plein supposé (1 800 h par an), non mesuré", False, "")
+
+for _i, _r in REV.items():
+    q, txt, ok, hs = ETP.get(_i, (1.0, "temps de travail non trouvé", False, ""))
+    _r.update(q=q, etp=txt, etp_ok=ok, h_src=hs)
