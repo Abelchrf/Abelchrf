@@ -35,7 +35,7 @@ FACTEURS = {
     "T13": "F1 F2 F3", "T14": "F2 F3", "T15": "", "T16": "F2", "T17": "F3", "T18": "F3",
     "T19": "F1 F3 F4", "T20": "F2", "T21": "F2 F3 F4", "T22": "F4", "T23": "F2 F3 F4",
     "T24": "F2 F3 F4 F5", "T25": "F2 F3 F4 F5", "T26": "F2 F3 F4", "T27": "F2 F3 F4", "T28": "F2 F3 F4",
-    "T29": "F1 F2 F3", "T30": "F1 F2", "T31": "F1 F2 F3", "T32": "F1 F2 F3", "T33": "F2 F3 F4 F5",
+    "T29": "F1 F2 F3", "T30": "F2", "T31": "F1 F2 F3", "T32": "F1 F2 F3", "T33": "F2 F3 F4 F5",
     "T34": "F4 F5", "T35": "F2", "T36": "F2", "T37": "F2 F5", "T38": "F2", "T39": "F2 F5", "T40": "F2",
     "T41": "F2", "T42": "F2 F5", "T43": "F2", "T44": "F3 F4", "T45": "F3", "T46": "F2", "T47": "F4",
     "T48": "F1 F2 F4", "T49": "F4 F5", "T50": "F4", "T51": "F1 F2 F4", "T52": "F3 F4", "T53": "F3 F5",
@@ -142,10 +142,16 @@ def dimensions(t):
     return {"EP": ep, "IT": it, "QT": qt, "ES": t["R"], "CA": ca, "PS": t["Se"]}
 
 
+# Facteurs corriges par une donnee nouvelle (la note de charge v4 ne les reproduit donc plus).
+CORRECTIONS = {"T30": "F1 retiré : médecins de famille suisses à 43 h par semaine (S131)"}
+
+
 def controle(T):
-    """Verifie que 5 - nombre de facteurs redonne la note de charge v4 (plancher 1)."""
+    """Verifie que 5 - nombre de facteurs redonne la note de charge v4 (plancher 1), hors corrections."""
     ecarts = []
     for t in T:
+        if t["id"] in CORRECTIONS:
+            continue
         n = len(FACTEURS[t["id"]].split())
         if max(1, 5 - n) != t["Ch"]:
             ecarts.append((t["id"], t["Ch"], max(1, 5 - n)))

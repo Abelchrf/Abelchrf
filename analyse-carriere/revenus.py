@@ -59,6 +59,20 @@ def net_irlande(g):
     return g - usc - 0.042 * g
 
 
+
+def net_allemagne(g):
+    """Cotisations salariales 2025 : retraite 9,3 % et chomage 1,3 % jusqu'a 96 600 EUR ; maladie 8,55 %
+    et dependance 2,4 % (sans enfant) jusqu'a 66 150 EUR."""
+    return g - 0.106 * min(g, 96600) - 0.1095 * min(g, 66150)
+
+
+def net_fonctionnaire(brut, part_primes):
+    """Pension 11,1 % sur le traitement indiciaire, RAFP 5 % sur les primes (plafond 20 % du traitement),
+    CSG et CRDS 9,7 % sur 98,25 % du brut."""
+    ti = brut * (1 - part_primes)
+    return brut - 0.111 * ti - 0.05 * min(brut - ti, 0.2 * ti) - 0.097 * 0.9825 * brut
+
+
 def c(med, p80, h, src_med, src_p80, fiab):
     return dict(med=round(med, -2), p80=round(p80, -2), h=h, src_med=src_med, src_p80=src_p80, fiab=fiab)
 
@@ -89,7 +103,8 @@ REV = {
     "T01": lib(98300 * NET_BNC * MED_MOY_LIB, "46 h (DREES, ER 1381, données 2025, S07)",
                "DREES 2021 (S02) : omnipraticiens, revenu d'activité moyen 98 300 € ; × 0,96 × 0,85 ; recoupement CARMF 2024 (S98) : 97 099 € moy.",
                "relayée"),
-    "T02": v3(64000, 76000, "estime : pas de serie officielle ; ancrage S09 (INSEE FPH 2024 : personnels medicaux 6 926 EUR/mois moy.)"),
+    "T02": sal(72500 * 0.78, 76000 / 64000, "environ 35 h, sans gardes (non officiel)",
+               "non officielle : 60 000 à 85 000 € brut par an en centre de santé (S129) ; milieu de fourchette × 0,78", "non officielle"),
     "T03": lib((88400 + 92800) / 2 * NET_BNC * MED_MOY_LIB, H_NT,
                "DREES 2021 (S02) : pédiatres 88 400 €, psychiatres 92 800 € moy. (spécialités du rang médian) ; × 0,96 × 0,85 ; CARMF 2022 (S98), part libérale seule : 74 884 € et 73 014 €",
                "relayée"),
@@ -99,7 +114,8 @@ REV = {
     "T05": lib(97672 * NET_BNC, H_NT,
                "CARCDSF 2023 (S04) : médiane 97 672 € ; × 0,96 ; recoupement Insee (S99) : dentistes 10 300 €/mois moy.",
                "relayée"),
-    "T06": v3(40000, 48000, "estime : grille de la convention collective officine (non recuperee) ; aucune serie officielle"),
+    "T06": sal(500 * 5.278 / 100 * 151.67 * 12 * 0.78, 48000 / 40000, H_FR,
+               "convention collective de l'officine 2026 (S127) : point 5,278 €, coefficient 500 (mi-carrière, estimé), 151,67 h par mois ; minimum conventionnel × 0,78 ; salaires réels non trouvés", "officielle (grille)"),
     "T07": lib(6390 * 12 * NET_INSEE * MED_MOY_LIB, H_NT,
                "Insee 2024 (S99) : pharmaciens non salariés, 6 390 €/mois moy. ; × 0,874 × 0,85",
                "relayée"),
@@ -114,7 +130,8 @@ REV = {
                "DREES 2021 (S03) : sages-femmes libérales, 42 200 € moy. ; × 0,96 × 0,85", "officielle"),
     "T10": lib(51100 * NET_BNC * MED_MOY_LIB, H_NT,
                "DREES 2021 (S03) : masseurs-kinésithérapeutes libéraux, 51 100 € moy. ; × 0,96 × 0,85", "officielle"),
-    "T11": v3(30000, 34000, "estime : grille reeducateurs FPH ; ancrage S09"),
+    "T11": grille(2565 * 12, H_NT,
+                  "DGAFP 2025 (S128) : FPH, personnels des services de soins, 2 565 €/mois net moyen en 2023 (proxy)", "officielle, proxy"),
     "T12": grille(2755 * 12, "12 h ou 7 h 30 par poste ; durée non trouvée",
                   "DREES 2022 (S10) : infirmiers, 2 755 €/mois net moyen en EQTP, toutes structures ; moyenne = médiane (grille) ; FPH 2024, tous agents : moyenne 2 896 €, médiane 2 474 € (S100)",
                   "officielle"),
@@ -125,7 +142,8 @@ REV = {
                "UNASA 2022 (S06) : 27 550 € moy., temps partiel inclus ; × 0,96 × 0,85 ; recoupement FNO 2023 : 2 400 €/mois moy.",
                "non officielle"),
     "T16": v3(31200, 36000, "estime : aucune serie officielle recuperee"),
-    "T17": v3(33600, 38000, "estime : grille paramedicale cat. A FPH ; ancrage S09"),
+    "T17": grille(2749 * 12, H_NT,
+                  "DGAFP 2025 (S128) : FPH, filière médico-technique, 2 749 €/mois net moyen en 2023 (proxy)", "officielle, proxy"),
     "T18": v3(36000, 45000, "S21 (APEC : offres 36 600 EUR brut moy. ; confirme 2 300-3 100 EUR net/mois)"),
     "T20": v3(30000, 35000, "estime : grille psychologues FPH ; aucune serie recuperee"),
     "T21": grille(2184 * 12, "12 h ou 7 h 30 par poste ; durée non trouvée",
@@ -137,15 +155,16 @@ REV = {
     "T78": v3(24000, 32000, "estime : aucune serie recuperee"),
     "T79": v3(27000, 32000, "S08 (PI mediane 2 440 EUR) ; estime 2 250 EUR/mois"),
     # --- Santé, étranger ---------------------------------------------------------------------------
-    "T23": c(7400 * 12 * 1.074 * 0.80, 89600, H_CH,
-             "OFSP (S23) : médiane des infirmiers 7 400 CHF/mois, 2018 ; × 1,074 (hausse de la médiane ESS 2018-2024) × 0,80",
-             "v3 (haut de la fourchette HUG, S64)", "officielle ancienne"),
-    "T24": c(7400 * 12 * 1.074 * 0.80, 89600, H_CH,
-             "OFSP (S23) : médiane des infirmiers 7 400 CHF/mois, 2018 ; × 1,074 × 0,80", "v3 (S64)", "officielle ancienne"),
-    "T25": c(75075, 91000, "40 h (non mesurée)", "grille officielle FHL (S29) : 6 600 €/mois × 13 à 12 ans d'exercice ; × 0,875", "estimé (v3)", "officielle (grille)"),
-    "T26": c(75075, 91000, "40 h (non mesurée)", "grille officielle FHL (S29) : 6 600 €/mois × 13 à 12 ans d'exercice ; × 0,875", "estimé (v3)", "officielle (grille)"),
-    "T27": sal(4310 * 12.8 * 0.78, 51480 / 45240, H_NT,
-               "Destatis avril 2024 (S32) : 4 310 €/mois brut ; × 12,8 (primes annuelles, estimé) × 0,78", "relayée"),
+    "T23": c(7400 * 12 * 1.074 * 0.80, 8700 * 12 * 1.074 * 0.80, H_CH,
+             "OFSP (S23) : médiane des infirmiers diplômés 7 400 CHF/mois à temps plein, 13e compris, estimation OFS 2018 ; × 1,074 (hausse de la médiane ESS 2018-2024) × 0,80",
+             "OFSP (S23) : environ 8 700 CHF/mois après plus de 20 ans, même ajustement", "officielle ancienne"),
+    "T24": c(7400 * 12 * 1.074 * 0.80, 8700 * 12 * 1.074 * 0.80, H_CH,
+             "OFSP (S23) : médiane des infirmiers diplômés 7 400 CHF/mois à temps plein, 13e compris (2018) ; × 1,074 × 0,80",
+             "OFSP (S23) : environ 8 700 CHF/mois après plus de 20 ans", "officielle ancienne"),
+    "T25": c(75075, 91000, "40 h (non mesurée)", "grille officielle FHL (S29) : carrière CS7, 227 à 443 points, soit 5 056 à 9 867 € brut par mois (point d'avril 2023) ; mi-carrière estimée 6 600 €/mois × 13 ; × 0,875", "estimé (v3)", "officielle (grille)"),
+    "T26": c(75075, 91000, "40 h (non mesurée)", "grille officielle FHL (S29) : carrière CS7, 227 à 443 points, soit 5 056 à 9 867 € brut par mois (point d'avril 2023) ; mi-carrière estimée 6 600 €/mois × 13 ; × 0,875", "estimé (v3)", "officielle (grille)"),
+    "T27": sal(net_allemagne(4310 * 12.8), 51480 / 45240, H_NT,
+               "Destatis avril 2024 (S32) : 4 310 €/mois brut ; × 12,8 (primes annuelles, estimé) ; cotisations 2025 plafonnées", "relayée"),
     "T28": c(40 * 1950 * 0.918, math.exp(math.log(40) + Z80 / 0.6745 * math.log(45 / 40)) * 1950 * 0.918, "37,5 à 40 h (non mesurée)",
              "Guichet-Emplois, Québec 2024 (S35) : médiane 40 CAD/h ; × 1 950 h × 0,918",
              "log-normale entre la médiane et le salaire élevé (45 CAD/h, lu comme Q3)", "officielle"),
@@ -154,15 +173,18 @@ REV = {
     "T30": c(172000 - LAMAL, p80_ln(172000, 199975 / 172000) - LAMAL, "plein temps = 10 demi-journées (OFS) ; heures non trouvées",
              "OFS 2019 (S24, S108) : premier recours, médiane 172 000 CHF nets d'AVS et de 2e pilier (relayée par la presse) ; moins la prime LAMal",
              "log-normale (moyenne OFS 199 975 CHF)", "relayée"),
-    "T31": c(102900, 119000, "48 h au plus (non mesurée)", "grille officielle TV-Ärzte VKA (S34) : Facharzt + gardes, 121 000 € brut estimé ; × 0,78", "estimé (v3)", "officielle (grille)"),
-    "T32": v3(180000, 240000, "estime : donnees RAMQ/ICIS non recuperees ; 180 000 CAD nets de frais"),
+    "T31": sal(net_allemagne(121000), 119000 / 102900, "48 h au plus (non mesurée)",
+               "grille TV-Ärzte VKA 2026 (S118) : Ä2 échelon 3 = 8 741,40 €/mois ; + gardes, total estimé 121 000 € brut ; cotisations plafonnées ; Entgeltatlas : médiane des médecins plafonnée à 7 450 €", "officielle (grille)"),
+    "T32": c(268808 * 0.70 - 9900, math.exp(math.log(268808) + 0.6567 * math.log(505024 / 268808)) * 0.70 - 9900, H_NT,
+             "Guichet-Emplois 2023-2024 (S122) : médiane 268 808 CAD, avant frais de cabinet ; - 30 % de frais (taux conventionnel du gouvernement du Québec) ; - RRQ et RQAP des travailleurs autonomes (9 900 CAD, estimé)",
+             "log-normale (haut de fourchette 505 024 CAD lu comme P90)", "officielle"),
     "T33": sal(5866 * 12 * 0.80, 62400 / 57200, H_CH,
                "OFS, ESS 2024 (S22) : niveau de compétence 2, médiane 5 866 CHF/mois (proxy) ; × 12 × 0,80", "officielle, proxy"),
     "T34": sal(7523 * 12 * 0.80, 83200 / 74880, H_CH,
                "OFS, ESS 2024 (S22) : niveau de compétence 3, médiane 7 523 CHF/mois (proxy) ; × 12 × 0,80", "officielle, proxy"),
-    "T91": lib(88 * 1800 * 0.85, "non trouvé (1 800 h par an supposées)",
-               "ZHAW pour la FMH (S111) : revenu horaire médian des dentistes 88 CHF (versions en conflit : 73 à 88 CHF), statut non précisé ; × 1 800 h × 0,85",
-               "sans source fiable"),
+    "T91": lib(166000 * 0.85 - LAMAL, "environ 42 h par semaine (ESPA 2014-2017, S111)",
+               "OFS, ESPA 2014-2017, exploitée par la ZHAW pour la FMH (S111) : dentistes de plus de 34 ans, revenu annuel médian 166 000 CHF brut standardisé, tous statuts (indépendants : 84 CHF/h, salariés : 68 CHF/h) ; × 0,85 (AVS et prévoyance des indépendants, estimé) moins la prime LAMal ; aucune statistique de la SSO",
+               "relayée"),
     "T92": c(net_proprio_us(185360), net_proprio_us(p80_ln(185360, 218710 / 185360)), "36,1 h au cabinet (ADA, 2024, S114)",
              "ADA HPI 2023 (S114) : médiane 185 360 USD, généralistes en cabinet privé ; moins cotisation des indépendants et assurance santé",
              "log-normale (moyenne ADA 218 710 USD)", "officielle (ordre professionnel)"),
@@ -175,16 +197,17 @@ REV = {
              "estimé (v3)", "non officielle"),
     "T37": sal(9490 * 12 * 0.80, 108000 / 91200, H_CH,
                "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois ; × 12 × 0,80", "relayée"),
-    "T38": sal(6114 * 12 * 0.78, 70200 / 56940, H_NT,
-               "Bundesagentur für Arbeit 2024 (S33) : informatique, médiane 6 114 €/mois brut ; × 12 × 0,78", "relayée"),
-    "T39": v3(65625, 83125, "S30 (STATEC 2022 : mediane 58 126 EUR) ; estime TIC 75 000 EUR x 0,875"),
+    "T38": sal(net_allemagne(6114 * 12), 70200 / 56940, H_NT,
+               "Bundesagentur für Arbeit 2024 (S33) : informatique, médiane 6 114 €/mois brut ; × 12 ; cotisations plafonnées", "relayée"),
+    "T39": v3(65625, 83125, "S30 (STATEC 2022 : mediane nationale 58 126 EUR brut, aucune mediane par metier) ; estime TIC 75 000 EUR x 0,875"),
     "T40": sal(45.67 * 1950 * 0.918, 107406 / 89505, "37,5 à 40 h (non mesurée)",
                "Guichet-Emplois, Québec 2024 (S35) : médiane 45,67 CAD/h ; × 1 950 h × 0,918", "officielle"),
     "T41": sal(67000 * 0.78, 56000 / 45000, H_NT,
                "IESF 2025 (S16) : médiane 67 000 € brut, tous ingénieurs (proxy) ; × 0,78", "relayée, proxy"),
     "T42": sal(9000 * 12 * 0.80, 112000 / 91200, H_CH,
                "OFS, ESS 2022 (S28) : diplômés HES, médiane 9 000 CHF/mois (proxy) ; × 12 × 0,80", "relayée, proxy"),
-    "T43": v3(58500, 70200, "S33 (BA 2024 : IKT 6 114 EUR/mois, proxy) ; estime 75 000 EUR x 0,78"),
+    "T43": sal(net_allemagne(7367 * 12), 1.2, H_NT,
+               "Bundesagentur für Arbeit, Entgeltatlas (S118) : ingénieurs de production, médiane 7 367 €/mois brut à temps plein ; × 12 ; cotisations plafonnées", "relayée"),
     "T80": sal(55000 * 0.78, 62400 / 50700, H_NT,
                "APEC 2025 (S17, S103) : famille « systèmes, réseaux et télécoms », médiane 51 k€ + 4 k€ de variable, brut (proxy) ; × 0,78", "relayée, proxy"),
     "T81": c(69000, 90000, H_NT, "non officielle : TJM Free-Work et Morgan Philips (S74, S75) 650 € × 180 jours × 0,59 ; Insee 2024 (S106) : 4 190 €/mois moy., champ plus large",
@@ -198,9 +221,9 @@ REV = {
                "APEC 2025 (S17, S103) : famille « business intelligence », médiane 50 k€ + 4 k€ de variable, brut (proxy) ; × 0,78", "relayée, proxy"),
     "T86": sal(9490 * 12 * 0.80, 116000 / 100000, H_CH,
                "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois (aucune donnée propre au cloud) ; × 12 × 0,80", "relayée, proxy"),
-    "T87": c(net_irlande(79000), net_irlande(math.exp(math.log(79000) + Z80 / 0.6745 * math.log(107000 / 79000))), "39 h (non mesurée)",
-             "non officielle : Jobmentis et Morgan McKinley (S79), médiane DevOps 79 000 € brut ; moins PRSI et USC (S85)",
-             "log-normale entre la médiane et P75 107 000 € (S79)", "non officielle"),
+    "T87": c(net_irlande(1440.36 * 52), net_irlande(1440.36 * 52) * 1.435, "39 h (non mesurée)",
+             "CSO 2024 (S123) : secteur information et communication, médiane 1 440,36 €/semaine brut (proxy) ; × 52 ; moins PRSI et USC (S85)",
+             "estimé : rapport P80/médian des guides privés (× 1,44, S79)", "officielle, proxy"),
     "T88": c(130390 * 0.91, p80_interp(164440, 198030) * 0.91, H_US,
              "BLS OEWS mai 2024 (S113) : architectes réseaux et cloud (15-1241), médiane 130 390 USD ; × 0,91",
              "interpolé entre P75 164 440 et P90 198 030 USD (S113)", "officielle, proxy"),
@@ -222,8 +245,10 @@ REV = {
     "T51": lib(3050 * 12 * NET_INSEE_ARTISAN * MED_MOY_LIB, H_NT,
                "Insee 2024 (S01) : construction, non-salariés classiques, 3 050 €/mois moy. (proxy) ; × 0,864 × 0,85", "relayée, proxy"),
     "T52": v3(30000, 36000, "S08 (ouvriers et PI) ; estime 2 500 EUR/mois"),
-    "T53": v3(37200, 45600, "S15 (SNCF : 26 a 34 kEUR brut apres formation) ; estime 3 100 EUR/mois a 40 ans"),
-    "T54": v3(72800, 81600, "S55 (BLS : 3 615 CHF/mois en formation) + S22 ; estime 7 000 CHF x 13 x 0,80", h=H_CH),
+    "T53": v3(37200, 45600, "aucune source officielle ; reperes non officiels : 4 214 EUR brut par mois variables compris en 2023 (S129)"),
+    "T54": c(7100 * 13 * 0.80, 8190 * 13 * 0.80, H_CH,
+             "modèle de calcul des CFF 2026 (S121, relayé) : 5 726 à 8 190 CHF/mois à 100 %, 13 salaires ; mi-carrière estimée 7 100 CHF ; × 0,80",
+             "maximum de la grille, 8 190 CHF/mois × 13", "relayée (grille d'entreprise)"),
     "T55": sal(1830 * 12, 31000 / 26400, H_NT,
                "SDES 2019 (S105) : ouvriers qualifiés du transport routier de marchandises, 1 830 €/mois net en EQTP (non actualisé)", "officielle ancienne"),
     # --- Public, droit, finance -----------------------------------------------------------------
@@ -231,17 +256,27 @@ REV = {
                   "DEPP 2024 (S101) : professeurs des écoles à temps complet, 2 950 €/mois net moyen ; moyenne = médiane (grille)", "officielle"),
     "T57": grille(3220 * 12, "42 h médiane déclarée, second degré (DEPP 2018, S101)",
                   "DEPP 2024 (S101) : professeurs certifiés à temps complet, 3 220 €/mois net moyen ; moyenne = médiane (grille)", "officielle"),
-    "T58": v3(34200, 39600, "S13 (grille brigadier-chef 2 550 a 2 678 EUR brut + ISSP 28,5 %) ; aucune moyenne officielle trouvee", h="cycles de 12 h 08 ; durée moyenne non mesurée (Cour des comptes)"),
+    "T58": grille(2870 * 12, "39 h en régime hebdomadaire, ou vacations de 11 à 12 h (S120)",
+                  "catégorie B de la police, 2 870 €/mois net moyen (DGAFP 2025, relayé par un site tiers, proxy) ; grille 2026 : 2 162 à 3 917 € net/mois (S120)", "relayée, proxy"),
     "T59": grille(3030 * 12, "gardes de 24 h ; au plus 2 256 h de présence par an, soit 1 607 h effectives (S102)",
                   "Insee 2023 (S102) : agents des SDIS, 3 030 €/mois net moyen en EQTP, sapeurs-pompiers et non-sapeurs-pompiers ; moyenne = médiane (grille)",
                   "officielle, champ plus large"),
-    "T60": v3(33000, 42000, "estime : grille attache + IFSE ; ancrage S66 (DGAFP : cat. A 3 321 EUR moy. 2023, via secondaire)"),
-    "T61": v3(38400, 48000, "estime : grille + primes DGFiP ; ancrage S67 (INSEE FPE 2024 : cat. A 3 543 EUR moy.)"),
-    "T62": v3(30600, 36000, "estime : grille B + primes DGFiP ; ancrage S66 (DGAFP : cat. B 2 588 EUR moy. 2023)"),
-    "T63": v3(66000, 78000, "estime : S68 (Cour des comptes 2010 via iFRAP : 5 000 EUR net/mois moy.), revalorise"),
-    "T64": c(98780, 108780, "40 h (non mesurée)", "grilles officielles du statut (S31) : AD7 à mi-carrière + indemnité de dépaysement 16 % ; avant impôt de l'UE", "estimé (v3)", "officielle (grille)"),
-    "T65": c(45910, 57070, "40 h (non mesurée)", "grilles officielles du statut (S31) : GF III + 16 %", "estimé (v3)", "officielle (grille)"),
-    "T66": v3(33000, 40000, "estime : grille de solde non recuperee"),
+    "T60": grille(3373 * 12, H_NT,
+                  "Insee et DGAFP 2023 (S67) : fonctionnaires de catégorie A, 3 373 €/mois net moyen (enseignants compris, proxy)", "officielle, proxy"),
+    "T61": grille(3373 * 12, H_NT,
+                  "Insee et DGAFP 2023 (S67) : catégorie A, 3 373 €/mois net moyen (proxy) ; DGFiP (S120) : 2 378 € net à la titularisation", "officielle, proxy"),
+    "T62": grille(2720 * 12, H_NT,
+                  "Insee et DGAFP 2023 (S67) : catégorie B, 2 720 €/mois net moyen (proxy) ; DGFiP : 2 120 € net à la titularisation", "officielle, proxy"),
+    "T63": grille(net_fonctionnaire(110000, 0.61), "environ 1 420 h par an (Cour des comptes 2026, S124)",
+                  "Cour des comptes 2026 (S124) : environ 110 000 € brut annuel moyen, dont 61 % de primes ; net calculé (pension sur le traitement, CSG et CRDS)", "officielle"),
+    "T64": c(8207.25 * (1.16 - 0.101 - 0.017) * 12, 8911.48 * (1.16 - 0.101 - 0.017) * 12, "40 h (non mesurée)",
+             "grille au 1er juillet 2025 (S119, relayée) : AD7 échelon 2 = 8 207,25 € + indemnité de dépaysement 16 % - pension 10,1 % - maladie 1,7 % (taux estimés) ; avant impôt de l'UE",
+             "AD8 échelon 1 = 8 911,48 € (S119)", "relayée (grille)"),
+    "T65": c(4100 * (1.16 - 0.101 - 0.017) * 12, 4449.30 * (1.16 - 0.101 - 0.017) * 12, "40 h (non mesurée)",
+             "grille des agents contractuels 2025 (S119) : GF III grade 8 = 3 475,62 € (officiel), grade 9 de 3 932,44 à 4 449,30 € ; mi-carrière 4 100 € estimé + 16 % - cotisations",
+             "GF III grade 10, échelon 1 = 4 449,30 €", "relayée (grille)"),
+    "T66": grille(2637 * 12, H_NT,
+                  "ministère des Armées, EcoDef n° 266 (S125) : solde nette médiane des sous-officiers 2 637 €/mois en 2023, toutes armées hors gendarmerie", "officielle"),
     "T67": c(((0.43 * 65378 + 0.57 * 49491) * NET_BNC), p80_ln(0.43 * 65378 + 0.57 * 49491, (0.43 * 120198 + 0.57 * 66812) / (0.43 * 65378 + 0.57 * 49491)) * NET_BNC, H_NT,
              "CNBF, rapport 2024 (S107) : médianes nettes 65 378 € (hommes) et 49 491 € (femmes), pondérées 43/57 (part des femmes estimée) ; × 0,96",
              "log-normale (moyennes CNBF 120 198 € et 66 812 €)", "relayée"),
@@ -249,15 +284,17 @@ REV = {
                "Insee 2024 (S106) : activités juridiques et comptables, 8 240 €/mois moy. (proxy) ; × 0,874 × 0,85 ; UNASA 2024 (S20) : 87 024 € moy.",
                "relayée, proxy"),
     "T69": v3(28800, 34000, "S08 (PI) ; estime 2 400 EUR/mois"),
-    "T70": v3(54250, 65625, "S30 (STATEC 2022 : mediane 58 126 EUR) ; estime 62 000 EUR x 0,875"),
-    "T71": v3(51600, 60000, "estime : grille magistrats + primes non recuperee"),
+    "T70": v3(54250, 65625, "S30 (STATEC 2022 : mediane nationale 58 126 EUR brut, aucune mediane par metier) ; estime 62 000 EUR x 0,875"),
+    "T71": grille(5083 * 12, H_NT,
+                  "ministère de la Justice (S126, relayé) : 5 083 €/mois net moyen après six ans d'exercice, primes comprises (3 884 € au début, 8 480 € en fin de carrière)", "relayée"),
     "T46": v3(52000, 66000, "estime : enquete de l'Institut des actuaires non recuperee"),
     # --- Commerce et autres -----------------------------------------------------------------------
     "T72": v3(38400, 55000, "S08 (PI et cadres) ; estime 3 200 EUR/mois variable inclus"),
     "T73": lib(2480 * 12 * NET_INSEE * MED_MOY_LIB, H_NT,
                "Insee 2024 (S106) : activités immobilières, 2 480 €/mois moy. (proxy), 27 % de revenus nuls ou déficitaires ; × 0,874 × 0,85",
                "relayée, proxy"),
-    "T74": v3(84000, 110000, "estime : aucune serie officielle recuperee", h="limites de temps de vol ; non mesurée"),
+    "T74": sal(118700 * 0.78, 110000 / 84000, "limites de temps de vol ; non mesurée",
+               "non officielle : sites spécialisés (S129), environ 118 700 € brut annuel moyen à Air France, toutes anciennetés ; × 0,78", "non officielle"),
     "T75": sal(1800 * 12, 25000 / 21000, H_FR,
                "Insee 2023 (S08) : employés, médiane 1 800 €/mois net", "officielle"),
 }
@@ -270,7 +307,7 @@ A_RESOURCER = [i for i, r in REV.items() if r["fiab"] in ("non re-sourcée", "sa
 # exprimee en equivalent temps plein. h_src = code de la source des heures, quand une duree reelle est citee.
 SOURCE_ETP = "source en équivalent temps plein"
 ETP = {}
-for _i in ("T08", "T12", "T21", "T04", "T59", "T55", "T75"):
+for _i in ("T08", "T12", "T21", "T04", "T59", "T55", "T75", "T58", "T60", "T61", "T62", "T63", "T66", "T71", "T11", "T17", "T06", "T02", "T74", "T32", "T43"):
     ETP[_i] = (1.0, SOURCE_ETP + " (EQTP)", True, "")
 for _i in ("T56", "T57"):
     ETP[_i] = (1.0, SOURCE_ETP + " (temps complet) ; 42 à 43 h déclarées", True, "S101")
@@ -289,8 +326,10 @@ for _i in ("T36", "T81"):
 ETP["T87"] = (1.0, SOURCE_ETP + " (salaire annuel à temps plein)", True, "")
 ETP["T01"] = (1.0, "46 h par semaine, au moins 35 h", True, "S07")
 ETP["T92"] = (1.0, "36,1 h par semaine, au moins 35 h", True, "S114")
-ETP["T29"] = (1.0, "50,7 h par semaine (médecins assistants)", True, "S109")
-ETP["T91"] = (1.0, "temps plein supposé (1 800 h par an), non mesuré", False, "")
+ETP["T29"] = (1.0, "56 à 58 h par semaine (médecins assistants et chefs de clinique, ASMAC 2022-2023)", True, "S130")
+ETP["T91"] = (1.0, "environ 42 h par semaine, au moins 35 h", True, "S111")
+ETP["T30"] = (1.0, "43 h par semaine (médecins de famille, 2020), au moins 35 h", True, "S131")
+ETP["T54"] = (1.0, SOURCE_ETP + " (grille à 100 %)", True, "")
 
 for _i, _r in REV.items():
     q, txt, ok, hs = ETP.get(_i, (1.0, "temps de travail non trouvé", False, ""))
