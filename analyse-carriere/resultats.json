@@ -46,20 +46,82 @@
   "p80i_nom": 129600.0,
   "med_ppa": 80200.0,
   "p80i_ppa": 129600.0,
-  "Rev": 4.243563350049055,
-  "W": 3.8965345025073583,
+  "q": 1.0,
+  "etp": "46 h par semaine, au moins 35 h",
+  "etp_ok": true,
+  "h_src": "S07",
+  "med_etp_nom": 80200.0,
+  "med_etp_ppa": 80200.0,
+  "p80_etp_nom": 129600.0,
+  "p80_etp_ppa": 129600.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q1",
+     "Q2"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P6"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 4.258210567370299,
+  "W": 4.108315795338614,
   "palier": "A",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.243563350049055,
-  "W_ia": 3.8965345025073583,
+  "proche": true,
+  "W_ia": 4.108315795338614,
   "palier_ia": "A",
-  "rang": 7,
-  "groupe": 5,
+  "rang": 5,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 5,
+   "environnement physique doublé": 17,
+   "intensité du travail doublé": 6,
+   "qualité du temps de travail doublé": 16,
+   "environnement social doublé": 5,
+   "compétences et autonomie doublé": 6,
+   "perspectives et sécurité doublé": 5,
+   "revenu doublé": 5
+  },
+  "nb_top": 6,
+  "rang_min": 5,
+  "rang_max": 17,
+  "W_tension": 4.108315795338614,
   "domine_par": [
-   "T05",
-   "T30",
-   "T91"
+   "T30"
   ]
  },
  {
@@ -99,27 +161,95 @@
    2
   ],
   "B": 3.4287904475685878,
-  "med": 64000,
-  "p80i": 76000,
-  "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : pas de serie officielle ; ancrage S09 (INSEE FPH 2024 : personnels medicaux 6 926 EUR/mois moy.)",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 64000.0,
-  "p80i_nom": 76000.0,
-  "med_ppa": 64000.0,
-  "p80i_ppa": 76000.0,
-  "Rev": 3.4258610993276117,
-  "W": 3.6638791648991416,
+  "med": 56600.0,
+  "p80i": 67200.0,
+  "h": "environ 35 h, sans gardes (non officiel)",
+  "src_med": "non officielle : 60 000 à 85 000 € brut par an en centre de santé (S129) ; milieu de fourchette × 0,78",
+  "src_p80": "estimé : rapport P80/médian de la v3 (× 1.19)",
+  "fiab": "non officielle",
+  "med_nom": 56600.0,
+  "p80i_nom": 67200.0,
+  "med_ppa": 56600.0,
+  "p80i_ppa": 67200.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 56600.0,
+  "med_etp_ppa": 56600.0,
+  "p80_etp_nom": 67200.0,
+  "p80_etp_ppa": 67200.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q2"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P2",
+     "P6"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 3.1811359960042553,
+  "W": 3.883019428000608,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 3.4258610993276117,
-  "W_ia": 3.6638791648991416,
+  "proche": false,
+  "W_ia": 3.883019428000608,
   "palier_ia": "A",
-  "rang": 21,
-  "groupe": 2,
-  "domine_par": []
+  "rang": 29,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 29,
+   "environnement physique doublé": 35,
+   "intensité du travail doublé": 32,
+   "qualité du temps de travail doublé": 34,
+   "environnement social doublé": 25,
+   "compétences et autonomie doublé": 32,
+   "perspectives et sécurité doublé": 19,
+   "revenu doublé": 29
+  },
+  "nb_top": 0,
+  "rang_min": 19,
+  "rang_max": 35,
+  "W_tension": 3.883019428000608,
+  "domine_par": [
+   "T01",
+   "T03",
+   "T30"
+  ]
  },
  {
   "id": "T03",
@@ -168,21 +298,82 @@
   "p80i_nom": 119500.0,
   "med_ppa": 73900.0,
   "p80i_ppa": 119500.0,
-  "Rev": 4.061386635982901,
-  "W": 3.869207995397435,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 73900.0,
+  "med_etp_ppa": 73900.0,
+  "p80_etp_nom": 119500.0,
+  "p80_etp_ppa": 119500.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q2"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P6"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 4.079663881731269,
+  "W": 4.08280912596161,
   "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.061386635982901,
-  "W_ia": 3.869207995397435,
+  "W_ia": 4.08280912596161,
   "palier_ia": "A",
-  "rang": 7,
-  "groupe": 5,
+  "rang": 8,
+  "groupe": 6,
+  "rangs_var": {
+   "Poids égaux": 8,
+   "environnement physique doublé": 17,
+   "intensité du travail doublé": 11,
+   "qualité du temps de travail doublé": 16,
+   "environnement social doublé": 9,
+   "compétences et autonomie doublé": 10,
+   "perspectives et sécurité doublé": 7,
+   "revenu doublé": 8
+  },
+  "nb_top": 5,
+  "rang_min": 7,
+  "rang_max": 17,
+  "W_tension": 4.08280912596161,
   "domine_par": [
    "T01",
-   "T05",
-   "T30",
-   "T91"
+   "T30"
   ]
  },
  {
@@ -232,16 +423,82 @@
   "p80i_nom": 99700.0,
   "med_ppa": 83100.0,
   "p80i_ppa": 99700.0,
-  "Rev": 4.020053794388442,
-  "W": 3.2230080691582663,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 83100.0,
+  "med_etp_ppa": 83100.0,
+  "p80_etp_nom": 99700.0,
+  "p80_etp_ppa": 99700.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I2"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q3"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1",
+     "P6"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 2,
+  "QT": 2,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 4.033124898326557,
+  "W": 3.290446414046651,
   "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.020053794388442,
-  "W_ia": 3.2230080691582663,
+  "W_ia": 3.290446414046651,
   "palier_ia": "B",
-  "rang": 54,
-  "groupe": 3,
+  "rang": 61,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 61,
+   "environnement physique doublé": 64,
+   "intensité du travail doublé": 66,
+   "qualité du temps de travail doublé": 69,
+   "environnement social doublé": 62,
+   "compétences et autonomie doublé": 60,
+   "perspectives et sécurité doublé": 54,
+   "revenu doublé": 56
+  },
+  "nb_top": 0,
+  "rang_min": 54,
+  "rang_max": 69,
+  "W_tension": 3.290446414046651,
   "domine_par": [
    "T01",
    "T03",
@@ -300,16 +557,77 @@
   "p80i_nom": 151500.0,
   "med_ppa": 93800.0,
   "p80i_ppa": 151500.0,
-  "Rev": 4.593169498902454,
-  "W": 4.168975424835368,
-  "palier": "A",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 93800.0,
+  "med_etp_ppa": 93800.0,
+  "p80_etp_nom": 151500.0,
+  "p80_etp_ppa": 151500.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E8"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 5,
+  "RE": 4.600866370949522,
+  "W": 4.228695195849932,
+  "palier": "S",
   "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 4.593169498902454,
-  "W_ia": 4.168975424835368,
-  "palier_ia": "A",
-  "rang": 1,
-  "groupe": 2,
+  "W_ia": 4.228695195849932,
+  "palier_ia": "S",
+  "rang": 2,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 2,
+   "environnement physique doublé": 17,
+   "intensité du travail doublé": 3,
+   "qualité du temps de travail doublé": 2,
+   "environnement social doublé": 2,
+   "compétences et autonomie doublé": 2,
+   "perspectives et sécurité doublé": 2,
+   "revenu doublé": 2
+  },
+  "nb_top": 7,
+  "rang_min": 2,
+  "rang_max": 17,
+  "W_tension": 4.228695195849932,
   "domine_par": []
  },
  {
@@ -349,48 +667,97 @@
    2
   ],
   "B": 2.918093130467194,
-  "med": 40000,
-  "p80i": 48000,
-  "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille de la convention collective officine (non recuperee) ; aucune serie officielle",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 40000.0,
-  "p80i_nom": 48000.0,
-  "med_ppa": 40000.0,
-  "p80i_ppa": 48000.0,
-  "Rev": 2.385963653020541,
-  "W": 2.6978945479530814,
-  "palier": "C",
+  "med": 37500.0,
+  "p80i": 45000.0,
+  "h": "35 h légales (non mesurée)",
+  "src_med": "convention collective de l'officine 2026 (S127) : point 5,278 €, coefficient 500 (mi-carrière, estimé), 151,67 h par mois ; minimum conventionnel × 0,78 ; salaires réels non trouvés",
+  "src_p80": "estimé : rapport P80/médian de la v3 (× 1.20)",
+  "fiab": "officielle (grille)",
+  "med_nom": 37500.0,
+  "p80i_nom": 45000.0,
+  "med_ppa": 37500.0,
+  "p80i_ppa": 45000.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 37500.0,
+  "med_etp_ppa": 37500.0,
+  "p80_etp_nom": 45000.0,
+  "p80_etp_ppa": 45000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P2"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 2.2900850544256315,
+  "W": 3.398583579203662,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.385963653020541,
-  "W_ia": 2.6978945479530814,
-  "palier_ia": "C",
-  "rang": 83,
-  "groupe": 1,
+  "W_ia": 3.398583579203662,
+  "palier_ia": "B",
+  "rang": 58,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 58,
+   "environnement physique doublé": 54,
+   "intensité du travail doublé": 58,
+   "qualité du temps de travail doublé": 57,
+   "environnement social doublé": 56,
+   "compétences et autonomie doublé": 57,
+   "perspectives et sécurité doublé": 48,
+   "revenu doublé": 60
+  },
+  "nb_top": 0,
+  "rang_min": 48,
+  "rang_max": 60,
+  "W_tension": 3.398583579203662,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
-   "T05",
-   "T08",
-   "T10",
-   "T13",
-   "T14",
-   "T19",
-   "T23",
-   "T26",
-   "T28",
-   "T29",
+   "T09",
    "T30",
-   "T32",
-   "T34",
-   "T63",
+   "T60",
+   "T61",
+   "T64",
    "T71",
-   "T91",
-   "T92",
    "T93"
   ]
  },
@@ -441,25 +808,90 @@
   "p80i_nom": 92000.0,
   "med_ppa": 57000.0,
   "p80i_ppa": 92000.0,
-  "Rev": 3.479095210925435,
-  "W": 2.8618642816388156,
-  "palier": "C",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 57000.0,
+  "med_etp_ppa": 57000.0,
+  "p80_etp_nom": 92000.0,
+  "p80_etp_ppa": 92000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 2,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 3,
+  "RE": 3.508893920191235,
+  "W": 3.2155562743130335,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 3.479095210925435,
-  "W_ia": 2.8618642816388156,
-  "palier_ia": "C",
-  "rang": 69,
-  "groupe": 3,
+  "W_ia": 3.2155562743130335,
+  "palier_ia": "B",
+  "rang": 64,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 64,
+   "environnement physique doublé": 61,
+   "intensité du travail doublé": 65,
+   "qualité du temps de travail doublé": 75,
+   "environnement social doublé": 63,
+   "compétences et autonomie doublé": 62,
+   "perspectives et sécurité doublé": 76,
+   "revenu doublé": 60
+  },
+  "nb_top": 0,
+  "rang_min": 60,
+  "rang_max": 76,
+  "W_tension": 3.2155562743130335,
   "domine_par": [
    "T01",
    "T03",
-   "T05",
    "T30",
    "T32",
-   "T90",
-   "T91",
-   "T92"
+   "T37",
+   "T42",
+   "T43",
+   "T64",
+   "T67",
+   "T68",
+   "T81",
+   "T82",
+   "T88",
+   "T90"
   ]
  },
  {
@@ -509,24 +941,94 @@
   "p80i_nom": 49600.0,
   "med_ppa": 41300.0,
   "p80i_ppa": 49600.0,
-  "Rev": 2.458272464380949,
-  "W": 3.1187408696571426,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 41300.0,
+  "med_etp_ppa": 41300.0,
+  "p80_etp_nom": 49600.0,
+  "p80_etp_ppa": 49600.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    [
+     "E6"
+    ]
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 2.5023670368195754,
+  "W": 3.2146238624027963,
   "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.458272464380949,
-  "W_ia": 3.1187408696571426,
+  "W_ia": 3.2146238624027963,
   "palier_ia": "B",
-  "rang": 59,
-  "groupe": 4,
+  "rang": 64,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 64,
+   "environnement physique doublé": 67,
+   "intensité du travail doublé": 71,
+   "qualité du temps de travail doublé": 65,
+   "environnement social doublé": 65,
+   "compétences et autonomie doublé": 62,
+   "perspectives et sécurité doublé": 56,
+   "revenu doublé": 68
+  },
+  "nb_top": 0,
+  "rang_min": 56,
+  "rang_max": 71,
+  "W_tension": 3.0717667195456535,
   "domine_par": [
    "T01",
    "T02",
    "T03",
    "T05",
-   "T10",
    "T30",
-   "T34",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -580,16 +1082,79 @@
   "p80i_nom": 55600.0,
   "med_ppa": 34400.0,
   "p80i_ppa": 55600.0,
-  "Rev": 2.3517485838959877,
-  "W": 4.022762287584398,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 34400.0,
+  "med_etp_ppa": 34400.0,
+  "p80_etp_nom": 55600.0,
+  "p80_etp_ppa": 55600.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 5,
+  "RE": 2.4039544528879926,
+  "W": 4.057707778983999,
   "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.3517485838959877,
-  "W_ia": 4.022762287584398,
+  "W_ia": 4.057707778983999,
   "palier_ia": "A",
-  "rang": 5,
+  "rang": 14,
   "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 14,
+   "environnement physique doublé": 23,
+   "intensité du travail doublé": 17,
+   "qualité du temps de travail doublé": 11,
+   "environnement social doublé": 9,
+   "compétences et autonomie doublé": 6,
+   "perspectives et sécurité doublé": 7,
+   "revenu doublé": 23
+  },
+  "nb_top": 3,
+  "rang_min": 6,
+  "rang_max": 23,
+  "W_tension": 3.9148506361268565,
   "domine_par": []
  },
  {
@@ -639,20 +1204,82 @@
   "p80i_nom": 67400.0,
   "med_ppa": 41700.0,
   "p80i_ppa": 67400.0,
-  "Rev": 2.7819165360132194,
-  "W": 3.897287480401983,
+  "q": 1.0,
+  "etp": "43,07 h par semaine (Ordre des kinésithérapeutes 2026), au moins 35 h",
+  "etp_ok": true,
+  "h_src": "S132",
+  "med_etp_nom": 41700.0,
+  "med_etp_ppa": 41700.0,
+  "p80_etp_nom": 67400.0,
+  "p80_etp_ppa": 67400.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q9"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 5,
+  "RE": 2.8255834320931994,
+  "W": 3.9750833474418856,
   "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.7819165360132194,
-  "W_ia": 3.897287480401983,
+  "W_ia": 3.9750833474418856,
   "palier_ia": "A",
-  "rang": 7,
-  "groupe": 5,
-  "domine_par": [
-   "T05",
-   "T91"
-  ]
+  "rang": 21,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 21,
+   "environnement physique doublé": 45,
+   "intensité du travail doublé": 6,
+   "qualité du temps de travail doublé": 12,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 15,
+   "perspectives et sécurité doublé": 10,
+   "revenu doublé": 23
+  },
+  "nb_top": 2,
+  "rang_min": 6,
+  "rang_max": 45,
+  "W_tension": 3.832226204584743,
+  "domine_par": []
  },
  {
   "id": "T11",
@@ -691,30 +1318,94 @@
    3
   ],
   "B": 3.3047659505690303,
-  "med": 30000,
-  "p80i": 34000,
+  "med": 30800,
+  "p80i": 36900.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille reeducateurs FPH ; ancrage S09",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 30000.0,
-  "p80i_nom": 34000.0,
-  "med_ppa": 30000.0,
-  "p80i_ppa": 34000.0,
-  "Rev": 1.6848023483915848,
-  "W": 3.4027203522587377,
+  "src_med": "DGAFP 2025 (S128) : FPH, personnels des services de soins, 2 565 €/mois net moyen en 2023 (proxy)",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle, proxy",
+  "med_nom": 30800.0,
+  "p80i_nom": 36900.0,
+  "med_ppa": 30800.0,
+  "p80i_ppa": 36900.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 30800.0,
+  "med_etp_ppa": 30800.0,
+  "p80_etp_nom": 36900.0,
+  "p80_etp_ppa": 36900.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 1.8572216456214432,
+  "W": 3.5510316636602064,
   "palier": "B",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 1.6848023483915848,
-  "W_ia": 3.4027203522587377,
+  "proche": true,
+  "W_ia": 3.5510316636602064,
   "palier_ia": "B",
-  "rang": 45,
-  "groupe": 3,
+  "rang": 50,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 50,
+   "environnement physique doublé": 59,
+   "intensité du travail doublé": 46,
+   "qualité du temps de travail doublé": 50,
+   "environnement social doublé": 46,
+   "compétences et autonomie doublé": 50,
+   "perspectives et sécurité doublé": 42,
+   "revenu doublé": 59
+  },
+  "nb_top": 0,
+  "rang_min": 42,
+  "rang_max": 59,
+  "W_tension": 3.408174520803063,
   "domine_par": [
-   "T02",
-   "T09",
-   "T77"
+   "T10",
+   "T34"
   ]
  },
  {
@@ -764,21 +1455,89 @@
   "p80i_nom": 39700.0,
   "med_ppa": 33100.0,
   "p80i_ppa": 39700.0,
-  "Rev": 1.9622264756403633,
-  "W": 2.6343339713460545,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 33100.0,
+  "med_etp_ppa": 33100.0,
+  "p80_etp_nom": 39700.0,
+  "p80_etp_ppa": 39700.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 2.0161416642093126,
+  "W": 2.9308773806013306,
   "palier": "C",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 1.9622264756403633,
-  "W_ia": 2.6343339713460545,
+  "proche": true,
+  "W_ia": 2.9308773806013306,
   "palier_ia": "C",
-  "rang": 84,
-  "groupe": 4,
+  "rang": 80,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 80,
+   "environnement physique doublé": 81,
+   "intensité du travail doublé": 86,
+   "qualité du temps de travail doublé": 83,
+   "environnement social doublé": 81,
+   "compétences et autonomie doublé": 77,
+   "perspectives et sécurité doublé": 76,
+   "revenu doublé": 79
+  },
+  "nb_top": 0,
+  "rang_min": 76,
+  "rang_max": 86,
+  "W_tension": 2.9308773806013306,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T06",
    "T08",
@@ -788,16 +1547,16 @@
    "T14",
    "T19",
    "T23",
+   "T24",
+   "T25",
    "T26",
    "T28",
-   "T29",
    "T30",
-   "T32",
    "T34",
    "T56",
-   "T57",
-   "T59",
-   "T63",
+   "T60",
+   "T61",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -851,16 +1610,79 @@
   "p80i_nom": 75300.0,
   "med_ppa": 46600.0,
   "p80i_ppa": 75300.0,
-  "Rev": 3.0299761495248547,
-  "W": 3.524496422428728,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 46600.0,
+  "med_etp_ppa": 46600.0,
+  "p80_etp_nom": 75300.0,
+  "p80_etp_ppa": 75300.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 3,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 3.068713444837812,
+  "W": 3.5098162064054015,
   "palier": "B",
   "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 3.0299761495248547,
-  "W_ia": 3.524496422428728,
+  "W_ia": 3.5098162064054015,
   "palier_ia": "B",
-  "rang": 33,
-  "groupe": 4,
+  "rang": 52,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 52,
+   "environnement physique doublé": 61,
+   "intensité du travail doublé": 54,
+   "qualité du temps de travail doublé": 56,
+   "environnement social doublé": 49,
+   "compétences et autonomie doublé": 47,
+   "perspectives et sécurité doublé": 45,
+   "revenu doublé": 50
+  },
+  "nb_top": 0,
+  "rang_min": 45,
+  "rang_max": 61,
+  "W_tension": 3.3669590635482587,
   "domine_par": [
    "T01",
    "T03",
@@ -916,25 +1738,95 @@
   "p80i_nom": 48000.0,
   "med_ppa": 42000.0,
   "p80i_ppa": 48000.0,
-  "Rev": 2.4453936422119305,
-  "W": 3.1168090463317895,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 42000.0,
+  "med_etp_ppa": 42000.0,
+  "p80_etp_nom": 48000.0,
+  "p80_etp_ppa": 48000.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    [
+     "E6"
+    ]
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 2.48874246468115,
+  "W": 3.2126774949544497,
   "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.4453936422119305,
-  "W_ia": 3.1168090463317895,
+  "W_ia": 3.2126774949544497,
   "palier_ia": "B",
-  "rang": 59,
-  "groupe": 4,
+  "rang": 64,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 64,
+   "environnement physique doublé": 67,
+   "intensité du travail doublé": 71,
+   "qualité du temps de travail doublé": 65,
+   "environnement social doublé": 65,
+   "compétences et autonomie doublé": 62,
+   "perspectives et sécurité doublé": 60,
+   "revenu doublé": 68
+  },
+  "nb_top": 0,
+  "rang_min": 60,
+  "rang_max": 71,
+  "W_tension": 3.069820352097307,
   "domine_par": [
    "T01",
    "T02",
    "T03",
    "T05",
    "T08",
-   "T10",
    "T30",
-   "T34",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -980,24 +1872,89 @@
   "B": 3.2713541094861767,
   "med": 22500.0,
   "p80i": 36300.0,
-  "h": "temps partiel fréquent, durée non trouvée",
-  "src_med": "UNASA 2022 (S06) : 27 550 € moy., temps partiel inclus ; × 0,96 × 0,85 ; recoupement FNO 2023 : 2 400 €/mois moy.",
+  "h": "38 à 39 actes par semaine sur 42 semaines et 10 h de tâches administratives (FNO) ; durée totale non trouvée",
+  "src_med": "UNASA 2022 (S06) : 27 550 € moy. ; × 0,96 × 0,85 ; aucun chiffre de la DREES, dont le jeu de données 2026 ne couvre pas les orthophonistes (S136) ; FNO : chiffre d'affaires moyen 2022 de 51 266 € avant charges (S136)",
   "src_p80": "estimé : log-normale des libéraux (× 1,62)",
   "fiab": "non officielle",
   "med_nom": 22500.0,
   "p80i_nom": 36300.0,
   "med_ppa": 22500.0,
   "p80i_ppa": 36300.0,
-  "Rev": 1.4009622576878644,
-  "W": 4.07014433865318,
-  "palier": "A",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 1.4009622576878644,
-  "W_ia": 4.07014433865318,
-  "palier_ia": "A",
-  "rang": 3,
-  "groupe": 2,
+  "q": 1.0,
+  "etp": "38 à 39 actes par semaine et 10 h de tâches administratives (FNO) ; durée totale non trouvée",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 22500.0,
+  "med_etp_ppa": 22500.0,
+  "p80_etp_nom": 36300.0,
+  "p80_etp_ppa": 36300.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P7"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 5,
+  "RE": 1.4720054801210987,
+  "W": 4.210286497160157,
+  "palier": "S",
+  "proche": true,
+  "W_ia": 4.210286497160157,
+  "palier_ia": "S",
+  "rang": 2,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 2,
+   "environnement physique doublé": 1,
+   "intensité du travail doublé": 1,
+   "qualité du temps de travail doublé": 2,
+   "environnement social doublé": 2,
+   "compétences et autonomie doublé": 2,
+   "perspectives et sécurité doublé": 2,
+   "revenu doublé": 20
+  },
+  "nb_top": 7,
+  "rang_min": 1,
+  "rang_max": 20,
+  "W_tension": 4.067429354303014,
   "domine_par": []
  },
  {
@@ -1047,20 +2004,80 @@
   "p80i_nom": 36000.0,
   "med_ppa": 31200.0,
   "p80i_ppa": 36000.0,
-  "Rev": 1.7907129026242985,
-  "W": 3.3586069353936447,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 31200.0,
+  "med_etp_ppa": 31200.0,
+  "p80_etp_nom": 36000.0,
+  "p80_etp_ppa": 36000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 1.8472510958327195,
+  "W": 3.9781787279761027,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 1.5552120010024448,
-  "W_ia": 3.1732818001503666,
-  "palier_ia": "B",
-  "rang": 48,
-  "groupe": 3,
-  "domine_par": [
-   "T02",
-   "T09"
-  ]
+  "W_ia": 3.8023464505631686,
+  "palier_ia": "A",
+  "rang": 16,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 16,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 6,
+   "qualité du temps de travail doublé": 27,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 29,
+   "perspectives et sécurité doublé": 10,
+   "revenu doublé": 35
+  },
+  "nb_top": 3,
+  "rang_min": 6,
+  "rang_max": 35,
+  "W_tension": 3.8353215851189595,
+  "domine_par": []
  },
  {
   "id": "T17",
@@ -1099,31 +2116,104 @@
    2
   ],
   "B": 2.2660955327517307,
-  "med": 33600,
-  "p80i": 38000,
+  "med": 33000,
+  "p80i": 39600.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille paramedicale cat. A FPH ; ancrage S09",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 33600.0,
-  "p80i_nom": 38000.0,
-  "med_ppa": 33600.0,
-  "p80i_ppa": 38000.0,
-  "Rev": 1.9359745826217865,
-  "W": 3.0103961873932676,
+  "src_med": "DGAFP 2025 (S128) : FPH, filière médico-technique, 2 749 €/mois net moyen en 2023 (proxy)",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle, proxy",
+  "med_nom": 33000.0,
+  "p80i_nom": 39600.0,
+  "med_ppa": 33000.0,
+  "p80i_ppa": 39600.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 33000.0,
+  "med_etp_ppa": 33000.0,
+  "p80_etp_nom": 39600.0,
+  "p80_etp_ppa": 39600.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 2.833333333333333,
+  "PS": 5,
+  "RE": 2.010025126856167,
+  "W": 3.1204797800270714,
   "palier": "B",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 1.9359745826217865,
-  "W_ia": 3.0103961873932676,
+  "proche": false,
+  "W_ia": 3.1204797800270714,
   "palier_ia": "B",
-  "rang": 64,
-  "groupe": 3,
+  "rang": 72,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 72,
+   "environnement physique doublé": 71,
+   "intensité du travail doublé": 69,
+   "qualité du temps de travail doublé": 73,
+   "environnement social doublé": 72,
+   "compétences et autonomie doublé": 74,
+   "perspectives et sécurité doublé": 66,
+   "revenu doublé": 75
+  },
+  "nb_top": 0,
+  "rang_min": 66,
+  "rang_max": 75,
+  "W_tension": 3.1204797800270714,
   "domine_par": [
+   "T01",
    "T02",
+   "T03",
+   "T05",
+   "T06",
    "T09",
+   "T30",
    "T56",
-   "T57",
+   "T60",
+   "T61",
+   "T64",
+   "T71",
+   "T91",
+   "T92",
    "T93"
   ]
  },
@@ -1174,22 +2264,80 @@
   "p80i_nom": 45000.0,
   "med_ppa": 36000.0,
   "p80i_ppa": 45000.0,
-  "Rev": 2.191983540293452,
-  "W": 3.268797531044018,
-  "palier": "B",
-  "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 2.191983540293452,
-  "W_ia": 3.268797531044018,
-  "palier_ia": "B",
-  "rang": 52,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 36000.0,
+  "med_etp_ppa": 36000.0,
+  "p80_etp_nom": 45000.0,
+  "p80_etp_ppa": 45000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 4,
+  "QT": 3,
+  "ES": 4,
+  "CA": 4.0,
+  "PS": 4,
+  "RE": 2.2421721947077584,
+  "W": 3.6060245992439657,
+  "palier": "A",
+  "proche": true,
+  "W_ia": 3.6060245992439657,
+  "palier_ia": "A",
+  "rang": 48,
   "groupe": 2,
-  "domine_par": [
-   "T02",
-   "T09",
-   "T83",
-   "T89"
-  ]
+  "rangs_var": {
+   "Poids égaux": 48,
+   "environnement physique doublé": 50,
+   "intensité du travail doublé": 42,
+   "qualité du temps de travail doublé": 52,
+   "environnement social doublé": 43,
+   "compétences et autonomie doublé": 47,
+   "perspectives et sécurité doublé": 46,
+   "revenu doublé": 50
+  },
+  "nb_top": 0,
+  "rang_min": 42,
+  "rang_max": 52,
+  "W_tension": 3.463167456386823,
+  "domine_par": []
  },
  {
   "id": "T19",
@@ -1238,16 +2386,75 @@
   "p80i_nom": 91700.0,
   "med_ppa": 56800.0,
   "p80i_ppa": 91700.0,
-  "Rev": 3.4714916454656466,
-  "W": 3.380723746819847,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 56800.0,
+  "med_etp_ppa": 56800.0,
+  "p80_etp_nom": 91700.0,
+  "p80_etp_ppa": 91700.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 3.501446316504295,
+  "W": 3.4287780452148993,
   "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.4714916454656466,
-  "W_ia": 3.380723746819847,
+  "W_ia": 3.4287780452148993,
   "palier_ia": "B",
-  "rang": 48,
-  "groupe": 3,
+  "rang": 56,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 56,
+   "environnement physique doublé": 64,
+   "intensité du travail doublé": 58,
+   "qualité du temps de travail doublé": 57,
+   "environnement social doublé": 56,
+   "compétences et autonomie doublé": 52,
+   "perspectives et sécurité doublé": 48,
+   "revenu doublé": 50
+  },
+  "nb_top": 0,
+  "rang_min": 48,
+  "rang_max": 64,
+  "W_tension": 3.4287780452148993,
   "domine_par": [
    "T01",
    "T03",
@@ -1304,17 +2511,85 @@
   "p80i_nom": 35000.0,
   "med_ppa": 30000.0,
   "p80i_ppa": 35000.0,
-  "Rev": 1.714286096386705,
-  "W": 3.487142914458006,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 30000.0,
+  "med_etp_ppa": 30000.0,
+  "p80_etp_nom": 35000.0,
+  "p80_etp_ppa": 35000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 1.772564554944818,
+  "W": 3.7532235078492597,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 1.714286096386705,
-  "W_ia": 3.487142914458006,
-  "palier_ia": "B",
-  "rang": 37,
-  "groupe": 5,
-  "domine_par": []
+  "W_ia": 3.7532235078492597,
+  "palier_ia": "A",
+  "rang": 40,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 40,
+   "environnement physique doublé": 35,
+   "intensité du travail doublé": 42,
+   "qualité du temps de travail doublé": 34,
+   "environnement social doublé": 34,
+   "compétences et autonomie doublé": 37,
+   "perspectives et sécurité doublé": 46,
+   "revenu doublé": 48
+  },
+  "nb_top": 0,
+  "rang_min": 34,
+  "rang_max": 48,
+  "W_tension": 3.7532235078492597,
+  "domine_par": [
+   "T35",
+   "T37",
+   "T39",
+   "T40",
+   "T46",
+   "T83",
+   "T85",
+   "T89"
+  ]
  },
  {
   "id": "T21",
@@ -1363,21 +2638,85 @@
   "p80i_nom": 31400.0,
   "med_ppa": 26200.0,
   "p80i_ppa": 31400.0,
-  "Rev": 1.4389145714901825,
-  "W": 2.3358371857235274,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 26200.0,
+  "med_etp_ppa": 26200.0,
+  "p80_etp_nom": 31400.0,
+  "p80_etp_ppa": 31400.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q5"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 1,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 1.6666666666666665,
+  "PS": 5,
+  "RE": 1.5032025589128075,
+  "W": 2.452838460797068,
   "palier": "C",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 1.4389145714901825,
-  "W_ia": 2.3358371857235274,
+  "W_ia": 2.452838460797068,
   "palier_ia": "C",
-  "rang": 90,
-  "groupe": 1,
+  "rang": 91,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 91,
+   "environnement physique doublé": 92,
+   "intensité du travail doublé": 92,
+   "qualité du temps de travail doublé": 91,
+   "environnement social doublé": 90,
+   "compétences et autonomie doublé": 92,
+   "perspectives et sécurité doublé": 89,
+   "revenu doublé": 91
+  },
+  "nb_top": 0,
+  "rang_min": 89,
+  "rang_max": 92,
+  "W_tension": 2.452838460797068,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T06",
    "T08",
@@ -1391,16 +2730,19 @@
    "T17",
    "T19",
    "T23",
+   "T24",
+   "T25",
    "T26",
    "T28",
-   "T29",
    "T30",
-   "T32",
    "T34",
    "T56",
-   "T57",
    "T59",
+   "T60",
+   "T61",
+   "T62",
    "T63",
+   "T64",
    "T71",
    "T77",
    "T91",
@@ -1445,28 +2787,87 @@
    4
   ],
   "B": 3.2545329390720896,
-  "med": 32000,
-  "p80i": 45000,
-  "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : aucune serie officielle recuperee",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 32000.0,
-  "p80i_nom": 45000.0,
-  "med_ppa": 32000.0,
-  "p80i_ppa": 45000.0,
-  "Rev": 2.0485151864736175,
-  "W": 3.4672772779710423,
+  "med": 20300.0,
+  "p80i": 32700.0,
+  "h": "environ 30 h de consultations (non sourcé)",
+  "src_med": "Registre des ostéopathes de France, rapport 2026 (S135) : revenu mensuel moyen 1 987 € en 2024, définition non précisée ; × 0,85",
+  "src_p80": "estimé : log-normale des libéraux (× 1,62)",
+  "fiab": "non officielle",
+  "med_nom": 20300.0,
+  "p80i_nom": 32700.0,
+  "med_ppa": 20300.0,
+  "p80i_ppa": 32700.0,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 20300.0,
+  "med_etp_ppa": 20300.0,
+  "p80_etp_nom": 32700.0,
+  "p80_etp_ppa": 32700.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 4,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 2,
+  "RE": 1.2450075602757626,
+  "W": 3.4635725086108233,
   "palier": "B",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 2.0485151864736175,
-  "W_ia": 3.4672772779710423,
+  "W_ia": 3.4635725086108233,
   "palier_ia": "B",
-  "rang": 37,
-  "groupe": 5,
+  "rang": 54,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 54,
+   "environnement physique doublé": 56,
+   "intensité du travail doublé": 51,
+   "qualité du temps de travail doublé": 46,
+   "environnement social doublé": 51,
+   "compétences et autonomie doublé": 47,
+   "perspectives et sécurité doublé": 69,
+   "revenu doublé": 64
+  },
+  "nb_top": 0,
+  "rang_min": 46,
+  "rang_max": 69,
+  "W_tension": 3.4635725086108233,
   "domine_par": [
-   "T09",
+   "T15",
    "T76"
   ]
  },
@@ -1508,37 +2909,105 @@
   ],
   "B": 2.3208865275780974,
   "med": 76300.0,
-  "p80i": 89600,
+  "p80i": 89700.0,
   "h": "41 h 47 contractuelles, tous salariés (OFS 2024, S112)",
-  "src_med": "OFSP (S23) : médiane des infirmiers 7 400 CHF/mois, 2018 ; × 1,074 (hausse de la médiane ESS 2018-2024) × 0,80",
-  "src_p80": "v3 (haut de la fourchette HUG, S64)",
+  "src_med": "OFSP (S23) : médiane des infirmiers diplômés 7 400 CHF/mois à temps plein, 13e compris, estimation OFS 2018 ; × 1,074 (hausse de la médiane ESS 2018-2024) × 0,80",
+  "src_p80": "OFSP (S23) : environ 8 700 CHF/mois après plus de 20 ans, même ajustement",
   "fiab": "officielle ancienne",
   "med_nom": 81779.20685959271,
-  "p80i_nom": 96034.29796355842,
+  "p80i_nom": 96141.47909967846,
   "med_ppa": 51096.09272625917,
-  "p80i_ppa": 60002.75109138692,
-  "Rev": 2.9111927469996806,
-  "W": 2.836678912049952,
-  "palier": "C",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.9111927469996806,
-  "W_ia": 2.836678912049952,
-  "palier_ia": "C",
-  "rang": 72,
-  "groupe": 4,
+  "p80i_ppa": 60069.7184475157,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 81779.20685959271,
+  "med_etp_ppa": 51096.09272625917,
+  "p80_etp_nom": 96141.47909967846,
+  "p80_etp_ppa": 60069.7184475157,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 2.946977677067541,
+  "W": 3.0638539538667913,
+  "palier": "B",
+  "proche": true,
+  "W_ia": 3.0638539538667913,
+  "palier_ia": "B",
+  "rang": 76,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 76,
+   "environnement physique doublé": 78,
+   "intensité du travail doublé": 79,
+   "qualité du temps de travail doublé": 75,
+   "environnement social doublé": 75,
+   "compétences et autonomie doublé": 72,
+   "perspectives et sécurité doublé": 69,
+   "revenu doublé": 74
+  },
+  "nb_top": 0,
+  "rang_min": 69,
+  "rang_max": 79,
+  "W_tension": 3.0638539538667913,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T13",
+   "T19",
+   "T24",
+   "T25",
    "T26",
-   "T29",
    "T30",
-   "T32",
    "T34",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -1583,33 +3052,98 @@
   ],
   "B": 2.3208865275780974,
   "med": 76300.0,
-  "p80i": 89600,
+  "p80i": 89700.0,
   "h": "41 h 47 contractuelles, tous salariés (OFS 2024, S112)",
-  "src_med": "OFSP (S23) : médiane des infirmiers 7 400 CHF/mois, 2018 ; × 1,074 × 0,80",
-  "src_p80": "v3 (S64)",
+  "src_med": "OFSP (S23) : médiane des infirmiers diplômés 7 400 CHF/mois à temps plein, 13e compris (2018) ; × 1,074 × 0,80",
+  "src_p80": "OFSP (S23) : environ 8 700 CHF/mois après plus de 20 ans",
   "fiab": "officielle ancienne",
   "med_nom": 81779.20685959271,
-  "p80i_nom": 96034.29796355842,
+  "p80i_nom": 96141.47909967846,
   "med_ppa": 74344.73350872064,
-  "p80i_ppa": 87303.90723959856,
-  "Rev": 3.749400203407837,
-  "W": 2.7724100305111756,
-  "palier": "C",
+  "p80i_ppa": 87401.34463607133,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 81779.20685959271,
+  "med_etp_ppa": 74344.73350872064,
+  "p80_etp_nom": 96141.47909967846,
+  "p80_etp_ppa": 87401.34463607133,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 3.768545765735662,
+  "W": 3.181220823676523,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.749400203407837,
-  "W_ia": 2.7724100305111756,
-  "palier_ia": "C",
-  "rang": 76,
-  "groupe": 5,
+  "W_ia": 3.181220823676523,
+  "palier_ia": "B",
+  "rang": 69,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 69,
+   "environnement physique doublé": 72,
+   "intensité du travail doublé": 76,
+   "qualité du temps de travail doublé": 65,
+   "environnement social doublé": 65,
+   "compétences et autonomie doublé": 68,
+   "perspectives et sécurité doublé": 60,
+   "revenu doublé": 60
+  },
+  "nb_top": 0,
+  "rang_min": 60,
+  "rang_max": 76,
+  "W_tension": 3.181220823676523,
   "domine_par": [
    "T01",
    "T03",
-   "T04",
    "T05",
-   "T29",
    "T30",
-   "T32",
+   "T64",
    "T91",
    "T92"
   ]
@@ -1654,32 +3188,97 @@
   "med": 75100,
   "p80i": 91000,
   "h": "40 h (non mesurée)",
-  "src_med": "grille officielle FHL (S29) : 6 600 €/mois × 13 à 12 ans d'exercice ; × 0,875",
+  "src_med": "grille officielle FHL (S29) : carrière CS7, 227 à 443 points, soit 5 056 à 9 867 € brut par mois (point d'avril 2023) ; mi-carrière estimée 6 600 €/mois × 13 ; × 0,875",
   "src_p80": "estimé (v3)",
   "fiab": "officielle (grille)",
   "med_nom": 75100.0,
   "p80i_nom": 91000.0,
   "med_ppa": 71523.80952380953,
   "p80i_ppa": 86666.66666666666,
-  "Rev": 3.694830878290407,
-  "W": 2.764224631743561,
-  "palier": "C",
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 75100.0,
+  "med_etp_ppa": 71523.80952380953,
+  "p80_etp_nom": 91000.0,
+  "p80_etp_ppa": 86666.66666666666,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 3.7145582788609586,
+  "W": 3.1735083255515657,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.694830878290407,
-  "W_ia": 2.764224631743561,
-  "palier_ia": "C",
-  "rang": 76,
-  "groupe": 5,
+  "W_ia": 3.1735083255515657,
+  "palier_ia": "B",
+  "rang": 69,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 69,
+   "environnement physique doublé": 72,
+   "intensité du travail doublé": 76,
+   "qualité du temps de travail doublé": 69,
+   "environnement social doublé": 69,
+   "compétences et autonomie doublé": 68,
+   "perspectives et sécurité doublé": 64,
+   "revenu doublé": 60
+  },
+  "nb_top": 0,
+  "rang_min": 60,
+  "rang_max": 76,
+  "W_tension": 3.1735083255515657,
   "domine_par": [
    "T01",
    "T03",
-   "T04",
    "T05",
    "T24",
-   "T29",
    "T30",
-   "T32",
+   "T64",
    "T91",
    "T92"
   ]
@@ -1724,33 +3323,100 @@
   "med": 75100,
   "p80i": 91000,
   "h": "40 h (non mesurée)",
-  "src_med": "grille officielle FHL (S29) : 6 600 €/mois × 13 à 12 ans d'exercice ; × 0,875",
+  "src_med": "grille officielle FHL (S29) : carrière CS7, 227 à 443 points, soit 5 056 à 9 867 € brut par mois (point d'avril 2023) ; mi-carrière estimée 6 600 €/mois × 13 ; × 0,875",
   "src_p80": "estimé (v3)",
   "fiab": "officielle (grille)",
   "med_nom": 75100.0,
   "p80i_nom": 91000.0,
   "med_ppa": 62677.44360902256,
   "p80i_ppa": 75947.36842105263,
-  "Rev": 3.3997213444090097,
-  "W": 2.9099582016613517,
-  "palier": "C",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 3.3997213444090097,
-  "W_ia": 2.9099582016613517,
-  "palier_ia": "C",
-  "rang": 67,
-  "groupe": 2,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 75100.0,
+  "med_etp_ppa": 62677.44360902256,
+  "p80_etp_nom": 91000.0,
+  "p80_etp_ppa": 75947.36842105263,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 3.4253070036007447,
+  "W": 3.132186714800106,
+  "palier": "B",
+  "proche": false,
+  "W_ia": 3.132186714800106,
+  "palier_ia": "B",
+  "rang": 72,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 72,
+   "environnement physique doublé": 76,
+   "intensité du travail doublé": 78,
+   "qualité du temps de travail doublé": 73,
+   "environnement social doublé": 72,
+   "compétences et autonomie doublé": 70,
+   "perspectives et sécurité doublé": 66,
+   "revenu doublé": 67
+  },
+  "nb_top": 0,
+  "rang_min": 66,
+  "rang_max": 78,
+  "W_tension": 3.132186714800106,
   "domine_par": [
    "T01",
-   "T02",
    "T03",
-   "T04",
    "T05",
-   "T29",
+   "T19",
+   "T24",
+   "T25",
    "T30",
-   "T32",
    "T34",
+   "T64",
    "T91",
    "T92"
   ]
@@ -1792,42 +3458,108 @@
    2
   ],
   "B": 2.5591616398143846,
-  "med": 43000.0,
-  "p80i": 49000.0,
+  "med": 43300.0,
+  "p80i": 49200.0,
   "h": "non trouvé",
-  "src_med": "Destatis avril 2024 (S32) : 4 310 €/mois brut ; × 12,8 (primes annuelles, estimé) × 0,78",
+  "src_med": "Destatis avril 2024 (S32) : 4 310 €/mois brut ; × 12,8 (primes annuelles, estimé) ; cotisations 2025 plafonnées",
   "src_p80": "estimé : rapport P80/médian de la v3 (× 1.14)",
   "fiab": "relayée",
-  "med_nom": 43000.0,
-  "p80i_nom": 49000.0,
-  "med_ppa": 43788.990825688066,
-  "p80i_ppa": 49899.08256880733,
-  "Rev": 2.535668719674969,
-  "W": 2.6303503079512454,
+  "med_nom": 43300.0,
+  "p80i_nom": 49200.0,
+  "med_ppa": 44094.49541284403,
+  "p80i_ppa": 50102.75229357798,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salariés à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 43300.0,
+  "med_etp_ppa": 44094.49541284403,
+  "p80_etp_nom": 49200.0,
+  "p80_etp_ppa": 50102.75229357798,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 2,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 2.5894699387529965,
+  "W": 2.869924276964714,
   "palier": "C",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.535668719674969,
-  "W_ia": 2.6303503079512454,
+  "W_ia": 2.869924276964714,
   "palier_ia": "C",
-  "rang": 84,
-  "groupe": 4,
+  "rang": 82,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 82,
+   "environnement physique doublé": 83,
+   "intensité du travail doublé": 87,
+   "qualité du temps de travail doublé": 85,
+   "environnement social doublé": 88,
+   "compétences et autonomie doublé": 82,
+   "perspectives et sécurité doublé": 79,
+   "revenu doublé": 79
+  },
+  "nb_top": 0,
+  "rang_min": 79,
+  "rang_max": 88,
+  "W_tension": 2.869924276964714,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T10",
    "T13",
+   "T19",
    "T23",
+   "T24",
+   "T25",
    "T26",
-   "T28",
-   "T29",
    "T30",
-   "T31",
-   "T32",
    "T34",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -1881,30 +3613,98 @@
   "p80i_nom": 51204.44718962323,
   "med_ppa": 43596.6764363683,
   "p80i_ppa": 50477.15749406331,
-  "Rev": 2.5420228123496122,
-  "W": 2.7813034218524417,
-  "palier": "C",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.5420228123496122,
-  "W_ia": 2.7813034218524417,
-  "palier_ia": "C",
-  "rang": 76,
-  "groupe": 5,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire horaire × durée à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 44224.830142063,
+  "med_etp_ppa": 43596.6764363683,
+  "p80_etp_nom": 51204.44718962323,
+  "p80_etp_ppa": 50477.15749406331,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I1"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q4"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 5,
+  "RE": 2.583716092161915,
+  "W": 3.0119594417374165,
+  "palier": "B",
+  "proche": true,
+  "W_ia": 3.0119594417374165,
+  "palier_ia": "B",
+  "rang": 78,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 78,
+   "environnement physique doublé": 79,
+   "intensité du travail doublé": 81,
+   "qualité du temps de travail doublé": 79,
+   "environnement social doublé": 78,
+   "compétences et autonomie doublé": 74,
+   "perspectives et sécurité doublé": 73,
+   "revenu doublé": 78
+  },
+  "nb_top": 0,
+  "rang_min": 73,
+  "rang_max": 81,
+  "W_tension": 3.0119594417374165,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T10",
    "T13",
+   "T19",
    "T23",
+   "T24",
+   "T25",
    "T26",
-   "T29",
    "T30",
-   "T32",
    "T34",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -1958,16 +3758,80 @@
   "p80i_nom": 226902.46516613077,
   "med_ppa": 109558.59462668415,
   "p80i_ppa": 141769.89292462735,
-  "Rev": 4.71481309774307,
-  "W": 3.3272219646614603,
+  "q": 1.0,
+  "etp": "56 à 58 h par semaine (médecins assistants et chefs de clinique, ASMAC 2022-2023)",
+  "etp_ok": true,
+  "h_src": "S130",
+  "med_etp_nom": 175348.33869239016,
+  "med_etp_ppa": 109558.59462668415,
+  "p80_etp_nom": 226902.46516613077,
+  "p80_etp_ppa": 141769.89292462735,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I2"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q3",
+     "Q11"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 2,
+  "QT": 2,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 4.715619378172196,
+  "W": 3.387945625453171,
   "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.71481309774307,
-  "W_ia": 3.3272219646614603,
+  "W_ia": 3.387945625453171,
   "palier_ia": "B",
-  "rang": 51,
-  "groupe": 1,
+  "rang": 58,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 58,
+   "environnement physique doublé": 59,
+   "intensité du travail doublé": 63,
+   "qualité du temps de travail doublé": 62,
+   "environnement social doublé": 59,
+   "compétences et autonomie doublé": 56,
+   "perspectives et sécurité doublé": 51,
+   "revenu doublé": 43
+  },
+  "nb_top": 0,
+  "rang_min": 43,
+  "rang_max": 63,
+  "W_tension": 3.387945625453171,
   "domine_par": [
    "T30",
    "T32",
@@ -2021,16 +3885,77 @@
   "p80i_nom": 286816.72025723476,
   "med_ppa": 111567.61531054755,
   "p80i_ppa": 179204.6450006154,
-  "Rev": 4.975281390966104,
-  "W": 4.006292208644916,
-  "palier": "A",
+  "q": 1.0,
+  "etp": "43 h par semaine (médecins de famille, 2020), au moins 35 h",
+  "etp_ok": true,
+  "h_src": "S131",
+  "med_etp_nom": 178563.77277599144,
+  "med_etp_ppa": 111567.61531054755,
+  "p80_etp_nom": 286816.72025723476,
+  "p80_etp_ppa": 179204.6450006154,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q10"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 4.975281390966104,
+  "W": 4.353611627280872,
+  "palier": "S",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.975281390966104,
-  "W_ia": 4.006292208644916,
-  "palier_ia": "A",
-  "rang": 5,
-  "groupe": 2,
+  "W_ia": 4.353611627280872,
+  "palier_ia": "S",
+  "rang": 1,
+  "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 1,
+   "environnement physique doublé": 1,
+   "intensité du travail doublé": 1,
+   "qualité du temps de travail doublé": 1,
+   "environnement social doublé": 1,
+   "compétences et autonomie doublé": 1,
+   "perspectives et sécurité doublé": 1,
+   "revenu doublé": 1
+  },
+  "nb_top": 8,
+  "rang_min": 1,
+  "rang_max": 1,
+  "W_tension": 4.353611627280872,
   "domine_par": []
  },
  {
@@ -2070,26 +3995,89 @@
    2
   ],
   "B": 3.5593688268514274,
-  "med": 102900,
-  "p80i": 119000,
+  "med": 103500.0,
+  "p80i": 119700.0,
   "h": "48 h au plus (non mesurée)",
-  "src_med": "grille officielle TV-Ärzte VKA (S34) : Facharzt + gardes, 121 000 € brut estimé ; × 0,78",
-  "src_p80": "estimé (v3)",
+  "src_med": "grille TV-Ärzte VKA 2026 (S118) : Ä2 échelon 3 = 8 741,40 €/mois ; + gardes, total estimé 121 000 € brut ; cotisations plafonnées ; Entgeltatlas : médiane des médecins plafonnée à 7 450 €",
+  "src_p80": "estimé : rapport P80/médian de la v3 (× 1.16)",
   "fiab": "officielle (grille)",
-  "med_nom": 102900.0,
-  "p80i_nom": 119000.0,
-  "med_ppa": 104788.0733944954,
-  "p80i_ppa": 121183.4862385321,
-  "Rev": 4.500999746047404,
-  "W": 3.1451499619071104,
+  "med_nom": 103500.0,
+  "p80i_nom": 119700.0,
+  "med_ppa": 105399.08256880732,
+  "p80i_ppa": 121896.33027522934,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 103500.0,
+  "med_etp_ppa": 105399.08256880732,
+  "p80_etp_nom": 119700.0,
+  "p80_etp_ppa": 121896.33027522934,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I2"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q3"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 2,
+  "QT": 2,
+  "ES": 2,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 4.516570794720286,
+  "W": 3.216652970674327,
   "palier": "B",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.500999746047404,
-  "W_ia": 3.1451499619071104,
+  "W_ia": 3.216652970674327,
   "palier_ia": "B",
-  "rang": 57,
-  "groupe": 2,
+  "rang": 64,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 64,
+   "environnement physique doublé": 67,
+   "intensité du travail doublé": 71,
+   "qualité du temps de travail doublé": 75,
+   "environnement social doublé": 75,
+   "compétences et autonomie doublé": 62,
+   "perspectives et sécurité doublé": 56,
+   "revenu doublé": 56
+  },
+  "nb_top": 0,
+  "rang_min": 56,
+  "rang_max": 75,
+  "W_tension": 3.216652970674327,
   "domine_par": [
    "T05",
    "T29",
@@ -2136,29 +4124,87 @@
    2
   ],
   "B": 3.519964488069839,
-  "med": 180000,
-  "p80i": 240000,
+  "med": 178300.0,
+  "p80i": 274800.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : donnees RAMQ/ICIS non recuperees ; 180 000 CAD nets de frais",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 111179.74058060531,
-  "p80i_nom": 148239.65410747376,
-  "med_ppa": 109600.58321992033,
-  "p80i_ppa": 146134.11095989376,
-  "Rev": 4.746118346940376,
-  "W": 3.4119177520410564,
-  "palier": "B",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.746118346940376,
-  "W_ia": 3.4119177520410564,
-  "palier_ia": "B",
-  "rang": 45,
-  "groupe": 3,
+  "src_med": "Guichet-Emplois 2023-2024 (S122) : médiane 268 808 CAD, avant frais de cabinet ; moins 30 % de frais (taux conventionnel du gouvernement du Québec) ; - RRQ et RQAP des travailleurs autonomes (9 900 CAD, estimé)",
+  "src_p80": "log-normale (haut de fourchette 505 024 CAD lu comme P90)",
+  "fiab": "officielle",
+  "med_nom": 110129.70969734405,
+  "p80i_nom": 169734.40395305745,
+  "med_ppa": 108565.46660062108,
+  "p80i_ppa": 167323.55704907837,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 110129.70969734405,
+  "med_etp_ppa": 108565.46660062108,
+  "p80_etp_nom": 169734.40395305745,
+  "p80_etp_ppa": 167323.55704907837,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 2,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 4.873492488753826,
+  "W": 3.696213212679118,
+  "palier": "A",
+  "proche": true,
+  "W_ia": 3.696213212679118,
+  "palier_ia": "A",
+  "rang": 44,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 44,
+   "environnement physique doublé": 45,
+   "intensité du travail doublé": 46,
+   "qualité du temps de travail doublé": 54,
+   "environnement social doublé": 46,
+   "compétences et autonomie doublé": 45,
+   "perspectives et sécurité doublé": 36,
+   "revenu doublé": 23
+  },
+  "nb_top": 0,
+  "rang_min": 23,
+  "rang_max": 54,
+  "W_tension": 3.696213212679118,
   "domine_par": [
-   "T30",
-   "T92"
+   "T30"
   ]
  },
  {
@@ -2208,30 +4254,102 @@
   "p80i_nom": 65809.21757770632,
   "med_ppa": 54857.2542141674,
   "p80i_ppa": 59826.561434278476,
-  "Rev": 2.9947170831236694,
-  "W": 2.28920756246855,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 60342.97963558414,
+  "med_etp_ppa": 54857.2542141674,
+  "p80_etp_nom": 65809.21757770632,
+  "p80_etp_ppa": 59826.561434278476,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E6"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q5"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 1,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 1.6666666666666665,
+  "PS": 4,
+  "RE": 3.026215951662027,
+  "W": 2.527554659761242,
   "palier": "C",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 2.9947170831236694,
-  "W_ia": 2.28920756246855,
+  "W_ia": 2.527554659761242,
   "palier_ia": "C",
-  "rang": 91,
+  "rang": 90,
   "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 90,
+   "environnement physique doublé": 91,
+   "intensité du travail doublé": 91,
+   "qualité du temps de travail doublé": 90,
+   "environnement social doublé": 89,
+   "compétences et autonomie doublé": 90,
+   "perspectives et sécurité doublé": 90,
+   "revenu doublé": 89
+  },
+  "nb_top": 0,
+  "rang_min": 89,
+  "rang_max": 91,
+  "W_tension": 2.527554659761242,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T13",
+   "T19",
    "T24",
    "T25",
    "T26",
-   "T29",
    "T30",
-   "T32",
    "T34",
+   "T41",
+   "T43",
+   "T46",
+   "T63",
+   "T64",
+   "T68",
+   "T71",
+   "T82",
+   "T86",
+   "T89",
+   "T90",
    "T91",
    "T92",
    "T93"
@@ -2284,23 +4402,80 @@
   "p80i_nom": 85959.27116827438,
   "med_ppa": 70349.80025333723,
   "p80i_ppa": 78144.79197115853,
-  "Rev": 3.569393466549948,
-  "W": 3.4954090199824925,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 77384.78027867095,
+  "med_etp_ppa": 70349.80025333723,
+  "p80_etp_nom": 85959.27116827438,
+  "p80_etp_ppa": 78144.79197115853,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 3.5898552284563228,
+  "W": 3.7985507469223316,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.569393466549948,
-  "W_ia": 3.4954090199824925,
-  "palier_ia": "B",
+  "W_ia": 3.7985507469223316,
+  "palier_ia": "A",
   "rang": 37,
-  "groupe": 5,
-  "domine_par": [
-   "T01",
-   "T03",
-   "T05",
-   "T30",
-   "T91"
-  ]
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 37,
+   "environnement physique doublé": 52,
+   "intensité du travail doublé": 27,
+   "qualité du temps de travail doublé": 40,
+   "environnement social doublé": 32,
+   "compétences et autonomie doublé": 37,
+   "perspectives et sécurité doublé": 21,
+   "revenu doublé": 32
+  },
+  "nb_top": 0,
+  "rang_min": 21,
+  "rang_max": 52,
+  "W_tension": 3.655693604065189,
+  "domine_par": []
  },
  {
   "id": "T35",
@@ -2339,28 +4514,99 @@
    1
   ],
   "B": 1.5108278595041953,
-  "med": 40500,
-  "p80i": 50700,
+  "med": 37400,
+  "p80i": 46900.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : S17 (APEC 2025 : IT 35-45 ans 49 a 101 kEUR) ; estime 52 000 EUR brut x 0,78",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 40500.0,
-  "p80i_nom": 50700.0,
-  "med_ppa": 40500.0,
-  "p80i_ppa": 50700.0,
-  "Rev": 2.4567568763223377,
-  "W": 3.5585135314483507,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 1.9579883652013028,
-  "W_ia": 3.1836982547801953,
-  "palier_ia": "B",
-  "rang": 31,
-  "groupe": 2,
+  "src_med": "DARES, portraits statistiques des métiers, données ouvertes (S133) : ingénieurs de l'informatique (M2Z), salaire médian 3 120 € par mois en 2017-2019, net probable (non actualisé)",
+  "src_p80": "estimé : rapport P80/médian de la v3 (× 1.25)",
+  "fiab": "relayée",
+  "med_nom": 37400.0,
+  "p80i_nom": 46900.0,
+  "med_ppa": 37400.0,
+  "p80i_ppa": 46900.0,
+  "q": 1.0,
+  "etp": "champ temps complet non précisé (DARES)",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 37400.0,
+  "med_etp_ppa": 37400.0,
+  "p80_etp_nom": 46900.0,
+  "p80_etp_ppa": 46900.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "sourcée",
+    [
+     "P2",
+     "P3"
+    ],
+    []
+   ]
+  },
+  "modifs": [
+   [
+    "PS",
+    3,
+    4,
+    "P3"
+   ]
+  ],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 2.3290141088940866,
+  "W": 3.9755734441277264,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.620020959692585,
+  "palier_ia": "A",
+  "rang": 21,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 21,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 22,
+   "qualité du temps de travail doublé": 12,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 17,
+   "perspectives et sécurité doublé": 21,
+   "revenu doublé": 32
+  },
+  "nb_top": 1,
+  "rang_min": 10,
+  "rang_max": 32,
+  "W_tension": 3.9755734441277264,
   "domine_par": [
-   "T40",
+   "T46",
    "T83",
    "T85",
    "T89"
@@ -2413,16 +4659,79 @@
   "p80i_nom": 76000.0,
   "med_ppa": 58000.0,
   "p80i_ppa": 76000.0,
-  "Rev": 3.3059538892806226,
-  "W": 3.6858930833920933,
+  "q": 1.0,
+  "etp": "estimation à temps plein (170 à 180 jours facturés)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 58000.0,
+  "med_etp_ppa": 58000.0,
+  "p80_etp_nom": 76000.0,
+  "p80_etp_ppa": 76000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P3"
+    ],
+    [
+     "P3"
+    ]
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 5.0,
+  "PS": 2,
+  "RE": 3.334980908161958,
+  "W": 3.7621401297374226,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 2.8071853781595872,
-  "W_ia": 3.461077806723938,
+  "proche": false,
+  "W_ia": 3.5494447881594233,
   "palier_ia": "B",
-  "rang": 19,
-  "groupe": 2,
+  "rang": 40,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 40,
+   "environnement physique doublé": 30,
+   "intensité du travail doublé": 42,
+   "qualité du temps de travail doublé": 32,
+   "environnement social doublé": 43,
+   "compétences et autonomie doublé": 32,
+   "perspectives et sécurité doublé": 52,
+   "revenu doublé": 35
+  },
+  "nb_top": 0,
+  "rang_min": 30,
+  "rang_max": 52,
+  "W_tension": 3.904997272594566,
   "domine_par": [
    "T81"
   ]
@@ -2474,16 +4783,77 @@
   "p80i_nom": 115648.44587352626,
   "med_ppa": 88765.46818669005,
   "p80i_ppa": 105134.95079411477,
-  "Rev": 4.154377080126313,
-  "W": 3.6231565620189468,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 97642.01500535906,
+  "med_etp_ppa": 88765.46818669005,
+  "p80_etp_nom": 115648.44587352626,
+  "p80_etp_ppa": 105134.95079411477,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 4.164521778278822,
+  "W": 4.09493168261126,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 3.6556085690052793,
-  "W_ia": 3.248341285350792,
-  "palier_ia": "B",
-  "rang": 23,
-  "groupe": 4,
+  "proche": false,
+  "W_ia": 3.739379198176119,
+  "palier_ia": "A",
+  "rang": 8,
+  "groupe": 6,
+  "rangs_var": {
+   "Poids égaux": 8,
+   "environnement physique doublé": 3,
+   "intensité du travail doublé": 11,
+   "qualité du temps de travail doublé": 7,
+   "environnement social doublé": 5,
+   "compétences et autonomie doublé": 6,
+   "perspectives et sécurité doublé": 21,
+   "revenu doublé": 5
+  },
+  "nb_top": 6,
+  "rang_min": 3,
+  "rang_max": 21,
+  "W_tension": 4.09493168261126,
   "domine_par": []
  },
  {
@@ -2523,27 +4893,90 @@
    2
   ],
   "B": 2.0514529738651754,
-  "med": 57200.0,
-  "p80i": 70600.0,
+  "med": 58300.0,
+  "p80i": 71900.0,
   "h": "non trouvé",
-  "src_med": "Bundesagentur für Arbeit 2024 (S33) : informatique, médiane 6 114 €/mois brut ; × 12 × 0,78",
+  "src_med": "Bundesagentur für Arbeit 2024 (S33) : informatique, médiane 6 114 €/mois brut ; × 12 ; cotisations plafonnées",
   "src_p80": "estimé : rapport P80/médian de la v3 (× 1.23)",
   "fiab": "relayée",
-  "med_nom": 57200.0,
-  "p80i_nom": 70600.0,
-  "med_ppa": 58249.54128440366,
-  "p80i_ppa": 71895.41284403669,
-  "Rev": 3.2547120415868447,
-  "W": 3.5282068062380265,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 2.7559435304658115,
-  "W_ia": 3.1533915295698716,
+  "med_nom": 58300.0,
+  "p80i_nom": 71900.0,
+  "med_ppa": 59369.7247706422,
+  "p80i_ppa": 73219.26605504587,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salariés à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 58300.0,
+  "med_etp_ppa": 59369.7247706422,
+  "p80_etp_nom": 71900.0,
+  "p80_etp_ppa": 73219.26605504587,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 3.3244639310944084,
+  "W": 3.8320662758706296,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.4765137914354876,
   "palier_ia": "B",
   "rang": 33,
   "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 33,
+   "environnement physique doublé": 27,
+   "intensité du travail doublé": 36,
+   "qualité du temps de travail doublé": 27,
+   "environnement social doublé": 37,
+   "compétences et autonomie doublé": 32,
+   "perspectives et sécurité doublé": 42,
+   "revenu doublé": 32
+  },
+  "nb_top": 0,
+  "rang_min": 27,
+  "rang_max": 42,
+  "W_tension": 3.8320662758706296,
   "domine_par": [
+   "T37",
+   "T39",
    "T81",
    "T89",
    "T90"
@@ -2589,23 +5022,84 @@
   "med": 65600,
   "p80i": 83100,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : S30 (STATEC 2022 : mediane 58 126 EUR) ; estime TIC 75 000 EUR x 0,875",
+  "src_med": "non re-sourcé, valeur v3 : S30 (STATEC 2022 : mediane nationale 58 126 EUR brut, aucune mediane par metier) ; estime TIC 75 000 EUR x 0,875",
   "src_p80": "estimé (v3)",
   "fiab": "non re-sourcée",
   "med_nom": 65600.0,
   "p80i_nom": 83100.0,
   "med_ppa": 62476.19047619047,
   "p80i_ppa": 79142.85714285714,
-  "Rev": 3.4377233613631333,
-  "W": 3.4356585042044703,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 65600.0,
+  "med_etp_ppa": 62476.19047619047,
+  "p80_etp_nom": 83100.0,
+  "p80_etp_ppa": 79142.85714285714,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 3.463451722384603,
+  "W": 3.994778817483515,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 1,
-  "Rev_ia": 2.938954850242099,
-  "W_ia": 3.0608432275363144,
-  "palier_ia": "B",
-  "rang": 42,
-  "groupe": 3,
+  "W_ia": 3.6392263330483727,
+  "palier_ia": "A",
+  "rang": 16,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 16,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 18,
+   "qualité du temps de travail doublé": 12,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 17,
+   "perspectives et sécurité doublé": 36,
+   "revenu doublé": 16
+  },
+  "nb_top": 1,
+  "rang_min": 10,
+  "rang_max": 36,
+  "W_tension": 3.994778817483515,
   "domine_par": [
    "T37"
   ]
@@ -2657,17 +5151,81 @@
   "p80i_nom": 60592.958616429896,
   "med_ppa": 49807.37615216379,
   "p80i_ppa": 59732.31785485658,
-  "Rev": 2.875482611381398,
-  "W": 3.6213223917072095,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire horaire × durée à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 50525.01544163064,
+  "med_etp_ppa": 49807.37615216379,
+  "p80_etp_nom": 60592.958616429896,
+  "p80_etp_ppa": 59732.31785485658,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 2.9112664546640996,
+  "W": 3.9158952078091573,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 2.3767141002603625,
-  "W_ia": 3.246507115039054,
+  "proche": false,
+  "W_ia": 3.560342723374015,
   "palier_ia": "B",
-  "rang": 23,
+  "rang": 25,
   "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 25,
+   "environnement physique doublé": 23,
+   "intensité du travail doublé": 27,
+   "qualité du temps de travail doublé": 22,
+   "environnement social doublé": 20,
+   "compétences et autonomie doublé": 23,
+   "perspectives et sécurité doublé": 41,
+   "revenu doublé": 29
+  },
+  "nb_top": 0,
+  "rang_min": 20,
+  "rang_max": 41,
+  "W_tension": 3.9158952078091573,
   "domine_par": [
+   "T37",
+   "T39",
+   "T46",
    "T83",
    "T89"
   ]
@@ -2719,17 +5277,82 @@
   "p80i_nom": 65000.0,
   "med_ppa": 52300.0,
   "p80i_ppa": 65000.0,
-  "Rev": 3.020925899062351,
-  "W": 3.6331388848593527,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salariés à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 52300.0,
+  "med_etp_ppa": 52300.0,
+  "p80_etp_nom": 65000.0,
+  "p80_etp_ppa": 65000.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P2"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 3.054542956924309,
+  "W": 3.9363632795606156,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 2.7854249974404968,
-  "W_ia": 3.4478137496160746,
-  "palier_ia": "B",
-  "rang": 23,
+  "proche": false,
+  "W_ia": 3.760531002147682,
+  "palier_ia": "A",
+  "rang": 25,
   "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 25,
+   "environnement physique doublé": 30,
+   "intensité du travail doublé": 27,
+   "qualité du temps de travail doublé": 16,
+   "environnement social doublé": 20,
+   "compétences et autonomie doublé": 23,
+   "perspectives et sécurité doublé": 27,
+   "revenu doublé": 23
+  },
+  "nb_top": 0,
+  "rang_min": 16,
+  "rang_max": 30,
+  "W_tension": 3.9363632795606156,
   "domine_par": [
+   "T30",
+   "T46",
    "T89"
   ]
  },
@@ -2780,22 +5403,80 @@
   "p80i_nom": 113719.18542336549,
   "med_ppa": 84185.91055247004,
   "p80i_ppa": 103381.07765760498,
-  "Rev": 4.072744787428105,
-  "W": 3.4509117181142157,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 92604.50160771704,
+  "med_etp_ppa": 84185.91055247004,
+  "p80_etp_nom": 113719.18542336549,
+  "p80_etp_ppa": 103381.07765760498,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 4.085239827318673,
+  "W": 3.9407485467598105,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 3.8372438858062514,
-  "W_ia": 3.2655865828709376,
-  "palier_ia": "B",
-  "rang": 42,
-  "groupe": 3,
+  "W_ia": 3.7649162693468763,
+  "palier_ia": "A",
+  "rang": 25,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 25,
+   "environnement physique doublé": 27,
+   "intensité du travail doublé": 27,
+   "qualité du temps de travail doublé": 16,
+   "environnement social doublé": 20,
+   "compétences et autonomie doublé": 23,
+   "perspectives et sécurité doublé": 39,
+   "revenu doublé": 12
+  },
+  "nb_top": 0,
+  "rang_min": 12,
+  "rang_max": 39,
+  "W_tension": 3.9407485467598105,
   "domine_par": [
-   "T01",
-   "T05",
    "T30",
-   "T37",
-   "T91"
+   "T37"
   ]
  },
  {
@@ -2835,28 +5516,89 @@
    2
   ],
   "B": 2.4677333843248466,
-  "med": 58500,
-  "p80i": 70200,
+  "med": 71800.0,
+  "p80i": 86100.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : S33 (BA 2024 : IKT 6 114 EUR/mois, proxy) ; estime 75 000 EUR x 0,78",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 58500.0,
-  "p80i_nom": 70200.0,
-  "med_ppa": 59573.39449541284,
-  "p80i_ppa": 71488.07339449541,
-  "Rev": 3.276306528435133,
-  "W": 3.52144597926527,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 3.040805626813281,
-  "W_ia": 3.3361208440219925,
-  "palier_ia": "B",
-  "rang": 33,
+  "src_med": "Bundesagentur für Arbeit, Entgeltatlas (S118) : ingénieurs de production, médiane 7 367 €/mois brut à temps plein ; × 12 ; cotisations plafonnées",
+  "src_p80": "estimé : rapport P80/médian de la v3 (× 1.20)",
+  "fiab": "relayée",
+  "med_nom": 71800.0,
+  "p80i_nom": 86100.0,
+  "med_ppa": 73117.43119266054,
+  "p80i_ppa": 87679.81651376146,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 71800.0,
+  "med_etp_ppa": 73117.43119266054,
+  "p80_etp_nom": 86100.0,
+  "p80_etp_ppa": 87679.81651376146,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 3.75224378911882,
+  "W": 3.8931776841598316,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.7173454067468974,
+  "palier_ia": "A",
+  "rang": 29,
   "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 29,
+   "environnement physique doublé": 35,
+   "intensité du travail doublé": 32,
+   "qualité du temps de travail doublé": 22,
+   "environnement social doublé": 34,
+   "compétences et autonomie doublé": 29,
+   "perspectives et sécurité doublé": 31,
+   "revenu doublé": 20
+  },
+  "nb_top": 0,
+  "rang_min": 20,
+  "rang_max": 35,
+  "W_tension": 3.8931776841598316,
   "domine_par": [
-   "T89",
+   "T30",
    "T90"
   ]
  },
@@ -2907,37 +5649,96 @@
   "p80i_nom": 34000.0,
   "med_ppa": 28800.0,
   "p80i_ppa": 34000.0,
-  "Rev": 1.635078172742475,
-  "W": 2.7852617259113712,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 28800.0,
+  "med_etp_ppa": 28800.0,
+  "p80_etp_nom": 34000.0,
+  "p80_etp_ppa": 34000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.333333333333333,
+  "PS": 4,
+  "RE": 1.6951679472318224,
+  "W": 2.861214468652165,
   "palier": "C",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 1.635078172742475,
-  "W_ia": 2.7852617259113712,
+  "W_ia": 2.861214468652165,
   "palier_ia": "C",
-  "rang": 76,
-  "groupe": 5,
+  "rang": 85,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 85,
+   "environnement physique doublé": 83,
+   "intensité du travail doublé": 81,
+   "qualité du temps de travail doublé": 85,
+   "environnement social doublé": 84,
+   "compétences et autonomie doublé": 82,
+   "perspectives et sécurité doublé": 84,
+   "revenu doublé": 86
+  },
+  "nb_top": 0,
+  "rang_min": 81,
+  "rang_max": 86,
+  "W_tension": 2.861214468652165,
   "domine_par": [
    "T01",
    "T02",
    "T03",
    "T05",
-   "T08",
+   "T06",
    "T09",
    "T10",
    "T11",
-   "T14",
+   "T13",
    "T16",
    "T18",
+   "T19",
    "T30",
    "T34",
+   "T35",
    "T41",
    "T43",
    "T45",
-   "T50",
-   "T52",
+   "T46",
    "T56",
-   "T57",
    "T60",
    "T61",
    "T62",
@@ -2947,7 +5748,9 @@
    "T76",
    "T77",
    "T80",
+   "T82",
    "T83",
+   "T85",
    "T86",
    "T89",
    "T90",
@@ -3003,24 +5806,80 @@
   "p80i_nom": 42000.0,
   "med_ppa": 33600.0,
   "p80i_ppa": 42000.0,
-  "Rev": 2.037771278335424,
-  "W": 3.1956656917503135,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 33600.0,
+  "med_etp_ppa": 33600.0,
+  "p80_etp_nom": 42000.0,
+  "p80_etp_ppa": 42000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P4"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 4,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.333333333333333,
+  "PS": 4,
+  "RE": 2.091021220879685,
+  "W": 3.346336364887574,
   "palier": "B",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 1.8022703767135717,
-  "W_ia": 3.010340556507036,
+  "W_ia": 3.17050408747464,
   "palier_ia": "B",
-  "rang": 54,
-  "groupe": 3,
+  "rang": 60,
+  "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 60,
+   "environnement physique doublé": 56,
+   "intensité du travail doublé": 56,
+   "qualité du temps de travail doublé": 59,
+   "environnement social doublé": 60,
+   "compétences et autonomie doublé": 61,
+   "perspectives et sécurité doublé": 60,
+   "revenu doublé": 64
+  },
+  "nb_top": 0,
+  "rang_min": 56,
+  "rang_max": 64,
+  "W_tension": 3.346336364887574,
   "domine_par": [
-   "T56",
-   "T57",
-   "T61",
-   "T64",
-   "T83",
-   "T89",
-   "T90"
+   "T18",
+   "T93"
   ]
  },
  {
@@ -3070,16 +5929,79 @@
   "p80i_nom": 66000.0,
   "med_ppa": 52000.0,
   "p80i_ppa": 66000.0,
-  "Rev": 3.0294475695136263,
-  "W": 3.734417135427044,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 52000.0,
+  "med_etp_ppa": 52000.0,
+  "p80_etp_nom": 66000.0,
+  "p80_etp_ppa": 66000.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P2"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 3.0633198787718836,
+  "W": 4.080474268395983,
   "palier": "A",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 2.530679058392593,
-  "W_ia": 3.359601858758889,
-  "palier_ia": "B",
-  "rang": 16,
-  "groupe": 3,
+  "W_ia": 3.7249217839608417,
+  "palier_ia": "A",
+  "rang": 8,
+  "groupe": 6,
+  "rangs_var": {
+   "Poids égaux": 8,
+   "environnement physique doublé": 6,
+   "intensité du travail doublé": 11,
+   "qualité du temps de travail doublé": 7,
+   "environnement social doublé": 9,
+   "compétences et autonomie doublé": 10,
+   "perspectives et sécurité doublé": 15,
+   "revenu doublé": 12
+  },
+  "nb_top": 5,
+  "rang_min": 6,
+  "rang_max": 15,
+  "W_tension": 4.080474268395983,
   "domine_par": [
    "T89"
   ]
@@ -3131,30 +6053,87 @@
   "p80i_nom": 31000.0,
   "med_ppa": 26400.0,
   "p80i_ppa": 31000.0,
-  "Rev": 1.4351373757899504,
-  "W": 3.005270606368492,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 26400.0,
+  "med_etp_ppa": 26400.0,
+  "p80_etp_nom": 31000.0,
+  "p80_etp_ppa": 31000.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E4"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 2.6666666666666665,
+  "PS": 4,
+  "RE": 1.4990879389348302,
+  "W": 3.023679229371642,
   "palier": "B",
   "proche": true,
-  "Se_ia": 4,
-  "Rev_ia": 1.4351373757899504,
-  "W_ia": 3.005270606368492,
+  "W_ia": 3.023679229371642,
   "palier_ia": "B",
-  "rang": 64,
-  "groupe": 3,
+  "rang": 78,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 78,
+   "environnement physique doublé": 79,
+   "intensité du travail doublé": 66,
+   "qualité du temps de travail doublé": 69,
+   "environnement social doublé": 78,
+   "compétences et autonomie doublé": 80,
+   "perspectives et sécurité doublé": 79,
+   "revenu doublé": 79
+  },
+  "nb_top": 0,
+  "rang_min": 66,
+  "rang_max": 80,
+  "W_tension": 3.023679229371642,
   "domine_par": [
-   "T02",
-   "T09",
+   "T10",
    "T11",
    "T16",
-   "T18",
+   "T34",
    "T50",
-   "T56",
-   "T57",
+   "T62",
    "T76",
    "T77",
-   "T83",
-   "T89",
-   "T90",
    "T93"
   ]
  },
@@ -3205,34 +6184,119 @@
   "p80i_nom": 43400.0,
   "med_ppa": 26900.0,
   "p80i_ppa": 43400.0,
-  "Rev": 1.800223198050659,
-  "W": 2.8300334797075988,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 26900.0,
+  "med_etp_ppa": 26900.0,
+  "p80_etp_nom": 43400.0,
+  "p80_etp_ppa": 43400.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E4"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 3.1666666666666665,
+  "PS": 3,
+  "RE": 1.863341258750484,
+  "W": 2.8614297036310212,
   "palier": "C",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 1.800223198050659,
-  "W_ia": 2.8300334797075988,
+  "W_ia": 2.8614297036310212,
   "palier_ia": "C",
-  "rang": 72,
-  "groupe": 4,
+  "rang": 85,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 85,
+   "environnement physique doublé": 83,
+   "intensité du travail doublé": 81,
+   "qualité du temps de travail doublé": 79,
+   "environnement social doublé": 84,
+   "compétences et autonomie doublé": 84,
+   "perspectives et sécurité doublé": 86,
+   "revenu doublé": 83
+  },
+  "nb_top": 0,
+  "rang_min": 79,
+  "rang_max": 86,
+  "W_tension": 2.8614297036310212,
   "domine_par": [
    "T01",
+   "T02",
    "T03",
    "T05",
    "T09",
    "T10",
-   "T13",
-   "T19",
    "T30",
+   "T34",
+   "T35",
+   "T37",
+   "T38",
+   "T39",
+   "T40",
+   "T41",
+   "T42",
+   "T43",
+   "T46",
    "T56",
-   "T57",
+   "T60",
+   "T61",
+   "T62",
+   "T64",
+   "T68",
+   "T70",
    "T71",
    "T76",
+   "T80",
+   "T81",
+   "T82",
    "T83",
+   "T85",
+   "T86",
+   "T87",
+   "T88",
    "T89",
    "T90",
    "T91",
-   "T92"
+   "T92",
+   "T93",
+   "T72"
   ]
  },
  {
@@ -3282,27 +6346,81 @@
   "p80i_nom": 74276.52733118972,
   "med_ppa": 57877.81350482315,
   "p80i_ppa": 67524.115755627,
-  "Rev": 3.183112387790159,
-  "W": 2.9274668581685237,
-  "palier": "C",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 3.183112387790159,
-  "W_ia": 2.9274668581685237,
-  "palier_ia": "C",
-  "rang": 67,
-  "groupe": 2,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 63665.59485530547,
+  "med_etp_ppa": 57877.81350482315,
+  "p80_etp_nom": 74276.52733118972,
+  "p80_etp_ppa": 67524.115755627,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E3",
+     "E4"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 2.6666666666666665,
+  "PS": 3,
+  "RE": 3.2122329802113807,
+  "W": 3.1255570924111495,
+  "palier": "B",
+  "proche": false,
+  "W_ia": 3.1255570924111495,
+  "palier_ia": "B",
+  "rang": 72,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 72,
+   "environnement physique doublé": 76,
+   "intensité du travail doublé": 63,
+   "qualité du temps de travail doublé": 62,
+   "environnement social doublé": 72,
+   "compétences et autonomie doublé": 74,
+   "perspectives et sécurité doublé": 81,
+   "revenu doublé": 68
+  },
+  "nb_top": 0,
+  "rang_min": 62,
+  "rang_max": 81,
+  "W_tension": 3.1255570924111495,
   "domine_par": [
-   "T01",
-   "T02",
-   "T03",
-   "T05",
-   "T30",
    "T34",
-   "T89",
-   "T90",
-   "T91",
-   "T92",
    "T93"
   ]
  },
@@ -3353,21 +6471,81 @@
   "p80i_nom": 51636.81284743669,
   "med_ppa": 43535.78722346835,
   "p80i_ppa": 50903.381984363,
-  "Rev": 2.5488727983977775,
-  "W": 3.1723309197596667,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire horaire × durée à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 44163.06361951822,
+  "med_etp_ppa": 43535.78722346835,
+  "p80_etp_nom": 51636.81284743669,
+  "p80_etp_ppa": 50903.381984363,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E4"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 2.6666666666666665,
+  "PS": 4,
+  "RE": 2.5906280923063973,
+  "W": 3.1796135369961513,
   "palier": "B",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 2.5488727983977775,
-  "W_ia": 3.1723309197596667,
+  "W_ia": 3.1796135369961513,
   "palier_ia": "B",
-  "rang": 57,
-  "groupe": 2,
+  "rang": 69,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 69,
+   "environnement physique doublé": 72,
+   "intensité du travail doublé": 60,
+   "qualité du temps de travail doublé": 59,
+   "environnement social doublé": 69,
+   "compétences et autonomie doublé": 72,
+   "perspectives et sécurité doublé": 69,
+   "revenu doublé": 73
+  },
+  "nb_top": 0,
+  "rang_min": 59,
+  "rang_max": 73,
+  "W_tension": 3.1796135369961513,
   "domine_par": [
-   "T02",
-   "T83",
-   "T89",
-   "T90",
+   "T10",
+   "T34",
    "T93"
   ]
  },
@@ -3418,34 +6596,119 @@
   "p80i_nom": 43400.0,
   "med_ppa": 26900.0,
   "p80i_ppa": 43400.0,
-  "Rev": 1.800223198050659,
-  "W": 2.8300334797075988,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 26900.0,
+  "med_etp_ppa": 26900.0,
+  "p80_etp_nom": 43400.0,
+  "p80_etp_ppa": 43400.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E4"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 3.1666666666666665,
+  "PS": 3,
+  "RE": 1.863341258750484,
+  "W": 2.8614297036310212,
   "palier": "C",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 1.800223198050659,
-  "W_ia": 2.8300334797075988,
+  "W_ia": 2.8614297036310212,
   "palier_ia": "C",
-  "rang": 72,
-  "groupe": 4,
+  "rang": 85,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 85,
+   "environnement physique doublé": 83,
+   "intensité du travail doublé": 81,
+   "qualité du temps de travail doublé": 79,
+   "environnement social doublé": 84,
+   "compétences et autonomie doublé": 84,
+   "perspectives et sécurité doublé": 86,
+   "revenu doublé": 83
+  },
+  "nb_top": 0,
+  "rang_min": 79,
+  "rang_max": 86,
+  "W_tension": 2.8614297036310212,
   "domine_par": [
    "T01",
+   "T02",
    "T03",
    "T05",
    "T09",
    "T10",
-   "T13",
-   "T19",
    "T30",
+   "T34",
+   "T35",
+   "T37",
+   "T38",
+   "T39",
+   "T40",
+   "T41",
+   "T42",
+   "T43",
+   "T46",
    "T56",
-   "T57",
+   "T60",
+   "T61",
+   "T62",
+   "T64",
+   "T68",
+   "T70",
    "T71",
    "T76",
+   "T80",
+   "T81",
+   "T82",
    "T83",
+   "T85",
+   "T86",
+   "T87",
+   "T88",
    "T89",
    "T90",
    "T91",
-   "T92"
+   "T92",
+   "T93",
+   "T72"
   ]
  },
  {
@@ -3495,39 +6758,88 @@
   "p80i_nom": 36000.0,
   "med_ppa": 30000.0,
   "p80i_ppa": 36000.0,
-  "Rev": 1.742939204821527,
-  "W": 2.861440880723229,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 30000.0,
+  "med_etp_ppa": 30000.0,
+  "p80_etp_nom": 36000.0,
+  "p80_etp_ppa": 36000.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E4"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 4,
+  "QT": 3,
+  "ES": 3,
+  "CA": 2.6666666666666665,
+  "PS": 4,
+  "RE": 1.80121766337964,
+  "W": 2.9239834757209002,
   "palier": "C",
-  "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 1.742939204821527,
-  "W_ia": 2.861440880723229,
+  "proche": true,
+  "W_ia": 2.9239834757209002,
   "palier_ia": "C",
-  "rang": 69,
-  "groupe": 3,
+  "rang": 80,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 80,
+   "environnement physique doublé": 81,
+   "intensité du travail doublé": 71,
+   "qualité du temps de travail doublé": 83,
+   "environnement social doublé": 81,
+   "compétences et autonomie doublé": 84,
+   "perspectives et sécurité doublé": 82,
+   "revenu doublé": 82
+  },
+  "nb_top": 0,
+  "rang_min": 71,
+  "rang_max": 84,
+  "W_tension": 2.9239834757209002,
   "domine_par": [
-   "T01",
-   "T02",
-   "T03",
-   "T05",
-   "T08",
-   "T09",
    "T10",
-   "T14",
+   "T11",
    "T16",
    "T18",
-   "T30",
    "T34",
+   "T45",
    "T50",
-   "T56",
-   "T57",
-   "T71",
+   "T62",
    "T76",
-   "T83",
-   "T89",
-   "T90",
-   "T91",
-   "T92",
    "T93"
   ]
  },
@@ -3571,45 +6883,111 @@
   "med": 37200,
   "p80i": 45600,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : S15 (SNCF : 26 a 34 kEUR brut apres formation) ; estime 3 100 EUR/mois a 40 ans",
+  "src_med": "non re-sourcé, valeur v3 : aucune source officielle ; reperes non officiels : 4 214 EUR brut par mois variables compris en 2023 (S129)",
   "src_p80": "estimé (v3)",
   "fiab": "non re-sourcée",
   "med_nom": 37200.0,
   "p80i_nom": 45600.0,
   "med_ppa": 37200.0,
   "p80i_ppa": 45600.0,
-  "Rev": 2.2453959028918185,
-  "W": 2.716809385433773,
-  "palier": "C",
-  "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 2.2453959028918185,
-  "W_ia": 2.716809385433773,
-  "palier_ia": "C",
-  "rang": 81,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 37200.0,
+  "med_etp_ppa": 37200.0,
+  "p80_etp_nom": 45600.0,
+  "p80_etp_ppa": 45600.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E5"
+    ],
+    [
+     "E5"
+    ]
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S4"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 2.1666666666666665,
+  "PS": 4,
+  "RE": 2.2941296374973392,
+  "W": 3.0658280434520004,
+  "palier": "B",
+  "proche": true,
+  "W_ia": 3.0658280434520004,
+  "palier_ia": "B",
+  "rang": 76,
   "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 76,
+   "environnement physique doublé": 67,
+   "intensité du travail doublé": 71,
+   "qualité du temps de travail doublé": 75,
+   "environnement social doublé": 75,
+   "compétences et autonomie doublé": 80,
+   "perspectives et sécurité doublé": 76,
+   "revenu doublé": 75
+  },
+  "nb_top": 0,
+  "rang_min": 67,
+  "rang_max": 80,
+  "W_tension": 2.780113757737715,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T05",
-   "T08",
    "T09",
-   "T10",
-   "T14",
    "T30",
-   "T34",
-   "T50",
+   "T35",
+   "T41",
+   "T43",
+   "T46",
    "T54",
-   "T57",
-   "T63",
+   "T60",
+   "T61",
+   "T64",
+   "T68",
    "T71",
+   "T80",
+   "T82",
    "T83",
-   "T84",
+   "T85",
+   "T86",
    "T89",
    "T90",
-   "T91",
-   "T92",
    "T93"
   ]
  },
@@ -3650,41 +7028,107 @@
    2
   ],
   "B": 1.9016126862206222,
-  "med": 72800,
-  "p80i": 81600,
+  "med": 73800.0,
+  "p80i": 85200.0,
   "h": "41 h 47 contractuelles, tous salariés (OFS 2024, S112)",
-  "src_med": "non re-sourcé, valeur v3 : S55 (BLS : 3 615 CHF/mois en formation) + S22 ; estime 7 000 CHF x 13 x 0,80",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 78027.86709539121,
-  "p80i_nom": 87459.80707395499,
-  "med_ppa": 48752.23526175187,
-  "p80i_ppa": 54645.36260108451,
-  "Rev": 2.758868661444528,
-  "W": 2.7938302992166792,
-  "palier": "C",
+  "src_med": "modèle de calcul des CFF 2026 (S121, relayé) : 5 726 à 8 190 CHF/mois à 100 %, 13 salaires ; mi-carrière estimée 7 100 CHF ; × 0,80",
+  "src_p80": "maximum de la grille, 8 190 CHF/mois × 13",
+  "fiab": "relayée (grille d'entreprise)",
+  "med_nom": 79099.67845659165,
+  "p80i_nom": 91318.32797427653,
+  "med_ppa": 49421.908823039674,
+  "p80i_ppa": 57056.1874217206,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à 100 %)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 79099.67845659165,
+  "med_etp_ppa": 49421.908823039674,
+  "p80_etp_nom": 91318.32797427653,
+  "p80_etp_ppa": 57056.1874217206,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E5"
+    ],
+    [
+     "E5"
+    ]
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S4"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 2.1666666666666665,
+  "PS": 4,
+  "RE": 2.8555263318319057,
+  "W": 3.1460275712140815,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 2.758868661444528,
-  "W_ia": 2.7938302992166792,
-  "palier_ia": "C",
-  "rang": 76,
-  "groupe": 5,
+  "W_ia": 3.1460275712140815,
+  "palier_ia": "B",
+  "rang": 72,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 72,
+   "environnement physique doublé": 64,
+   "intensité du travail doublé": 66,
+   "qualité du temps de travail doublé": 69,
+   "environnement social doublé": 69,
+   "compétences et autonomie doublé": 77,
+   "perspectives et sécurité doublé": 73,
+   "revenu doublé": 68
+  },
+  "nb_top": 0,
+  "rang_min": 64,
+  "rang_max": 77,
+  "W_tension": 2.860313285499796,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T05",
-   "T10",
    "T30",
-   "T34",
-   "T63",
+   "T41",
+   "T43",
+   "T46",
+   "T64",
+   "T68",
    "T71",
+   "T82",
    "T83",
+   "T86",
    "T89",
    "T90",
-   "T91",
-   "T92",
    "T93"
   ]
  },
@@ -3735,50 +7179,106 @@
   "p80i_nom": 25800.0,
   "med_ppa": 22000.0,
   "p80i_ppa": 25800.0,
-  "Rev": 1.0263005713349784,
-  "W": 1.9439450857002467,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 22000.0,
+  "med_etp_ppa": 22000.0,
+  "p80_etp_nom": 25800.0,
+  "p80_etp_ppa": 25800.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E2",
+     "E5"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q7"
+    ],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S4"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 2,
+  "ES": 2,
+  "CA": 2.1666666666666665,
+  "PS": 4,
+  "RE": 1.0983409386236653,
+  "W": 2.323572515041476,
   "palier": "C",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 1.0,
-  "W_ia": 1.79,
+  "W_ia": 2.1666666666666665,
   "palier_ia": "C",
   "rang": 93,
   "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 93,
+   "environnement physique doublé": 92,
+   "intensité du travail doublé": 92,
+   "qualité du temps de travail doublé": 93,
+   "environnement social doublé": 93,
+   "compétences et autonomie doublé": 93,
+   "perspectives et sécurité doublé": 92,
+   "revenu doublé": 93
+  },
+  "nb_top": 0,
+  "rang_min": 92,
+  "rang_max": 93,
+  "W_tension": 2.323572515041476,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T06",
-   "T08",
    "T09",
    "T10",
    "T11",
-   "T12",
    "T13",
-   "T14",
    "T15",
    "T16",
    "T17",
    "T18",
    "T19",
-   "T23",
-   "T24",
-   "T25",
-   "T26",
-   "T27",
-   "T28",
-   "T29",
    "T30",
-   "T31",
    "T32",
    "T34",
+   "T35",
    "T41",
    "T43",
    "T44",
    "T45",
+   "T46",
    "T47",
    "T50",
    "T52",
@@ -3786,12 +7286,9 @@
    "T54",
    "T56",
    "T57",
-   "T58",
-   "T59",
    "T60",
    "T61",
    "T62",
-   "T63",
    "T64",
    "T66",
    "T68",
@@ -3802,7 +7299,7 @@
    "T80",
    "T82",
    "T83",
-   "T84",
+   "T85",
    "T86",
    "T89",
    "T90",
@@ -3858,18 +7355,88 @@
   "p80i_nom": 42500.0,
   "med_ppa": 35400.0,
   "p80i_ppa": 42500.0,
-  "Rev": 2.113374384233356,
-  "W": 3.6970061576350037,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (temps complet) ; 42 à 43 h déclarées",
+  "etp_ok": true,
+  "h_src": "S101",
+  "med_etp_nom": 35400.0,
+  "med_etp_ppa": 35400.0,
+  "p80_etp_nom": 42500.0,
+  "p80_etp_ppa": 42500.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E7"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I3"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q14"
+    ],
+    []
+   ],
+   "ES": [
+    "sourcée",
+    [
+     "S3"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 2.164308788617069,
+  "W": 3.8091869698024388,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 1.8778734826115047,
-  "W_ia": 3.661681022391726,
+  "proche": false,
+  "W_ia": 3.776211835246648,
   "palier_ia": "A",
-  "rang": 19,
-  "groupe": 2,
+  "rang": 33,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 33,
+   "environnement physique doublé": 42,
+   "intensité du travail doublé": 38,
+   "qualité du temps de travail doublé": 27,
+   "environnement social doublé": 39,
+   "compétences et autonomie doublé": 32,
+   "perspectives et sécurité doublé": 21,
+   "revenu doublé": 40
+  },
+  "nb_top": 0,
+  "rang_min": 21,
+  "rang_max": 42,
+  "W_tension": 3.8091869698024388,
   "domine_par": [
-   "T57"
+   "T09",
+   "T30"
   ]
  },
  {
@@ -3919,17 +7486,96 @@
   "p80i_nom": 46400.0,
   "med_ppa": 38600.0,
   "p80i_ppa": 46400.0,
-  "Rev": 2.3080852630324324,
-  "W": 3.726212789454865,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (temps complet) ; 42 à 43 h déclarées",
+  "etp_ok": true,
+  "h_src": "S101",
+  "med_etp_nom": 38600.0,
+  "med_etp_ppa": 38600.0,
+  "p80_etp_nom": 46400.0,
+  "p80_etp_ppa": 46400.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E7"
+    ],
+    []
+   ],
+   "IT": [
+    "mixte",
+    [
+     "I3"
+    ],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q14"
+    ],
+    []
+   ],
+   "ES": [
+    "sourcée",
+    [
+     "S3"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [
+   [
+    "ES",
+    3,
+    2,
+    "S3"
+   ]
+  ],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 2,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 2.3551797740182128,
+  "W": 3.69359711057403,
   "palier": "A",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.072584361410581,
-  "W_ia": 3.690887654211587,
+  "proche": true,
+  "W_ia": 3.660621976018239,
   "palier_ia": "A",
-  "rang": 16,
-  "groupe": 3,
-  "domine_par": []
+  "rang": 44,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 44,
+   "environnement physique doublé": 45,
+   "intensité du travail doublé": 46,
+   "qualité du temps de travail doublé": 37,
+   "environnement social doublé": 52,
+   "compétences et autonomie doublé": 40,
+   "perspectives et sécurité doublé": 36,
+   "revenu doublé": 48
+  },
+  "nb_top": 0,
+  "rang_min": 36,
+  "rang_max": 52,
+  "W_tension": 3.69359711057403,
+  "domine_par": [
+   "T09",
+   "T30"
+  ]
  },
  {
   "id": "T58",
@@ -3968,31 +7614,95 @@
    1
   ],
   "B": 1.4744288660850642,
-  "med": 34200,
-  "p80i": 39600,
-  "h": "cycles de 12 h 08 ; durée moyenne non mesurée (Cour des comptes)",
-  "src_med": "non re-sourcé, valeur v3 : S13 (grille brigadier-chef 2 550 a 2 678 EUR brut + ISSP 28,5 %) ; aucune moyenne officielle trouvee",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 34200.0,
-  "p80i_nom": 39600.0,
-  "med_ppa": 34200.0,
-  "p80i_ppa": 39600.0,
-  "Rev": 1.9994829213436198,
-  "W": 2.489922438201543,
+  "med": 34400,
+  "p80i": 41300.0,
+  "h": "39 h en régime hebdomadaire, ou vacations de 11 à 12 h (S120)",
+  "src_med": "catégorie B de la police, 2 870 €/mois net moyen (DGAFP 2025, relayé par un site tiers, proxy) ; grille 2026 : 2 162 à 3 917 € net/mois (S120)",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "relayée, proxy",
+  "med_nom": 34400.0,
+  "p80i_nom": 41300.0,
+  "med_ppa": 34400.0,
+  "p80i_ppa": 41300.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 34400.0,
+  "med_etp_ppa": 34400.0,
+  "p80_etp_nom": 41300.0,
+  "p80_etp_ppa": 41300.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q6"
+    ],
+    []
+   ],
+   "ES": [
+    "sourcée",
+    [
+     "S1"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 2,
+  "QT": 3,
+  "ES": 2,
+  "CA": 2.1666666666666665,
+  "PS": 5,
+  "RE": 2.1015441905437355,
+  "W": 2.609744408172914,
   "palier": "C",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 1.9994829213436198,
-  "W_ia": 2.489922438201543,
+  "W_ia": 2.609744408172914,
   "palier_ia": "C",
   "rang": 89,
   "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 89,
+   "environnement physique doublé": 88,
+   "intensité du travail doublé": 89,
+   "qualité du temps de travail doublé": 89,
+   "environnement social doublé": 90,
+   "compétences et autonomie doublé": 89,
+   "perspectives et sécurité doublé": 86,
+   "revenu doublé": 90
+  },
+  "nb_top": 0,
+  "rang_min": 86,
+  "rang_max": 90,
+  "W_tension": 2.609744408172914,
   "domine_par": [
    "T01",
    "T02",
    "T03",
-   "T04",
    "T05",
    "T06",
    "T08",
@@ -4002,18 +7712,19 @@
    "T14",
    "T19",
    "T23",
+   "T24",
+   "T25",
    "T26",
    "T27",
    "T28",
-   "T29",
    "T30",
-   "T31",
-   "T32",
    "T34",
    "T56",
    "T57",
-   "T59",
+   "T60",
+   "T61",
    "T63",
+   "T64",
    "T71",
    "T91",
    "T92",
@@ -4067,16 +7778,79 @@
   "p80i_nom": 43600.0,
   "med_ppa": 36400.0,
   "p80i_ppa": 43600.0,
-  "Rev": 2.1732966868131034,
-  "W": 2.8759945030219654,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 36400.0,
+  "med_etp_ppa": 36400.0,
+  "p80_etp_nom": 43600.0,
+  "p80_etp_ppa": 43600.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q6"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 1,
+  "IT": 2,
+  "QT": 3,
+  "ES": 4,
+  "CA": 2.1666666666666665,
+  "PS": 5,
+  "RE": 2.2229950480764376,
+  "W": 2.7699516735347287,
   "palier": "C",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.1732966868131034,
-  "W_ia": 2.8759945030219654,
+  "W_ia": 2.7699516735347287,
   "palier_ia": "C",
-  "rang": 69,
-  "groupe": 3,
+  "rang": 88,
+  "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 88,
+   "environnement physique doublé": 88,
+   "intensité du travail doublé": 88,
+   "qualité du temps de travail doublé": 88,
+   "environnement social doublé": 81,
+   "compétences et autonomie doublé": 88,
+   "perspectives et sécurité doublé": 82,
+   "revenu doublé": 86
+  },
+  "nb_top": 0,
+  "rang_min": 81,
+  "rang_max": 88,
+  "W_tension": 2.7699516735347287,
   "domine_par": [
    "T01",
    "T02",
@@ -4087,6 +7861,7 @@
    "T13",
    "T30",
    "T34",
+   "T63",
    "T91"
   ]
  },
@@ -4127,29 +7902,93 @@
    2
   ],
   "B": 2.6302585767344455,
-  "med": 33000,
-  "p80i": 42000,
+  "med": 40500,
+  "p80i": 48600.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille attache + IFSE ; ancrage S66 (DGAFP : cat. A 3 321 EUR moy. 2023, via secondaire)",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 33000.0,
-  "p80i_nom": 42000.0,
-  "med_ppa": 33000.0,
-  "p80i_ppa": 42000.0,
-  "Rev": 2.0158234204936147,
-  "W": 3.422373513074042,
-  "palier": "B",
+  "src_med": "Insee et DGAFP 2023 (S67) : fonctionnaires de catégorie A, 3 373 €/mois net moyen (enseignants compris, proxy)",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle, proxy",
+  "med_nom": 40500.0,
+  "p80i_nom": 48600.0,
+  "med_ppa": 40500.0,
+  "p80i_ppa": 48600.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 40500.0,
+  "med_etp_ppa": 40500.0,
+  "p80_etp_nom": 48600.0,
+  "p80_etp_ppa": 48600.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 2.4586928549684495,
+  "W": 3.779813264995493,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 1.7803225188717646,
-  "W_ia": 3.3870483778307645,
-  "palier_ia": "B",
-  "rang": 42,
+  "W_ia": 3.746838130439702,
+  "palier_ia": "A",
+  "rang": 37,
   "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 37,
+   "environnement physique doublé": 30,
+   "intensité du travail doublé": 38,
+   "qualité du temps de travail doublé": 40,
+   "environnement social doublé": 39,
+   "compétences et autonomie doublé": 40,
+   "perspectives et sécurité doublé": 27,
+   "revenu doublé": 40
+  },
+  "nb_top": 0,
+  "rang_min": 27,
+  "rang_max": 40,
+  "W_tension": 3.779813264995493,
   "domine_par": [
-   "T61",
-   "T64"
+   "T64",
+   "T71",
+   "T93"
   ]
  },
  {
@@ -4189,28 +8028,93 @@
    2
   ],
   "B": 2.526612686220622,
-  "med": 38400,
-  "p80i": 48000,
+  "med": 40500,
+  "p80i": 48600.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille + primes DGFiP ; ancrage S67 (INSEE FPE 2024 : cat. A 3 543 EUR moy.)",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 38400.0,
-  "p80i_nom": 48000.0,
-  "med_ppa": 38400.0,
-  "p80i_ppa": 48000.0,
-  "Rev": 2.336239477371433,
-  "W": 3.470435921605715,
-  "palier": "B",
+  "src_med": "Insee et DGAFP 2023 (S67) : catégorie A, 3 373 €/mois net moyen (proxy) ; DGFiP (S120) : 2 378 € net à la titularisation",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle, proxy",
+  "med_nom": 40500.0,
+  "p80i_nom": 48600.0,
+  "med_ppa": 40500.0,
+  "p80i_ppa": 48600.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 40500.0,
+  "med_etp_ppa": 40500.0,
+  "p80_etp_nom": 48600.0,
+  "p80_etp_ppa": 48600.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 2.4586928549684495,
+  "W": 3.779813264995493,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 2.100738575749581,
-  "W_ia": 3.4351107863624373,
-  "palier_ia": "B",
+  "W_ia": 3.746838130439702,
+  "palier_ia": "A",
   "rang": 37,
-  "groupe": 5,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 37,
+   "environnement physique doublé": 30,
+   "intensité du travail doublé": 38,
+   "qualité du temps de travail doublé": 40,
+   "environnement social doublé": 39,
+   "compétences et autonomie doublé": 40,
+   "perspectives et sécurité doublé": 27,
+   "revenu doublé": 40
+  },
+  "nb_top": 0,
+  "rang_min": 27,
+  "rang_max": 40,
+  "W_tension": 3.779813264995493,
   "domine_par": [
-   "T64"
+   "T64",
+   "T71",
+   "T93"
   ]
  },
  {
@@ -4250,27 +8154,90 @@
    1
   ],
   "B": 1.4744288660850642,
-  "med": 30600,
-  "p80i": 36000,
+  "med": 32600,
+  "p80i": 39200.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille B + primes DGFiP ; ancrage S66 (DGAFP : cat. B 2 588 EUR moy. 2023)",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 30600.0,
-  "p80i_nom": 36000.0,
-  "med_ppa": 30600.0,
-  "p80i_ppa": 36000.0,
-  "Rev": 1.7670602535248312,
-  "W": 3.5750590380287246,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 1.5315593519029775,
-  "W_ia": 3.539733902785447,
-  "palier_ia": "B",
-  "rang": 27,
+  "src_med": "Insee et DGAFP 2023 (S67) : catégorie B, 2 720 €/mois net moyen (proxy) ; DGFiP : 2 120 € net à la titularisation",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle, proxy",
+  "med_nom": 32600.0,
+  "p80i_nom": 39200.0,
+  "med_ppa": 32600.0,
+  "p80i_ppa": 39200.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 32600.0,
+  "med_etp_ppa": 32600.0,
+  "p80_etp_nom": 39200.0,
+  "p80_etp_ppa": 39200.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 3.333333333333333,
+  "PS": 5,
+  "RE": 1.9853853488853748,
+  "W": 3.7598169546026727,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.7268418200468814,
+  "palier_ia": "A",
+  "rang": 40,
   "groupe": 4,
-  "domine_par": []
+  "rangs_var": {
+   "Poids égaux": 40,
+   "environnement physique doublé": 30,
+   "intensité du travail doublé": 32,
+   "qualité du temps de travail doublé": 44,
+   "environnement social doublé": 43,
+   "compétences et autonomie doublé": 45,
+   "perspectives et sécurité doublé": 31,
+   "revenu doublé": 43
+  },
+  "nb_top": 0,
+  "rang_min": 30,
+  "rang_max": 45,
+  "W_tension": 3.7598169546026727,
+  "domine_par": [
+   "T93"
+  ]
  },
  {
   "id": "T63",
@@ -4309,34 +8276,90 @@
    1
   ],
   "B": 2.5,
-  "med": 66000,
-  "p80i": 78000,
-  "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : S68 (Cour des comptes 2010 via iFRAP : 5 000 EUR net/mois moy.), revalorise",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 66000.0,
-  "p80i_nom": 78000.0,
-  "med_ppa": 66000.0,
-  "p80i_ppa": 78000.0,
-  "Rev": 3.489763367666174,
-  "W": 3.203464505149926,
-  "palier": "B",
+  "med": 94300.0,
+  "p80i": 113200.0,
+  "h": "environ 1 420 h par an (Cour des comptes 2026, S124)",
+  "src_med": "Cour des comptes 2026 (S124) : environ 110 000 € brut annuel moyen, dont 61 % de primes ; net calculé (pension sur le traitement, CSG et CRDS)",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle",
+  "med_nom": 94300.0,
+  "p80i_nom": 113200.0,
+  "med_ppa": 94300.0,
+  "p80i_ppa": 113200.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 94300.0,
+  "med_etp_ppa": 94300.0,
+  "p80_etp_nom": 113200.0,
+  "p80_etp_ppa": 113200.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 2,
+  "QT": 3,
+  "ES": 4,
+  "CA": 2.833333333333333,
+  "PS": 5,
+  "RE": 4.310687989313388,
+  "W": 3.734860188949532,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.489763367666174,
-  "W_ia": 3.203464505149926,
-  "palier_ia": "B",
-  "rang": 54,
-  "groupe": 3,
-  "domine_par": [
-   "T01",
-   "T03",
-   "T05",
-   "T30",
-   "T34",
-   "T91"
-  ]
+  "W_ia": 3.734860188949532,
+  "palier_ia": "A",
+  "rang": 40,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 40,
+   "environnement physique doublé": 35,
+   "intensité du travail doublé": 51,
+   "qualité du temps de travail doublé": 46,
+   "environnement social doublé": 34,
+   "compétences et autonomie doublé": 50,
+   "perspectives et sécurité doublé": 31,
+   "revenu doublé": 29
+  },
+  "nb_top": 0,
+  "rang_min": 29,
+  "rang_max": 51,
+  "W_tension": 3.734860188949532,
+  "domine_par": []
  },
  {
   "id": "T64",
@@ -4375,26 +8398,87 @@
    2
   ],
   "B": 2.938020776152843,
-  "med": 98800,
-  "p80i": 108800,
+  "med": 102600.0,
+  "p80i": 111400.0,
   "h": "40 h (non mesurée)",
-  "src_med": "grilles officielles du statut (S31) : AD7 à mi-carrière + indemnité de dépaysement 16 % ; avant impôt de l'UE",
-  "src_p80": "estimé (v3)",
-  "fiab": "officielle (grille)",
-  "med_nom": 98800.0,
-  "p80i_nom": 108800.0,
-  "med_ppa": 82457.14285714286,
-  "p80i_ppa": 90803.00751879699,
-  "Rev": 3.915520856181348,
-  "W": 3.7073281284272026,
+  "src_med": "grille au 1er juillet 2025 (S119, relayée) : AD7 échelon 2 = 8 207,25 € + indemnité de dépaysement 16 %, moins pension 10,1 % et maladie 1,7 % (taux estimés) ; avant impôt de l'UE",
+  "src_p80": "AD8 échelon 1 = 8 911,48 € (S119)",
+  "fiab": "relayée (grille)",
+  "med_nom": 102600.0,
+  "p80i_nom": 111400.0,
+  "med_ppa": 85628.57142857143,
+  "p80i_ppa": 92972.93233082707,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 102600.0,
+  "med_etp_ppa": 85628.57142857143,
+  "p80_etp_nom": 111400.0,
+  "p80_etp_ppa": 92972.93233082707,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 3.997252701936905,
+  "W": 3.9996075288481294,
   "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.6800199545594943,
-  "W_ia": 3.672002993183924,
+  "W_ia": 3.9666323942923385,
   "palier_ia": "A",
   "rang": 16,
-  "groupe": 3,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 16,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 18,
+   "qualité du temps de travail doublé": 25,
+   "environnement social doublé": 25,
+   "compétences et autonomie doublé": 23,
+   "perspectives et sécurité doublé": 10,
+   "revenu doublé": 10
+  },
+  "nb_top": 3,
+  "rang_min": 10,
+  "rang_max": 25,
+  "W_tension": 3.9996075288481294,
   "domine_par": []
  },
  {
@@ -4434,34 +8518,88 @@
    1
   ],
   "B": 1.6516126862206222,
-  "med": 45900,
-  "p80i": 57100,
+  "med": 51300.0,
+  "p80i": 55600.0,
   "h": "40 h (non mesurée)",
-  "src_med": "grilles officielles du statut (S31) : GF III + 16 %",
-  "src_p80": "estimé (v3)",
-  "fiab": "officielle (grille)",
-  "med_nom": 45900.0,
-  "p80i_nom": 57100.0,
-  "med_ppa": 43714.28571428571,
-  "p80i_ppa": 54380.952380952374,
-  "Rev": 2.6210725664875394,
-  "W": 2.993160884973131,
-  "palier": "C",
+  "src_med": "grille des agents contractuels 2025 (S119) : GF III grade 8 = 3 475,62 € (officiel), grade 9 de 3 932,44 à 4 449,30 € ; mi-carrière 4 100 € estimé + 16 %, moins cotisations",
+  "src_p80": "GF III grade 10, échelon 1 = 4 449,30 €",
+  "fiab": "relayée (grille)",
+  "med_nom": 51300.0,
+  "p80i_nom": 55600.0,
+  "med_ppa": 48857.142857142855,
+  "p80i_ppa": 52952.38095238095,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 51300.0,
+  "med_etp_ppa": 48857.142857142855,
+  "p80_etp_nom": 55600.0,
+  "p80_etp_ppa": 52952.38095238095,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 2.833333333333333,
+  "PS": 3,
+  "RE": 2.766115453448233,
+  "W": 3.5142069695402234,
+  "palier": "B",
   "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 2.122304055366506,
-  "W_ia": 2.618345608304976,
-  "palier_ia": "C",
-  "rang": 64,
-  "groupe": 3,
+  "W_ia": 3.1586544851050813,
+  "palier_ia": "B",
+  "rang": 52,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 52,
+   "environnement physique doublé": 49,
+   "intensité du travail doublé": 50,
+   "qualité du temps de travail doublé": 51,
+   "environnement social doublé": 54,
+   "compétences et autonomie doublé": 57,
+   "perspectives et sécurité doublé": 56,
+   "revenu doublé": 54
+  },
+  "nb_top": 0,
+  "rang_min": 49,
+  "rang_max": 57,
+  "W_tension": 3.5142069695402234,
   "domine_par": [
-   "T38",
-   "T40",
-   "T64",
-   "T81",
-   "T83",
-   "T89",
-   "T90"
+   "T70",
+   "T93"
   ]
  },
  {
@@ -4501,26 +8639,87 @@
    1
   ],
   "B": 1.2591293669617323,
-  "med": 33000,
-  "p80i": 40000,
+  "med": 31600,
+  "p80i": 38000.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille de solde non recuperee",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 33000.0,
-  "p80i_nom": 40000.0,
-  "med_ppa": 33000.0,
-  "p80i_ppa": 40000.0,
-  "Rev": 1.9661980621438497,
-  "W": 2.634929709321577,
+  "src_med": "ministère des Armées, EcoDef n° 266 (S125) : solde nette médiane des sous-officiers 2 637 €/mois en 2023, toutes armées hors gendarmerie",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "officielle",
+  "med_nom": 31600.0,
+  "p80i_nom": 38000.0,
+  "med_ppa": 31600.0,
+  "p80i_ppa": 38000.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 31600.0,
+  "med_etp_ppa": 31600.0,
+  "p80_etp_nom": 38000.0,
+  "p80_etp_ppa": 38000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q6"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 2,
+  "IT": 3,
+  "QT": 3,
+  "ES": 4,
+  "CA": 2.1666666666666665,
+  "PS": 4,
+  "RE": 1.9171956653977646,
+  "W": 2.869123190294918,
   "palier": "C",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 1.9661980621438497,
-  "W_ia": 2.634929709321577,
+  "W_ia": 2.869123190294918,
   "palier_ia": "C",
-  "rang": 84,
-  "groupe": 4,
+  "rang": 82,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 82,
+   "environnement physique doublé": 83,
+   "intensité du travail doublé": 81,
+   "qualité du temps de travail doublé": 85,
+   "environnement social doublé": 78,
+   "compétences et autonomie doublé": 87,
+   "perspectives et sécurité doublé": 84,
+   "revenu doublé": 83
+  },
+  "nb_top": 0,
+  "rang_min": 78,
+  "rang_max": 87,
+  "W_tension": 2.869123190294918,
   "domine_par": [
    "T01",
    "T02",
@@ -4532,10 +8731,15 @@
    "T18",
    "T30",
    "T34",
-   "T59",
-   "T63",
+   "T35",
+   "T41",
+   "T46",
    "T76",
+   "T80",
+   "T82",
    "T83",
+   "T85",
+   "T86",
    "T89",
    "T91"
   ]
@@ -4587,20 +8791,80 @@
   "p80i_nom": 121900.0,
   "med_ppa": 54100.0,
   "p80i_ppa": 121900.0,
-  "Rev": 3.701720686998556,
-  "W": 3.1052581030497834,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 54100.0,
+  "med_etp_ppa": 54100.0,
+  "p80_etp_nom": 121900.0,
+  "p80_etp_ppa": 121900.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 3,
+  "RE": 3.733836324518067,
+  "W": 3.5334051892168667,
   "palier": "B",
-  "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 3.4662197853767065,
-  "W_ia": 2.9199329678065062,
-  "palier_ia": "C",
-  "rang": 59,
-  "groupe": 4,
+  "proche": true,
+  "W_ia": 3.3575729118039335,
+  "palier_ia": "B",
+  "rang": 50,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 50,
+   "environnement physique doublé": 45,
+   "intensité du travail doublé": 54,
+   "qualité du temps de travail doublé": 54,
+   "environnement social doublé": 52,
+   "compétences et autonomie doublé": 52,
+   "perspectives et sécurité doublé": 56,
+   "revenu doublé": 43
+  },
+  "nb_top": 0,
+  "rang_min": 43,
+  "rang_max": 56,
+  "W_tension": 3.5334051892168667,
   "domine_par": [
    "T37",
    "T64",
    "T68",
+   "T82",
    "T88",
    "T90"
   ]
@@ -4652,17 +8916,78 @@
   "p80i_nom": 118700.0,
   "med_ppa": 73400.0,
   "p80i_ppa": 118700.0,
-  "Rev": 4.046285215353267,
-  "W": 3.52694278230299,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 3.8107843137314124,
-  "W_ia": 3.341617647059712,
-  "palier_ia": "B",
-  "rang": 33,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 73400.0,
+  "med_etp_ppa": 73400.0,
+  "p80_etp_nom": 118700.0,
+  "p80_etp_ppa": 118700.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 4.064863691577607,
+  "W": 3.9378376702253726,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.762005392812438,
+  "palier_ia": "A",
+  "rang": 25,
   "groupe": 4,
-  "domine_par": []
+  "rangs_var": {
+   "Poids égaux": 25,
+   "environnement physique doublé": 17,
+   "intensité du travail doublé": 27,
+   "qualité du temps de travail doublé": 32,
+   "environnement social doublé": 32,
+   "compétences et autonomie doublé": 23,
+   "perspectives et sécurité doublé": 27,
+   "revenu doublé": 12
+  },
+  "nb_top": 0,
+  "rang_min": 12,
+  "rang_max": 32,
+  "W_tension": 3.9378376702253726,
+  "domine_par": [
+   "T82"
+  ]
  },
  {
   "id": "T69",
@@ -4711,18 +9036,80 @@
   "p80i_nom": 34000.0,
   "med_ppa": 28800.0,
   "p80i_ppa": 34000.0,
-  "Rev": 1.635078172742475,
-  "W": 3.2552617259113714,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 28800.0,
+  "med_etp_ppa": 28800.0,
+  "p80_etp_nom": 34000.0,
+  "p80_etp_ppa": 34000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 3.333333333333333,
+  "PS": 3,
+  "RE": 1.6951679472318224,
+  "W": 3.4326430400807366,
   "palier": "B",
   "proche": false,
-  "Se_ia": 1,
-  "Rev_ia": 1.13630966162144,
-  "W_ia": 2.8804464492432156,
-  "palier_ia": "C",
-  "rang": 52,
+  "W_ia": 3.0770905556455945,
+  "palier_ia": "B",
+  "rang": 56,
   "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 56,
+   "environnement physique doublé": 50,
+   "intensité du travail doublé": 51,
+   "qualité du temps de travail doublé": 52,
+   "environnement social doublé": 56,
+   "compétences et autonomie doublé": 57,
+   "perspectives et sécurité doublé": 64,
+   "revenu doublé": 64
+  },
+  "nb_top": 0,
+  "rang_min": 50,
+  "rang_max": 64,
+  "W_tension": 3.4326430400807366,
   "domine_par": [
-   "T62"
+   "T16",
+   "T62",
+   "T70",
+   "T93"
   ]
  },
  {
@@ -4765,30 +9152,84 @@
   "med": 54200,
   "p80i": 65600,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : S30 (STATEC 2022 : mediane 58 126 EUR) ; estime 62 000 EUR x 0,875",
+  "src_med": "non re-sourcé, valeur v3 : S30 (STATEC 2022 : mediane nationale 58 126 EUR brut, aucune mediane par metier) ; estime 62 000 EUR x 0,875",
   "src_p80": "estimé (v3)",
   "fiab": "non re-sourcée",
   "med_nom": 54200.0,
   "p80i_nom": 65600.0,
   "med_ppa": 51619.04761904762,
   "p80i_ppa": 62476.19047619047,
-  "Rev": 2.9646826428507467,
-  "W": 3.124702396427612,
-  "palier": "B",
-  "proche": false,
-  "Se_ia": 1,
-  "Rev_ia": 2.4659141317297113,
-  "W_ia": 2.7498871197594563,
-  "palier_ia": "C",
-  "rang": 59,
-  "groupe": 4,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 54200.0,
+  "med_etp_ppa": 51619.04761904762,
+  "p80_etp_nom": 65600.0,
+  "p80_etp_ppa": 62476.19047619047,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 3.333333333333333,
+  "PS": 3,
+  "RE": 2.998881211510525,
+  "W": 3.618887792120551,
+  "palier": "A",
+  "proche": true,
+  "W_ia": 3.2633353076854092,
+  "palier_ia": "B",
+  "rang": 48,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 48,
+   "environnement physique doublé": 43,
+   "intensité du travail doublé": 42,
+   "qualité du temps de travail doublé": 46,
+   "environnement social doublé": 49,
+   "compétences et autonomie doublé": 52,
+   "perspectives et sécurité doublé": 52,
+   "revenu doublé": 43
+  },
+  "nb_top": 0,
+  "rang_min": 42,
+  "rang_max": 52,
+  "W_tension": 3.618887792120551,
   "domine_par": [
-   "T38",
-   "T46",
-   "T64",
-   "T81",
-   "T89",
-   "T90"
+   "T93"
   ]
  },
  {
@@ -4828,26 +9269,89 @@
    2
   ],
   "B": 3.270632359728884,
-  "med": 51600,
-  "p80i": 60000,
+  "med": 61000,
+  "p80i": 73200.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : grille magistrats + primes non recuperee",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 51600.0,
-  "p80i_nom": 60000.0,
-  "med_ppa": 51600.0,
-  "p80i_ppa": 60000.0,
-  "Rev": 2.923099844897495,
-  "W": 3.628464976734624,
+  "src_med": "ministère de la Justice (S126, relayé) : 5 083 €/mois net moyen après six ans d'exercice, primes comprises (3 884 € au début, 8 480 € en fin de carrière)",
+  "src_p80": "estimé : amplitude de grille (× 1,2)",
+  "fiab": "relayée",
+  "med_nom": 61000.0,
+  "p80i_nom": 73200.0,
+  "med_ppa": 61000.0,
+  "p80i_ppa": 73200.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 61000.0,
+  "med_etp_ppa": 61000.0,
+  "p80_etp_nom": 73200.0,
+  "p80_etp_ppa": 73200.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 5,
+  "RE": 3.3559912091470516,
+  "W": 3.979427315592436,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 2.923099844897495,
-  "W_ia": 3.628464976734624,
+  "proche": false,
+  "W_ia": 3.979427315592436,
   "palier_ia": "A",
-  "rang": 23,
-  "groupe": 4,
+  "rang": 16,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 16,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 22,
+   "qualité du temps de travail doublé": 27,
+   "environnement social doublé": 29,
+   "compétences et autonomie doublé": 17,
+   "perspectives et sécurité doublé": 10,
+   "revenu doublé": 16
+  },
+  "nb_top": 2,
+  "rang_min": 10,
+  "rang_max": 29,
+  "W_tension": 3.979427315592436,
   "domine_par": []
  },
  {
@@ -4890,26 +9394,87 @@
   "med": 33000,
   "p80i": 45000,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : S69 (Observatoire de l'activite liberale, DGE : 27 600 EUR moy. en 2011), revalorise",
+  "src_med": "non re-sourcé, valeur v3 : sources en conflit : ONPP 2014, 25 012 EUR moy. ; UNASA 2024 via JDN, 43 500 EUR brut (S137)",
   "src_p80": "estimé (v3)",
   "fiab": "non re-sourcée",
   "med_nom": 33000.0,
   "p80i_nom": 45000.0,
   "med_ppa": 33000.0,
   "p80i_ppa": 45000.0,
-  "Rev": 2.085997317823198,
-  "W": 3.77289959767348,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 33000.0,
+  "med_etp_ppa": 33000.0,
+  "p80_etp_nom": 45000.0,
+  "p80_etp_ppa": 45000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 4,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 4,
+  "RE": 2.1400467608930365,
+  "W": 3.8771495372704337,
   "palier": "A",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 2.085997317823198,
-  "W_ia": 3.77289959767348,
+  "W_ia": 3.8771495372704337,
   "palier_ia": "A",
-  "rang": 14,
-  "groupe": 2,
-  "domine_par": [
-   "T09"
-  ]
+  "rang": 29,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 29,
+   "environnement physique doublé": 43,
+   "intensité du travail doublé": 18,
+   "qualité du temps de travail doublé": 25,
+   "environnement social doublé": 25,
+   "compétences et autonomie doublé": 23,
+   "perspectives et sécurité doublé": 31,
+   "revenu doublé": 38
+  },
+  "nb_top": 0,
+  "rang_min": 18,
+  "rang_max": 43,
+  "W_tension": 3.734292394413291,
+  "domine_par": []
  },
  {
   "id": "T77",
@@ -4958,17 +9523,84 @@
   "p80i_nom": 34000.0,
   "med_ppa": 30000.0,
   "p80i_ppa": 34000.0,
-  "Rev": 1.6848023483915848,
-  "W": 3.5927203522587376,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 1.6848023483915848,
-  "W_ia": 3.5927203522587376,
-  "palier_ia": "B",
-  "rang": 27,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (grille à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 30000.0,
+  "med_etp_ppa": 30000.0,
+  "p80_etp_nom": 34000.0,
+  "p80_etp_ppa": 34000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P1"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 4,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 1.7430808069496977,
+  "W": 3.8204401152785286,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.8204401152785286,
+  "palier_ia": "A",
+  "rang": 33,
   "groupe": 4,
-  "domine_par": []
+  "rangs_var": {
+   "Poids égaux": 33,
+   "environnement physique doublé": 39,
+   "intensité du travail doublé": 22,
+   "qualité du temps de travail doublé": 37,
+   "environnement social doublé": 29,
+   "compétences et autonomie doublé": 37,
+   "perspectives et sécurité doublé": 21,
+   "revenu doublé": 43
+  },
+  "nb_top": 0,
+  "rang_min": 21,
+  "rang_max": 43,
+  "W_tension": 3.6775829724213858,
+  "domine_par": [
+   "T16"
+  ]
  },
  {
   "id": "T78",
@@ -5017,17 +9649,82 @@
   "p80i_nom": 32000.0,
   "med_ppa": 24000.0,
   "p80i_ppa": 32000.0,
-  "Rev": 1.3513347796272894,
-  "W": 3.412700216944094,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 24000.0,
+  "med_etp_ppa": 24000.0,
+  "p80_etp_nom": 32000.0,
+  "p80_etp_ppa": 32000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 2,
+  "RE": 1.4195143582604441,
+  "W": 3.7027877654657777,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 1,
-  "Rev_ia": 1.115833878005438,
-  "W_ia": 3.2273750817008158,
+  "W_ia": 3.526955488052844,
   "palier_ia": "B",
-  "rang": 45,
-  "groupe": 3,
-  "domine_par": []
+  "rang": 44,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 44,
+   "environnement physique doublé": 39,
+   "intensité du travail doublé": 36,
+   "qualité du temps de travail doublé": 37,
+   "environnement social doublé": 37,
+   "compétences et autonomie doublé": 40,
+   "perspectives et sécurité doublé": 54,
+   "revenu doublé": 54
+  },
+  "nb_top": 0,
+  "rang_min": 36,
+  "rang_max": 54,
+  "W_tension": 3.559930622608635,
+  "domine_par": [
+   "T15"
+  ]
  },
  {
   "id": "T79",
@@ -5076,38 +9773,83 @@
   "p80i_nom": 32000.0,
   "med_ppa": 27000.0,
   "p80i_ppa": 32000.0,
-  "Rev": 1.4948031334471243,
-  "W": 2.7342204700170685,
-  "palier": "C",
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 27000.0,
+  "med_etp_ppa": 27000.0,
+  "p80_etp_nom": 32000.0,
+  "p80_etp_ppa": 32000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 4,
+  "QT": 3,
+  "ES": 3,
+  "CA": 2.833333333333333,
+  "PS": 4,
+  "RE": 1.557756551736552,
+  "W": 3.198727126438555,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 4,
-  "Rev_ia": 1.4948031334471243,
-  "W_ia": 2.7342204700170685,
-  "palier_ia": "C",
-  "rang": 81,
-  "groupe": 2,
+  "W_ia": 3.198727126438555,
+  "palier_ia": "B",
+  "rang": 64,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 64,
+   "environnement physique doublé": 61,
+   "intensité du travail doublé": 60,
+   "qualité du temps de travail doublé": 65,
+   "environnement social doublé": 65,
+   "compétences et autonomie doublé": 70,
+   "perspectives et sécurité doublé": 69,
+   "revenu doublé": 75
+  },
+  "nb_top": 0,
+  "rang_min": 60,
+  "rang_max": 75,
+  "W_tension": 3.198727126438555,
   "domine_par": [
-   "T02",
-   "T09",
-   "T11",
    "T16",
-   "T17",
    "T18",
-   "T41",
-   "T43",
    "T45",
-   "T50",
-   "T56",
-   "T57",
-   "T60",
-   "T61",
    "T62",
-   "T64",
-   "T76",
    "T77",
-   "T83",
-   "T89",
-   "T90",
    "T93"
   ]
  },
@@ -5158,17 +9900,83 @@
   "p80i_nom": 52800.0,
   "med_ppa": 42900.0,
   "p80i_ppa": 52800.0,
-  "Rev": 2.568161189742174,
-  "W": 3.535224178461326,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 2.332660288120322,
-  "W_ia": 3.3498990432180484,
-  "palier_ia": "B",
-  "rang": 31,
-  "groupe": 2,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salariés à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 42900.0,
+  "med_etp_ppa": 42900.0,
+  "p80_etp_nom": 52800.0,
+  "p80_etp_ppa": 52800.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "sourcée",
+    [
+     "P2",
+     "P3"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 2.6105692473872777,
+  "W": 3.8729384639124684,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.6971061864995347,
+  "palier_ia": "A",
+  "rang": 29,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 29,
+   "environnement physique doublé": 25,
+   "intensité du travail doublé": 32,
+   "qualité du temps de travail doublé": 34,
+   "environnement social doublé": 25,
+   "compétences et autonomie doublé": 29,
+   "perspectives et sécurité doublé": 31,
+   "revenu doublé": 35
+  },
+  "nb_top": 0,
+  "rang_min": 25,
+  "rang_max": 35,
+  "W_tension": 3.8729384639124684,
   "domine_par": [
+   "T46",
+   "T82",
    "T83",
    "T86",
    "T89"
@@ -5221,16 +10029,77 @@
   "p80i_nom": 90000.0,
   "med_ppa": 69000.0,
   "p80i_ppa": 90000.0,
-  "Rev": 3.6894593223899577,
-  "W": 3.893418898358494,
+  "q": 1.0,
+  "etp": "estimation à temps plein (170 à 180 jours facturés)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 69000.0,
+  "med_etp_ppa": 69000.0,
+  "p80_etp_nom": 90000.0,
+  "p80_etp_ppa": 90000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P3"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 5.0,
+  "PS": 3,
+  "RE": 3.7107807047107837,
+  "W": 3.9586829578158267,
   "palier": "A",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 3.4539584207681058,
-  "W_ia": 3.7080937631152158,
+  "W_ia": 3.782850680402892,
   "palier_ia": "A",
-  "rang": 7,
-  "groupe": 5,
+  "rang": 21,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 21,
+   "environnement physique doublé": 17,
+   "intensité du travail doublé": 22,
+   "qualité du temps de travail doublé": 16,
+   "environnement social doublé": 29,
+   "compétences et autonomie doublé": 15,
+   "perspectives et sécurité doublé": 39,
+   "revenu doublé": 16
+  },
+  "nb_top": 0,
+  "rang_min": 15,
+  "rang_max": 39,
+  "W_tension": 3.9586829578158267,
   "domine_par": []
  },
  {
@@ -5280,16 +10149,77 @@
   "p80i_nom": 113290.46087888532,
   "med_ppa": 88765.46818669005,
   "p80i_ppa": 102991.32807171393,
-  "Rev": 4.133424468539025,
-  "W": 3.580013670280854,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 3.8979235669171732,
-  "W_ia": 3.394688535037576,
-  "palier_ia": "B",
-  "rang": 27,
-  "groupe": 4,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 97642.01500535906,
+  "med_etp_ppa": 88765.46818669005,
+  "p80_etp_nom": 113290.46087888532,
+  "p80_etp_ppa": 102991.32807171393,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 4.143569166691535,
+  "W": 4.091938452384505,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.916106174971571,
+  "palier_ia": "A",
+  "rang": 8,
+  "groupe": 6,
+  "rangs_var": {
+   "Poids égaux": 8,
+   "environnement physique doublé": 3,
+   "intensité du travail doublé": 11,
+   "qualité du temps de travail doublé": 16,
+   "environnement social doublé": 5,
+   "compétences et autonomie doublé": 10,
+   "perspectives et sécurité doublé": 15,
+   "revenu doublé": 5
+  },
+  "nb_top": 5,
+  "rang_min": 3,
+  "rang_max": 16,
+  "W_tension": 4.091938452384505,
   "domine_par": []
  },
  {
@@ -5339,17 +10269,83 @@
   "p80i_nom": 62700.0,
   "med_ppa": 49900.0,
   "p80i_ppa": 62700.0,
-  "Rev": 2.9270639486380663,
-  "W": 3.83905959229571,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salariés à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 49900.0,
+  "med_etp_ppa": 49900.0,
+  "p80_etp_nom": 62700.0,
+  "p80_etp_ppa": 62700.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "sourcée",
+    [
+     "P2",
+     "P3",
+     "P4"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 2.962765354264058,
+  "W": 4.066109336323437,
   "palier": "A",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 2.6915630470162126,
-  "W_ia": 3.6537344570524315,
+  "W_ia": 3.890277058910503,
   "palier_ia": "A",
-  "rang": 12,
-  "groupe": 2,
+  "rang": 8,
+  "groupe": 6,
+  "rangs_var": {
+   "Poids égaux": 8,
+   "environnement physique doublé": 6,
+   "intensité du travail doublé": 11,
+   "qualité du temps de travail doublé": 7,
+   "environnement social doublé": 9,
+   "compétences et autonomie doublé": 10,
+   "perspectives et sécurité doublé": 15,
+   "revenu doublé": 16
+  },
+  "nb_top": 5,
+  "rang_min": 6,
+  "rang_max": 16,
+  "W_tension": 4.066109336323437,
   "domine_par": [
+   "T46",
    "T89"
   ]
  },
@@ -5390,39 +10386,105 @@
    1
   ],
   "B": 1.5108278595041953,
-  "med": 39000,
-  "p80i": 46800,
+  "med": 37400.0,
+  "p80i": 43300.0,
   "h": "non trouvé",
-  "src_med": "non re-sourcé, valeur v3 : estime : S76 (bas de fourchette 37 000 EUR brut) ; 50 000 EUR brut a 40 ans x 0,78",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 39000.0,
-  "p80i_nom": 46800.0,
-  "med_ppa": 39000.0,
-  "p80i_ppa": 46800.0,
-  "Rev": 2.3293735104024793,
-  "W": 2.8094060265603717,
-  "palier": "C",
+  "src_med": "APEC (S134, relayée) : offres d'emploi en cybersécurité, salaire moyen proposé 48 000 € brut (proxy pour le SOC) ; × 0,78",
+  "src_p80": "log-normale avec P90 = 60 000 € (80 % des offres entre 37 000 et 60 000 €)",
+  "fiab": "relayée, proxy",
+  "med_nom": 37400.0,
+  "p80i_nom": 43300.0,
+  "med_ppa": 37400.0,
+  "p80i_ppa": 43300.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (offres d'emploi à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 37400.0,
+  "med_etp_ppa": 37400.0,
+  "p80_etp_nom": 43300.0,
+  "p80_etp_ppa": 43300.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "sourcée",
+    [
+     "P2",
+     "P4"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 2,
+  "QT": 3,
+  "ES": 3,
+  "CA": 3.5,
+  "PS": 4,
+  "RE": 2.2477819318946786,
+  "W": 3.249683133127811,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 1.8306049992814422,
-  "W_ia": 2.4345907498922164,
+  "W_ia": 2.8941306486926694,
   "palier_ia": "C",
-  "rang": 72,
-  "groupe": 4,
+  "rang": 63,
+  "groupe": 1,
+  "rangs_var": {
+   "Poids égaux": 63,
+   "environnement physique doublé": 54,
+   "intensité du travail doublé": 69,
+   "qualité du temps de travail doublé": 62,
+   "environnement social doublé": 63,
+   "compétences et autonomie doublé": 66,
+   "perspectives et sécurité doublé": 66,
+   "revenu doublé": 68
+  },
+  "nb_top": 0,
+  "rang_min": 54,
+  "rang_max": 69,
+  "W_tension": 3.249683133127811,
   "domine_par": [
-   "T01",
-   "T03",
-   "T05",
-   "T09",
-   "T10",
-   "T30",
+   "T35",
+   "T46",
+   "T60",
+   "T61",
+   "T64",
+   "T68",
    "T71",
+   "T80",
+   "T82",
    "T83",
+   "T85",
+   "T86",
    "T89",
    "T90",
-   "T91",
-   "T92",
    "T93"
   ]
  },
@@ -5473,18 +10535,89 @@
   "p80i_nom": 50600.0,
   "med_ppa": 42100.0,
   "p80i_ppa": 50600.0,
-  "Rev": 2.5019439233229193,
-  "W": 3.5652915884984377,
-  "palier": "B",
-  "proche": true,
-  "Se_ia": 1,
-  "Rev_ia": 2.003175412201882,
-  "W_ia": 3.1904763118302824,
-  "palier_ia": "B",
-  "rang": 27,
-  "groupe": 4,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salariés à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 42100.0,
+  "med_etp_ppa": 42100.0,
+  "p80_etp_nom": 50600.0,
+  "p80_etp_ppa": 50600.0,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "sourcée",
+    [
+     "P2",
+     "P3"
+    ],
+    []
+   ]
+  },
+  "modifs": [
+   [
+    "PS",
+    3,
+    4,
+    "P3"
+   ]
+  ],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 2.545187225935768,
+  "W": 4.006455317990825,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 3.650902833555682,
+  "palier_ia": "A",
+  "rang": 16,
+  "groupe": 5,
+  "rangs_var": {
+   "Poids égaux": 16,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 18,
+   "qualité du temps de travail doublé": 12,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 17,
+   "perspectives et sécurité doublé": 19,
+   "revenu doublé": 23
+  },
+  "nb_top": 1,
+  "rang_min": 10,
+  "rang_max": 23,
+  "W_tension": 4.006455317990825,
   "domine_par": [
-   "T40",
+   "T46",
    "T83",
    "T89"
   ]
@@ -5536,17 +10669,79 @@
   "p80i_nom": 113290.46087888532,
   "med_ppa": 61007.26143331862,
   "p80i_ppa": 70784.4954281205,
-  "Rev": 3.2952170121308666,
-  "W": 3.64428255181963,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 97642.01500535906,
+  "med_etp_ppa": 61007.26143331862,
+  "p80_etp_nom": 113290.46087888532,
+  "p80_etp_ppa": 70784.4954281205,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 3.322001078023411,
+  "W": 3.974571582574773,
   "palier": "A",
-  "proche": true,
-  "Se_ia": 3,
-  "Rev_ia": 3.0597161105090147,
-  "W_ia": 3.458957416576352,
-  "palier_ia": "B",
+  "proche": false,
+  "W_ia": 3.798739305161839,
+  "palier_ia": "A",
   "rang": 21,
-  "groupe": 2,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 21,
+   "environnement physique doublé": 10,
+   "intensité du travail doublé": 22,
+   "qualité du temps de travail doublé": 27,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 17,
+   "perspectives et sécurité doublé": 21,
+   "revenu doublé": 20
+  },
+  "nb_top": 1,
+  "rang_min": 10,
+  "rang_max": 27,
+  "W_tension": 3.974571582574773,
   "domine_par": [
+   "T82",
    "T89"
   ]
  },
@@ -5587,29 +10782,94 @@
    2
   ],
   "B": 2.37499090348691,
-  "med": 73300.0,
-  "p80i": 105200.0,
+  "med": 69700.0,
+  "p80i": 100000.0,
   "h": "39 h (non mesurée)",
-  "src_med": "non officielle : Jobmentis et Morgan McKinley (S79), médiane DevOps 79 000 € brut ; moins PRSI et USC (S85)",
-  "src_p80": "log-normale entre la médiane et P75 107 000 € (S79)",
-  "fiab": "non officielle",
-  "med_nom": 73300.0,
-  "p80i_nom": 105200.0,
-  "med_ppa": 58958.69565217391,
-  "p80i_ppa": 84617.39130434782,
-  "Rev": 3.4351681894183246,
-  "W": 3.3652752284127483,
-  "palier": "B",
-  "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 3.1996672877964727,
-  "W_ia": 3.1799500931694706,
+  "src_med": "CSO 2024 (S123) : secteur information et communication, médiane 1 440,36 €/semaine brut (proxy) ; × 52 ; moins PRSI et USC (S85)",
+  "src_p80": "estimé : rapport P80/médian des guides privés (× 1,44, S79)",
+  "fiab": "officielle, proxy",
+  "med_nom": 69700.0,
+  "p80i_nom": 100000.0,
+  "med_ppa": 56063.04347826087,
+  "p80i_ppa": 80434.78260869565,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire annuel à temps plein)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 69700.0,
+  "med_etp_ppa": 56063.04347826087,
+  "p80_etp_nom": 100000.0,
+  "p80_etp_ppa": 80434.78260869565,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 3.352798922150327,
+  "W": 3.6932569888786184,
+  "palier": "A",
+  "proche": true,
+  "W_ia": 3.517424711465684,
   "palier_ia": "B",
-  "rang": 48,
-  "groupe": 3,
+  "rang": 44,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 44,
+   "environnement physique doublé": 39,
+   "intensité du travail doublé": 46,
+   "qualité du temps de travail doublé": 45,
+   "environnement social doublé": 46,
+   "compétences et autonomie doublé": 40,
+   "perspectives et sécurité doublé": 48,
+   "revenu doublé": 38
+  },
+  "nb_top": 0,
+  "rang_min": 38,
+  "rang_max": 48,
+  "W_tension": 3.6932569888786184,
   "domine_par": [
    "T37",
+   "T39",
+   "T68",
+   "T71",
    "T81",
+   "T82",
    "T88",
    "T90"
   ]
@@ -5661,18 +10921,80 @@
   "p80i_nom": 137758.6206896552,
   "med_ppa": 82807.29143098481,
   "p80i_ppa": 111479.40329124998,
-  "Rev": 4.129341542463564,
-  "W": 3.4694012313695346,
-  "palier": "B",
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire horaire × 2 080 h)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 102327.58620689657,
+  "med_etp_ppa": 82807.29143098481,
+  "p80_etp_nom": 137758.6206896552,
+  "p80_etp_ppa": 111479.40329124998,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 3,
+  "RE": 4.142569213461673,
+  "W": 3.8060813162088105,
+  "palier": "A",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 3.893840640841712,
-  "W_ia": 3.2840760961262565,
-  "palier_ia": "B",
-  "rang": 37,
-  "groupe": 5,
+  "W_ia": 3.630249038795877,
+  "palier_ia": "A",
+  "rang": 33,
+  "groupe": 4,
+  "rangs_var": {
+   "Poids égaux": 33,
+   "environnement physique doublé": 27,
+   "intensité du travail doublé": 38,
+   "qualité du temps de travail doublé": 40,
+   "environnement social doublé": 39,
+   "compétences et autonomie doublé": 32,
+   "perspectives et sécurité doublé": 42,
+   "revenu doublé": 23
+  },
+  "nb_top": 0,
+  "rang_min": 23,
+  "rang_max": 42,
+  "W_tension": 3.8060813162088105,
   "domine_par": [
-   "T37"
+   "T37",
+   "T82"
   ]
  },
  {
@@ -5722,16 +11044,79 @@
   "p80i_nom": 113933.54769560558,
   "med_ppa": 61007.26143331862,
   "p80i_ppa": 71186.29956489318,
-  "Rev": 3.3009742996823803,
-  "W": 3.8951461449523572,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire standardisé de l'ESS)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 97642.01500535906,
+  "med_etp_ppa": 61007.26143331862,
+  "p80_etp_nom": 113933.54769560558,
+  "p80_etp_ppa": 71186.29956489318,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "mixte",
+    [
+     "P4"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 3.3277583655749248,
+  "W": 4.1182511950821326,
   "palier": "A",
-  "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 3.0654733980605267,
-  "W_ia": 3.7098210097090787,
+  "proche": true,
+  "W_ia": 3.942418917669198,
   "palier_ia": "A",
-  "rang": 7,
-  "groupe": 5,
+  "rang": 5,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 5,
+   "environnement physique doublé": 3,
+   "intensité du travail doublé": 6,
+   "qualité du temps de travail doublé": 5,
+   "environnement social doublé": 5,
+   "compétences et autonomie doublé": 6,
+   "perspectives et sécurité doublé": 10,
+   "revenu doublé": 10
+  },
+  "nb_top": 8,
+  "rang_min": 3,
+  "rang_max": 10,
+  "W_tension": 4.1182511950821326,
   "domine_par": []
  },
  {
@@ -5781,16 +11166,79 @@
   "p80i_nom": 132241.37931034484,
   "med_ppa": 79319.19996379927,
   "p80i_ppa": 107014.64621325249,
-  "Rev": 4.035346835456317,
-  "W": 3.8553020253184473,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire horaire × 2 080 h)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 98017.24137931035,
+  "med_etp_ppa": 79319.19996379927,
+  "p80_etp_nom": 132241.37931034484,
+  "p80_etp_ppa": 107014.64621325249,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E1"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "sourcée",
+    [
+     "P5"
+    ],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 4.5,
+  "PS": 4,
+  "RE": 4.050484055798041,
+  "W": 4.07864057939972,
   "palier": "A",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 3.7998459338344635,
-  "W_ia": 3.6699768900751697,
+  "W_ia": 3.9028083019867856,
   "palier_ia": "A",
-  "rang": 12,
-  "groupe": 2,
+  "rang": 8,
+  "groupe": 6,
+  "rangs_var": {
+   "Poids égaux": 8,
+   "environnement physique doublé": 6,
+   "intensité du travail doublé": 11,
+   "qualité du temps de travail doublé": 7,
+   "environnement social doublé": 20,
+   "compétences et autonomie doublé": 10,
+   "perspectives et sécurité doublé": 15,
+   "revenu doublé": 8
+  },
+  "nb_top": 5,
+  "rang_min": 6,
+  "rang_max": 20,
+  "W_tension": 4.07864057939972,
   "domine_par": []
  },
  {
@@ -5830,26 +11278,89 @@
    4
   ],
   "B": 4.033209630974259,
-  "med": 134600.0,
-  "p80i": 217500.0,
-  "h": "non trouvé (1 800 h par an supposées)",
-  "src_med": "ZHAW pour la FMH (S111) : revenu horaire médian des dentistes 88 CHF (versions en conflit : 73 à 88 CHF), statut non précisé ; × 1 800 h × 0,85",
+  "med": 135700.0,
+  "p80i": 219300.0,
+  "h": "environ 42 h par semaine (ESPA 2014-2017, S111)",
+  "src_med": "OFS, ESPA 2014-2017, exploitée par la ZHAW pour la FMH (S111) : dentistes de plus de 34 ans, revenu annuel médian 166 000 CHF brut standardisé, tous statuts (indépendants : 84 CHF/h, salariés : 68 CHF/h) ; × 0,85 (AVS et prévoyance des indépendants, estimé) moins la prime LAMal ; aucune statistique de la SSO",
   "src_p80": "estimé : log-normale des libéraux (× 1,62)",
-  "fiab": "sans source fiable",
-  "med_nom": 144265.8092175777,
-  "p80i_nom": 233118.97106109327,
-  "med_ppa": 90138.06134933794,
-  "p80i_ppa": 145653.9995800966,
-  "Rev": 4.504637661030212,
-  "W": 4.155695649154532,
-  "palier": "A",
+  "fiab": "relayée",
+  "med_nom": 145444.80171489817,
+  "p80i_nom": 235048.23151125404,
+  "med_ppa": 90874.70226675452,
+  "p80i_ppa": 146859.41199041464,
+  "q": 1.0,
+  "etp": "environ 42 h par semaine, au moins 35 h",
+  "etp_ok": true,
+  "h_src": "S111",
+  "med_etp_nom": 145444.80171489817,
+  "med_etp_ppa": 90874.70226675452,
+  "p80_etp_nom": 235048.23151125404,
+  "p80_etp_ppa": 146859.41199041464,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E8"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q12"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 3,
+  "QT": 5,
+  "ES": 4,
+  "CA": 5.0,
+  "PS": 5,
+  "RE": 4.532037319160054,
+  "W": 4.218862474165722,
+  "palier": "S",
   "proche": true,
-  "Se_ia": 5,
-  "Rev_ia": 4.504637661030212,
-  "W_ia": 4.155695649154532,
-  "palier_ia": "A",
-  "rang": 1,
-  "groupe": 2,
+  "W_ia": 4.218862474165722,
+  "palier_ia": "S",
+  "rang": 2,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 2,
+   "environnement physique doublé": 17,
+   "intensité du travail doublé": 3,
+   "qualité du temps de travail doublé": 2,
+   "environnement social doublé": 2,
+   "compétences et autonomie doublé": 2,
+   "perspectives et sécurité doublé": 2,
+   "revenu doublé": 2
+  },
+  "nb_top": 7,
+  "rang_min": 2,
+  "rang_max": 17,
+  "W_tension": 4.218862474165722,
   "domine_par": [
    "T05"
   ]
@@ -5901,16 +11412,79 @@
   "p80i_nom": 226896.55172413794,
   "med_ppa": 106177.50426112796,
   "p80i_ppa": 183613.13483264705,
-  "Rev": 4.9396827709638425,
-  "W": 4.070952415644577,
+  "q": 1.0,
+  "etp": "36,1 h par semaine, au moins 35 h",
+  "etp_ok": true,
+  "h_src": "S114",
+  "med_etp_nom": 131206.89655172414,
+  "med_etp_ppa": 106177.50426112796,
+  "p80_etp_nom": 226896.55172413794,
+  "p80_etp_ppa": 183613.13483264705,
+  "prov": {
+   "EP": [
+    "mixte",
+    [
+     "E8"
+    ],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q13"
+    ],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 5.0,
+  "PS": 5,
+  "RE": 4.941879962902269,
+  "W": 4.13455428041461,
   "palier": "A",
-  "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 4.9396827709638425,
-  "W_ia": 4.070952415644577,
+  "proche": true,
+  "W_ia": 4.13455428041461,
   "palier_ia": "A",
-  "rang": 3,
-  "groupe": 2,
+  "rang": 5,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 5,
+   "environnement physique doublé": 25,
+   "intensité du travail doublé": 6,
+   "qualité du temps de travail doublé": 5,
+   "environnement social doublé": 13,
+   "compétences et autonomie doublé": 5,
+   "perspectives et sécurité doublé": 5,
+   "revenu doublé": 4
+  },
+  "nb_top": 6,
+  "rang_min": 4,
+  "rang_max": 25,
+  "W_tension": 4.13455428041461,
   "domine_par": []
  },
  {
@@ -5960,16 +11534,79 @@
   "p80i_nom": 93620.68965517242,
   "med_ppa": 60553.26787034104,
   "p80i_ppa": 75761.34666727002,
-  "Rev": 3.3552300473613608,
-  "W": 3.773284507104204,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (salaire horaire × 2 080 h)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 74827.58620689655,
+  "med_etp_ppa": 60553.26787034104,
+  "p80_etp_nom": 93620.68965517242,
+  "p80_etp_ppa": 75761.34666727002,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S2"
+    ],
+    [
+     "S2"
+    ]
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 5,
+  "IT": 4,
+  "QT": 4,
+  "ES": 3,
+  "CA": 4.0,
+  "PS": 5,
+  "RE": 3.3823455411916146,
+  "W": 4.054620791598802,
   "palier": "A",
   "proche": false,
-  "Se_ia": 5,
-  "Rev_ia": 3.3552300473613608,
-  "W_ia": 3.773284507104204,
+  "W_ia": 4.054620791598802,
   "palier_ia": "A",
   "rang": 14,
   "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 14,
+   "environnement physique doublé": 6,
+   "intensité du travail doublé": 3,
+   "qualité du temps de travail doublé": 22,
+   "environnement social doublé": 20,
+   "compétences et autonomie doublé": 17,
+   "perspectives et sécurité doublé": 7,
+   "revenu doublé": 12
+  },
+  "nb_top": 3,
+  "rang_min": 3,
+  "rang_max": 22,
+  "W_tension": 3.911763648741659,
   "domine_par": []
  },
  {
@@ -6019,31 +11656,88 @@
   "p80i_nom": 55000.0,
   "med_ppa": 38400.0,
   "p80i_ppa": 55000.0,
-  "Rev": 2.474701973835473,
-  "W": 3.081205296075321,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 38400.0,
+  "med_etp_ppa": 38400.0,
+  "p80_etp_nom": 55000.0,
+  "p80_etp_ppa": 55000.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 5,
+  "ES": 3,
+  "CA": 3.833333333333333,
+  "PS": 3,
+  "RE": 2.5220269844496994,
+  "W": 3.4793371882547186,
   "palier": "B",
-  "proche": true,
-  "Se_ia": 2,
-  "Rev_ia": 2.2392010722136213,
-  "W_ia": 2.8958801608320432,
-  "palier_ia": "C",
-  "rang": 63,
-  "groupe": 1,
+  "proche": false,
+  "W_ia": 3.303504910841785,
+  "palier_ia": "B",
+  "rang": 54,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 54,
+   "environnement physique doublé": 52,
+   "intensité du travail doublé": 56,
+   "qualité du temps de travail doublé": 46,
+   "environnement social doublé": 55,
+   "compétences et autonomie doublé": 55,
+   "perspectives et sécurité doublé": 60,
+   "revenu doublé": 56
+  },
+  "nb_top": 0,
+  "rang_min": 46,
+  "rang_max": 60,
+  "W_tension": 3.4793371882547186,
   "domine_par": [
+   "T30",
    "T37",
    "T38",
    "T39",
    "T40",
+   "T41",
+   "T42",
+   "T43",
    "T46",
-   "T68",
-   "T71",
-   "T80",
    "T81",
    "T83",
    "T85",
-   "T86",
-   "T87",
-   "T88",
    "T89",
    "T90"
   ]
@@ -6095,31 +11789,104 @@
   "p80i_nom": 35700.0,
   "med_ppa": 22100.0,
   "p80i_ppa": 35700.0,
-  "Rev": 1.3621604655158648,
-  "W": 2.6143240698273797,
+  "q": 1.0,
+  "etp": "temps de travail non trouvé",
+  "etp_ok": false,
+  "h_src": "",
+  "med_etp_nom": 22100.0,
+  "med_etp_ppa": 22100.0,
+  "p80_etp_nom": 35700.0,
+  "p80_etp_ppa": 35700.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 4,
+  "ES": 3,
+  "CA": 3.833333333333333,
+  "PS": 1,
+  "RE": 1.433999603077826,
+  "W": 2.8953332766301654,
   "palier": "C",
   "proche": false,
-  "Se_ia": 1,
-  "Rev_ia": 1.2271216356046089,
-  "W_ia": 2.5940682453406914,
+  "W_ia": 2.8657792812768483,
   "palier_ia": "C",
-  "rang": 84,
-  "groupe": 4,
+  "rang": 82,
+  "groupe": 3,
+  "rangs_var": {
+   "Poids égaux": 82,
+   "environnement physique doublé": 72,
+   "intensité du travail doublé": 79,
+   "qualité du temps de travail doublé": 79,
+   "environnement social doublé": 84,
+   "compétences et autonomie doublé": 77,
+   "perspectives et sécurité doublé": 91,
+   "revenu doublé": 86
+  },
+  "nb_top": 0,
+  "rang_min": 72,
+  "rang_max": 91,
+  "W_tension": 2.8953332766301654,
   "domine_par": [
+   "T01",
+   "T02",
+   "T03",
+   "T09",
+   "T15",
+   "T16",
    "T20",
+   "T30",
    "T35",
    "T36",
    "T37",
    "T38",
    "T39",
    "T40",
+   "T41",
+   "T42",
+   "T43",
    "T46",
    "T56",
-   "T57",
+   "T60",
+   "T61",
+   "T64",
    "T68",
    "T71",
+   "T77",
    "T80",
    "T81",
+   "T82",
    "T83",
    "T85",
    "T86",
@@ -6127,6 +11894,7 @@
    "T88",
    "T89",
    "T90",
+   "T93",
    "T72"
   ]
  },
@@ -6167,36 +11935,89 @@
    5
   ],
   "B": 3.9219252434011125,
-  "med": 84000,
-  "p80i": 110000,
+  "med": 92600.0,
+  "p80i": 121200.0,
   "h": "limites de temps de vol ; non mesurée",
-  "src_med": "non re-sourcé, valeur v3 : estime : aucune serie officielle recuperee",
-  "src_p80": "estimé (v3)",
-  "fiab": "non re-sourcée",
-  "med_nom": 84000.0,
-  "p80i_nom": 110000.0,
-  "med_ppa": 84000.0,
-  "p80i_ppa": 110000.0,
-  "Rev": 4.133172644573185,
-  "W": 2.599975896685978,
-  "palier": "C",
+  "src_med": "non officielle : sites spécialisés (S129), environ 118 700 € brut annuel moyen à Air France, toutes anciennetés ; × 0,78",
+  "src_p80": "estimé : rapport P80/médian de la v3 (× 1.31)",
+  "fiab": "non officielle",
+  "med_nom": 92600.0,
+  "p80i_nom": 121200.0,
+  "med_ppa": 92600.0,
+  "p80i_ppa": 121200.0,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 92600.0,
+  "med_etp_ppa": 92600.0,
+  "p80_etp_nom": 121200.0,
+  "p80_etp_ppa": 121200.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "estimée",
+    [],
+    []
+   ],
+   "ES": [
+    "mixte",
+    [
+     "S4"
+    ],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 4,
+  "IT": 3,
+  "QT": 3,
+  "ES": 3,
+  "CA": 2.833333333333333,
+  "PS": 3,
+  "RE": 4.358790776668064,
+  "W": 3.3131605871430563,
+  "palier": "B",
   "proche": false,
-  "Se_ia": 3,
-  "Rev_ia": 4.133172644573185,
-  "W_ia": 2.599975896685978,
-  "palier_ia": "C",
-  "rang": 88,
-  "groupe": 1,
+  "W_ia": 3.3131605871430563,
+  "palier_ia": "B",
+  "rang": 61,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 61,
+   "environnement physique doublé": 56,
+   "intensité du travail doublé": 60,
+   "qualité du temps de travail doublé": 59,
+   "environnement social doublé": 60,
+   "compétences et autonomie doublé": 66,
+   "perspectives et sécurité doublé": 73,
+   "revenu doublé": 50
+  },
+  "nb_top": 0,
+  "rang_min": 50,
+  "rang_max": 73,
+  "W_tension": 3.3131605871430563,
   "domine_par": [
-   "T01",
-   "T05",
-   "T29",
-   "T30",
-   "T32",
-   "T37",
-   "T82",
-   "T91",
-   "T92"
+   "T30"
   ]
  },
  {
@@ -6246,33 +12067,92 @@
   "p80i_nom": 25700.0,
   "med_ppa": 21600.0,
   "p80i_ppa": 25700.0,
-  "Rev": 1.0,
-  "W": 2.11,
+  "q": 1.0,
+  "etp": "source en équivalent temps plein (EQTP)",
+  "etp_ok": true,
+  "h_src": "",
+  "med_etp_nom": 21600.0,
+  "med_etp_ppa": 21600.0,
+  "p80_etp_nom": 25700.0,
+  "p80_etp_ppa": 25700.0,
+  "prov": {
+   "EP": [
+    "estimée",
+    [],
+    []
+   ],
+   "IT": [
+    "estimée",
+    [],
+    []
+   ],
+   "QT": [
+    "mixte",
+    [
+     "Q8"
+    ],
+    [
+     "Q8"
+    ]
+   ],
+   "ES": [
+    "estimée",
+    [],
+    []
+   ],
+   "CA": [
+    "mixte",
+    [],
+    []
+   ],
+   "PS": [
+    "estimée",
+    [],
+    []
+   ]
+  },
+  "modifs": [],
+  "EP": 3,
+  "IT": 3,
+  "QT": 3,
+  "ES": 2,
+  "CA": 2.1666666666666665,
+  "PS": 3,
+  "RE": 1.0728545383644692,
+  "W": 2.4627887435758766,
   "palier": "C",
   "proche": false,
-  "Se_ia": 2,
-  "Rev_ia": 1.0,
-  "W_ia": 1.96,
+  "W_ia": 2.3095238095238093,
   "palier_ia": "C",
-  "rang": 92,
-  "groupe": 1,
+  "rang": 91,
+  "groupe": 2,
+  "rangs_var": {
+   "Poids égaux": 91,
+   "environnement physique doublé": 88,
+   "intensité du travail doublé": 89,
+   "qualité du temps de travail doublé": 91,
+   "environnement social doublé": 92,
+   "compétences et autonomie doublé": 90,
+   "perspectives et sécurité doublé": 92,
+   "revenu doublé": 92
+  },
+  "nb_top": 0,
+  "rang_min": 88,
+  "rang_max": 92,
+  "W_tension": 2.6056458864330194,
   "domine_par": [
    "T01",
    "T02",
    "T03",
    "T05",
-   "T08",
+   "T06",
    "T09",
-   "T10",
-   "T11",
-   "T14",
    "T15",
    "T16",
    "T17",
    "T18",
    "T20",
    "T30",
-   "T34",
    "T35",
    "T37",
    "T38",
@@ -6281,13 +12161,8 @@
    "T41",
    "T42",
    "T43",
-   "T44",
    "T45",
    "T46",
-   "T47",
-   "T49",
-   "T50",
-   "T52",
    "T53",
    "T54",
    "T56",
@@ -6295,7 +12170,6 @@
    "T60",
    "T61",
    "T62",
-   "T63",
    "T64",
    "T65",
    "T67",
@@ -6308,8 +12182,8 @@
    "T79",
    "T80",
    "T81",
+   "T82",
    "T83",
-   "T84",
    "T85",
    "T86",
    "T87",
@@ -6319,7 +12193,8 @@
    "T91",
    "T92",
    "T93",
-   "T72"
+   "T72",
+   "T74"
   ]
  }
 ]

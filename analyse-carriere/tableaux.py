@@ -154,19 +154,65 @@ A("")
 
 # --- Partie C : provenance des notes hors revenu --------------------------------------------------
 A("### Classement v5, partie C : provenance des notes hors revenu\n")
-A("S = sourcée (chiffre publié pour ce groupe de métiers), M = mixte (une partie des composantes sourcée), E = estimée (grille normative).\n")
-A("| Rang | ID | EP | IT | QT | ES | CA | PS | Ancrages |")
-A("|---|---|---|---|---|---|---|---|---|")
+A("S = sourcée : chiffre officiel et chiffré pour le métier lui-même, dans le pays du triplet. "
+  "M = mixte : chiffre pour un groupe plus large, un autre pays ou un autre statut, sans ampleur publiée, "
+  "issu d'une enquête non officielle, ou ne couvrant qu'une partie de la dimension (QT et CA sont au mieux M). "
+  "E = estimée : aucun chiffre trouvé, note de la grille normative. "
+  "Ancrages : codes de la partie C2. Tensions : note maintenue alors qu'un chiffre de statut M indique une autre valeur.\n")
+A("| Rang | ID | EP | IT | QT | ES | CA | PS | Ancrages | Tensions |")
+A("|---|---|---|---|---|---|---|---|---|---|")
 LETTRE = {"sourcée": "S", "mixte": "M", "estimée": "E"}
+D6 = ("EP", "IT", "QT", "ES", "CA", "PS")
 compte = Counter()
 for t in m.CLASSEMENT:
-    p = EU.provenance(t)
-    for d in ("EP", "IT", "QT", "ES", "CA", "PS"):
-        compte[p[d][0]] += 1
-    anc = " ; ".join(f"{d} : {p[d][1]}" for d in ("EP", "IT", "QT", "ES", "PS") if p[d][1])
-    A(f"| {rg(t)} | {t['id']} | " + " | ".join(LETTRE[p[d][0]] for d in ("EP", "IT", "QT", "ES", "CA", "PS")) + f" | {anc or 'aucun'} |")
+    p = t["prov"]
+    for d in D6:
+        compte[(d, p[d][0])] += 1
+    anc = " ; ".join(f"{d} {', '.join(p[d][1])}" for d in D6 if p[d][1])
+    ten = " ; ".join(f"{d} ({', '.join(p[d][2])})" for d in D6 if p[d][2])
+    A(f"| {rg(t)} | {t['id']} | " + " | ".join(LETTRE[p[d][0]] for d in D6) + f" | {anc or 'aucun'} | {ten or 'aucune'} |")
 A("")
-A(f"Total sur {6 * len(T)} notes hors revenu : {compte['sourcée']} sourcées, {compte['mixte']} mixtes, {compte['estimée']} estimées.")
+A("| Dimension | Sourcées | Mixtes | Estimées |")
+A("|---|---|---|---|")
+for d in D6:
+    A(f"| {d} | {compte[(d, 'sourcée')]} | {compte[(d, 'mixte')]} | {compte[(d, 'estimée')]} |")
+tot = {s: sum(compte[(d, s)] for d in D6) for s in LETTRE}
+A(f"| Total ({6 * len(T)} notes) | {tot['sourcée']} | {tot['mixte']} | {tot['estimée']} |")
+A("")
+
+
+def ens(s):
+    v = sorted(s)
+    if len(v) > 2 and v == list(range(v[0], v[-1] + 1)):
+        return f"{v[0]} à {v[-1]}"
+    return " ou ".join(str(x) for x in v)
+
+
+A("### Classement v5, partie C2 : ancrages utilisés\n")
+A("Règles de conversion et de statut : section 1.13. Notes compatibles : valeurs que le chiffre autorise (pour QT, présence ou absence des facteurs F1 et F3).\n")
+A("| Code | Dim. | Chiffre publié | Source | Statut | Notes compatibles | Triplets couverts | Tensions |")
+A("|---|---|---|---|---|---|---|---|")
+for a in EU.ANCRAGES:
+    par = {}
+    for i in a["ids"]:
+        par.setdefault(EU._statut(a, ID[i]), []).append(i)
+    statut = next(iter(par)) if len(par) == 1 else " ; ".join(f"{s} : {', '.join(ids)}" for s, ids in sorted(par.items()))
+    if a["dim"] == "QT":
+        compat = " ; ".join(f"{fx} {'présent' if ex else 'absent'}" for fx, ex in (("F1", a["f1"]), ("F3", a["f3"])) if ex is not None)
+    elif isinstance(a["ok"], dict):
+        grp = {}
+        for i, s in a["ok"].items():
+            grp.setdefault(ens(s), []).append(i)
+        compat = " ; ".join(f"{v} ({', '.join(ids)})" for v, ids in grp.items())
+    else:
+        compat = ens(a["ok"])
+    tens = [i for i in a["ids"] if not EU._accord(a, ID[i], ID[i])]
+    A(f"| {a['code']} | {a['dim']} | {a['texte']} | {a['src']} | {statut} | {compat} | {', '.join(a['ids'])} | {', '.join(tens) or 'aucune'} |")
+A("")
+A("### Notes modifiées par un ancrage de statut S\n")
+for t in T:
+    for dim, avant, apres, code in t["modifs"]:
+        A(f"- {t['id']} {tri(t)} : {dim} {avant} → {apres} ({code}).")
 A("")
 
 # --- Partie D : barriere et IA (informatif) ------------------------------------------------------
@@ -192,6 +238,17 @@ A("- Dans le haut du classement dans les 8 configurations : " + (", ".join(f"{t[
 A("- Dans le haut du classement dans les 4 configurations citées dans la demande (poids égaux, revenu, autonomie et sécurité doublés) : " + (", ".join(f"{t['id']} {tri(t)}" for t in noyau4) or "aucun") + ".")
 A("- Dans le haut du classement dans une seule configuration : " + (", ".join(f"{t['id']} {tri(t)} ({COURT[[c for c in CFG if t['rangs_var'][c] <= m.TOP][0]]})" for t in m.UNE_SEULE) or "aucun") + ".")
 A("")
+A("### Sensibilité aux notes en tension (informatif, hors classement)\n")
+A("Poids égaux ; chaque note en tension avec un chiffre de statut M prend la valeur compatible avec ce chiffre (partie C2). Les autres triplets gardent leur score.\n")
+A("| ID | Triplet | Note en tension | Rang v5 | Rang si chiffre appliqué | Palier v5 | Palier si chiffre appliqué |")
+A("|---|---|---|---|---|---|---|")
+for t in m.CLASSEMENT:
+    tn = [f"{d} ({', '.join(t['prov'][d][2])})" for d in D6 if t["prov"][d][2]]
+    if not tn:
+        continue
+    r2, g2 = m.RANG_TENSION[t["id"]]
+    A(f"| {t['id']} | {tri(t)} | {' ; '.join(tn)} | {rg(t)} | {r2}{'=' if g2 > 1 else ''} | {pal(t)} | {m.classer(t['W_tension'])} |")
+A("")
 
 # --- Egalites et frontieres ------------------------------------------------------------------------
 A("### Égalités déclarées (écart inférieur à 0,03 avec le premier du groupe)\n")
@@ -208,12 +265,21 @@ A("")
 # --- Conversion des notes v4 vers Eurofound ----------------------------------------------------------
 A("### Conversion des notes v4 vers les dimensions Eurofound, triplet par triplet\n")
 A("Facteurs de l'ancienne charge : F1 plus de 45 h, F2 intensité ou exigences émotionnelles, F3 nuits, week-ends ou astreintes, F4 pénibilité physique, F5 trajet (hors grille). H = horaires imposés (contrôle v4 de 3 ou moins).\n")
-A("| ID | Groupe de métiers | Facteurs | Charge v4 | Contrôle v4 | H | CITP-08 (niveau) | EP | IT | QT | CA |")
-A("|---|---|---|---|---|---|---|---|---|---|---|")
+A("ES reprend les relations v4 et PS la sécurité v4, sauf note modifiée par un ancrage de statut S (code entre parenthèses).\n")
+A("| ID | Groupe de métiers | Facteurs | Charge v4 | Contrôle v4 | H | CITP-08 (niveau) | EP | IT | QT | CA | Relations v4 → ES | Sécurité v4 → PS |")
+A("|---|---|---|---|---|---|---|---|---|---|---|---|---|")
+MODIF = {(t["id"], dim): code for t in T for dim, _, _, code in t["modifs"]}
+
+
+def vers(t, v4, dim):
+    c = MODIF.get((t["id"], dim))
+    return f"{t[v4]} → {t[dim]} ({c})" if c else f"{t[v4]} → {t[dim]}"
+
+
 for t in T:
     g = EU.groupe_de(t["id"])[0].replace("_", " ")
     code, niv = EU.CITP[t["id"]]
-    A(f"| {t['id']} | {g} | {EU.FACTEURS[t['id']] or 'aucun'} | {t['Ch']} | {t['C']} | {1 if t['C'] <= 3 else 0} | {code} ({niv}) | {t['EP']} | {t['IT']} | {t['QT']} | {note(t['CA'])} |")
+    A(f"| {t['id']} | {g} | {EU.FACTEURS[t['id']] or 'aucun'} | {t['Ch']} | {t['C']} | {1 if t['C'] <= 3 else 0} | {code} ({niv}) | {t['EP']} | {t['IT']} | {t['QT']} | {note(t['CA'])} | {vers(t, 'R', 'ES')} | {vers(t, 'Se', 'PS')} |")
 A("")
 
 # --- Modifications de rang v4 -> v5 --------------------------------------------------------------------
@@ -252,6 +318,7 @@ A("")
 
 texte = fr("\n".join(out) + "\n")
 texte = re.sub(r"(?<=\d)\.(?=\d)", ",", texte)  # decimales a la francaise
+texte = texte.replace("section 1,13", "section 1.13").replace("grille 1,3", "grille 1.3")  # numeros de section
 texte = texte.replace(" x ", " × ")
 with open(os.path.join(ICI, "tableaux.md"), "w", encoding="utf-8") as f:
     f.write(texte)

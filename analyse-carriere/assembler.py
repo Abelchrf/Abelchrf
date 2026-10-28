@@ -39,11 +39,12 @@ parties += [f"## 3. Classement v5 ({len(_m.T)} triplets, grille Eurofound à poi
             "Palier : S ≥ 4,2, A ≥ 3,6, B ≥ 3,0, C en dessous ; * = à moins de 0,1 d'une frontière. "
             "« 7= » : rang partagé (écart inférieur à 0,03). "
             "« X / Y k€ » : revenu net annuel en milliers d'euros, X au change 2025 sans ajustement, Y en parité de pouvoir d'achat ; le score utilise Y en équivalent temps plein.", ""]
-for prefixe in ("Classement v5, partie A", "Classement v5, partie B", "Classement v5, partie C", "Classement v5, partie D"):
+for prefixe in ("Classement v5, partie A", "Classement v5, partie B", "Classement v5, partie C :",
+                "Classement v5, partie C2", "Notes modifiées", "Classement v5, partie D"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
 parties += ["## 4. Robustesse aux pondérations", ""]
-for prefixe in ("Robustesse", "Noyau robuste"):
+for prefixe in ("Robustesse", "Noyau robuste", "Sensibilité aux notes"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
 parties += ["## 5. Égalités et frontières de palier", ""]

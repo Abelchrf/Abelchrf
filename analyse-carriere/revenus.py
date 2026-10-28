@@ -138,8 +138,8 @@ REV = {
     "T13": lib(57100 * NET_BNC * MED_MOY_LIB, H_NT,
                "DREES 2021 (S03) : infirmiers libéraux, 57 100 € moy. ; × 0,96 × 0,85", "officielle"),
     "T14": v3(42000, 48000, "estime : grille IADE FPH ; ancrage S09"),
-    "T15": lib(27550 * NET_BNC * MED_MOY_LIB, "temps partiel fréquent, durée non trouvée",
-               "UNASA 2022 (S06) : 27 550 € moy., temps partiel inclus ; × 0,96 × 0,85 ; recoupement FNO 2023 : 2 400 €/mois moy.",
+    "T15": lib(27550 * NET_BNC * MED_MOY_LIB, "38 à 39 actes par semaine sur 42 semaines et 10 h de tâches administratives (FNO) ; durée totale non trouvée",
+               "UNASA 2022 (S06) : 27 550 € moy. ; × 0,96 × 0,85 ; aucun chiffre de la DREES, dont le jeu de données 2026 ne couvre pas les orthophonistes (S136) ; FNO : chiffre d'affaires moyen 2022 de 51 266 € avant charges (S136)",
                "non officielle"),
     "T16": v3(31200, 36000, "estime : aucune serie officielle recuperee"),
     "T17": grille(2749 * 12, H_NT,
@@ -149,8 +149,10 @@ REV = {
     "T21": grille(2184 * 12, "12 h ou 7 h 30 par poste ; durée non trouvée",
                   "DREES 2022 (S10) : aides-soignants et ASH, 2 184 €/mois net moyen ; moyenne = médiane (grille)",
                   "officielle, champ plus large"),
-    "T22": v3(32000, 45000, "estime : aucune serie officielle recuperee"),
-    "T76": v3(33000, 45000, "estime : S69 (Observatoire de l'activite liberale, DGE : 27 600 EUR moy. en 2011), revalorise"),
+    "T22": lib(1987 * 12 * MED_MOY_LIB, "environ 30 h de consultations (non sourcé)",
+               "Registre des ostéopathes de France, rapport 2026 (S135) : revenu mensuel moyen 1 987 € en 2024, définition non précisée ; × 0,85",
+               "non officielle"),
+    "T76": v3(33000, 45000, "sources en conflit : ONPP 2014, 25 012 EUR moy. ; UNASA 2024 via JDN, 43 500 EUR brut (S137)"),
     "T77": c(30000, 34000, H_NT, "grille officielle FPH (S65) : IM 395 à 727 + CTI 183 € net/mois ; calcul à 10 ans d'exercice", "estimé (v3)", "officielle (grille)"),
     "T78": v3(24000, 32000, "estime : aucune serie recuperee"),
     "T79": v3(27000, 32000, "S08 (PI mediane 2 440 EUR) ; estime 2 250 EUR/mois"),
@@ -176,7 +178,7 @@ REV = {
     "T31": sal(net_allemagne(121000), 119000 / 102900, "48 h au plus (non mesurée)",
                "grille TV-Ärzte VKA 2026 (S118) : Ä2 échelon 3 = 8 741,40 €/mois ; + gardes, total estimé 121 000 € brut ; cotisations plafonnées ; Entgeltatlas : médiane des médecins plafonnée à 7 450 €", "officielle (grille)"),
     "T32": c(268808 * 0.70 - 9900, math.exp(math.log(268808) + 0.6567 * math.log(505024 / 268808)) * 0.70 - 9900, H_NT,
-             "Guichet-Emplois 2023-2024 (S122) : médiane 268 808 CAD, avant frais de cabinet ; - 30 % de frais (taux conventionnel du gouvernement du Québec) ; - RRQ et RQAP des travailleurs autonomes (9 900 CAD, estimé)",
+             "Guichet-Emplois 2023-2024 (S122) : médiane 268 808 CAD, avant frais de cabinet ; moins 30 % de frais (taux conventionnel du gouvernement du Québec) ; - RRQ et RQAP des travailleurs autonomes (9 900 CAD, estimé)",
              "log-normale (haut de fourchette 505 024 CAD lu comme P90)", "officielle"),
     "T33": sal(5866 * 12 * 0.80, 62400 / 57200, H_CH,
                "OFS, ESS 2024 (S22) : niveau de compétence 2, médiane 5 866 CHF/mois (proxy) ; × 12 × 0,80", "officielle, proxy"),
@@ -192,7 +194,8 @@ REV = {
              "BLS OEWS mai 2024 (S113) : orthophonistes, médiane 95 410 USD ; × 0,91",
              "interpolé entre P75 112 510 et P90 132 850 USD (S113)", "officielle"),
     # --- Numérique, ingénierie -----------------------------------------------------------------
-    "T35": v3(40500, 50700, "S17 (APEC 2025 : IT 35-45 ans 49 a 101 kEUR) ; estime 52 000 EUR brut x 0,78"),
+    "T35": sal(3120 * 12, 50700 / 40500, H_NT,
+               "DARES, portraits statistiques des métiers, données ouvertes (S133) : ingénieurs de l'informatique (M2Z), salaire médian 3 120 € par mois en 2017-2019, net probable (non actualisé)", "relayée"),
     "T36": c(58000, 76000, H_NT, "non officielle : TJM Malt (S19) 576 € × 170 jours × 0,59 ; Insee 2024 (S106), information et communication : 4 190 €/mois moy., champ plus large",
              "estimé (v3)", "non officielle"),
     "T37": sal(9490 * 12 * 0.80, 108000 / 91200, H_CH,
@@ -216,7 +219,9 @@ REV = {
                "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois (aucune donnée propre au cloud) ; × 12 × 0,80", "relayée, proxy"),
     "T83": sal(64000 * 0.78, 60800 / 48400, H_NT,
                "APEC 2025 (S17, S103) : famille « sécurité informatique », médiane 60 k€ + 4 k€ de variable, brut ; × 0,78", "relayée"),
-    "T84": v3(39000, 46800, "estime : S76 (bas de fourchette 37 000 EUR brut) ; 50 000 EUR brut a 40 ans x 0,78"),
+    "T84": c(48000 * 0.78, 48000 * (60000 / 48000) ** 0.6567 * 0.78, H_NT,
+             "APEC (S134, relayée) : offres d'emploi en cybersécurité, salaire moyen proposé 48 000 € brut (proxy pour le SOC) ; × 0,78",
+             "log-normale avec P90 = 60 000 € (80 % des offres entre 37 000 et 60 000 €)", "relayée, proxy"),
     "T85": sal(54000 * 0.78, 56200 / 46800, H_NT,
                "APEC 2025 (S17, S103) : famille « business intelligence », médiane 50 k€ + 4 k€ de variable, brut (proxy) ; × 0,78", "relayée, proxy"),
     "T86": sal(9490 * 12 * 0.80, 116000 / 100000, H_CH,
@@ -270,10 +275,10 @@ REV = {
     "T63": grille(net_fonctionnaire(110000, 0.61), "environ 1 420 h par an (Cour des comptes 2026, S124)",
                   "Cour des comptes 2026 (S124) : environ 110 000 € brut annuel moyen, dont 61 % de primes ; net calculé (pension sur le traitement, CSG et CRDS)", "officielle"),
     "T64": c(8207.25 * (1.16 - 0.101 - 0.017) * 12, 8911.48 * (1.16 - 0.101 - 0.017) * 12, "40 h (non mesurée)",
-             "grille au 1er juillet 2025 (S119, relayée) : AD7 échelon 2 = 8 207,25 € + indemnité de dépaysement 16 % - pension 10,1 % - maladie 1,7 % (taux estimés) ; avant impôt de l'UE",
+             "grille au 1er juillet 2025 (S119, relayée) : AD7 échelon 2 = 8 207,25 € + indemnité de dépaysement 16 %, moins pension 10,1 % et maladie 1,7 % (taux estimés) ; avant impôt de l'UE",
              "AD8 échelon 1 = 8 911,48 € (S119)", "relayée (grille)"),
     "T65": c(4100 * (1.16 - 0.101 - 0.017) * 12, 4449.30 * (1.16 - 0.101 - 0.017) * 12, "40 h (non mesurée)",
-             "grille des agents contractuels 2025 (S119) : GF III grade 8 = 3 475,62 € (officiel), grade 9 de 3 932,44 à 4 449,30 € ; mi-carrière 4 100 € estimé + 16 % - cotisations",
+             "grille des agents contractuels 2025 (S119) : GF III grade 8 = 3 475,62 € (officiel), grade 9 de 3 932,44 à 4 449,30 € ; mi-carrière 4 100 € estimé + 16 %, moins cotisations",
              "GF III grade 10, échelon 1 = 4 449,30 €", "relayée (grille)"),
     "T66": grille(2637 * 12, H_NT,
                   "ministère des Armées, EcoDef n° 266 (S125) : solde nette médiane des sous-officiers 2 637 €/mois en 2023, toutes armées hors gendarmerie", "officielle"),
@@ -325,6 +330,10 @@ for _i in ("T36", "T81"):
     ETP[_i] = (1.0, "estimation à temps plein (170 à 180 jours facturés)", True, "")
 ETP["T87"] = (1.0, SOURCE_ETP + " (salaire annuel à temps plein)", True, "")
 ETP["T01"] = (1.0, "46 h par semaine, au moins 35 h", True, "S07")
+ETP["T10"] = (1.0, "43,07 h par semaine (Ordre des kinésithérapeutes 2026), au moins 35 h", True, "S132")
+ETP["T84"] = (1.0, SOURCE_ETP + " (offres d'emploi à temps plein)", True, "")
+ETP["T35"] = (1.0, "champ temps complet non précisé (DARES)", False, "")
+ETP["T15"] = (1.0, "38 à 39 actes par semaine et 10 h de tâches administratives (FNO) ; durée totale non trouvée", False, "")
 ETP["T92"] = (1.0, "36,1 h par semaine, au moins 35 h", True, "S114")
 ETP["T29"] = (1.0, "56 à 58 h par semaine (médecins assistants et chefs de clinique, ASMAC 2022-2023)", True, "S130")
 ETP["T91"] = (1.0, "environ 42 h par semaine, au moins 35 h", True, "S111")

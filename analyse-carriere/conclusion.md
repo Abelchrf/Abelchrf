@@ -1,46 +1,82 @@
-## 7. Conclusion : palier S vide, tête du classement
+## 9. Conclusion : classement final
 
-| Rang | Triplet | En une phrase |
-|---|---|---|
-| 1= | T05 Chirurgien-dentiste × libéral × France | Premier à égalité et à 0,03 du palier S : contrôle maximal, pénurie qui garantit l'emploi, 94 k€ médians nets (CARCDSF 2023) ; il égale ou dépasse le dentiste suisse sur les sept critères. |
-| 1= | T91 Chirurgien-dentiste × libéral × Suisse (résident) | Mêmes notes que le dentiste français, mais son revenu (90 k€ en PPA) n'a pas de source fiable : sans statistique de la SSO, c'est un revenu horaire d'enquête ; c'est la place la plus fragile du haut du classement. |
-| 3= | T92 Chirurgien-dentiste × libéral × États-Unis | Revenu le plus élevé du pool au P80 (184 k€ en PPA, ADA 2023), freiné par l'exercice en anglais (relations 3) ; donnée américaine peu transférable. |
-| 3= | T15 Orthophoniste × libéral × France | La charge la plus légère (5) et un emploi garanti compensent le revenu le plus bas du haut du classement : 22 k€ médians au temps réel, souvent partiel (source non officielle, UNASA). |
-| 5= | T09 Sage-femme × libéral × France | Contrôle 5 et charge 4 pour 34 k€ médians (DREES 2021, revenus en forte hausse depuis). |
-| 5= | T30 Médecin généraliste × indépendant × Suisse (résident) | Médian installé le plus élevé du pool en PPA (112 k€, OFS 2019), avec un contrôle de 4 et une charge de 3. |
+Règle déclarée (1.12) : le classement final réunit les triplets présents dans le haut du classement (10 premiers, rangs partagés compris) dans les 8 configurations de poids. Viennent ensuite ceux qui y sont dans les 4 configurations citées dans la demande (poids égaux, revenu, autonomie et sécurité doublés), puis, signalés à part, ceux qui n'y sont que dans une seule.
+
+### 9.1 Noyau robuste : dans le haut du classement dans les 8 configurations
+
+| Rang à poids égaux | Triplet | Palier | Rangs sur les 8 configurations | En une phrase |
+|---|---|---|---|---|
+| 1 | T30 Médecin généraliste × indépendant × Suisse (résident) | S | 1 à 1 | Premier partout : médian le plus élevé du pool en PPA (112 k€, OFS 2019, 43 h par semaine, donc pas de conversion), aucune note sous 3 ; seule sa note QT a un appui chiffré (heures), ses notes EP, IT, ES et PS sont estimées. |
+| 5= | T89 Ingénieur cybersécurité (hors SOC) × salarié × Suisse (résident) | A* | 3 à 10 | Aucune dimension faible (EP 5, QT 5, PS 4), mais revenu moyen pour la Suisse (61 k€ en PPA) et proxy (médiane de tous les spécialistes TIC suisses) ; sa demande n'est documentée qu'en France (P4, donnée transposée) ; dernier admis quand le revenu ou la sécurité comptent double (10e). |
+
+### 9.2 Dans le haut du classement dans les 4 configurations citées, pas dans les 8
+
+| Rang | Triplet | Palier | Sort du haut du classement quand | En une phrase |
+|---|---|---|---|---|
+| 2= | T05 Chirurgien-dentiste × libéral × France | S* | EP doublé (17e) | Compétences et autonomie maximales (CA 5), 94 k€ médians (CARCDSF 2023) ; ses postures (EP 3, cohérent avec 84 % de troubles musculosquelettiques chez les orthodontistes, E8) le font sortir quand l'environnement physique compte double ; heures non trouvées. |
+| 2= | T91 Chirurgien-dentiste × libéral × Suisse (résident) | S* | EP doublé (17e) | Mêmes notes que T05 ; revenu désormais tiré d'une enquête officielle (ESPA de l'OFS exploitée par la ZHAW pour la FMH : 166 000 CHF médians après 34 ans, 42 h par semaine, S111), soit 91 k€ en PPA. |
+| 5= | T92 Chirurgien-dentiste × libéral × États-Unis | A* | EP doublé (25e), ES doublé (13e) | P80 le plus élevé du pool (184 k€ en PPA, ADA), 36 h par semaine ; exercice en anglais (ES 3) ; données américaines peu transférables. |
+| 5= | T01 Médecin généraliste × libéral × France | A* | EP doublé (17e), QT doublé (16e) | 80 k€ médians ; 46 h par semaine en 2025 (DREES), donc F1 et QT 4, à 1 h du seuil de 45 h. |
+| 8= | T03 Médecin spécialiste (rang médian) × libéral × France | A | EP, IT et QT doublés (17e, 11e, 16e) | 74 k€ médians au rang médian des spécialités ; heures non trouvées. |
+
+### 9.3 Autres triplets souvent dans le haut du classement
+
+| Rang | Triplet | Top 10 sur 8 | Remarque |
+|---|---|---|---|
+| 2= | T15 Orthophoniste × libéral × France | 7 | Premier quand EP ou IT comptent double, 20e quand le revenu compte double (22 k€, source non officielle, heures non trouvées). Son ES 4 est en tension avec le seul chiffre trouvé, celui de son groupe (S2) : appliqué, il passerait 7e, palier A. |
+| 8= | T37 Développeur × salarié × Suisse (frontalier) | 6 | 89 k€ en PPA ; sort quand l'intensité ou la sécurité comptent double (PS 3, estimée). |
+| 8= | T82, T46, T90, T83 | 5 | Cloud et DevOps frontalier en Suisse, actuaire, cybersécurité aux États-Unis et en France : environnement de bureau (E1) et compétences élevées ; le revenu de T46 n'est pas re-sourcé. |
+| 14= à 16= | T09, T93, T64, T16 | 3 | Sage-femme libérale, orthophoniste aux États-Unis, administrateur de l'UE, orthoptiste. |
+
+### 9.4 Dans le haut du classement dans une seule configuration
+
+T85 data engineer (France), T39 développeur frontalier au Luxembourg, T35 développeur (France), T86 ingénieur cloud résident en Suisse : tous seulement quand l'environnement physique compte double (EP 5 des métiers de bureau). T35 et T85 y entrent grâce à leur PS passé de 3 à 4 (P3, créations d'emplois des ingénieurs de l'informatique).
 
 Lecture :
-- Retirer la barrière fait monter les métiers à études longues, dont le cumul 24-45 ans était pénalisé : médecin généraliste libéral en France du 13e au 7e rang (ex aequo), médecin généraliste en Suisse du 8e au 5e, spécialiste du 11e au 7e.
-- Mesurer le revenu au temps de travail réel fait baisser l'orthophoniste (31 vers 22 k€) et la sage-femme (40 vers 34 k€), sans les faire sortir du haut du classement.
-- La tech reste dans le palier A : cybersécurité en Suisse du 6e au 7e rang (ex aequo), car la seule médiane officielle trouvée est celle de tous les spécialistes TIC ; cloud et DevOps freelance 7e (ex aequo) ; cybersécurité aux États-Unis du 9e au 12e (ex aequo) ; cybersécurité en France 12e (ex aequo).
-- Le palier S reste vide pour la même raison qu'en v3 : la note de lieu de 2 des soignants libéraux. Avec un poids de contrôle de 30, T05 et T91 passent en S.
+- Avec des poids égaux, les conditions de travail (EP, IT, QT) pèsent 3/7 du score, contre 19 % pour l'ancienne charge, et l'autonomie passe de 22 % à 1/7 (CA, qui mêle latitude et niveau de compétence). Les métiers de bureau à revenu élevé montent (T37 du 23e au 8e rang, T82 du 27e au 8e, T46 du 16e au 8e) ; les soignants libéraux à revenu bas ou à contraintes physiques descendent (sage-femme libérale du 5e au 14e, kinésithérapeute libéral du 7e au 21e). Détail triplet par triplet en section 7.
+- Palier S : T30, T05, T91, T15 ; les trois derniers sont à moins de 0,1 de la frontière de 4,2, fixée par la consigne. Scénario IA fort : aucun des 22 premiers ne change de palier.
+- Le revenu en équivalent temps plein ne modifie aucune cellule : toutes les heures trouvées dépassent 35 h, ou la source est déjà en temps plein. Là où un temps partiel est probable (orthophoniste, sage-femme libérale, ostéopathe), les heures n'ont pas été trouvées ; ces cellules gardent la quotité 1 et sont signalées.
+- Les notes hors revenu du haut du classement sont surtout des estimations : les statistiques par métier trouvées portent surtout sur l'hôpital, la police, le bâtiment et le transport, qui sont en bas du classement, et les confirment.
 
-## 8. Ce qui est vérifiable et ce qui est mon opinion
+## 10. Ce qui est vérifiable et ce qui est mon opinion
 
 | Élément | Statut |
 |---|---|
-| Revenus médians ou moyens cités (codes S), grilles de rémunération, indices de prix Eurostat, temps de travail cités | Vérifiable, mais lu ici à travers des extraits de moteur de recherche : à contrôler dans les tableaux primaires avant toute décision. |
-| Passage au net, conversion d'une moyenne en médiane, P80 estimés, frais de scolarité, surcoûts régionaux des frontaliers | Hypothèses déclarées (sections 1.4 et 1.11), modifiables dans `revenus_v4.py`. |
-| Notes de contrôle, charge, relations, sécurité, sens, lieu | Estimations normatives (mon jugement), guidées par DARES, DREES, INSEE, DEPP et les règles de télétravail citées. |
-| Revenus et notes aux États-Unis | Revenus BLS et ADA vérifiables, mais transférabilité limitée : congés payés, assurance santé et protection contre le licenciement non comparables ; seul l'écart de prix est corrigé. |
-| Poids des critères | Opinion fondée sur des tailles d'effet publiées ; aucun consensus chiffré. |
-| Barrière d'entrée, probabilités p, scénarios IA | Informatifs, hors score ; p et IA sont des estimations à poids de preuve faible. |
-| Seuils de paliers, seuil d'égalité | Arbitraires ; 26 triplets sur 93 sont à moins de 0,1 d'une frontière de palier. |
+| Les 7 dimensions et leur lien avec la santé et le bien-être des travailleurs | Consensus publié (Eurofound, S116). Composantes de la qualité du temps de travail : durée, horaires atypiques, aménagement, flexibilité ; le télétravail n'en fait pas partie (S150). |
+| Poids égaux | Le choix le plus neutre, pas un fait : d'où les 8 configurations. Seuls T30 et T89 restent dans le haut du classement dans les 8. |
+| Revenus cités (codes S), grilles, indices de prix, heures | Vérifiables, mais lus à travers des extraits de moteur de recherche : à contrôler dans les tableaux primaires avant toute décision. |
+| Passage au net, moyenne vers médiane, P80, quotité | Hypothèses déclarées (1.4, 1.11, 1.12), modifiables dans `revenus.py`. |
+| Notes EP et IT par groupe de métiers, latitude de décision (moitié de CA), ES et PS des libéraux | Estimations normatives (mon jugement). Sur 558 notes hors revenu : 9 sourcées au niveau du métier, 239 mixtes (dont les 93 notes CA), 310 estimées. |
+| Règles d'ancrage (bandes EP, seuil de 1,5 fois la moyenne, seuil de 40 % pour F3, grille PS) | Choix déclarés (1.13) avant leur application ; limites arbitraires. 3 notes modifiées, 18 tensions signalées. |
+| Revenus et notes aux États-Unis | Transférabilité limitée : congés payés, assurance santé et protection contre le licenciement non comparables ; seul l'écart de prix est corrigé. |
+| Barrière d'entrée, probabilités p, scénarios IA | Informatifs, hors score ; poids de preuve faible. |
+| Paliers, seuil d'égalité | Arbitraires ; 21 triplets sur 93 sont à moins de 0,1 d'une frontière de palier. |
 
 Règle de révision : un rang ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée, jamais sur une simple contestation.
 
-## 9. Cellules revenu non re-sourcées ou sans source fiable
+## 11. Cellules signalées
 
-- Non re-sourcées faute de quota de recherche (valeur v3 conservée, estimée à 40 ans pour le sujet, donc parfois sous-estimée pour un professionnel installé) : T02, T06, T11, T14, T16, T17, T18, T20, T22, T32, T35, T39, T43, T44, T45, T46, T47, T52, T53, T54, T58, T60, T61, T62, T63, T66, T69, T70, T71, T72, T74, T76, T78, T79, T84.
-- Sans source fiable : T91 (revenu horaire d'enquête, versions en conflit).
-- Sources non officielles : T15 (UNASA, confirmé par la FNO), T36 et T81 (tarifs journaliers Malt, Free-Work, Morgan Philips), T87 (guides de salaires privés).
-- Proxy (métier voisin ou champ plus large) : T04 (personnels médicaux de la FPH), T21 (avec les ASH), T33, T34, T42, T49 (niveaux de qualification suisses), T41 (tous ingénieurs), T48, T51 (toute la construction), T59 (tous agents des SDIS), T68 (activités juridiques et comptables), T73 (activités immobilières), T80, T85 (familles APEC voisines), T82, T86, T89 (tous spécialistes TIC suisses), T88 (architectes réseaux et cloud).
-- Données anciennes : T23 et T24 (2018, actualisées par la hausse de la médiane ESS), T29 (2014), T55 (2019, non actualisé).
-- P80 publiés ou interpolés : T88, T90, T93 (BLS) ; tous les autres sont estimés (log-normale, amplitude de grille ou rapport v3).
-- Temps de travail réel trouvé seulement pour T01 (46 h), T56 et T57 (42 à 43 h déclarées), T29 (50,7 h), T92 (36,1 h), T59 (plafonds annuels) et la durée contractuelle suisse (41 h 47).
-- À lire au tour suivant : jeux de données DREES (déciles par profession), fiche santé de l'Insee « Emploi et revenus des indépendants » 2025, portraits statistiques des métiers de la DARES, tableaux OFS de l'ESS par profession, revenus des dentistes suisses (SSO, Medisuisse), STATEC, Destatis et Bundesagentur für Arbeit, Guichet-Emplois et RAMQ.
+### 11.1 Revenu
 
-## 10. Sources
+- Non re-sourcées (valeur v3, estimée pour le sujet à 40 ans, donc parfois sous-estimée pour un professionnel installé) : T14, T16, T18, T20, T39, T44, T45, T46, T47, T52, T53, T69, T70, T72, T76, T78, T79 (17 cellules ; T53 et T76 : sources trouvées mais non officielles ou en conflit).
+- Non officielles : T02 (fourchettes de sites spécialisés), T15 (UNASA ; la DREES ne publie aucun revenu des orthophonistes, son jeu de données 2026 ne les couvre pas, S136), T22 (registre associatif des ostéopathes), T36 et T81 (tarifs journaliers privés), T74 (sites spécialisés, Air France).
+- Proxy ou champ plus large : T04, T21, T59 ; T11, T17, T33, T34, T60, T61, T62, T87, T88 ; T41, T42, T48, T49, T51, T58, T68, T73, T80, T82, T84, T85, T86, T89.
+- Données anciennes : T23, T24, T29, T55.
+- Temps de travail réel non trouvé (quotité 1, pas de conversion en équivalent temps plein) : T03, T05, T07, T09, T13, T14, T15, T16, T18, T19, T20, T22, T35, T39, T44, T45, T46, T47, T48, T51, T52, T53, T67, T68, T69, T70, T72, T73, T76, T78, T79 (31 cellules). Pour T35, la source DARES ne précise pas si le champ est le temps complet.
+- Dentiste en Suisse, prioritaire dans la demande : la SSO ne publie pas de revenus ; T91 repose maintenant sur l'enquête officielle ESPA (OFS, 2014 à 2017) exploitée par la ZHAW pour la FMH, avec 42 h par semaine (S111), moins la prime LAMal ; fiabilité « relayée » (lue dans la presse professionnelle).
+
+### 11.2 Notes hors revenu
+
+- Modifiées par un chiffre de statut S : T35 et T85, PS 3 → 4 (P3) ; T57, ES 3 → 2 (S3).
+- En tension avec un chiffre de groupe (note maintenue, effet en section 4) : ES de T09, T10, T11, T13, T15, T16, T18, T34, T76, T77, T78, T93 (S2) ; EP de T08 et T14 (E6) ; EP de T53 et T54 (E5) ; PS de T36 (P3) ; QT de T75 (Q8).
+- Aucune statistique trouvée pour les conditions de travail des dentistes et des orthophonistes, qui occupent le haut du classement, ni des kinésithérapeutes (hors heures) : leurs notes IT sont des estimations, comme leurs notes EP et ES, sauf l'appui indirect des orthodontistes pour l'EP des dentistes (E8) et le chiffre de groupe pour l'ES des orthophonistes et des kinésithérapeutes (S2).
+
+### 11.3 Pour lever ces limites
+
+- Ajouter dares.travail-emploi.gouv.fr, insee.fr, drees.solidarites-sante.gouv.fr et bfs.admin.ch aux domaines autorisés de l'environnement cloud (accès réseau) permettrait de lire les tableaux primaires : portraits statistiques des métiers de la DARES (conditions de travail par famille professionnelle), enquête Sumer 2017 par famille professionnelle, jeux de données de la DREES, ESPA de l'OFS par profession.
+- À chercher ensuite : heures des orthophonistes et des dentistes libéraux (FNO, ONDPS, DREES), revenus des cellules non re-sourcées, demande de développeurs hors de France (Suisse, Luxembourg, Allemagne, Québec).
+
+## 12. Sources
 
 | Code | Source |
 |---|---|
@@ -155,3 +191,43 @@ Règle de révision : un rang ne changera que sur une donnée nouvelle (par exem
 | S112 | OFS, durée du travail 2024 : https://www.kmu.admin.ch/kmu/en/home/new/news/2025/working-hours-stable.html ; prime LAMal moyenne 2025 : https://www.bag.admin.ch/dam/fr/sd-web/4T-CsX1ytzWE/PG26-FB-Mittlere%20Pr%C3%A4mie_FR.pdf |
 | S113 | BLS, Occupational Outlook Handbook et O*NET (mai 2024) : https://www.bls.gov/ooh/computer-and-information-technology/computer-network-architects.htm ; https://www.onetonline.org/link/localwages/15-1241.00 ; https://www.onetonline.org/link/localwages/15-1212.00 ; https://www.bls.gov/ooh/healthcare/speech-language-pathologists.htm ; https://www.onetonline.org/link/localwages/29-1127.00 |
 | S114 | ADA Health Policy Institute, revenus et heures des dentistes : https://www.ada.org/resources/research/health-policy-institute/dental-practice-research/trends-in-dentist-income ; https://www.beckersdental.com/benchmarking/median-net-income-of-general-practice-dentists-hit-185k-in-2023 ; https://www.beckersdental.com/benchmarking/how-many-hours-do-dentists-work-per-week/ |
+| S115 | OIT, CITP-08 et niveaux de compétence : https://isco.ilo.org/en/isco-08 |
+| S116 | Eurofound, qualité de l'emploi (7 indices) : https://www.eurofound.europa.eu/en/topics/job-quality ; 6e enquête européenne sur les conditions de travail, rapport de synthèse : https://www.eurofound.europa.eu/en/publications/all/sixth-european-working-conditions-survey-overview-report |
+| S117 | DARES et France Stratégie, Métiers 2030 (mars 2022), relais : https://www.lemondeinformatique.fr/actualites/lire-le-marche-de-l-emploi-it-attractif-mais-tendu-a-l-horizon-2030-86091.html ; https://www.solutions-numeriques.com/?p=96970 ; https://www.blogdumoderateur.com/metiers-informatique-creations-emploi-2030-penurie-talents/ |
+| S118 | Allemagne, grille TV-Ärzte VKA : https://www.haufe.de/oeffentlicher-dienst/personal-tarifrecht/entgelttabellen/entgelttabelle-tv-aerztevka_144_519958.html ; https://www.oeffentlichen-dienst.de/entgelttabelle/tv-aerzte-vka.html ; Bundesagentur für Arbeit, Entgeltatlas : https://web.arbeitsagentur.de/entgeltatlas/beruf/59018 |
+| S119 | Grilles des institutions de l'UE au 1er juillet 2025 : https://eur-lex.europa.eu/eli/C/2025/6564/oj ; agents contractuels : https://fusionforenergy.europa.eu/wp-content/uploads/2026/01/Remuneration-CA-1.pdf |
+| S120 | Police nationale, rémunérations 2026 : https://www.police-nationale.interieur.gouv.fr/nous-rejoindre/nos-voies-dacces/devenir-policier/gpx/ext ; relais DGAFP : https://infos-entreprises.fr/combien-gagne/policier/ ; DGFiP : https://rejoindrelesfinancespubliques.economie.gouv.fr/evoluer-aux-finances-publiques/remuneration-et-avantages-sociaux |
+| S121 | CFF, modèle de calcul des salaires des mécaniciens de locomotive (relais) : https://www.suedostschweiz.ch/panorama/was-verdient-ein-lokfuehrer-bei-der-sbb-bis-zu-8190-franken-im-monat-2124489 |
+| S122 | Guichet-Emplois, médecins de famille au Québec : https://www.guichetemplois.gc.ca/rapportmarche/salaire-profession/24431/QC |
+| S123 | CSO, Earnings Analysis using Administrative Data Sources 2024 : https://www.cso.ie/en/releasesandpublications/ep/p-eaads/earningsanalysisusingadministrativedatasources2024/distributionofearnings/ |
+| S124 | Cour des comptes, gestion des ressources humaines de la DGAC (juillet 2026) : https://www.ccomptes.fr/sites/default/files/2026-07/20260706-S2026-0717-Gestion-des-RH-DGAC.pdf |
+| S125 | Ministère des Armées, EcoDef n° 266 : https://www.defense.gouv.fr/sites/default/files/ssm/Ecodef%20266.pdf |
+| S126 | Rémunération des magistrats (ministère de la Justice, relais) : https://www.simonnetavocat.fr/combien-gagne-un-juge-en-france-la-remuneration-reelle-des-magistrats/ |
+| S127 | Pharmacie d'officine, accord salarial de 2026 : https://www.legifrance.gouv.fr/jorf/id/JORFTEXT000053907644 ; valeur précédente du point : https://www.legifrance.gouv.fr/conv_coll/id/KALIARTI000051834690/?idConteneur=1996 |
+| S128 | DGAFP, rapport annuel 2025, niveaux de rémunération : https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/ra_2025_vue_remunerations_niveaux.pdf |
+| S129 | Sources non officielles (centre de santé, SNCF, Air France) : https://www.profilmedecin.fr/contenu/remuneration-du-medecin-generaliste-comparatif-entre-lactivite-salariee-et-lactivite-liberale/ ; https://www.bvoltaire.fr/sncf-des-cheminots-bien-payes-primes-gratifies-mais-encore-en-greve/comment-page-6/ ; https://trajectio.fr/salaire-commandant-air-france/ |
+| S130 | ASMAC, enquêtes auprès des membres 2022 et 2023 : https://www.suedostschweiz.ch/schweiz-und-welt/aerztinnen-und-aerzte-arbeiten-nach-wie-vor-viel-zu-viel-2-1915851 ; https://www.demoscope.ch/fileadmin/files/Medienberichte/Mitgliederbefragung-VSAO-2023-Management-Summary_DE_final.pdf |
+| S131 | Étude Workforce 2020 sur les médecins de famille (Université de Bâle), relais, attribution probable : https://www.srf.ch/news/schweiz/drohende-versorgungsluecke-hausaerztemangel-die-situation-verbessert-sich-langsam |
+| S132 | Ordre des masseurs-kinésithérapeutes, rapport sur les libéraux 2026 : https://www.ordremk.fr/wp-content/uploads/2026/07/rapport-kinesithapeutes-liberaux-2026.pdf |
+| S133 | DARES, portraits statistiques des métiers, données ouvertes (salaire médian) : https://dares.travail-emploi.gouv.fr/sites/default/files/d00f3b579cafefe8712640d613401fef/Qualit%C3%A9%20de%20l'emploi%20-%20salaire%20m%C3%A9dian.csv |
+| S134 | APEC, offres d'emploi en cybersécurité (relais) : https://www.meilleurs-masters.com/articles/metiers-cybersecurite-les-mieux-payes.html ; https://www.letudiant.fr/metiers/secteur/cybersecurite/analyste-soc.html |
+| S135 | Registre des ostéopathes de France, rapport 2026 : https://osteopathie.org/client/document/rapport_rof_29012026_604.pdf |
+| S136 | DREES, jeu de données 2026 sur les revenus des libéraux de santé (sans les orthophonistes) : https://drees.solidarites-sante.gouv.fr/communique-de-presse-jeux-de-donnees/jeux-de-donnees/260915_revenu-des-professionnels-de-sante-liberaux ; FNO, livret 2024 : https://www.fno.fr/wp-content/uploads/2024/10/LivretPro-2024-FNO.pdf |
+| S137 | Pédicures-podologues : https://www.onpp.fr/assets/cnopp/fichiers/communiques/14-dossier-presse.pdf ; https://www.journaldunet.com/business/salaire/pedicure-podologue/salaire-00885 |
+| S138 | DREES, Études et Résultats n° 1215 (novembre 2021), conditions de travail à l'hôpital en 2019 : https://drees.solidarites-sante.gouv.fr/sites/default/files/2021-11/ER1215.pdf ; relais : https://www.senat.fr/rap/r21-587-1/r21-587-123.html ; https://www.weka.fr/actualite/?p=142366 |
+| S139 | Insee Références 2023 et DARES, conditions de travail en 2019 (crainte pour l'emploi) : https://www.insee.fr/fr/statistiques/7456903?sommaire=7456956 ; https://dares.travail-emploi.gouv.fr/publication/quelles-etaient-les-conditions-de-travail-en-2019-avant-la-crise-sanitaire |
+| S140 | DARES Résultats, horaires atypiques en 2021 : https://dares.travail-emploi.gouv.fr/sites/default/files/9ecbd7771cb5901b009b74fc253e5623/DR%20travail_horaires%20atypiques_2021.pdf |
+| S141 | DGAFP, rapport annuel 2024, temps et organisation du travail : https://www.fonction-publique.gouv.fr/files/files/publications/vue-rapport-annuel/ra_2024_vue_temps_organisation_temps_travail.pdf |
+| S142 | SSMSI, agressions selon la profession (enquêtes 2013 à 2018), relais : https://www.franceinfo.fr/societe/les-policiers-et-gendarmes-sont-pres-de-septfois-plus-victimes-d-agressions-physiques-que-la-moyenne-des-travailleurs-revele-le-ministere-de-l-interieur_4966776.html |
+| S143 | SDES, durée de service des conducteurs routiers : https://www.statistiques.developpement-durable.gouv.fr/la-duree-de-service-des-conducteurs-routiers-de-fret-poids-lourds-en-2020 ; https://www.statistiques.developpement-durable.gouv.fr/la-duree-hebdomadaire-de-service-des-conducteurs-de-poids-lourds-du-transport-routier-de-1 |
+| S144 | DARES, enquête Sumer 2017 : https://dares.travail-emploi.gouv.fr/sites/default/files/pdf/dares_expositions_risques_professionnels_produits_chimiques-2.pdf ; https://www.actu-environnement.com/media/pdf/news-34026-enquete-sumer-2017.pdf ; https://dares.travail-emploi.gouv.fr/publication/metiers-potentiellement-les-plus-concernes-par-les-criteres-ergonomiques |
+| S145 | DEPP, note d'information 24.02 (enseignants, conditions de travail en 2019) : https://www.education.gouv.fr/depp/les-enseignants-des-cadres-au-contact-du-public-qui-se-sentent-utiles-mais-en-manque-de-452415 ; Insee Première n° 1506 : https://www.insee.fr/fr/statistiques/1283795 |
+| S146 | Eurofound, 6e enquête européenne sur les conditions de travail (2015), indices par profession : https://www.researchgate.net/publication/311679538_6th_European_Working_Conditions_Survey_-_overview_report ; ETUI : https://www.etui.org/topics/health-safety-working-conditions/news-list/european-working-conditions-survey-2015-a-few-interesting-trends-in-health-at-work |
+| S147 | Eurofound, enquête 2024, premiers résultats et rapport de synthèse : https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-first-findings ; https://www.eurofound.europa.eu/en/publications/all/european-working-conditions-survey-2024-overview-report |
+| S148 | Eurofound, travail indépendant et qualité de l'emploi : https://www.eurofound.europa.eu/en/publications/all/exploring-self-employment-european-union ; https://www.eurofound.europa.eu/en/publications/all/self-employment-eu-job-quality-and-developments-social-protection |
+| S149 | OFS, Enquête suisse sur la santé 2022, conditions de travail : https://www.bfs.admin.ch/bfs/fr/home/statistiques/sante.assetdetail.31866458.html ; SECO, EWCTS 2021 : https://www.seco.admin.ch/seco/fr/home/seco/nsb-news/medienmitteilungen-2023.msg-id-97402.html |
+| S150 | Eurofound, qualité du temps de travail (composantes de l'indice) : https://assets.eurofound.europa.eu/f/279033/75885649e5/ef1634en.pdf |
+| S151 | DARES, travail le dimanche en 2025 (relais) : https://www.banquedesterritoires.fr/pres-dun-francais-sur-quatre-concerne-par-le-travail-le-dimanche |
+| S152 | DARES, tensions sur le marché du travail en 2024 (février 2026) et déclinaisons régionales : https://centre-val-de-loire.dreets.gouv.fr/sites/centre-val-de-loire.dreets.gouv.fr/IMG/pdf/dares_dr_tensions_2024.pdf ; https://pays-de-la-loire.dreets.gouv.fr/sites/pays-de-la-loire.dreets.gouv.fr/IMG/pdf/les_tensions_sur_le_marche_du_travail_en_2024_dans_la_region_des_pays_de_la_loire.pdf ; https://tpeactu.fr/2026/02/05/metiers-en-tension-marche-du-travail-2024/ |
+| S153 | Troubles musculosquelettiques des orthodontistes (enquête 2020) : https://odf.edpsciences.org/articles/odf/abs/2022/02/odf2022019/odf2022019.html ; population générale (Santé publique France) : https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-liees-au-travail/troubles-musculo-squelettiques/documents/enquetes-etudes/prevalence-de-tms-en-france-dans-la-population-generale-et-dans-la-population-des-actifs-occupes-selon-la-categorie-socioprofessionnelle-et-le-sec |
+| S154 | FNO, accès aux soins en orthophonie, cité dans une question écrite à l'Assemblée nationale (attribution probable) : https://questions.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE6360.pdf ; https://fno.fr/wp-content/uploads/2024/10/FNO-Etude-acces-aux-soins-23.12.21.pptx.pdf |

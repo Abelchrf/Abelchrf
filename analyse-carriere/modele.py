@@ -748,7 +748,10 @@ def score(t, P, ps=None, re_=None):
 # exposition elevee = perspectives -2 et revenus x 0,8 ; fonctionnaires : choc reduit d'un cran.
 IA_FORT = {"faible": (0, 1.0), "moyenne": (1, 0.9), "elevee": (2, 0.8)}
 for t in T:
-    t.update(EU.dimensions(t))
+    # Notes Eurofound converties des notes v4, puis ancrees sur les chiffres publies (section 1.13) :
+    # un ancrage de statut S qui contredit une note la remplace ; t["modifs"] garde la trace.
+    _d, t["prov"], t["modifs"] = EU.ancrer(t)
+    t.update(_d)
     t["RE"] = score_revenu(t)
     t["W"] = score(t, POIDS5)
     t["palier"] = classer(t["W"])
@@ -798,6 +801,12 @@ for t in T:
     t["rang_min"], t["rang_max"] = min(t["rangs_var"].values()), max(t["rangs_var"].values())
 ROBUSTES = [t for t in CLASSEMENT if t["nb_top"] == len(VARIANTES5)]
 UNE_SEULE = [t for t in CLASSEMENT if t["nb_top"] == 1]
+
+# Sensibilite aux notes (informatif, hors classement) : poids egaux, notes en tension avec un chiffre de
+# groupe (ancrage M) ramenees a la valeur compatible avec ce chiffre.
+for t in T:
+    t["W_tension"] = score(EU.variante_tensions(t, {d: t[d] for d in EU.DIMS}), POIDS5)
+RANG_TENSION = rangs_partages(T, cle="W_tension")
 
 
 def domine(y, x, crit=CRIT):
