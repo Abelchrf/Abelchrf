@@ -1,0 +1,1033 @@
+{
+ "classement1": [
+  {
+   "rang": "1",
+   "id": "2266-FR-ind",
+   "code": "2266",
+   "poste": "2266 Audiologistes et orthophonistes",
+   "poste_rep": "Orthophoniste",
+   "statut": "libéral",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A*",
+   "p10": 0.8102,
+   "p10_min": 0.6753,
+   "p10_max": 0.8102,
+   "p1": 0.0972,
+   "net_nom": 21481.2066125,
+   "net_ppa": 21481.2066125,
+   "fiab": "non officielle",
+   "src": "UNASA 2022 (S06) : 27 550 € moy. ; × 0,96 × 0,85 ; aucun chiffre de la DREES, dont le jeu de données 2026 ne couvre pas les orthophonistes (S136) ; FNO : chiffre d'affaires moyen 2022 de 51 266 € avant charges (S136)"
+  },
+  {
+   "rang": "2",
+   "id": "2529-CHf-sal",
+   "code": "2529",
+   "poste": "2529 Spécialistes des bases de données et des réseaux n.c.a. (cybersécurité)",
+   "poste_rep": "spécialistes TIC, ESS",
+   "statut": "salarié",
+   "pays": "CH",
+   "resid": "FR-GE",
+   "palier": "A*",
+   "p10": 0.8636,
+   "p10_min": 0.7112,
+   "p10_max": 0.882,
+   "p1": 0.193,
+   "net_nom": 76487.26219185424,
+   "net_ppa": 69533.8747198675,
+   "fiab": "relayée, proxy",
+   "src": "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois (aucune donnée propre à la cybersécurité) ; × 12 × 0,80"
+  },
+  {
+   "rang": "3=",
+   "id": "2211-CH-ind",
+   "code": "2211",
+   "poste": "2211 Médecins généralistes",
+   "poste_rep": "Médecin de famille (médecine interne générale)",
+   "statut": "indépendant",
+   "pays": "CH",
+   "resid": "CH",
+   "palier": "A*",
+   "p10": 0.7752,
+   "p10_min": 0.7717,
+   "p10_max": 0.7856,
+   "p1": 0.1686,
+   "net_nom": 140184.98326334835,
+   "net_ppa": 87588.33912330768,
+   "fiab": "relayée",
+   "src": "OFS 2019 (S24, S108) : premier recours, médiane 172 000 CHF nets d'AVS et de 2e pilier (relayée par la presse) ; moins la prime LAMal"
+  },
+  {
+   "rang": "3=",
+   "id": "2212-FR-ind",
+   "code": "2212",
+   "poste": "2212 Médecins spécialistes",
+   "poste_rep": "spécialistes libéraux, toutes spécialités",
+   "statut": "libéral",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A*",
+   "p10": 0.758,
+   "p10_min": 0.7032,
+   "p10_max": 0.7715,
+   "p1": 0.1455,
+   "net_nom": 87726.925,
+   "net_ppa": 87726.925,
+   "fiab": "relayée",
+   "src": "DREES 2021 (S02) : médecins spécialistes libéraux hors généralistes, revenu d'activité moyen 153 300 € ; × 0,96 × 0,85"
+  },
+  {
+   "rang": "5",
+   "id": "2619-FR-ind",
+   "code": "2619",
+   "poste": "2619 Juristes non classés ailleurs",
+   "poste_rep": "Notaire",
+   "statut": "libéral",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.6174,
+   "p10_min": 0.5865,
+   "p10_max": 0.653,
+   "p1": 0.1176,
+   "net_nom": 120804.31,
+   "net_ppa": 120804.31,
+   "fiab": "relayée (site secondaire)",
+   "src": "UNASA 2024 relayée (S182) : revenu moyen estimé 224 976 € ; × 0,96 × 0,85 ; médiane relayée de 197 500 € « brut » (définition non précisée) ; activité en baisse de 10 % en 2023 et de 4 % en 2024"
+  },
+  {
+   "rang": "6=",
+   "id": "2120-FR-sal",
+   "code": "2120",
+   "poste": "2120 Mathématiciens, actuaires et statisticiens",
+   "poste_rep": "Actuaire",
+   "statut": "salarié",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.5825,
+   "p10_min": 0.5132,
+   "p10_max": 0.5895,
+   "p1": 0.0348,
+   "net_nom": 44303.12,
+   "net_ppa": 44303.12,
+   "fiab": "non re-sourcée",
+   "src": "non re-sourcé, valeur v3 : estime : enquete de l'Institut des actuaires non recuperee"
+  },
+  {
+   "rang": "6=",
+   "id": "2222-FR-ind",
+   "code": "2222",
+   "poste": "2222 Sages-femmes",
+   "poste_rep": "Sage-femme",
+   "statut": "libéral",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.4375,
+   "p10_min": 0.4316,
+   "p10_max": 0.4547,
+   "p1": 0.0266,
+   "net_nom": 30484.52,
+   "net_ppa": 30484.52,
+   "fiab": "officielle",
+   "src": "DREES 2021 (S03) : sages-femmes libérales, 42 200 € moy. ; × 0,96 × 0,85"
+  },
+  {
+   "rang": "6=",
+   "id": "2512-CHf-sal",
+   "code": "2512",
+   "poste": "2512 Concepteurs de logiciels",
+   "poste_rep": "Développeur logiciel",
+   "statut": "salarié",
+   "pays": "CH",
+   "resid": "FR-GE",
+   "palier": "A",
+   "p10": 0.5265,
+   "p10_min": 0.4919,
+   "p10_max": 0.5294,
+   "p1": 0.032,
+   "net_nom": 76487.26219185424,
+   "net_ppa": 69533.8747198675,
+   "fiab": "relayée",
+   "src": "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois ; × 12 × 0,80"
+  },
+  {
+   "rang": "6=",
+   "id": "2522-CHf-sal",
+   "code": "2522",
+   "poste": "2522 Administrateurs de systèmes",
+   "poste_rep": "Ingénieur cloud DevOps",
+   "statut": "salarié",
+   "pays": "CH",
+   "resid": "FR-GE",
+   "palier": "A",
+   "p10": 0.584,
+   "p10_min": 0.5468,
+   "p10_max": 0.5935,
+   "p1": 0.0617,
+   "net_nom": 76487.26219185424,
+   "net_ppa": 69533.8747198675,
+   "fiab": "relayée, proxy",
+   "src": "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois (aucune donnée propre au cloud) ; × 12 × 0,80"
+  },
+  {
+   "rang": "10=",
+   "id": "2261-CH-ind",
+   "code": "2261",
+   "poste": "2261 Dentistes",
+   "poste_rep": "Médecin-dentiste",
+   "statut": "indépendant",
+   "pays": "CH",
+   "resid": "CH",
+   "palier": "A",
+   "p10": 0.6044,
+   "p10_min": 0.5154,
+   "p10_max": 0.6044,
+   "p1": 0.0281,
+   "net_nom": 116764.85253666024,
+   "net_ppa": 72955.31421116162,
+   "fiab": "relayée",
+   "src": "OFS, ESPA 2014-2017, exploitée par la ZHAW pour la FMH (S111) : dentistes de plus de 34 ans, revenu annuel médian 166 000 CHF brut standardisé, tous statuts (indépendants : 84 CHF/h, salariés : 68 CHF/h) ; × 0,85 (AVS et prévoyance des indépendants, estimé) moins la prime LAMal ; aucune statistique de la SSO"
+  },
+  {
+   "rang": "10=",
+   "id": "1330-CHf-sal",
+   "code": "1330",
+   "poste": "1330 Directeurs des services des TIC",
+   "poste_rep": "directeur des systèmes d'information",
+   "statut": "salarié",
+   "pays": "CH",
+   "resid": "FR-GE",
+   "palier": "A",
+   "p10": 0.5628,
+   "p10_min": 0.5211,
+   "p10_max": 0.5656,
+   "p1": 0.021,
+   "net_nom": 113247.5884244373,
+   "net_ppa": 102952.35311312482,
+   "fiab": "non officielle, non datée",
+   "src": "Michael Page, fiche de salaires informatiques non datée (S193) : directeur des systèmes d'information, 180 000 CHF de salaire de base moyen ; × 0,80"
+  },
+  {
+   "rang": "10=",
+   "id": "2521-FR-sal",
+   "code": "2521",
+   "poste": "2521 Concepteurs et administrateurs de bases de données",
+   "poste_rep": "Data engineer (ingénieur des données)",
+   "statut": "salarié",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.3992,
+   "p10_min": 0.3865,
+   "p10_max": 0.4216,
+   "p1": 0.0068,
+   "net_nom": 37169.675,
+   "net_ppa": 37169.675,
+   "fiab": "relayée, proxy",
+   "src": "APEC 2025 (S17, S103) : famille « business intelligence », médiane 50 k€ + 4 k€ de variable, brut (proxy) ; × 0,78"
+  },
+  {
+   "rang": "13",
+   "id": "2267-FR-sal",
+   "code": "2267",
+   "poste": "2267 Optométristes et orthoptistes",
+   "poste_rep": "Orthoptiste",
+   "statut": "salarié",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.2989,
+   "p10_min": 0.2989,
+   "p10_max": 0.4056,
+   "p1": 0.0045,
+   "net_nom": 29282.424305,
+   "net_ppa": 29282.424305,
+   "fiab": "non re-sourcée",
+   "src": "non re-sourcé, valeur v3 : estime : aucune serie officielle recuperee"
+  },
+  {
+   "rang": "14=",
+   "id": "2612-FR-fon",
+   "code": "2612",
+   "poste": "2612 Magistrats",
+   "poste_rep": "Magistrat de l'ordre judiciaire",
+   "statut": "fonctionnaire",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.4428,
+   "p10_min": 0.3376,
+   "p10_max": 0.4428,
+   "p1": 0.0267,
+   "net_nom": 50788.07000000001,
+   "net_ppa": 50788.07000000001,
+   "fiab": "relayée",
+   "src": "ministère de la Justice (S126, relayé) : 5 083 €/mois net moyen après six ans d'exercice, primes comprises (3 884 € au début, 8 480 € en fin de carrière)"
+  },
+  {
+   "rang": "14=",
+   "id": "2264-FR-ind",
+   "code": "2264",
+   "poste": "2264 Physiothérapeutes",
+   "poste_rep": "Masseur-kinésithérapeute",
+   "statut": "libéral",
+   "pays": "FR",
+   "resid": "FR",
+   "palier": "A",
+   "p10": 0.3173,
+   "p10_min": 0.2939,
+   "p10_max": 0.3293,
+   "p1": 0.0044,
+   "net_nom": 35503.270000000004,
+   "net_ppa": 35503.270000000004,
+   "fiab": "officielle",
+   "src": "DREES 2021 (S03) : masseurs-kinésithérapeutes libéraux, 51 100 € moy. ; × 0,96 × 0,85"
+  }
+ ],
+ "classement_monde": [
+  {
+   "rang": "1",
+   "id": "2266-GB-ind",
+   "code": "2266",
+   "poste": "2266 Audiologistes et orthophonistes",
+   "poste_rep": "Orthophoniste",
+   "statut": "indépendant",
+   "pays": "GB",
+   "resid": "GB",
+   "palier": "S",
+   "p10": 0.9345,
+   "p10_min": 0.8243,
+   "p10_max": 0.9345,
+   "p1": 0.2495,
+   "net_nom": 33600.89628531749,
+   "net_ppa": 32824.82464798641,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 0.63 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "2=",
+   "id": "2529-AE-sal",
+   "code": "2529",
+   "poste": "2529 Spécialistes des bases de données et des réseaux n.c.a. (cybersécurité)",
+   "poste_rep": "spécialistes TIC, ESS",
+   "statut": "salarié",
+   "pays": "AE",
+   "resid": "AE",
+   "palier": "A*",
+   "p10": 0.842,
+   "p10_min": 0.6895,
+   "p10_max": 0.8751,
+   "p1": 0.1367,
+   "net_nom": 86748.55569678971,
+   "net_ppa": 94414.50587870645,
+   "fiab": "non officielle (cabinet de recrutement)",
+   "src": "Michael Page 2025 relayé (S199) : pentesteurs et consultants en sécurité, 20 000 à 40 000 AED par mois ; milieu"
+  },
+  {
+   "rang": "2=",
+   "id": "2267-US-sal",
+   "code": "2267",
+   "poste": "2267 Optométristes et orthoptistes",
+   "poste_rep": "Orthoptiste",
+   "statut": "salarié",
+   "pays": "US",
+   "resid": "US",
+   "palier": "A*",
+   "p10": 0.6339,
+   "p10_min": 0.6248,
+   "p10_max": 0.6384,
+   "p1": 0.0592,
+   "net_nom": 82566.94690265486,
+   "net_ppa": 65088.24022957298,
+   "fiab": "relayée (2023, site secondaire)",
+   "src": "BLS mai 2023 relayé (S194) : optométristes, médiane 131 860 USD (aucun chiffre de mai 2024 trouvé)"
+  },
+  {
+   "rang": "4=",
+   "id": "2222-GB-ind",
+   "code": "2222",
+   "poste": "2222 Sages-femmes",
+   "poste_rep": "Sage-femme",
+   "statut": "indépendant",
+   "pays": "GB",
+   "resid": "GB",
+   "palier": "A*",
+   "p10": 0.5767,
+   "p10_min": 0.5501,
+   "p10_max": 0.5826,
+   "p1": 0.0463,
+   "net_nom": 48669.45977802933,
+   "net_ppa": 47545.35323583395,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 0.96 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "4=",
+   "id": "2211-DE-ind",
+   "code": "2211",
+   "poste": "2211 Médecins généralistes",
+   "poste_rep": "Médecin de famille (médecine interne générale)",
+   "statut": "indépendant",
+   "pays": "DE",
+   "resid": "DE",
+   "palier": "A*",
+   "p10": 0.7243,
+   "p10_min": 0.6498,
+   "p10_max": 0.7356,
+   "p1": 0.1246,
+   "net_nom": 117913.97076,
+   "net_ppa": 120077.52985651375,
+   "fiab": "relayée (par cabinet, site secondaire)",
+   "src": "Destatis 2023 relayé (S188) : médecine générale, revenu net de cabinet (Reinertrag) médian 218 000 € par cabinet"
+  },
+  {
+   "rang": "4=",
+   "id": "2120-LUf-sal",
+   "code": "2120",
+   "poste": "2120 Mathématiciens, actuaires et statisticiens",
+   "poste_rep": "Actuaire",
+   "statut": "salarié",
+   "pays": "LU",
+   "resid": "FR-LO",
+   "palier": "A*",
+   "p10": 0.6241,
+   "p10_min": 0.5548,
+   "p10_max": 0.6431,
+   "p1": 0.0511,
+   "net_nom": 71309.5906136,
+   "net_ppa": 67913.89582247619,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 1.45 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "4=",
+   "id": "2261-US-ind",
+   "code": "2261",
+   "poste": "2261 Dentistes",
+   "poste_rep": "dentiste propriétaire",
+   "statut": "indépendant",
+   "pays": "US",
+   "resid": "US",
+   "palier": "A",
+   "p10": 0.6884,
+   "p10_min": 0.5803,
+   "p10_max": 0.7162,
+   "p1": 0.0643,
+   "net_nom": 100846.69135088495,
+   "net_ppa": 79498.32129245102,
+   "fiab": "officielle (ordre professionnel)",
+   "src": "ADA 2023 (S114) : dentistes généralistes propriétaires, médiane 185 360 USD"
+  },
+  {
+   "rang": "8=",
+   "id": "2212-DE-ind",
+   "code": "2212",
+   "poste": "2212 Médecins spécialistes",
+   "poste_rep": "spécialistes libéraux, toutes spécialités",
+   "statut": "indépendant",
+   "pays": "DE",
+   "resid": "DE",
+   "palier": "A",
+   "p10": 0.6352,
+   "p10_min": 0.5908,
+   "p10_max": 0.6416,
+   "p1": 0.0865,
+   "net_nom": 98033.71335280001,
+   "net_ppa": 99832.49708404404,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 2.60 (FR+CH) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "8=",
+   "id": "2619-DE-ind",
+   "code": "2619",
+   "poste": "2619 Juristes non classés ailleurs",
+   "poste_rep": "Notaire",
+   "statut": "indépendant",
+   "pays": "DE",
+   "resid": "DE",
+   "palier": "A",
+   "p10": 0.5211,
+   "p10_min": 0.513,
+   "p10_max": 0.5651,
+   "p1": 0.0818,
+   "net_nom": 190038.111228,
+   "net_ppa": 193525.04904869723,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 5.12 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "10",
+   "id": "2264-GB-ind",
+   "code": "2264",
+   "poste": "2264 Physiothérapeutes",
+   "poste_rep": "Masseur-kinésithérapeute",
+   "statut": "indépendant",
+   "pays": "GB",
+   "resid": "GB",
+   "palier": "A",
+   "p10": 0.4364,
+   "p10_min": 0.3676,
+   "p10_max": 0.4364,
+   "p1": 0.007,
+   "net_nom": 56385.91618331835,
+   "net_ppa": 55083.584545399455,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 1.16 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "11=",
+   "id": "2512-CHf-sal",
+   "code": "2512",
+   "poste": "2512 Concepteurs de logiciels",
+   "poste_rep": "Développeur logiciel",
+   "statut": "salarié",
+   "pays": "CH",
+   "resid": "FR-GE",
+   "palier": "A",
+   "p10": 0.3492,
+   "p10_min": 0.3332,
+   "p10_max": 0.3492,
+   "p1": 0.0058,
+   "net_nom": 76487.26219185424,
+   "net_ppa": 69533.8747198675,
+   "fiab": "relayée",
+   "src": "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois ; × 12 × 0,80"
+  },
+  {
+   "rang": "11=",
+   "id": "2522-CHf-sal",
+   "code": "2522",
+   "poste": "2522 Administrateurs de systèmes",
+   "poste_rep": "Ingénieur cloud DevOps",
+   "statut": "salarié",
+   "pays": "CH",
+   "resid": "FR-GE",
+   "palier": "A",
+   "p10": 0.4239,
+   "p10_min": 0.4057,
+   "p10_max": 0.429,
+   "p1": 0.025,
+   "net_nom": 76487.26219185424,
+   "net_ppa": 69533.8747198675,
+   "fiab": "relayée, proxy",
+   "src": "OFS, ESS 2024 (S26) : spécialistes TIC, médiane 9 490 CHF/mois (aucune donnée propre au cloud) ; × 12 × 0,80"
+  },
+  {
+   "rang": "11=",
+   "id": "2612-LU-fon",
+   "code": "2612",
+   "poste": "2612 Magistrats",
+   "poste_rep": "Magistrat de l'ordre judiciaire",
+   "statut": "fonctionnaire",
+   "pays": "LU",
+   "resid": "LU",
+   "palier": "A",
+   "p10": 0.4191,
+   "p10_min": 0.3196,
+   "p10_max": 0.4291,
+   "p1": 0.0257,
+   "net_nom": 81285.99731359999,
+   "net_ppa": 67840.19324668871,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 1.70 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "11=",
+   "id": "2269-GB-ind",
+   "code": "2269",
+   "poste": "2269 Professions de la santé non classées ailleurs",
+   "poste_rep": "Pédicure-podologue",
+   "statut": "indépendant",
+   "pays": "GB",
+   "resid": "GB",
+   "palier": "A",
+   "p10": 0.3205,
+   "p10_min": 0.3205,
+   "p10_max": 0.3437,
+   "p1": 0.0128,
+   "net_nom": 47180.31906823672,
+   "net_ppa": 46090.6068427599,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 0.92 (FR) × salaire moyen OCDE 2025 du pays"
+  },
+  {
+   "rang": "11=",
+   "id": "2141-LUf-sal",
+   "code": "2141",
+   "poste": "2141 Ingénieurs industriels et de production",
+   "poste_rep": "Ingénieur méthodes et industrialisation",
+   "statut": "salarié",
+   "pays": "LU",
+   "resid": "FR-LO",
+   "palier": "A",
+   "p10": 0.2589,
+   "p10_min": 0.2567,
+   "p10_max": 0.3573,
+   "p1": 0.0019,
+   "net_nom": 63379.6263136,
+   "net_ppa": 60361.548870095234,
+   "fiab": "estimé (structure)",
+   "src": "estimé (structure) : rapport au salaire moyen 1.25 (FR+CH) × salaire moyen OCDE 2025 du pays"
+  }
+ ],
+ "non_sourcees_1": [
+  [
+   "2120",
+   "2120-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : estime : enquete de l'Institut des actuaires non recuperee"
+  ],
+  [
+   "2267",
+   "2267-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : estime : aucune serie officielle recuperee"
+  ],
+  [
+   "2269",
+   "2269-FR-ind",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : sources en conflit : ONPP 2014, 25 012 EUR moy. ; UNASA 2024 via JDN, 43 500 EUR brut (S137)"
+  ],
+  [
+   "2634",
+   "2634-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : estime : grille psychologues FPH ; aucune serie recuperee"
+  ],
+  [
+   "2265",
+   "2265-FR-ind",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : estime : aucune serie recuperee"
+  ],
+  [
+   "3322",
+   "3322-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : S08 (PI et cadres) ; estime 3 200 EUR/mois variable inclus"
+  ],
+  [
+   "3313",
+   "3313-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : S08 (PI) ; estime 2 400 EUR/mois"
+  ],
+  [
+   "3513",
+   "3513-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : S08 (PI mediane 2 440 EUR, D9 3 680 EUR) ; estime 2 800 EUR/mois"
+  ],
+  [
+   "3254",
+   "3254-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : S08 (PI mediane 2 440 EUR) ; estime 2 250 EUR/mois"
+  ],
+  [
+   "7127",
+   "7127-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : S08 (ouvriers et PI) ; estime 2 500 EUR/mois"
+  ],
+  [
+   "3115",
+   "3115-FR-sal",
+   "non re-sourcée",
+   "non re-sourcé, valeur v3 : S08 (INSEE 2023 : professions intermediaires mediane 2 440 EUR/mois) ; estime 2 400 EUR"
+  ]
+ ],
+ "non_sourcees_monde": [
+  [
+   "2266",
+   "2266-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.63 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2222",
+   "2222-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.96 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2120",
+   "2120-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.45 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2212",
+   "2212-DE-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 2.60 (FR+CH) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2619",
+   "2619-DE-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 5.12 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2264",
+   "2264-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.16 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2612",
+   "2612-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.70 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2269",
+   "2269-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.92 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2141",
+   "2141-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.25 (FR+CH) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2521",
+   "2521-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.17 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2411",
+   "2411-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 2.05 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2330",
+   "2330-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.08 (FR+CH) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2341",
+   "2341-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.99 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2634",
+   "2634-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.84 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3352",
+   "3352-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.02 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2265",
+   "2265-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.67 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3154",
+   "3154-DE-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 2.63 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2230",
+   "2230-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.57 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3313",
+   "3313-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.80 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3322",
+   "3322-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.07 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2221",
+   "2221-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.30 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2611",
+   "2611-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.51 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2262",
+   "2262-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.05 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3513",
+   "3513-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.94 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "2250",
+   "2250-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.58 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3254",
+   "3254-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.75 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3153",
+   "3153-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 2.58 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3211",
+   "3211-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.92 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "8311",
+   "8311-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.97 (FR+CH) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "7127",
+   "7127-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.84 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3334",
+   "3334-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.62 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "3115",
+   "3115-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.80 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "7126",
+   "7126-GB-ind",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.75 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "0210",
+   "0210-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.88 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "5411",
+   "5411-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 1.02 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "5412",
+   "5412-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.96 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "5223",
+   "5223-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.60 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "5321",
+   "5321-LU-fon",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.73 (FR) × salaire moyen OCDE 2025 du pays"
+  ],
+  [
+   "8332",
+   "8332-LUf-sal",
+   "estimé (structure)",
+   "estimé (structure) : rapport au salaire moyen 0.61 (FR) × salaire moyen OCDE 2025 du pays"
+  ]
+ ],
+ "cellules_vides": [
+  [
+   "2266",
+   "SG",
+   "revenu non trouvé"
+  ],
+  [
+   "2266",
+   "AE",
+   "revenu non trouvé"
+  ],
+  [
+   "2222",
+   "CA",
+   "revenu non trouvé"
+  ],
+  [
+   "2222",
+   "AU",
+   "revenu non trouvé"
+  ],
+  [
+   "2222",
+   "SG",
+   "revenu non trouvé"
+  ],
+  [
+   "2120",
+   "AU",
+   "revenu non trouvé"
+  ],
+  [
+   "2120",
+   "SG",
+   "article sans source ni année (10 416 SGD par mois) : refusé"
+  ],
+  [
+   "2120",
+   "AE",
+   "site de coût de la vie, revenu net : refusé"
+  ],
+  [
+   "2529",
+   "CA",
+   "revenu non trouvé"
+  ],
+  [
+   "2529",
+   "AU",
+   "revenu non trouvé"
+  ],
+  [
+   "2529",
+   "SG",
+   "revenu non trouvé"
+  ],
+  [
+   "2267",
+   "CA",
+   "revenu non trouvé"
+  ],
+  [
+   "2267",
+   "AU",
+   "revenu non trouvé"
+  ],
+  [
+   "2267",
+   "SG",
+   "revenu non trouvé"
+  ],
+  [
+   "2267",
+   "AE",
+   "revenu non trouvé"
+  ],
+  [
+   "2212",
+   "CA",
+   "revenu non trouvé"
+  ],
+  [
+   "2212",
+   "SG",
+   "fourchette de tous médecins, pas de spécialistes : refusée"
+  ],
+  [
+   "2212",
+   "AE",
+   "fourchettes non attribuées (35 000 à 80 000 AED par mois) : refusées"
+  ],
+  [
+   "2619",
+   "US",
+   "sans équivalent : notariat de type latin absent (le notary public n'est pas un juriste)"
+  ],
+  [
+   "2619",
+   "CA",
+   "revenu non trouvé"
+  ],
+  [
+   "2619",
+   "AU",
+   "sans équivalent : notariat de type latin absent (le notary public n'est pas un juriste)"
+  ],
+  [
+   "2619",
+   "SG",
+   "sans équivalent : notariat de type latin absent (le notary public n'est pas un juriste)"
+  ],
+  [
+   "2619",
+   "AE",
+   "sans équivalent : notariat de type latin absent (le notary public n'est pas un juriste)"
+  ],
+  [
+   "2264",
+   "SG",
+   "estimation modélisée (85 524 SGD par an) : refusée"
+  ],
+  [
+   "2264",
+   "AE",
+   "sources contradictoires (247 000 AED par an ou 6 200 AED par mois) : refusées"
+  ],
+  [
+   "2261",
+   "CA",
+   "revenu non trouvé"
+  ],
+  [
+   "2261",
+   "SG",
+   "site de salaires à estimations modélisées (61 956 SGD par an) : refusé"
+  ]
+ ],
+ "top10_codes": [
+  "2266",
+  "2222",
+  "2211",
+  "2120",
+  "2529",
+  "2267",
+  "2212",
+  "2619",
+  "2264",
+  "2261"
+ ],
+ "p1_max": {
+  "classement1": 0.193,
+  "monde": 0.2495
+ }
+}
