@@ -4,51 +4,51 @@
 - p80_etp_ppa : min 25,700, max 183,613
 - cum_ppa : min 412,812, max 1,557,780 (informatif, hors score)
 
-## Classement v5 (Eurofound, poids egaux)
+## Classement v6 (Eurofound, poids egaux)
 
 | Rang | ID | Triplet | EP | IT | QT | ES | CA | PS | RE | W | Palier | Med ETP PPA kEUR | P80 ETP PPA kEUR | Quotite | Top 10 (sur 8) | Rangs min-max | Fiabilite revenu |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | T30 | Medecin generaliste x independant x Suisse (resident) | 4 | 3 | 5 | 4 | 4.50 | 5 | 4.98 | 4.354 | S | 112 | 179 | 1.00 | 8 | 1-1 | relayée |
-| 2= | T05 | Chirurgien-dentiste x liberal x France | 3 | 3 | 5 | 4 | 5.00 | 5 | 4.60 | 4.229 | S* | 94 | 152 | 1.00 | 7 | 2-17 | relayée |
-| 2= | T91 | Chirurgien-dentiste x liberal x Suisse (resident) | 3 | 3 | 5 | 4 | 5.00 | 5 | 4.53 | 4.219 | S* | 91 | 147 | 1.00 | 7 | 2-17 | relayée |
-| 2= | T15 | Orthophoniste x liberal x France | 5 | 4 | 5 | 4 | 5.00 | 5 | 1.47 | 4.210 | S* | 22 | 36 | 1.00 | 7 | 1-20 | non officielle |
-| 5= | T92 | Chirurgien-dentiste x liberal x Etats-Unis | 3 | 3 | 5 | 3 | 5.00 | 5 | 4.94 | 4.135 | A* | 106 | 184 | 1.00 | 6 | 4-25 | officielle (ordre professionnel) |
-| 5= | T89 | Ingenieur cybersecurite (hors SOC) x salarie x Suisse (resident) | 5 | 3 | 5 | 4 | 4.50 | 4 | 3.33 | 4.118 | A* | 61 | 71 | 1.00 | 8 | 3-10 | relayée, proxy |
-| 5= | T01 | Medecin generaliste x liberal x France | 4 | 3 | 4 | 4 | 4.50 | 5 | 4.26 | 4.108 | A* | 80 | 130 | 1.00 | 6 | 5-17 | relayée |
-| 8= | T37 | Developpeur x salarie x Suisse (frontalier) | 5 | 3 | 5 | 4 | 4.50 | 3 | 4.16 | 4.095 | A | 89 | 105 | 1.00 | 6 | 3-21 | relayée |
-| 8= | T82 | Ingenieur cloud et DevOps x salarie x Suisse (frontalier) | 5 | 3 | 4 | 4 | 4.50 | 4 | 4.14 | 4.092 | A | 89 | 103 | 1.00 | 5 | 3-16 | relayée, proxy |
-| 8= | T03 | Medecin specialiste (rang median) x liberal x France | 4 | 3 | 4 | 4 | 4.50 | 5 | 4.08 | 4.083 | A | 74 | 120 | 1.00 | 5 | 7-17 | relayée |
-| 8= | T46 | Actuaire x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 3.06 | 4.080 | A | 52 | 66 | 1.00 | 5 | 6-15 | non re-sourcée |
-| 8= | T90 | Ingenieur cybersecurite (hors SOC) x salarie x Etats-Unis | 5 | 3 | 5 | 3 | 4.50 | 4 | 4.05 | 4.079 | A | 79 | 107 | 1.00 | 5 | 6-20 | officielle |
-| 8= | T83 | Ingenieur cybersecurite (hors SOC) x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 2.96 | 4.066 | A | 50 | 63 | 1.00 | 5 | 6-16 | relayée |
-| 14= | T09 | Sage-femme x liberal x France | 4 | 3 | 5 | 4 | 5.00 | 5 | 2.40 | 4.058 | A | 34 | 56 | 1.00 | 3 | 6-23 | officielle |
-| 14= | T93 | Orthophoniste x salarie x Etats-Unis | 5 | 4 | 4 | 3 | 4.00 | 5 | 3.38 | 4.055 | A | 61 | 76 | 1.00 | 3 | 3-22 | officielle |
-| 16= | T85 | Data engineer x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 2.55 | 4.006 | A | 42 | 51 | 1.00 | 1 | 10-23 | relayée, proxy |
+| 1= | T30 | Medecin generaliste x independant x Suisse (resident) | 4 | 3 | 4 | 4 | 4.50 | 5 | 4.98 | 4.211 | S* | 112 | 179 | 1.00 | 8 | 1-5 | relayée |
+| 1= | T15 | Orthophoniste x liberal x France | 5 | 4 | 5 | 4 | 5.00 | 5 | 1.47 | 4.210 | S* | 22 | 36 | 1.00 | 7 | 1-20 | non officielle |
+| 3= | T92 | Chirurgien-dentiste x liberal x Etats-Unis | 3 | 3 | 5 | 3 | 5.00 | 5 | 4.94 | 4.135 | A* | 106 | 184 | 1.00 | 6 | 2-23 | officielle (ordre professionnel) |
+| 3= | T89 | Ingenieur cybersecurite (hors SOC) x salarie x Suisse (resident) | 5 | 3 | 5 | 4 | 4.50 | 4 | 3.33 | 4.118 | A* | 61 | 71 | 1.00 | 8 | 2-10 | relayée, proxy |
+| 3= | T01 | Medecin generaliste x liberal x France | 4 | 3 | 4 | 4 | 4.50 | 5 | 4.26 | 4.108 | A* | 80 | 130 | 1.00 | 6 | 3-17 | relayée |
+| 6= | T37 | Developpeur x salarie x Suisse (frontalier) | 5 | 3 | 5 | 4 | 4.50 | 3 | 4.16 | 4.095 | A | 89 | 105 | 1.00 | 7 | 2-21 | relayée |
+| 6= | T82 | Ingenieur cloud et DevOps x salarie x Suisse (frontalier) | 5 | 3 | 4 | 4 | 4.50 | 4 | 4.14 | 4.092 | A | 89 | 103 | 1.00 | 6 | 2-15 | relayée, proxy |
+| 6= | T05 | Chirurgien-dentiste x liberal x France | 3 | 3 | 4 | 4 | 5.00 | 5 | 4.60 | 4.086 | A | 94 | 152 | 1.00 | 6 | 3-25 | relayée |
+| 6= | T03 | Medecin specialiste (rang median) x liberal x France | 4 | 3 | 4 | 4 | 4.50 | 5 | 4.08 | 4.083 | A | 74 | 120 | 1.00 | 5 | 5-17 | relayée |
+| 6= | T46 | Actuaire x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 3.06 | 4.080 | A | 52 | 66 | 1.00 | 5 | 4-15 | non re-sourcée |
+| 6= | T90 | Ingenieur cybersecurite (hors SOC) x salarie x Etats-Unis | 5 | 3 | 5 | 3 | 4.50 | 4 | 4.05 | 4.079 | A | 79 | 107 | 1.00 | 5 | 4-20 | officielle |
+| 6= | T91 | Chirurgien-dentiste x liberal x Suisse (resident) | 3 | 3 | 4 | 4 | 5.00 | 5 | 4.53 | 4.076 | A | 91 | 147 | 1.00 | 6 | 3-29 | relayée |
+| 6= | T83 | Ingenieur cybersecurite (hors SOC) x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 2.96 | 4.066 | A | 50 | 63 | 1.00 | 5 | 4-16 | relayée |
+| 14= | T09 | Sage-femme x liberal x France | 4 | 3 | 5 | 4 | 5.00 | 5 | 2.40 | 4.058 | A | 34 | 56 | 1.00 | 4 | 4-23 | officielle |
+| 14= | T93 | Orthophoniste x salarie x Etats-Unis | 5 | 4 | 4 | 3 | 4.00 | 5 | 3.38 | 4.055 | A | 61 | 76 | 1.00 | 3 | 2-22 | officielle |
+| 16= | T85 | Data engineer x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 2.55 | 4.006 | A | 42 | 51 | 1.00 | 2 | 10-23 | relayée, proxy |
 | 16= | T64 | Administrateur UE (AD) x fonctionnaire europeen x Luxembourg (resident) | 5 | 3 | 4 | 3 | 4.00 | 5 | 4.00 | 4.000 | A | 86 | 93 | 1.00 | 3 | 10-25 | relayée (grille) |
-| 16= | T39 | Developpeur x salarie x Luxembourg (frontalier) | 5 | 3 | 5 | 4 | 4.50 | 3 | 3.46 | 3.995 | A | 62 | 79 | 1.00 | 1 | 10-36 | non re-sourcée |
+| 16= | T39 | Developpeur x salarie x Luxembourg (frontalier) | 5 | 3 | 5 | 4 | 4.50 | 3 | 3.46 | 3.995 | A | 62 | 79 | 1.00 | 2 | 10-36 | non re-sourcée |
 | 16= | T71 | Magistrat x fonctionnaire x France | 5 | 3 | 4 | 3 | 4.50 | 5 | 3.36 | 3.979 | A | 61 | 73 | 1.00 | 2 | 10-29 | relayée |
-| 16= | T16 | Orthoptiste x salarie x France | 5 | 4 | 4 | 4 | 4.00 | 5 | 1.85 | 3.978 | A | 31 | 36 | 1.00 | 3 | 6-35 | non re-sourcée |
-| 21= | T35 | Developpeur x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 2.33 | 3.976 | A | 37 | 47 | 1.00 | 1 | 10-32 | relayée |
-| 21= | T10 | Masseur-kinesitherapeute x liberal x France | 2 | 4 | 5 | 4 | 5.00 | 5 | 2.83 | 3.975 | A | 42 | 67 | 1.00 | 2 | 6-45 | officielle |
+| 16= | T16 | Orthoptiste x salarie x France | 5 | 4 | 4 | 4 | 4.00 | 5 | 1.85 | 3.978 | A | 31 | 36 | 1.00 | 3 | 4-35 | non re-sourcée |
+| 21= | T35 | Developpeur x salarie x France | 5 | 3 | 5 | 4 | 4.50 | 4 | 2.33 | 3.976 | A | 37 | 47 | 1.00 | 2 | 10-32 | relayée |
+| 21= | T10 | Masseur-kinesitherapeute x liberal x France | 2 | 4 | 5 | 4 | 5.00 | 5 | 2.83 | 3.975 | A | 42 | 67 | 1.00 | 3 | 4-45 | officielle |
 | 21= | T86 | Ingenieur cloud et DevOps x salarie x Suisse (resident) | 5 | 3 | 4 | 4 | 4.50 | 4 | 3.32 | 3.975 | A | 61 | 71 | 1.00 | 1 | 10-27 | relayée, proxy |
-| 21= | T81 | Ingenieur cloud et DevOps x independant (freelance) x France | 5 | 3 | 5 | 3 | 5.00 | 3 | 3.71 | 3.959 | A | 69 | 90 | 1.00 | 0 | 15-39 | non officielle |
+| 21= | T81 | Ingenieur cloud et DevOps x independant (freelance) x France | 5 | 3 | 5 | 3 | 5.00 | 3 | 3.71 | 3.959 | A | 69 | 90 | 1.00 | 0 | 14-39 | non officielle |
 | 25= | T42 | Ingenieur methodes-industrialisation x salarie x Suisse (frontalier) | 4 | 3 | 5 | 4 | 4.50 | 3 | 4.09 | 3.941 | A | 84 | 103 | 1.00 | 0 | 12-39 | relayée, proxy |
 | 25= | T68 | Expert-comptable x liberal x France | 5 | 3 | 4 | 3 | 4.50 | 4 | 4.06 | 3.938 | A | 73 | 119 | 1.00 | 0 | 12-32 | relayée, proxy |
-| 25= | T41 | Ingenieur methodes-industrialisation x salarie x France | 4 | 3 | 5 | 4 | 4.50 | 4 | 3.05 | 3.936 | A | 52 | 65 | 1.00 | 0 | 16-30 | relayée, proxy |
+| 25= | T41 | Ingenieur methodes-industrialisation x salarie x France | 4 | 3 | 5 | 4 | 4.50 | 4 | 3.05 | 3.936 | A | 52 | 65 | 1.00 | 0 | 14-29 | relayée, proxy |
 | 25= | T40 | Developpeur x salarie x Canada (Quebec) | 5 | 3 | 5 | 4 | 4.50 | 3 | 2.91 | 3.916 | A | 50 | 60 | 1.00 | 0 | 20-41 | officielle |
 | 29= | T43 | Ingenieur methodes-industrialisation x salarie x Allemagne | 4 | 3 | 5 | 3 | 4.50 | 4 | 3.75 | 3.893 | A | 73 | 88 | 1.00 | 0 | 20-35 | relayée |
 | 29= | T02 | Medecin generaliste x salarie (centre de sante) x France | 4 | 3 | 4 | 4 | 4.00 | 5 | 3.18 | 3.883 | A | 57 | 67 | 1.00 | 0 | 19-35 | non officielle |
 | 29= | T76 | Pedicure-podologue x liberal x France | 3 | 4 | 5 | 4 | 5.00 | 4 | 2.14 | 3.877 | A | 33 | 45 | 1.00 | 0 | 18-43 | non re-sourcée |
-| 29= | T80 | Ingenieur cloud et DevOps x salarie x France | 5 | 3 | 4 | 4 | 4.50 | 4 | 2.61 | 3.873 | A | 43 | 53 | 1.00 | 0 | 25-35 | relayée, proxy |
-| 33= | T38 | Developpeur x salarie x Allemagne | 5 | 3 | 5 | 3 | 4.50 | 3 | 3.32 | 3.832 | A | 59 | 73 | 1.00 | 0 | 27-42 | relayée |
+| 29= | T80 | Ingenieur cloud et DevOps x salarie x France | 5 | 3 | 4 | 4 | 4.50 | 4 | 2.61 | 3.873 | A | 43 | 53 | 1.00 | 0 | 23-35 | relayée, proxy |
+| 33= | T38 | Developpeur x salarie x Allemagne | 5 | 3 | 5 | 3 | 4.50 | 3 | 3.32 | 3.832 | A | 59 | 73 | 1.00 | 0 | 25-42 | relayée |
 | 33= | T77 | Ergotherapeute x fonctionnaire FPH x France | 4 | 4 | 4 | 4 | 4.00 | 5 | 1.74 | 3.820 | A | 30 | 34 | 1.00 | 0 | 21-43 | officielle (grille) |
 | 33= | T56 | Professeur des ecoles x fonctionnaire x France | 4 | 3 | 5 | 3 | 4.50 | 5 | 2.16 | 3.809 | A | 35 | 42 | 1.00 | 0 | 21-42 | officielle |
 | 33= | T88 | Ingenieur cloud et DevOps x salarie x Etats-Unis | 5 | 3 | 4 | 3 | 4.50 | 3 | 4.14 | 3.806 | A | 83 | 111 | 1.00 | 0 | 23-42 | officielle, proxy |
 | 37= | T34 | Masseur-kinesitherapeute x salarie x Suisse (frontalier) | 2 | 4 | 4 | 4 | 4.00 | 5 | 3.59 | 3.799 | A | 70 | 78 | 1.00 | 0 | 21-52 | officielle, proxy |
 | 37= | T60 | Attache d'administration x fonctionnaire x France | 5 | 3 | 4 | 3 | 4.00 | 5 | 2.46 | 3.780 | A | 40 | 49 | 1.00 | 0 | 27-40 | officielle, proxy |
 | 37= | T61 | Inspecteur des finances publiques x fonctionnaire x France | 5 | 3 | 4 | 3 | 4.00 | 5 | 2.46 | 3.780 | A | 40 | 49 | 1.00 | 0 | 27-40 | officielle, proxy |
-| 40= | T36 | Developpeur x independant (freelance) x France | 5 | 3 | 5 | 3 | 5.00 | 2 | 3.33 | 3.762 | A | 58 | 76 | 1.00 | 0 | 30-52 | non officielle |
-| 40= | T62 | Controleur des finances publiques x fonctionnaire x France | 5 | 4 | 4 | 3 | 3.33 | 5 | 1.99 | 3.760 | A | 33 | 39 | 1.00 | 0 | 30-45 | officielle, proxy |
+| 40= | T36 | Developpeur x independant (freelance) x France | 5 | 3 | 5 | 3 | 5.00 | 2 | 3.33 | 3.762 | A | 58 | 76 | 1.00 | 0 | 29-52 | non officielle |
+| 40= | T62 | Controleur des finances publiques x fonctionnaire x France | 5 | 4 | 4 | 3 | 3.33 | 5 | 1.99 | 3.760 | A | 33 | 39 | 1.00 | 0 | 29-45 | officielle, proxy |
 | 40= | T20 | Psychologue x contractuel FPH x France | 5 | 3 | 5 | 4 | 4.50 | 3 | 1.77 | 3.753 | A | 30 | 35 | 1.00 | 0 | 34-48 | non re-sourcée |
 | 40= | T63 | Controleur aerien (ICNA) x fonctionnaire x France | 5 | 2 | 3 | 4 | 2.83 | 5 | 4.31 | 3.735 | A | 94 | 113 | 1.00 | 0 | 29-51 | officielle |
 | 44= | T78 | Dieteticien x liberal x France | 5 | 4 | 5 | 4 | 4.50 | 2 | 1.42 | 3.703 | A | 24 | 32 | 1.00 | 0 | 36-54 | non re-sourcée |

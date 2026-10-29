@@ -1,82 +1,89 @@
-## 9. Conclusion : classement final
+## 9. Conclusion finale (version 6)
 
-Règle déclarée (1.12) : le classement final réunit les triplets présents dans le haut du classement (10 premiers, rangs partagés compris) dans les 8 configurations de poids. Viennent ensuite ceux qui y sont dans les 4 configurations citées dans la demande (poids égaux, revenu, autonomie et sécurité doublés), puis, signalés à part, ceux qui n'y sont que dans une seule.
+### 9.1 Classement final et incertitude
 
-### 9.1 Noyau robuste : dans le haut du classement dans les 8 configurations
-
-| Rang à poids égaux | Triplet | Palier | Rangs sur les 8 configurations | En une phrase |
-|---|---|---|---|---|
-| 1 | T30 Médecin généraliste × indépendant × Suisse (résident) | S | 1 à 1 | Premier partout : médian le plus élevé du pool en PPA (112 k€, OFS 2019, 43 h par semaine, donc pas de conversion), aucune note sous 3 ; seule sa note QT a un appui chiffré (heures), ses notes EP, IT, ES et PS sont estimées. |
-| 5= | T89 Ingénieur cybersécurité (hors SOC) × salarié × Suisse (résident) | A* | 3 à 10 | Aucune dimension faible (EP 5, QT 5, PS 4), mais revenu moyen pour la Suisse (61 k€ en PPA) et proxy (médiane de tous les spécialistes TIC suisses) ; sa demande n'est documentée qu'en France (P4, donnée transposée) ; dernier admis quand le revenu ou la sécurité comptent double (10e). |
-
-### 9.2 Dans le haut du classement dans les 4 configurations citées, pas dans les 8
-
-| Rang | Triplet | Palier | Sort du haut du classement quand | En une phrase |
-|---|---|---|---|---|
-| 2= | T05 Chirurgien-dentiste × libéral × France | S* | EP doublé (17e) | Compétences et autonomie maximales (CA 5), 94 k€ médians (CARCDSF 2023) ; ses postures (EP 3, cohérent avec 84 % de troubles musculosquelettiques chez les orthodontistes, E8) le font sortir quand l'environnement physique compte double ; heures non trouvées. |
-| 2= | T91 Chirurgien-dentiste × libéral × Suisse (résident) | S* | EP doublé (17e) | Mêmes notes que T05 ; revenu désormais tiré d'une enquête officielle (ESPA de l'OFS exploitée par la ZHAW pour la FMH : 166 000 CHF médians après 34 ans, 42 h par semaine, S111), soit 91 k€ en PPA. |
-| 5= | T92 Chirurgien-dentiste × libéral × États-Unis | A* | EP doublé (25e), ES doublé (13e) | P80 le plus élevé du pool (184 k€ en PPA, ADA), 36 h par semaine ; exercice en anglais (ES 3) ; données américaines peu transférables. |
-| 5= | T01 Médecin généraliste × libéral × France | A* | EP doublé (17e), QT doublé (16e) | 80 k€ médians ; 46 h par semaine en 2025 (DREES), donc F1 et QT 4, à 1 h du seuil de 45 h. |
-| 8= | T03 Médecin spécialiste (rang médian) × libéral × France | A | EP, IT et QT doublés (17e, 11e, 16e) | 74 k€ médians au rang médian des spécialités ; heures non trouvées. |
-
-### 9.3 Autres triplets souvent dans le haut du classement
-
-| Rang | Triplet | Top 10 sur 8 | Remarque |
-|---|---|---|---|
-| 2= | T15 Orthophoniste × libéral × France | 7 | Premier quand EP ou IT comptent double, 20e quand le revenu compte double (22 k€, source non officielle, heures non trouvées). Son ES 4 est en tension avec le seul chiffre trouvé, celui de son groupe (S2) : appliqué, il passerait 7e, palier A. |
-| 8= | T37 Développeur × salarié × Suisse (frontalier) | 6 | 89 k€ en PPA ; sort quand l'intensité ou la sécurité comptent double (PS 3, estimée). |
-| 8= | T82, T46, T90, T83 | 5 | Cloud et DevOps frontalier en Suisse, actuaire, cybersécurité aux États-Unis et en France : environnement de bureau (E1) et compétences élevées ; le revenu de T46 n'est pas re-sourcé. |
-| 14= à 16= | T09, T93, T64, T16 | 3 | Sage-femme libérale, orthophoniste aux États-Unis, administrateur de l'UE, orthoptiste. |
-
-### 9.4 Dans le haut du classement dans une seule configuration
-
-T85 data engineer (France), T39 développeur frontalier au Luxembourg, T35 développeur (France), T86 ingénieur cloud résident en Suisse : tous seulement quand l'environnement physique compte double (EP 5 des métiers de bureau). T35 et T85 y entrent grâce à leur PS passé de 3 à 4 (P3, créations d'emplois des ingénieurs de l'informatique).
+| Rang à poids égaux | Triplet | Palier | Top 10 sur les 8 pondérations | Top 10 sur 10 000 tirages des notes (A) | 1er sur 10 000 tirages (A) | Notes estimées sur 6 |
+|---|---|---|---|---|---|---|
+| 1= | T30 Médecin généraliste × indépendant × Suisse (résident) | S* | 8 (rangs 1 à 5) | 65 % | 19,3 % | 3 : EP, IT, ES |
+| 1= | T15 Orthophoniste × libéral × France | S* | 7 | 47 % | 2,3 % | 3 : EP, IT, QT |
+| 3= | T92 Chirurgien-dentiste × libéral × États-Unis | A* | 6 | 61 % | 9,3 % | 2 : IT, ES |
+| 3= | T89 Ingénieur cybersécurité (hors SOC) × salarié × Suisse (résident) | A* | 8 (rangs 2 à 10) | 56 % | 7,7 % | 2 : IT, ES |
+| 3= | T01 Médecin généraliste × libéral × France | A* | 6 | 51 % | 10,3 % | 3 : EP, IT, ES |
+| 6= | T82 Ingénieur cloud et DevOps × salarié × Suisse (frontalier) | A | 6 | 49 % | 8,8 % | 3 : IT, QT, ES |
+| 6= | T03 Médecin spécialiste (rang médian) × libéral × France | A | 5 | 44 % | 7,5 % | 3 : EP, IT, ES |
+| 6= | T37 Développeur × salarié × Suisse (frontalier) | A | 7 | 39 % | 3,8 % | 3 : IT, QT, ES |
+| 6= | T91 Chirurgien-dentiste × libéral × Suisse (résident) | A | 6 | 39 % | 2,9 % | 2 : IT, ES |
+| 6= | T90 Ingénieur cybersécurité (hors SOC) × salarié × États-Unis | A | 5 | 38 % | 3,0 % | 2 : IT, ES |
+| 6= | T05 Chirurgien-dentiste × libéral × France | A | 6 | 36 % | 2,8 % | 3 : IT, ES, PS |
+| 6= | T83 Ingénieur cybersécurité (hors SOC) × salarié × France | A | 5 | 35 % | 1,6 % | 2 : IT, ES |
+| 6= | T46 Actuaire × salarié × France | A | 5 | 32 % | 2,5 % | 3 : IT, QT, ES |
 
 Lecture :
-- Avec des poids égaux, les conditions de travail (EP, IT, QT) pèsent 3/7 du score, contre 19 % pour l'ancienne charge, et l'autonomie passe de 22 % à 1/7 (CA, qui mêle latitude et niveau de compétence). Les métiers de bureau à revenu élevé montent (T37 du 23e au 8e rang, T82 du 27e au 8e, T46 du 16e au 8e) ; les soignants libéraux à revenu bas ou à contraintes physiques descendent (sage-femme libérale du 5e au 14e, kinésithérapeute libéral du 7e au 21e). Détail triplet par triplet en section 7.
-- Palier S : T30, T05, T91, T15 ; les trois derniers sont à moins de 0,1 de la frontière de 4,2, fixée par la consigne. Scénario IA fort : aucun des 22 premiers ne change de palier.
-- Le revenu en équivalent temps plein ne modifie aucune cellule : toutes les heures trouvées dépassent 35 h, ou la source est déjà en temps plein. Là où un temps partiel est probable (orthophoniste, sage-femme libérale, ostéopathe), les heures n'ont pas été trouvées ; ces cellules gardent la quotité 1 et sont signalées.
-- Les notes hors revenu du haut du classement sont surtout des estimations : les statistiques par métier trouvées portent surtout sur l'hôpital, la police, le bâtiment et le transport, qui sont en bas du classement, et les confirment.
+- Selon la règle déclarée (1.12), le classement final est T30 et T89 : seuls triplets dans le top 10 des 8 pondérations.
+- Ce classement ne résiste pas aux notes estimées. Les 13 premiers tiennent en 0,15 point (4,21 à 4,07), à peine une marche de note (1/7 = 0,14), alors qu'un écart de plus ou moins 1 sur 2 ou 3 notes estimées déplace un score d'environ 0,2. Aucun triplet n'est dans le top 10 de 70 % des tirages, et aucun dans 90 %.
+- T30 est le premier le plus probable (19,3 % des tirages), devant T01 (10,3 %), T92 (9,3 %), T82 (8,8 %), T89 (7,7 %) et T03 (7,5 %). T15, premier ex aequo au calcul de base, ne l'est que dans 2,3 % des tirages : trois de ses notes estimées sont à 5 et ne peuvent que baisser.
+- Hors de ces 13, cinq triplets dépassent 25 % de chances d'être dans le top 10 : T71 magistrat (32 %), T86 cloud résident en Suisse, T64 administrateur de l'UE, T39 développeur au Luxembourg, T93 orthophoniste aux États-Unis.
+- Les variantes B (écarts communs à un groupe de métiers) et C (notes mixtes tirées aussi) donnent le même tableau : T30 premier le plus probable (19 à 21 %), aucun triplet au-dessus de 70 % pour le top 10.
 
-## 10. Ce qui est vérifiable et ce qui est mon opinion
+### 9.2 Ce qui est vérifié par des données
 
-| Élément | Statut |
-|---|---|
-| Les 7 dimensions et leur lien avec la santé et le bien-être des travailleurs | Consensus publié (Eurofound, S116). Composantes de la qualité du temps de travail : durée, horaires atypiques, aménagement, flexibilité ; le télétravail n'en fait pas partie (S150). |
-| Poids égaux | Le choix le plus neutre, pas un fait : d'où les 8 configurations. Seuls T30 et T89 restent dans le haut du classement dans les 8. |
-| Revenus cités (codes S), grilles, indices de prix, heures | Vérifiables, mais lus à travers des extraits de moteur de recherche : à contrôler dans les tableaux primaires avant toute décision. |
-| Passage au net, moyenne vers médiane, P80, quotité | Hypothèses déclarées (1.4, 1.11, 1.12), modifiables dans `revenus.py`. |
-| Notes EP et IT par groupe de métiers, latitude de décision (moitié de CA), ES et PS des libéraux | Estimations normatives (mon jugement). Sur 558 notes hors revenu : 9 sourcées au niveau du métier, 239 mixtes (dont les 93 notes CA), 310 estimées. |
-| Règles d'ancrage (bandes EP, seuil de 1,5 fois la moyenne, seuil de 40 % pour F3, grille PS) | Choix déclarés (1.13) avant leur application ; limites arbitraires. 3 notes modifiées, 18 tensions signalées. |
-| Revenus et notes aux États-Unis | Transférabilité limitée : congés payés, assurance santé et protection contre le licenciement non comparables ; seul l'écart de prix est corrigé. |
-| Barrière d'entrée, probabilités p, scénarios IA | Informatifs, hors score ; poids de preuve faible. |
-| Paliers, seuil d'égalité | Arbitraires ; 21 triplets sur 93 sont à moins de 0,1 d'une frontière de palier. |
+| Constat | Chiffres | Sources |
+|---|---|---|
+| Revenu médian net en équivalent temps plein, en PPA, des 13 premiers | T30 112 k€ (OFS 2019) ; T92 106 k€ (ADA 2023) ; T05 94 k€ (CARCDSF 2023) ; T91 91 k€ (enquête ESPA de l'OFS, exploitée par la ZHAW) ; T37 89 k€ (OFS, ESS 2024) ; T01 80 k€ (DREES 2021) ; T90 79 k€ (BLS 2024) ; T03 74 k€ (DREES) ; T83 50 k€ (APEC 2025) | S24, S108, S114, S04, S111, S26, S02, S113, S17 |
+| Heures réelles | T01 46 h, T30 43 h, T91 42 h, T92 36,1 h par semaine | S07, S131, S111, S114 |
+| Gardes obligatoires | Médecins et médecins-dentistes indépendants en Suisse (LPMéd art. 40 let. g et règles cantonales) ; chirurgiens-dentistes en France (permanence des dimanches et jours fériés) ; aucune obligation pour les médecins libéraux en France (environ 40 % participent, volontariat) | S155 à S158 |
+| Demande et sécurité | Pénurie de médecins de premier recours en Suisse (jusqu'à 30 % des consultations non couvertes en 2030, Obsan) ; pénurie projetée de dentistes aux États-Unis (11 860 équivalents temps plein en 2037, HRSA, contestée par l'ADA) ; orthophonistes aux États-Unis +15 % et analystes en sécurité +29 % d'emplois projetés (BLS, tous métiers +3,1 %) ; ingénieurs de l'informatique en France +26 % (DARES et France Stratégie) ; offres en cybersécurité +49 % (ANSSI) | S160, S161, S162, S87, S117, S78 |
+| Compétences | Niveau de compétence CITP-08 de chaque métier (moitié de la note CA) | S115 |
+| Conditions de travail mesurées par métier | Hôpital (DREES), police (SSMSI), enseignants (Insee, DEPP), bâtiment et transport (DARES, SDES, Eurofound) : ces métiers sont dans la moitié basse du classement, et les chiffres confirment leurs notes | S138, S142, S145, S58, S143, S146 |
+| Résistance aux pondérations | T30 et T89 dans le top 10 des 8 configurations ; T30, T92, T89, T01, T05 et T91 dans les 4 configurations citées | Section 4 |
+
+Statut des 558 notes hors revenu : 12 sourcées au niveau du métier, 247 mixtes (dont les 93 notes CA), 299 estimées.
+
+### 9.3 Ce qui dépend d'estimations
+
+| Élément estimé | Triplets du haut concernés | Effet mesuré |
+|---|---|---|
+| EP, IT et ES des professions libérales de santé : aucune statistique de conditions de travail pour les dentistes, les orthophonistes et les généralistes en cabinet | T30, T15, T01, T03, T05, T91, T92 | Avec ces notes à plus ou moins 1, l'ordre du groupe de tête n'est plus déterminé (9.1) |
+| IT, ES et QT des métiers de l'informatique : chiffres de groupe seulement | T89, T82, T37, T90, T83, T46 | Idem |
+| Latitude de décision, moitié de la note CA | Tous | Variante C : même conclusion |
+| ES 4 de l'orthophoniste, alors que le seul chiffre (son groupe socioprofessionnel) indique 3 | T15 | Chiffre appliqué : T15 passe du 1er au 4e rang ex aequo, palier A |
+| PS 5 du dentiste suisse, alors que l'enquête de la SSO (2016) montre des cabinets urbains sous-occupés | T91 | Chiffre appliqué : T91 passe du 6e au 18e rang ex aequo |
+| Absence d'astreintes en cybersécurité, alors qu'une enquête d'éditeur donne 70 % de travail fréquent le week-end | T89, T83, T90 | Chiffre appliqué : T89 passe du 3e au 14e rang ex aequo |
+| F3 pour des gardes obligatoires dont la fréquence n'est publiée nulle part | T30, T91, T05 | Sans F3 (version 5) : T05 et T91 seraient 2e ex aequo, T30 seul 1er |
+| Poids égaux, frontières de palier, seuil d'égalité, règles de conversion des chiffres | Tous | 8 pondérations : seuls T30 et T89 restent dans le top 10 ; 20 triplets à moins de 0,1 d'une frontière |
+| Revenus non officiels ou non re-sourcés | T15 (UNASA), T46 (valeur v3) | Non testé par les tirages |
+
+### 9.4 Ce que l'on peut conclure, et ce que l'on ne peut pas
+
+- **Conclusion appuyée par les données et stable sous les pondérations :** pour le sujet de référence, une fois installé, le haut du classement réunit les professions médicales et dentaires libérales (France, Suisse, États-Unis), l'orthophoniste libéral en France, et l'ingénierie informatique et cybersécurité (Suisse, États-Unis, France). Leurs revenus, leurs heures, leurs obligations de garde et la demande de main-d'œuvre sont documentés.
+- **Conclusion non appuyée :** l'ordre exact à l'intérieur de ce groupe. « T30 est le meilleur triplet » n'est vrai que dans 19 % des tirages : c'est le plus probable, pas un résultat établi.
+- **Ce qui trancherait :** des notes EP, IT et ES mesurées pour les dentistes, les généralistes en cabinet, les orthophonistes et les ingénieurs de l'informatique, en France (enquête Conditions de travail de la DARES par famille professionnelle) et en Suisse (ESPA par profession) ; et la fréquence réelle des gardes.
 
 Règle de révision : un rang ne changera que sur une donnée nouvelle (par exemple un tableau primaire qui contredit une cellule) ou une incohérence démontrée, jamais sur une simple contestation.
 
-## 11. Cellules signalées
+## 10. Cellules signalées
 
-### 11.1 Revenu
+### 10.1 Revenu
 
 - Non re-sourcées (valeur v3, estimée pour le sujet à 40 ans, donc parfois sous-estimée pour un professionnel installé) : T14, T16, T18, T20, T39, T44, T45, T46, T47, T52, T53, T69, T70, T72, T76, T78, T79 (17 cellules ; T53 et T76 : sources trouvées mais non officielles ou en conflit).
-- Non officielles : T02 (fourchettes de sites spécialisés), T15 (UNASA ; la DREES ne publie aucun revenu des orthophonistes, son jeu de données 2026 ne les couvre pas, S136), T22 (registre associatif des ostéopathes), T36 et T81 (tarifs journaliers privés), T74 (sites spécialisés, Air France).
+- Non officielles : T02 (fourchettes de sites spécialisés), T15 (UNASA ; la DREES ne publie aucun revenu des orthophonistes, S136), T22 (registre associatif des ostéopathes), T36 et T81 (tarifs journaliers privés), T74 (sites spécialisés, Air France).
 - Proxy ou champ plus large : T04, T21, T59 ; T11, T17, T33, T34, T60, T61, T62, T87, T88 ; T41, T42, T48, T49, T51, T58, T68, T73, T80, T82, T84, T85, T86, T89.
 - Données anciennes : T23, T24, T29, T55.
-- Temps de travail réel non trouvé (quotité 1, pas de conversion en équivalent temps plein) : T03, T05, T07, T09, T13, T14, T15, T16, T18, T19, T20, T22, T35, T39, T44, T45, T46, T47, T48, T51, T52, T53, T67, T68, T69, T70, T72, T73, T76, T78, T79 (31 cellules). Pour T35, la source DARES ne précise pas si le champ est le temps complet.
-- Dentiste en Suisse, prioritaire dans la demande : la SSO ne publie pas de revenus ; T91 repose maintenant sur l'enquête officielle ESPA (OFS, 2014 à 2017) exploitée par la ZHAW pour la FMH, avec 42 h par semaine (S111), moins la prime LAMal ; fiabilité « relayée » (lue dans la presse professionnelle).
+- Temps de travail réel non trouvé (quotité 1, pas de conversion en équivalent temps plein) : T03, T05, T07, T09, T13, T14, T15, T16, T18, T19, T20, T22, T35, T39, T44, T45, T46, T47, T48, T51, T52, T53, T67, T68, T69, T70, T72, T73, T76, T78, T79 (31 cellules).
 
-### 11.2 Notes hors revenu
+### 10.2 Notes hors revenu
 
 - Modifiées par un chiffre de statut S : T35 et T85, PS 3 → 4 (P3) ; T57, ES 3 → 2 (S3).
-- En tension avec un chiffre de groupe (note maintenue, effet en section 4) : ES de T09, T10, T11, T13, T15, T16, T18, T34, T76, T77, T78, T93 (S2) ; EP de T08 et T14 (E6) ; EP de T53 et T54 (E5) ; PS de T36 (P3) ; QT de T75 (Q8).
-- Aucune statistique trouvée pour les conditions de travail des dentistes et des orthophonistes, qui occupent le haut du classement, ni des kinésithérapeutes (hors heures) : leurs notes IT sont des estimations, comme leurs notes EP et ES, sauf l'appui indirect des orthodontistes pour l'EP des dentistes (E8) et le chiffre de groupe pour l'ES des orthophonistes et des kinésithérapeutes (S2).
+- Facteur F3 ajouté pour une garde obligatoire (1.14) : T30, T91, T05 ; QT 5 → 4.
+- En tension avec un chiffre de statut M (note maintenue, effet en section 4) : ES de T09, T10, T11, T13, T15, T16, T18, T34, T76, T77, T78, T93 (S2) ; EP de T08 et T14 (E6) ; EP de T53 et T54 (E5) ; PS de T36 (P3) et de T91 (P11) ; QT de T83, T89 et T90 (Q19) et de T75 (Q8).
+- Chiffres trouvés sans référence comparable, note inchangée : épuisement professionnel des orthophonistes (48,6 %), des chirurgiens-dentistes (environ 35 % des répondants de l'Ordre), stress en cybersécurité (62 %) ; projection de densité des dentistes en France (+39 % d'ici 2050) (S159, S166).
 
-### 11.3 Pour lever ces limites
+### 10.3 Pour lever ces limites
 
-- Ajouter dares.travail-emploi.gouv.fr, insee.fr, drees.solidarites-sante.gouv.fr et bfs.admin.ch aux domaines autorisés de l'environnement cloud (accès réseau) permettrait de lire les tableaux primaires : portraits statistiques des métiers de la DARES (conditions de travail par famille professionnelle), enquête Sumer 2017 par famille professionnelle, jeux de données de la DREES, ESPA de l'OFS par profession.
-- À chercher ensuite : heures des orthophonistes et des dentistes libéraux (FNO, ONDPS, DREES), revenus des cellules non re-sourcées, demande de développeurs hors de France (Suisse, Luxembourg, Allemagne, Québec).
+- Les domaines dares.travail-emploi.gouv.fr, www.insee.fr, drees.solidarites-sante.gouv.fr et www.bfs.admin.ch sont toujours refusés par le proxy de cette session (403). Une fois ouverts, il faudra lire : l'enquête Conditions de travail 2019 par famille professionnelle (DARES), l'enquête Sumer 2017 par famille professionnelle, les tableaux de l'ESPA par profession (OFS), les jeux de données de la DREES.
+- À chercher ensuite : fréquence des gardes (sociétés cantonales de médecine et de médecine dentaire, conseils départementaux de l'Ordre), heures des orthophonistes et des dentistes libéraux en France, revenus des cellules non re-sourcées.
 
-## 12. Sources
+## 11. Sources
 
 | Code | Source |
 |---|---|
@@ -231,3 +238,15 @@ Règle de révision : un rang ne changera que sur une donnée nouvelle (par exem
 | S152 | DARES, tensions sur le marché du travail en 2024 (février 2026) et déclinaisons régionales : https://centre-val-de-loire.dreets.gouv.fr/sites/centre-val-de-loire.dreets.gouv.fr/IMG/pdf/dares_dr_tensions_2024.pdf ; https://pays-de-la-loire.dreets.gouv.fr/sites/pays-de-la-loire.dreets.gouv.fr/IMG/pdf/les_tensions_sur_le_marche_du_travail_en_2024_dans_la_region_des_pays_de_la_loire.pdf ; https://tpeactu.fr/2026/02/05/metiers-en-tension-marche-du-travail-2024/ |
 | S153 | Troubles musculosquelettiques des orthodontistes (enquête 2020) : https://odf.edpsciences.org/articles/odf/abs/2022/02/odf2022019/odf2022019.html ; population générale (Santé publique France) : https://www.santepubliquefrance.fr/maladies-et-traumatismes/maladies-liees-au-travail/troubles-musculo-squelettiques/documents/enquetes-etudes/prevalence-de-tms-en-france-dans-la-population-generale-et-dans-la-population-des-actifs-occupes-selon-la-categorie-socioprofessionnelle-et-le-sec |
 | S154 | FNO, accès aux soins en orthophonie, cité dans une question écrite à l'Assemblée nationale (attribution probable) : https://questions.assemblee-nationale.fr/dyn/16/questions/QANR5L16QE6360.pdf ; https://fno.fr/wp-content/uploads/2024/10/FNO-Etude-acces-aux-soins-23.12.21.pptx.pdf |
+| S155 | Suisse, services de garde des médecins : guide juridique de la FMH : https://leitfaden.fmh.ch/rechtlicher-leitfaden/2-rahmenbedingungen-des-arztes/24-berufspflichten-arzt.pdf?c=51717 ; taxe de dispense, Appenzell Rhodes-Extérieures : https://files.entscheidsuche.ch/chunks/AR/OG/004/OG-O4V-22-4_2022-10-27.pdf ; Vaud : https://www.vd.ch/fileadmin/user_upload/themes/sante/Professionnels/Formation/Syst%C3%A8me_de_la_garde_m%C3%A9dicale.pdf |
+| S156 | Suisse, service d'urgence dentaire : Argovie : https://www.ag.ch/de/themen/gesundheit/gesundheitsversorgung/zahnmedizin ; règlement de Schwytz : https://sz.ch/public/upload/assets/38678/Reglement_der_Zahnaerztegesellschaft_des_Kantons_Schwyz_fuer_den_zahnaerztlichen_Notfalldienst.pdf?fp=3 ; Zurich : https://www.zh.ch/de/gesundheit/gesundheitsberufe/fachspezifische-informationen/zahnmedizin.html |
+| S157 | France, permanence des soins dentaires : Conseil d'État, 29 mai 2020, n° 422956 : https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-05-29/422956 ; ARS PACA : https://www.paca.ars.sante.fr/lorganisation-de-la-permanence-et-la-continuite-des-soins-0 ; ARS Centre-Val de Loire : https://www.centre-val-de-loire.ars.sante.fr/media/3628/download ; ARS Grand Est : https://www.grand-est.paps.sante.fr/media/43674/download |
+| S158 | France, permanence des soins des médecins : amendement citant l'Ordre des médecins (2025) : https://www.assemblee-nationale.fr/dyn/17/amendements/0966/CION-SOC/AS78.pdf ; loi de 2023 sans obligation individuelle : https://www.lequotidiendumedecin.fr/liberal-soins-de-ville/exercice/en-cas-dechec-des-discussions-nous-nhesiterons-pas-poser-une-obligation-de-garde-la-ou-cest |
+| S159 | Cybersécurité, astreintes et horaires : France Travail : https://www.francetravail.fr/actualites/le-dossier/numerique-telecoms/informatique---web/travailler-dans-la-cybersecurite.html ; ANSSI, observatoire des métiers 2025 : https://cyber.gouv.fr/actualites/publication-de-la-4e-%C3%A9dition-de-lobservatoire-des-m%C3%A9tiers-2025/ ; relais : https://www.lemondeinformatique.fr/actualites/lire-l-evolution-des-metiers-de-la-cybersecurite-etudiee-par-l-anssi-97127.html ; https://www.solutions-numeriques.com/metiers-de-la-cybersecurite-une-cartographie-des-transformations/ ; enquête Bitdefender (relais) : https://www.techradar.com/pro/cybersecurity-workers-are-increasingly-working-over-the-weekends-and-many-are-ready-to-quit ; https://www.itpro.com/security/cyber-security-staff-are-working-weekends-more-than-ever-before-and-it-needs-to-stop |
+| S160 | Obsan, besoins en médecins de premier recours (relais cantonaux) : https://kr-geschaefte.zug.ch/dokumente/202/13030_1794_1_Aerztemangel.pdf ; rapport Obsan 04/2022 : https://www.obsan.admin.ch/sites/default/files/2022-05/Obsan_04_2022_BERICHT.pdf ; étude Workforce 2025 : https://www.srf.ch/news/schweiz/studie-der-uni-basel-hausaerzteverband-schlaegt-wegen-fachkraeftemangel-alarm |
+| S161 | HRSA, état des effectifs de santé 2024 : https://bhw.hrsa.gov/sites/default/files/bureau-health-workforce/state-of-the-health-workforce-report-2024.pdf ; contestation de l'ADA : https://www.drbicuspid.com/dental-hygiene/article/15370469/ada-disputes-hrsas-projection-of-dentist-shortage-in-2025 |
+| S162 | BLS, orthophonistes, projections 2024 à 2034 : https://www.bls.gov/ooh/healthcare/speech-language-pathologists.htm |
+| S163 | SSO, enquête 2016 sur l'utilisation des cabinets dentaires (relais) : https://www.zwp-online.info/zwpnews/dental-news/branchenmeldungen/umfrage-zur-auslastung-schweizer-zahnaerzte-stehen-unter-druck ; https://www.zm-online.de/news/detail/zahnarztpraxen-in-urbaner-schweiz-fehlen-patienten |
+| S164 | Suisse, pénurie dans l'informatique : classement 2019 de l'Université de Zurich : https://www.stellenmarktmonitor.uzh.ch/dam/jcr:3e64333f-3678-4f1a-9216-59127d4f4d1d/Fachkraeftemangel_Rankings_2019.pdf ; système d'indicateurs du SECO : https://www.seco.admin.ch/seco/en/home/Publikationen_Dienstleistungen/Publikationen_und_Formulare/Arbeit/Arbeitsmarkt/Informationen_Arbeitsmarktforschung/fachkraeftemangel-in-der-schweiz---ein-indikatorensystem-zur-beu.html ; chômage des TIC : https://www.itreseller.ch/Artikel/103736/Zahl_der_arbeitslosen_Informatiker_steigt.html |
+| S165 | DARES, critères ergonomiques par métier (Sumer 2017) : https://travail-emploi.gouv.fr/IMG/pdf/1a_-_expositions_aux_criteres_ergonomiques_par_metiers_sumer_17112023.pdf |
+| S166 | Épuisement professionnel et projections : enquête CARPIMKO (relais) : https://www.caducee.net/actualite-medicale/15357/burnout-hyperstress-penibilite-les-chiffres-alarmants-de-la-souffrance-au-travail-des-soignants-liberaux.html ; https://www.previssima.fr/actualite/70-des-auxiliaires-medicaux-liberaux-presentent-un-epuisement-emotionnel-dont-40-de-maniere-severe-retour-sur-cette-etude-avec-l.html ; Ordre des chirurgiens-dentistes, lettre 166 (2018) : https://www.ordre-chirurgiens-dentistes.fr/wp-content/uploads/2020/12/La_Lettre_166_2018.pdf ; DREES, projections des chirurgiens-dentistes : https://drees.solidarites-sante.gouv.fr/publications/etudes-et-resultats/8-000-chirurgiennes-dentistes-supplementaires-dici-2040 ; https://drees.solidarites-sante.gouv.fr/communique-de-presse/medecins-sages-femmes-chirurgiens-dentistes-et-pharmaciens-combien-de |

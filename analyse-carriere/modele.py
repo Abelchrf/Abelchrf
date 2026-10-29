@@ -835,7 +835,7 @@ lignes.append("## Bornes de l'echelle log (EUR PPA France)\n")
 for key, (lo, hi, _) in BORNES.items():
     lignes.append(f"- {key} : min {lo:,.0f}, max {hi:,.0f}" + (" (informatif, hors score)" if key == "cum_ppa" else ""))
 lignes.append("")
-lignes.append("## Classement v5 (Eurofound, poids egaux)\n")
+lignes.append("## Classement v6 (Eurofound, poids egaux)\n")
 lignes.append("| Rang | ID | Triplet | EP | IT | QT | ES | CA | PS | RE | W | Palier | Med ETP PPA kEUR | P80 ETP PPA kEUR | Quotite | Top 10 (sur 8) | Rangs min-max | Fiabilite revenu |")
 lignes.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
 for t in CLASSEMENT:

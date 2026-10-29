@@ -69,7 +69,8 @@
     "mixte",
     [
      "Q1",
-     "Q2"
+     "Q2",
+     "Q18"
     ],
     []
    ],
@@ -104,20 +105,20 @@
   "proche": true,
   "W_ia": 4.108315795338614,
   "palier_ia": "A",
-  "rang": 5,
+  "rang": 3,
   "groupe": 3,
   "rangs_var": {
-   "Poids égaux": 5,
+   "Poids égaux": 3,
    "environnement physique doublé": 17,
-   "intensité du travail doublé": 6,
-   "qualité du temps de travail doublé": 16,
-   "environnement social doublé": 5,
-   "compétences et autonomie doublé": 6,
-   "perspectives et sécurité doublé": 5,
-   "revenu doublé": 5
+   "intensité du travail doublé": 4,
+   "qualité du temps de travail doublé": 14,
+   "environnement social doublé": 3,
+   "compétences et autonomie doublé": 7,
+   "perspectives et sécurité doublé": 3,
+   "revenu doublé": 3
   },
   "nb_top": 6,
-  "rang_min": 5,
+  "rang_min": 3,
   "rang_max": 17,
   "W_tension": 4.108315795338614,
   "domine_par": [
@@ -320,7 +321,8 @@
    "QT": [
     "mixte",
     [
-     "Q2"
+     "Q2",
+     "Q18"
     ],
     []
    ],
@@ -355,20 +357,20 @@
   "proche": false,
   "W_ia": 4.08280912596161,
   "palier_ia": "A",
-  "rang": 8,
-  "groupe": 6,
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 8,
+   "Poids égaux": 6,
    "environnement physique doublé": 17,
-   "intensité du travail doublé": 11,
-   "qualité du temps de travail doublé": 16,
-   "environnement social doublé": 9,
-   "compétences et autonomie doublé": 10,
-   "perspectives et sécurité doublé": 7,
-   "revenu doublé": 8
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 14,
+   "environnement social doublé": 8,
+   "compétences et autonomie doublé": 11,
+   "perspectives et sécurité doublé": 5,
+   "revenu doublé": 6
   },
   "nb_top": 5,
-  "rang_min": 7,
+  "rang_min": 5,
   "rang_max": 17,
   "W_tension": 4.08280912596161,
   "domine_par": [
@@ -579,8 +581,10 @@
     []
    ],
    "QT": [
-    "estimée",
-    [],
+    "mixte",
+    [
+     "Q17"
+    ],
     []
    ],
    "ES": [
@@ -602,32 +606,32 @@
   "modifs": [],
   "EP": 3,
   "IT": 3,
-  "QT": 5,
+  "QT": 4,
   "ES": 4,
   "CA": 5.0,
   "PS": 5,
   "RE": 4.600866370949522,
-  "W": 4.228695195849932,
-  "palier": "S",
-  "proche": true,
-  "W_ia": 4.228695195849932,
-  "palier_ia": "S",
-  "rang": 2,
-  "groupe": 3,
+  "W": 4.085838052992789,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 4.085838052992789,
+  "palier_ia": "A",
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 2,
-   "environnement physique doublé": 17,
-   "intensité du travail doublé": 3,
-   "qualité du temps de travail doublé": 2,
-   "environnement social doublé": 2,
-   "compétences et autonomie doublé": 2,
-   "perspectives et sécurité doublé": 2,
-   "revenu doublé": 2
+   "Poids égaux": 6,
+   "environnement physique doublé": 25,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 14,
+   "environnement social doublé": 3,
+   "compétences et autonomie doublé": 4,
+   "perspectives et sécurité doublé": 5,
+   "revenu doublé": 3
   },
-  "nb_top": 7,
-  "rang_min": 2,
-  "rang_max": 17,
-  "W_tension": 4.228695195849932,
+  "nb_top": 6,
+  "rang_min": 3,
+  "rang_max": 25,
+  "W_tension": 4.085838052992789,
   "domine_par": []
  },
  {
@@ -1143,16 +1147,16 @@
   "groupe": 2,
   "rangs_var": {
    "Poids égaux": 14,
-   "environnement physique doublé": 23,
+   "environnement physique doublé": 21,
    "intensité du travail doublé": 17,
-   "qualité du temps de travail doublé": 11,
-   "environnement social doublé": 9,
-   "compétences et autonomie doublé": 6,
-   "perspectives et sécurité doublé": 7,
+   "qualité du temps de travail doublé": 9,
+   "environnement social doublé": 8,
+   "compétences et autonomie doublé": 4,
+   "perspectives et sécurité doublé": 5,
    "revenu doublé": 23
   },
-  "nb_top": 3,
-  "rang_min": 6,
+  "nb_top": 4,
+  "rang_min": 4,
   "rang_max": 23,
   "W_tension": 3.9148506361268565,
   "domine_par": []
@@ -1268,15 +1272,15 @@
   "rangs_var": {
    "Poids égaux": 21,
    "environnement physique doublé": 45,
-   "intensité du travail doublé": 6,
-   "qualité du temps de travail doublé": 12,
+   "intensité du travail doublé": 4,
+   "qualité du temps de travail doublé": 10,
    "environnement social doublé": 13,
    "compétences et autonomie doublé": 15,
    "perspectives et sécurité doublé": 10,
    "revenu doublé": 23
   },
-  "nb_top": 2,
-  "rang_min": 6,
+  "nb_top": 3,
+  "rang_min": 4,
   "rang_max": 45,
   "W_tension": 3.832226204584743,
   "domine_par": []
@@ -1939,16 +1943,16 @@
   "proche": true,
   "W_ia": 4.210286497160157,
   "palier_ia": "S",
-  "rang": 2,
-  "groupe": 3,
+  "rang": 1,
+  "groupe": 2,
   "rangs_var": {
-   "Poids égaux": 2,
+   "Poids égaux": 1,
    "environnement physique doublé": 1,
    "intensité du travail doublé": 1,
-   "qualité du temps de travail doublé": 2,
-   "environnement social doublé": 2,
-   "compétences et autonomie doublé": 2,
-   "perspectives et sécurité doublé": 2,
+   "qualité du temps de travail doublé": 1,
+   "environnement social doublé": 1,
+   "compétences et autonomie doublé": 1,
+   "perspectives et sécurité doublé": 1,
    "revenu doublé": 20
   },
   "nb_top": 7,
@@ -2066,7 +2070,7 @@
   "rangs_var": {
    "Poids égaux": 16,
    "environnement physique doublé": 10,
-   "intensité du travail doublé": 6,
+   "intensité du travail doublé": 4,
    "qualité du temps de travail doublé": 27,
    "environnement social doublé": 13,
    "compétences et autonomie doublé": 29,
@@ -2074,7 +2078,7 @@
    "revenu doublé": 35
   },
   "nb_top": 3,
-  "rang_min": 6,
+  "rang_min": 4,
   "rang_max": 35,
   "W_tension": 3.8353215851189595,
   "domine_par": []
@@ -3907,7 +3911,8 @@
    "QT": [
     "mixte",
     [
-     "Q10"
+     "Q10",
+     "Q15"
     ],
     []
    ],
@@ -3922,40 +3927,42 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
+    "sourcée",
+    [
+     "P8"
+    ],
     []
    ]
   },
   "modifs": [],
   "EP": 4,
   "IT": 3,
-  "QT": 5,
+  "QT": 4,
   "ES": 4,
   "CA": 4.5,
   "PS": 5,
   "RE": 4.975281390966104,
-  "W": 4.353611627280872,
+  "W": 4.210754484423729,
   "palier": "S",
-  "proche": false,
-  "W_ia": 4.353611627280872,
+  "proche": true,
+  "W_ia": 4.210754484423729,
   "palier_ia": "S",
   "rang": 1,
-  "groupe": 1,
+  "groupe": 2,
   "rangs_var": {
    "Poids égaux": 1,
-   "environnement physique doublé": 1,
-   "intensité du travail doublé": 1,
-   "qualité du temps de travail doublé": 1,
+   "environnement physique doublé": 5,
+   "intensité du travail doublé": 2,
+   "qualité du temps de travail doublé": 4,
    "environnement social doublé": 1,
-   "compétences et autonomie doublé": 1,
+   "compétences et autonomie doublé": 2,
    "perspectives et sécurité doublé": 1,
    "revenu doublé": 1
   },
   "nb_top": 8,
   "rang_min": 1,
-  "rang_max": 1,
-  "W_tension": 4.353611627280872,
+  "rang_max": 5,
+  "W_tension": 4.210754484423729,
   "domine_par": []
  },
  {
@@ -4536,7 +4543,8 @@
    "EP": [
     "mixte",
     [
-     "E1"
+     "E1",
+     "E9"
     ],
     []
    ],
@@ -4595,13 +4603,13 @@
    "Poids égaux": 21,
    "environnement physique doublé": 10,
    "intensité du travail doublé": 22,
-   "qualité du temps de travail doublé": 12,
+   "qualité du temps de travail doublé": 10,
    "environnement social doublé": 13,
    "compétences et autonomie doublé": 17,
    "perspectives et sécurité doublé": 21,
    "revenu doublé": 32
   },
-  "nb_top": 1,
+  "nb_top": 2,
   "rang_min": 10,
   "rang_max": 32,
   "W_tension": 3.9755734441277264,
@@ -4720,7 +4728,7 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 40,
-   "environnement physique doublé": 30,
+   "environnement physique doublé": 29,
    "intensité du travail doublé": 42,
    "qualité du temps de travail doublé": 32,
    "environnement social doublé": 43,
@@ -4729,7 +4737,7 @@
    "revenu doublé": 35
   },
   "nb_top": 0,
-  "rang_min": 30,
+  "rang_min": 29,
   "rang_max": 52,
   "W_tension": 3.904997272594566,
   "domine_par": [
@@ -4820,8 +4828,10 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
+    "mixte",
+    [
+     "P12"
+    ],
     []
    ]
   },
@@ -4838,20 +4848,20 @@
   "proche": false,
   "W_ia": 3.739379198176119,
   "palier_ia": "A",
-  "rang": 8,
-  "groupe": 6,
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 8,
-   "environnement physique doublé": 3,
-   "intensité du travail doublé": 11,
-   "qualité du temps de travail doublé": 7,
-   "environnement social doublé": 5,
-   "compétences et autonomie doublé": 6,
+   "Poids égaux": 6,
+   "environnement physique doublé": 2,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 4,
+   "environnement social doublé": 3,
+   "compétences et autonomie doublé": 7,
    "perspectives et sécurité doublé": 21,
-   "revenu doublé": 5
+   "revenu doublé": 6
   },
-  "nb_top": 6,
-  "rang_min": 3,
+  "nb_top": 7,
+  "rang_min": 2,
   "rang_max": 21,
   "W_tension": 4.09493168261126,
   "domine_par": []
@@ -4962,7 +4972,7 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 33,
-   "environnement physique doublé": 27,
+   "environnement physique doublé": 25,
    "intensité du travail doublé": 36,
    "qualité du temps de travail doublé": 27,
    "environnement social doublé": 37,
@@ -4971,7 +4981,7 @@
    "revenu doublé": 32
   },
   "nb_top": 0,
-  "rang_min": 27,
+  "rang_min": 25,
   "rang_max": 42,
   "W_tension": 3.8320662758706296,
   "domine_par": [
@@ -5090,13 +5100,13 @@
    "Poids égaux": 16,
    "environnement physique doublé": 10,
    "intensité du travail doublé": 18,
-   "qualité du temps de travail doublé": 12,
+   "qualité du temps de travail doublé": 10,
    "environnement social doublé": 13,
    "compétences et autonomie doublé": 17,
    "perspectives et sécurité doublé": 36,
    "revenu doublé": 16
   },
-  "nb_top": 1,
+  "nb_top": 2,
   "rang_min": 10,
   "rang_max": 36,
   "W_tension": 3.994778817483515,
@@ -5210,7 +5220,7 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 25,
-   "environnement physique doublé": 23,
+   "environnement physique doublé": 21,
    "intensité du travail doublé": 27,
    "qualité du temps de travail doublé": 22,
    "environnement social doublé": 20,
@@ -5338,20 +5348,19 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 25,
-   "environnement physique doublé": 30,
+   "environnement physique doublé": 29,
    "intensité du travail doublé": 27,
-   "qualité du temps de travail doublé": 16,
+   "qualité du temps de travail doublé": 14,
    "environnement social doublé": 20,
    "compétences et autonomie doublé": 23,
    "perspectives et sécurité doublé": 27,
    "revenu doublé": 23
   },
   "nb_top": 0,
-  "rang_min": 16,
-  "rang_max": 30,
+  "rang_min": 14,
+  "rang_max": 29,
   "W_tension": 3.9363632795606156,
   "domine_par": [
-   "T30",
    "T46",
    "T89"
   ]
@@ -5462,9 +5471,9 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 25,
-   "environnement physique doublé": 27,
+   "environnement physique doublé": 25,
    "intensité du travail doublé": 27,
-   "qualité du temps de travail doublé": 16,
+   "qualité du temps de travail doublé": 14,
    "environnement social doublé": 20,
    "compétences et autonomie doublé": 23,
    "perspectives et sécurité doublé": 39,
@@ -5475,7 +5484,6 @@
   "rang_max": 39,
   "W_tension": 3.9407485467598105,
   "domine_par": [
-   "T30",
    "T37"
   ]
  },
@@ -5598,7 +5606,6 @@
   "rang_max": 35,
   "W_tension": 3.8931776841598316,
   "domine_par": [
-   "T30",
    "T90"
   ]
  },
@@ -5986,20 +5993,20 @@
   "proche": false,
   "W_ia": 3.7249217839608417,
   "palier_ia": "A",
-  "rang": 8,
-  "groupe": 6,
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 8,
-   "environnement physique doublé": 6,
-   "intensité du travail doublé": 11,
-   "qualité du temps de travail doublé": 7,
-   "environnement social doublé": 9,
-   "compétences et autonomie doublé": 10,
+   "Poids égaux": 6,
+   "environnement physique doublé": 5,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 4,
+   "environnement social doublé": 8,
+   "compétences et autonomie doublé": 11,
    "perspectives et sécurité doublé": 15,
    "revenu doublé": 12
   },
   "nb_top": 5,
-  "rang_min": 6,
+  "rang_min": 4,
   "rang_max": 15,
   "W_tension": 4.080474268395983,
   "domine_par": [
@@ -7435,8 +7442,7 @@
   "rang_max": 42,
   "W_tension": 3.8091869698024388,
   "domine_par": [
-   "T09",
-   "T30"
+   "T09"
   ]
  },
  {
@@ -7573,8 +7579,7 @@
   "rang_max": 52,
   "W_tension": 3.69359711057403,
   "domine_par": [
-   "T09",
-   "T30"
+   "T09"
   ]
  },
  {
@@ -7973,7 +7978,7 @@
   "groupe": 3,
   "rangs_var": {
    "Poids égaux": 37,
-   "environnement physique doublé": 30,
+   "environnement physique doublé": 29,
    "intensité du travail doublé": 38,
    "qualité du temps de travail doublé": 40,
    "environnement social doublé": 39,
@@ -8099,7 +8104,7 @@
   "groupe": 3,
   "rangs_var": {
    "Poids égaux": 37,
-   "environnement physique doublé": 30,
+   "environnement physique doublé": 29,
    "intensité du travail doublé": 38,
    "qualité du temps de travail doublé": 40,
    "environnement social doublé": 39,
@@ -8223,7 +8228,7 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 40,
-   "environnement physique doublé": 30,
+   "environnement physique doublé": 29,
    "intensité du travail doublé": 32,
    "qualité du temps de travail doublé": 44,
    "environnement social doublé": 43,
@@ -8232,7 +8237,7 @@
    "revenu doublé": 43
   },
   "nb_top": 0,
-  "rang_min": 30,
+  "rang_min": 29,
   "rang_max": 45,
   "W_tension": 3.7598169546026727,
   "domine_par": [
@@ -9912,7 +9917,8 @@
    "EP": [
     "mixte",
     [
-     "E1"
+     "E1",
+     "E9"
     ],
     []
    ],
@@ -9962,7 +9968,7 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 29,
-   "environnement physique doublé": 25,
+   "environnement physique doublé": 23,
    "intensité du travail doublé": 32,
    "qualité du temps de travail doublé": 34,
    "environnement social doublé": 25,
@@ -9971,7 +9977,7 @@
    "revenu doublé": 35
   },
   "nb_top": 0,
-  "rang_min": 25,
+  "rang_min": 23,
   "rang_max": 35,
   "W_tension": 3.8729384639124684,
   "domine_par": [
@@ -10090,14 +10096,14 @@
    "Poids égaux": 21,
    "environnement physique doublé": 17,
    "intensité du travail doublé": 22,
-   "qualité du temps de travail doublé": 16,
+   "qualité du temps de travail doublé": 14,
    "environnement social doublé": 29,
    "compétences et autonomie doublé": 15,
    "perspectives et sécurité doublé": 39,
    "revenu doublé": 16
   },
   "nb_top": 0,
-  "rang_min": 15,
+  "rang_min": 14,
   "rang_max": 39,
   "W_tension": 3.9586829578158267,
   "domine_par": []
@@ -10186,8 +10192,10 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
+    "mixte",
+    [
+     "P12"
+    ],
     []
    ]
   },
@@ -10204,21 +10212,21 @@
   "proche": false,
   "W_ia": 3.916106174971571,
   "palier_ia": "A",
-  "rang": 8,
-  "groupe": 6,
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 8,
-   "environnement physique doublé": 3,
-   "intensité du travail doublé": 11,
-   "qualité du temps de travail doublé": 16,
-   "environnement social doublé": 5,
-   "compétences et autonomie doublé": 10,
+   "Poids égaux": 6,
+   "environnement physique doublé": 2,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 14,
+   "environnement social doublé": 3,
+   "compétences et autonomie doublé": 7,
    "perspectives et sécurité doublé": 15,
-   "revenu doublé": 5
+   "revenu doublé": 6
   },
-  "nb_top": 5,
-  "rang_min": 3,
-  "rang_max": 16,
+  "nb_top": 6,
+  "rang_min": 2,
+  "rang_max": 15,
   "W_tension": 4.091938452384505,
   "domine_par": []
  },
@@ -10281,7 +10289,8 @@
    "EP": [
     "mixte",
     [
-     "E1"
+     "E1",
+     "E9"
     ],
     []
    ],
@@ -10291,9 +10300,13 @@
     []
    ],
    "QT": [
-    "estimée",
-    [],
-    []
+    "mixte",
+    [
+     "Q19"
+    ],
+    [
+     "Q19"
+    ]
    ],
    "ES": [
     "estimée",
@@ -10328,22 +10341,22 @@
   "proche": false,
   "W_ia": 3.890277058910503,
   "palier_ia": "A",
-  "rang": 8,
-  "groupe": 6,
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 8,
-   "environnement physique doublé": 6,
-   "intensité du travail doublé": 11,
-   "qualité du temps de travail doublé": 7,
-   "environnement social doublé": 9,
-   "compétences et autonomie doublé": 10,
+   "Poids égaux": 6,
+   "environnement physique doublé": 5,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 4,
+   "environnement social doublé": 8,
+   "compétences et autonomie doublé": 11,
    "perspectives et sécurité doublé": 15,
    "revenu doublé": 16
   },
   "nb_top": 5,
-  "rang_min": 6,
+  "rang_min": 4,
   "rang_max": 16,
-  "W_tension": 4.066109336323437,
+  "W_tension": 3.923252193466294,
   "domine_par": [
    "T46",
    "T89"
@@ -10547,7 +10560,8 @@
    "EP": [
     "mixte",
     [
-     "E1"
+     "E1",
+     "E9"
     ],
     []
    ],
@@ -10606,13 +10620,13 @@
    "Poids égaux": 16,
    "environnement physique doublé": 10,
    "intensité du travail doublé": 18,
-   "qualité du temps de travail doublé": 12,
+   "qualité du temps de travail doublé": 10,
    "environnement social doublé": 13,
    "compétences et autonomie doublé": 17,
    "perspectives et sécurité doublé": 19,
    "revenu doublé": 23
   },
-  "nb_top": 1,
+  "nb_top": 2,
   "rang_min": 10,
   "rang_max": 23,
   "W_tension": 4.006455317990825,
@@ -10706,8 +10720,10 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
+    "mixte",
+    [
+     "P12"
+    ],
     []
    ]
   },
@@ -10980,7 +10996,7 @@
   "groupe": 4,
   "rangs_var": {
    "Poids égaux": 33,
-   "environnement physique doublé": 27,
+   "environnement physique doublé": 25,
    "intensité du travail doublé": 38,
    "qualité du temps de travail doublé": 40,
    "environnement social doublé": 39,
@@ -11066,9 +11082,13 @@
     []
    ],
    "QT": [
-    "estimée",
-    [],
-    []
+    "mixte",
+    [
+     "Q19"
+    ],
+    [
+     "Q19"
+    ]
    ],
    "ES": [
     "estimée",
@@ -11083,7 +11103,8 @@
    "PS": [
     "mixte",
     [
-     "P4"
+     "P4",
+     "P12"
     ],
     []
    ]
@@ -11101,22 +11122,22 @@
   "proche": true,
   "W_ia": 3.942418917669198,
   "palier_ia": "A",
-  "rang": 5,
+  "rang": 3,
   "groupe": 3,
   "rangs_var": {
-   "Poids égaux": 5,
-   "environnement physique doublé": 3,
-   "intensité du travail doublé": 6,
-   "qualité du temps de travail doublé": 5,
-   "environnement social doublé": 5,
-   "compétences et autonomie doublé": 6,
+   "Poids égaux": 3,
+   "environnement physique doublé": 2,
+   "intensité du travail doublé": 4,
+   "qualité du temps de travail doublé": 2,
+   "environnement social doublé": 3,
+   "compétences et autonomie doublé": 7,
    "perspectives et sécurité doublé": 10,
    "revenu doublé": 10
   },
   "nb_top": 8,
-  "rang_min": 3,
+  "rang_min": 2,
   "rang_max": 10,
-  "W_tension": 4.1182511950821326,
+  "W_tension": 3.9753940522249893,
   "domine_par": []
  },
  {
@@ -11188,9 +11209,13 @@
     []
    ],
    "QT": [
-    "estimée",
-    [],
-    []
+    "mixte",
+    [
+     "Q19"
+    ],
+    [
+     "Q19"
+    ]
    ],
    "ES": [
     "estimée",
@@ -11223,22 +11248,22 @@
   "proche": false,
   "W_ia": 3.9028083019867856,
   "palier_ia": "A",
-  "rang": 8,
-  "groupe": 6,
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 8,
-   "environnement physique doublé": 6,
-   "intensité du travail doublé": 11,
-   "qualité du temps de travail doublé": 7,
+   "Poids égaux": 6,
+   "environnement physique doublé": 5,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 4,
    "environnement social doublé": 20,
-   "compétences et autonomie doublé": 10,
+   "compétences et autonomie doublé": 11,
    "perspectives et sécurité doublé": 15,
-   "revenu doublé": 8
+   "revenu doublé": 6
   },
   "nb_top": 5,
-  "rang_min": 6,
+  "rang_min": 4,
   "rang_max": 20,
-  "W_tension": 4.07864057939972,
+  "W_tension": 3.9357834365425775,
   "domine_par": []
  },
  {
@@ -11312,7 +11337,8 @@
    "QT": [
     "mixte",
     [
-     "Q12"
+     "Q12",
+     "Q16"
     ],
     []
    ],
@@ -11327,40 +11353,44 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
-    []
+    "mixte",
+    [
+     "P11"
+    ],
+    [
+     "P11"
+    ]
    ]
   },
   "modifs": [],
   "EP": 3,
   "IT": 3,
-  "QT": 5,
+  "QT": 4,
   "ES": 4,
   "CA": 5.0,
   "PS": 5,
   "RE": 4.532037319160054,
-  "W": 4.218862474165722,
-  "palier": "S",
-  "proche": true,
-  "W_ia": 4.218862474165722,
-  "palier_ia": "S",
-  "rang": 2,
-  "groupe": 3,
+  "W": 4.076005331308579,
+  "palier": "A",
+  "proche": false,
+  "W_ia": 4.076005331308579,
+  "palier_ia": "A",
+  "rang": 6,
+  "groupe": 8,
   "rangs_var": {
-   "Poids égaux": 2,
-   "environnement physique doublé": 17,
-   "intensité du travail doublé": 3,
-   "qualité du temps de travail doublé": 2,
-   "environnement social doublé": 2,
-   "compétences et autonomie doublé": 2,
-   "perspectives et sécurité doublé": 2,
-   "revenu doublé": 2
+   "Poids égaux": 6,
+   "environnement physique doublé": 29,
+   "intensité du travail doublé": 9,
+   "qualité du temps de travail doublé": 14,
+   "environnement social doublé": 8,
+   "compétences et autonomie doublé": 4,
+   "perspectives et sécurité doublé": 5,
+   "revenu doublé": 3
   },
-  "nb_top": 7,
-  "rang_min": 2,
-  "rang_max": 17,
-  "W_tension": 4.218862474165722,
+  "nb_top": 6,
+  "rang_min": 3,
+  "rang_max": 29,
+  "W_tension": 3.9331481884514363,
   "domine_par": [
    "T05"
   ]
@@ -11451,8 +11481,10 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
+    "sourcée",
+    [
+     "P9"
+    ],
     []
    ]
   },
@@ -11469,21 +11501,21 @@
   "proche": true,
   "W_ia": 4.13455428041461,
   "palier_ia": "A",
-  "rang": 5,
+  "rang": 3,
   "groupe": 3,
   "rangs_var": {
-   "Poids égaux": 5,
-   "environnement physique doublé": 25,
-   "intensité du travail doublé": 6,
-   "qualité du temps de travail doublé": 5,
+   "Poids égaux": 3,
+   "environnement physique doublé": 23,
+   "intensité du travail doublé": 4,
+   "qualité du temps de travail doublé": 2,
    "environnement social doublé": 13,
-   "compétences et autonomie doublé": 5,
-   "perspectives et sécurité doublé": 5,
-   "revenu doublé": 4
+   "compétences et autonomie doublé": 2,
+   "perspectives et sécurité doublé": 3,
+   "revenu doublé": 2
   },
   "nb_top": 6,
-  "rang_min": 4,
-  "rang_max": 25,
+  "rang_min": 2,
+  "rang_max": 23,
   "W_tension": 4.13455428041461,
   "domine_par": []
  },
@@ -11573,8 +11605,10 @@
     []
    ],
    "PS": [
-    "estimée",
-    [],
+    "sourcée",
+    [
+     "P10"
+    ],
     []
    ]
   },
@@ -11595,16 +11629,16 @@
   "groupe": 2,
   "rangs_var": {
    "Poids égaux": 14,
-   "environnement physique doublé": 6,
-   "intensité du travail doublé": 3,
+   "environnement physique doublé": 5,
+   "intensité du travail doublé": 2,
    "qualité du temps de travail doublé": 22,
    "environnement social doublé": 20,
    "compétences et autonomie doublé": 17,
-   "perspectives et sécurité doublé": 7,
+   "perspectives et sécurité doublé": 5,
    "revenu doublé": 12
   },
   "nb_top": 3,
-  "rang_min": 3,
+  "rang_min": 2,
   "rang_max": 22,
   "W_tension": 3.911763648741659,
   "domine_par": []
@@ -11726,7 +11760,6 @@
   "rang_max": 60,
   "W_tension": 3.4793371882547186,
   "domine_par": [
-   "T30",
    "T37",
    "T38",
    "T39",

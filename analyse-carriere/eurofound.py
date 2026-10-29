@@ -30,12 +30,12 @@ NOMS_DIMS = {
 # exigence emotionnelle ou decisionnelle ; F3 nuits, week-ends ou astreintes ; F4 penibilite physique ;
 # F5 trajet d'au moins 1 h par sens ou decouches.
 FACTEURS = {
-    "T01": "F1 F2", "T02": "F2", "T03": "F1 F2", "T04": "F1 F2 F3", "T05": "F2 F4", "T06": "F2 F3 F4",
+    "T01": "F1 F2", "T02": "F2", "T03": "F1 F2", "T04": "F1 F2 F3", "T05": "F2 F3 F4", "T06": "F2 F3 F4",
     "T07": "F1 F2 F3", "T08": "F2 F3", "T09": "F2", "T10": "F4", "T11": "F4", "T12": "F2 F3 F4",
     "T13": "F1 F2 F3", "T14": "F2 F3", "T15": "", "T16": "F2", "T17": "F3", "T18": "F3",
     "T19": "F1 F3 F4", "T20": "F2", "T21": "F2 F3 F4", "T22": "F4", "T23": "F2 F3 F4",
     "T24": "F2 F3 F4 F5", "T25": "F2 F3 F4 F5", "T26": "F2 F3 F4", "T27": "F2 F3 F4", "T28": "F2 F3 F4",
-    "T29": "F1 F2 F3", "T30": "F2", "T31": "F1 F2 F3", "T32": "F1 F2 F3", "T33": "F2 F3 F4 F5",
+    "T29": "F1 F2 F3", "T30": "F2 F3", "T31": "F1 F2 F3", "T32": "F1 F2 F3", "T33": "F2 F3 F4 F5",
     "T34": "F4 F5", "T35": "F2", "T36": "F2", "T37": "F2 F5", "T38": "F2", "T39": "F2 F5", "T40": "F2",
     "T41": "F2", "T42": "F2 F5", "T43": "F2", "T44": "F3 F4", "T45": "F3", "T46": "F2", "T47": "F4",
     "T48": "F1 F2 F4", "T49": "F4 F5", "T50": "F4", "T51": "F1 F2 F4", "T52": "F3 F4", "T53": "F3 F5",
@@ -44,7 +44,7 @@ FACTEURS = {
     "T67": "F1 F2", "T68": "F1 F2", "T69": "", "T70": "F5", "T71": "F1 F2", "T72": "F2 F5", "T73": "F2 F3",
     "T74": "F2 F3 F5", "T75": "F3 F4", "T76": "F4", "T77": "", "T78": "", "T79": "F3", "T80": "F2 F3",
     "T81": "F2", "T82": "F2 F3 F5", "T83": "F2", "T84": "F2 F3", "T85": "F2", "T86": "F2 F3", "T87": "F2 F3",
-    "T88": "F2 F3", "T89": "F2", "T90": "F2", "T91": "F2 F4", "T92": "F2 F4", "T93": "",
+    "T88": "F2 F3", "T89": "F2", "T90": "F2", "T91": "F2 F3 F4", "T92": "F2 F4", "T93": "",
 }
 
 # Groupes de metiers et grilles EP / IT (estimations normatives, sauf ancrage DARES signale dans ANCRAGES).
@@ -140,7 +140,9 @@ def dimensions(t):
 
 
 # Facteurs corriges par une donnee nouvelle (la note de charge v4 ne les reproduit donc plus).
-CORRECTIONS = {"T30": "F1 retiré : médecins de famille suisses à 43 h par semaine (S131)",
+CORRECTIONS = {"T30": "F1 retiré : médecins de famille suisses à 43 h par semaine (S131) ; F3 ajouté en v6 : participation obligatoire aux services de garde (LPMéd art. 40 let. g et règles cantonales, S155)",
+               "T91": "F3 ajouté en v6 : service d'urgence dentaire obligatoire (LPMéd art. 40 let. g, S156)",
+               "T05": "F3 ajouté en v6 : permanence des soins dentaires obligatoire (CSP R4127-245 et R6315-7, S157)",
                "T10": "F1 retiré : kinésithérapeutes libéraux à 43,07 h par semaine (S132)"}
 
 
@@ -290,6 +292,45 @@ anc("P6", "PS", "T01 T02 T03 T04", "médecins, France : tension de recrutement �
 anc("P7", "PS", "T15", "orthophonistes libéraux, France : 90 % ne peuvent pas proposer de nouveau bilan "
     "(enquête de la FNO citée dans une question parlementaire) ; pénurie = 5", "S154", True, "FR", ok={5},
     officiel=False)
+
+# Version 6 (29 octobre 2026), section 1.14. Gardes : F3 quand une obligation legale de participer a un
+# service de garde ou d'urgence (nuits, week-ends, astreinte) s'applique au metier et au statut, meme
+# rachetable par une taxe (consigne du 29 octobre, appliquee a tous les triplets concernes).
+anc("Q15", "QT", "T30", "médecins exerçant à titre indépendant, Suisse : participation obligatoire aux services "
+    "d'urgence selon les règles cantonales (LPMéd art. 40 let. g), présence ou astreinte ; dispense contre une "
+    "taxe (4 000 CHF par an en Appenzell Rhodes-Extérieures) ; fréquence non publiée ; donc F3", "S155", True,
+    "CH", f3=True)
+anc("Q16", "QT", "T91", "médecins-dentistes indépendants, Suisse : service d'urgence dentaire obligatoire (même "
+    "article, Argovie, Schwytz, Zurich), taxe de dispense de 2 000 CHF à Schwytz ; fréquence non publiée ; donc F3",
+    "S156", True, "CH", f3=True)
+anc("Q17", "QT", "T05", "chirurgiens-dentistes, France : permanence des soins des dimanches et jours fériés "
+    "obligatoire (CSP R4127-245 et R6315-7), tableaux de garde de l'Ordre, astreinte de 75 € par demi-journée ; "
+    "fréquence non publiée ; donc F3", "S157", True, "FR", f3=True)
+anc("Q18", "QT", "T01 T03", "médecins libéraux, France : permanence des soins fondée sur le volontariat (loi de "
+    "2023 sans obligation individuelle), environ 40 % des médecins y participent, fréquence non publiée ; pas "
+    "d'obligation, donc pas de F3", "S158", True, "FR", f3=False)
+anc("Q19", "QT", "T83 T89 T90", "professionnels de la cybersécurité : aucune part d'astreintes officielle ; "
+    "astreintes signalées pour certains postes, surtout SOC et gestion de crise (France Travail) ; 70 % "
+    "disent travailler souvent le week-end (enquête d'un éditeur, 1 200 répondants, 6 pays), donc F3 "
+    "selon la règle des 40 %", "S159", False, "UE", f3=True, officiel=False)
+anc("E9", "EP", "T35 T80 T83 T85", "ingénieurs de l'informatique, France : 1,2 % des salariés potentiellement "
+    "concernés par les critères ergonomiques du compte pénibilité (caissiers 18,2 %), sans moyenne nationale "
+    "publiée", "S165", True, "FR", ok={4, 5}, quant=False)
+anc("P8", "PS", "T30", "médecins de premier recours, Suisse : jusqu'à 30 % des consultations prévues non "
+    "couvertes en 2030, pénurie la plus grave en médecine de famille (Obsan) ; plus des trois quarts des "
+    "cabinets signalent une pénurie régionale (étude Workforce 2025) ; pénurie = 5", "S160", True, "CH",
+    ok={5})
+anc("P9", "PS", "T92", "dentistes généralistes, États-Unis : pénurie projetée de 11 860 équivalents temps "
+    "plein en 2037 (HRSA, projection contestée par l'ADA) ; pénurie = 5", "S161", True, "US", ok={5})
+anc("P10", "PS", "T93", "orthophonistes, États-Unis : emploi projeté +15 % de 2024 à 2034 (tous métiers "
+    "+3,1 %, rapport 4,8) ; profession réglementée en forte demande = 4 ou 5", "S162", True, "US", ok={4, 5})
+anc("P11", "PS", "T91", "dentistes titulaires d'un cabinet, Suisse (enquête de la SSO, 2016) : 23 % à 80 % "
+    "d'utilisation, près d'un cabinet urbain sur deux sans patient au moins un jour par semaine ; pas de "
+    "pénurie, donc 3 ou 4", "S163", True, "CH", ok={3, 4}, officiel=False)
+anc("P12", "PS", "T37 T82 T86 T89", "informatique, Suisse : 2e rang du classement de pénurie de main-d'œuvre "
+    "(2019, Université de Zurich sur données du SECO) ; chômeurs inscrits des TIC +18 % de juillet 2024 à "
+    "juillet 2025 (SECO) ; marché tendu mais cyclique = 3 ou 4", "S164", False, "CH", ok={3, 4},
+    quant=False)
 
 
 def _statut(a, t):

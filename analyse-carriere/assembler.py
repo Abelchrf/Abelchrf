@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Assemble rapport.md a partir de entete.md, tableaux.md (genere) et conclusion.md (version 5)."""
+"""Assemble rapport.md a partir de entete.md, tableaux.md (genere) et conclusion.md (version 6)."""
 import os
 import re
 import subprocess
@@ -32,19 +32,19 @@ import modele as _m  # noqa: E402
 
 parties = [lire("entete.md").strip(), ""]
 parties += ["## 2. Pool (" + sec("Pool")[0].split("(")[1], "", sec("Pool")[1], ""]
-parties += [f"## 3. Classement v5 ({len(_m.T)} triplets, grille Eurofound à poids égaux)", "",
+parties += [f"## 3. Classement v6 ({len(_m.T)} triplets, grille Eurofound à poids égaux)", "",
             "Lecture des colonnes : EP environnement physique, IT intensité du travail, QT qualité du temps de travail, ES environnement social, "
             "CA compétences et autonomie, PS perspectives et sécurité, RE revenu ; notes de 1 (mauvais) à 5 (bon), poids égaux. "
             "CA et RE sont des notes continues (moyenne ou échelle logarithmique), les autres sont entières. "
             "Palier : S ≥ 4,2, A ≥ 3,6, B ≥ 3,0, C en dessous ; * = à moins de 0,1 d'une frontière. "
             "« 7= » : rang partagé (écart inférieur à 0,03). "
             "« X / Y k€ » : revenu net annuel en milliers d'euros, X au change 2025 sans ajustement, Y en parité de pouvoir d'achat ; le score utilise Y en équivalent temps plein.", ""]
-for prefixe in ("Classement v5, partie A", "Classement v5, partie B", "Classement v5, partie C :",
-                "Classement v5, partie C2", "Notes modifiées", "Classement v5, partie D"):
+for prefixe in ("Classement v6, partie A", "Classement v6, partie B", "Classement v6, partie C :",
+                "Classement v6, partie C2", "Facteurs modifiés", "Notes modifiées", "Classement v6, partie D"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
-parties += ["## 4. Robustesse aux pondérations", ""]
-for prefixe in ("Robustesse", "Noyau robuste", "Sensibilité aux notes"):
+parties += ["## 4. Robustesse aux pondérations et aux notes", ""]
+for prefixe in ("Robustesse :", "Noyau robuste", "Robustesse aux notes", "Sensibilité aux notes"):
     titre, corps = sec(prefixe)
     parties += ["### " + titre, "", corps, ""]
 parties += ["## 5. Égalités et frontières de palier", ""]

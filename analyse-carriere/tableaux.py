@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Genere tableaux.md (tableaux du rapport, version 5) a partir de modele.py."""
+"""Genere tableaux.md (tableaux du rapport, version 6) a partir de modele.py."""
 import json
 import os
 import re
@@ -136,7 +136,7 @@ for i in range(half):
 A("")
 
 # --- Partie A : notes Eurofound puis palier ---------------------------------------------------
-A("### Classement v5, partie A : notes des 7 dimensions Eurofound, puis palier\n")
+A("### Classement v6, partie A : notes des 7 dimensions Eurofound, puis palier\n")
 A("| Rang | ID | Triplet | EP | IT | QT | ES | CA | PS | RE | Palier | Top 10 (sur 8 configurations) |")
 A("|---|---|---|---|---|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
@@ -144,7 +144,7 @@ for t in m.CLASSEMENT:
 A("")
 
 # --- Partie B : revenu equivalent temps plein ---------------------------------------------------
-A("### Classement v5, partie B : revenu net en équivalent temps plein\n")
+A("### Classement v6, partie B : revenu net en équivalent temps plein\n")
 A("| Rang | ID | Médian au temps réel nom./PPA k€ | Temps de travail et quotité | Médian ETP nom./PPA k€ | P80 ETP nom./PPA k€ | Source du médian | Source du P80 | Fiabilité |")
 A("|---|---|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
@@ -153,7 +153,7 @@ for t in m.CLASSEMENT:
 A("")
 
 # --- Partie C : provenance des notes hors revenu --------------------------------------------------
-A("### Classement v5, partie C : provenance des notes hors revenu\n")
+A("### Classement v6, partie C : provenance des notes hors revenu\n")
 A("S = sourcée : chiffre officiel et chiffré pour le métier lui-même, dans le pays du triplet. "
   "M = mixte : chiffre pour un groupe plus large, un autre pays ou un autre statut, sans ampleur publiée, "
   "issu d'une enquête non officielle, ou ne couvrant qu'une partie de la dimension (QT et CA sont au mieux M). "
@@ -188,7 +188,7 @@ def ens(s):
     return " ou ".join(str(x) for x in v)
 
 
-A("### Classement v5, partie C2 : ancrages utilisés\n")
+A("### Classement v6, partie C2 : ancrages utilisés\n")
 A("Règles de conversion et de statut : section 1.13. Notes compatibles : valeurs que le chiffre autorise (pour QT, présence ou absence des facteurs F1 et F3).\n")
 A("| Code | Dim. | Chiffre publié | Source | Statut | Notes compatibles | Triplets couverts | Tensions |")
 A("|---|---|---|---|---|---|---|---|")
@@ -209,6 +209,11 @@ for a in EU.ANCRAGES:
     tens = [i for i in a["ids"] if not EU._accord(a, ID[i], ID[i])]
     A(f"| {a['code']} | {a['dim']} | {a['texte']} | {a['src']} | {statut} | {compat} | {', '.join(a['ids'])} | {', '.join(tens) or 'aucune'} |")
 A("")
+A("### Facteurs modifiés en version 6 (gardes obligatoires)\n")
+for _i, _c in EU.CORRECTIONS.items():
+    if "v6" in _c:
+        A(f"- {_i} {tri(ID[_i])} : {_c.split(' ; ')[-1]} ; QT {ID[_i]['QT']}.")
+A("")
 A("### Notes modifiées par un ancrage de statut S\n")
 for t in T:
     for dim, avant, apres, code in t["modifs"]:
@@ -216,7 +221,7 @@ for t in T:
 A("")
 
 # --- Partie D : barriere et IA (informatif) ------------------------------------------------------
-A("### Classement v5, partie D : barrière d'entrée, risque IA et dominance (informatif, hors score)\n")
+A("### Classement v6, partie D : barrière d'entrée, risque IA et dominance (informatif, hors score)\n")
 A("| Rang | ID | Âge d'entrée | Formation et financement | Sélectivité | Années de revenu perdues | Cumul 24-45 ans PPA k€ | IA : exposition, palier si IA fort | Dominé sur les 7 dimensions par |")
 A("|---|---|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
@@ -240,7 +245,7 @@ A("- Dans le haut du classement dans une seule configuration : " + (", ".join(f"
 A("")
 A("### Sensibilité aux notes en tension (informatif, hors classement)\n")
 A("Poids égaux ; chaque note en tension avec un chiffre de statut M prend la valeur compatible avec ce chiffre (partie C2). Les autres triplets gardent leur score.\n")
-A("| ID | Triplet | Note en tension | Rang v5 | Rang si chiffre appliqué | Palier v5 | Palier si chiffre appliqué |")
+A("| ID | Triplet | Note en tension | Rang v6 | Rang si chiffre appliqué | Palier v6 | Palier si chiffre appliqué |")
 A("|---|---|---|---|---|---|---|")
 for t in m.CLASSEMENT:
     tn = [f"{d} ({', '.join(t['prov'][d][2])})" for d in D6 if t["prov"][d][2]]
@@ -248,6 +253,30 @@ for t in m.CLASSEMENT:
         continue
     r2, g2 = m.RANG_TENSION[t["id"]]
     A(f"| {t['id']} | {tri(t)} | {' ; '.join(tn)} | {rg(t)} | {r2}{'=' if g2 > 1 else ''} | {pal(t)} | {m.classer(t['W_tension'])} |")
+A("")
+
+# --- Robustesse aux notes estimees (tirages) -------------------------------------------------------------
+import robustesse_notes as RN  # noqa: E402
+
+MC = RN.tout(T)
+
+
+def pc(x, dec=0):
+    return f"{100 * x:.{dec}f} %"
+
+
+A("### Robustesse aux notes estimées : 10 000 tirages\n")
+A("Règles déclarées en section 1.14. A (consigne) : chaque note estimée (E) prend un écart de -1, 0 ou +1 avec la même probabilité, borné à [1, 5]. B : même tirage, mais EP et IT varient ensemble pour tout un groupe de métiers (ils viennent d'une grille par groupe). C : notes estimées et mixtes, CA à 0,5 près ; seules les notes sourcées et le revenu restent fixes. Poids égaux. Rang médian et intervalle de 90 % (5e au 95e centile) en variante A. Tous les triplets sont listés, par probabilité décroissante d'être dans le top 10 en variante A.\n")
+A("| Rang v6 | ID | Triplet | Notes tirées (A) | Top 10, A | 1er, A | Rang médian [5e à 95e], A | Top 10, B | 1er, B | Top 10, C | 1er, C |")
+A("|---|---|---|---|---|---|---|---|---|---|---|")
+for t in sorted(T, key=lambda t: (-MC["A"][t["id"]]["p_top"], t["rang"])):
+    a, b, c = (MC[v][t["id"]] for v in "ABC")
+    A(f"| {rg(t)} | {t['id']} | {tri(t)} | {a['n_var']} | {pc(a['p_top'])} | {pc(a['p_1'], 1)} | {a['r_med']} [{a['r_p5']} à {a['r_p95']}] | {pc(b['p_top'])} | {pc(b['p_1'], 1)} | {pc(c['p_top'])} | {pc(c['p_1'], 1)} |")
+A("")
+tete = sorted(T, key=lambda t: -MC["A"][t["id"]]["p_1"])[:5]
+A("Lecture : premier le plus probable (A) : " + ", ".join(f"{t['id']} ({pc(MC['A'][t['id']]['p_1'], 1)})" for t in tete)
+  + ". Top 10 dans au moins la moitié des tirages (A) : " + (", ".join(t["id"] for t in T if MC["A"][t["id"]]["p_top"] >= 0.5) or "aucun")
+  + ". Top 10 dans au moins 90 % des tirages (A) : " + (", ".join(t["id"] for t in T if MC["A"][t["id"]]["p_top"] >= 0.9) or "aucun") + ".")
 A("")
 
 # --- Egalites et frontieres ------------------------------------------------------------------------
@@ -282,30 +311,24 @@ for t in T:
     A(f"| {t['id']} | {g} | {EU.FACTEURS[t['id']] or 'aucun'} | {t['Ch']} | {t['C']} | {1 if t['C'] <= 3 else 0} | {code} ({niv}) | {t['EP']} | {t['IT']} | {t['QT']} | {note(t['CA'])} | {vers(t, 'R', 'ES')} | {vers(t, 'Se', 'PS')} |")
 A("")
 
-# --- Modifications de rang v4 -> v5 --------------------------------------------------------------------
-v4 = json.load(open(os.path.join(ICI, "rangs_v4.json"), encoding="utf-8"))
-P4 = {"C": 22, "Ch": 19, "R": 15, "Se": 15, "Sn": 6, "Rev": 15, "L": 8}
-BLOCS = {
-    "conditions de travail (EP, IT, QT ; ancienne charge)": lambda t, d: (t["EP"] + t["IT"] + t["QT"]) / 7 - P4["Ch"] * d["Ch"] / 100,
-    "autonomie et compétences (CA ; ancien contrôle)": lambda t, d: t["CA"] / 7 - P4["C"] * d["C"] / 100,
-    "environnement social (ES ; anciennes relations)": lambda t, d: t["ES"] / 7 - P4["R"] * d["R"] / 100,
-    "perspectives et sécurité (PS)": lambda t, d: t["PS"] / 7 - P4["Se"] * d["Se"] / 100,
-    "revenu (RE, équivalent temps plein)": lambda t, d: t["RE"] / 7 - P4["Rev"] * d["Rev"] / 100,
-    "sens retiré": lambda t, d: -P4["Sn"] * d["Sn"] / 100,
-    "lieu (télétravail) retiré": lambda t, d: -P4["L"] * d["L"] / 100,
-}
-moy = {b: sum(f(t, v4[t["id"]]) for t in T) / len(T) for b, f in BLOCS.items()}
-A("### Modifications de rang par rapport à la version 4\n")
-A("Chaque bloc compare la contribution d'un groupe de critères au score v5 et au score v4, par rapport à la moyenne des 93 triplets : un nombre positif fait monter le triplet. Les deux blocs les plus forts sont indiqués.\n")
-A("| ID | Triplet | Rang v4 | Rang v5 | Variation | Ce qui l'explique |")
+# --- Modifications de rang v5 -> v6 --------------------------------------------------------------------
+v5 = json.load(open(os.path.join(ICI, "rangs_v5.json"), encoding="utf-8"))
+NOMS6 = {"EP": "EP", "IT": "IT", "QT": "QT", "ES": "ES", "CA": "CA", "PS": "PS", "RE": "RE"}
+A("### Modifications de rang par rapport à la version 5\n")
+A("Poids égaux dans les deux versions : un rang ne change que si une note du triplet change, ou si un voisin change. Les notes changées sont indiquées (v5 → v6). Le tableau v4 → v5 est dans la version 5 du rapport (historique du dépôt).\n")
+A("| ID | Triplet | Rang v5 | Rang v6 | Variation | Ce qui l'explique |")
 A("|---|---|---|---|---|---|")
+CHANGES_V6 = [t["id"] for t in T if any(abs(t[d] - v5[t["id"]][d]) > 1e-3 for d in EU.DIMS)]
 for t in m.CLASSEMENT:
-    d = v4[t["id"]]
+    d = v5[t["id"]]
     s_old = f"{d['rang']}{'=' if d['groupe'] > 1 else ''}"
     if s_old == rg(t):
         continue
-    contrib = sorted(((b, f(t, d) - moy[b]) for b, f in BLOCS.items()), key=lambda x: -abs(x[1]))[:2]
-    expl = " ; ".join(f"{b} ({d2(v)})" for b, v in contrib)
+    notes = [f"{x} {note(d[x])} → {note(t[x])}" for x in EU.DIMS if abs(t[x] - d[x]) > 1e-3]
+    if notes:
+        expl = " ; ".join(notes) + (f" ({EU.CORRECTIONS[t['id']].split(' ; ')[-1]})" if t["id"] in EU.CORRECTIONS and "v6" in EU.CORRECTIONS[t["id"]] else "")
+    else:
+        expl = "aucune note changée ; déplacé par " + ", ".join(c for c in CHANGES_V6 if c != t["id"])
     var = d["rang"] - t["rang"]
     A(f"| {t['id']} | {tri(t)} | {s_old} | {rg(t)} | {'+' if var > 0 else ''}{var} | {expl} |")
 A("")
@@ -318,7 +341,7 @@ A("")
 
 texte = fr("\n".join(out) + "\n")
 texte = re.sub(r"(?<=\d)\.(?=\d)", ",", texte)  # decimales a la francaise
-texte = texte.replace("section 1,13", "section 1.13").replace("grille 1,3", "grille 1.3")  # numeros de section
+texte = re.sub(r"(section|grille) 1,(\d+)", r"\1 1.\2", texte)  # numeros de section
 texte = texte.replace(" x ", " × ")
 with open(os.path.join(ICI, "tableaux.md"), "w", encoding="utf-8") as f:
     f.write(texte)
