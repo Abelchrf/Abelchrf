@@ -1,0 +1,114 @@
+A0X41a Eleveurs de bovins ou d'équins
+A0X41b Eleveurs d'insectes, d'animaux sauvages ou de compagnie
+A0X41c Eleveurs de lapins et volailles
+A0X41d Eleveurs d'ovins ou de caprins
+A0X41e Eleveurs de porcins
+A0X41f Aides d'éleveurs
+A0X42a Bûcherons et élagueurs
+A0X42b Sylviculteurs, agents forestiers et agents de protection des espaces naturels
+A2X70a Techniciens et agents de conseil et assistance technique en agriculture
+A2X70b Techniciens et agents de contrôle et diagnostic technique en agriculture
+A2X70c Techniciens et agents de maîtrise en agriculture, élevage et environnement naturel
+A3X40a Aquaculteurs et saliculteurs
+A3X40b Marins d'équipage de pêche
+B0X32a Ouvriers peu qualifiés en construction en béton
+B0X32b Ouvriers qualifiés en construction en béton
+B1X33a Charpentiers peu qualifiés
+B1X33b Charpentiers qualifiés
+B1X34a Couvreurs peu qualifiés
+B1X34b Couvreurs qualifiés
+B2X30a Ouvriers peu qualifiés en pose et décoration de revêtements
+B2X30b Ouvriers qualifiés en pose et décoration de revêtements
+B2X31a Ouvriers peu qualifiés en travaux de façade, d'étanchéité et d'isolation
+B2X31b Ouvriers qualifiés en travaux de façade, d'étanchéité et d'isolation
+B2X32a Ouvriers peu qualifiés en électricité du bâtiment
+B2X32b Ouvriers qualifiés en électricité du bâtiment
+B2X33a Plombiers, chauffagistes peu qualifiés
+B2X33b Plombiers, chauffagistes qualifiés
+B2X36a Ouvriers peu qualifiés en peinture en bâtiment
+B2X36b Ouvriers qualifiés en peinture en bâtiment
+B5X40a Conducteurs de grue
+B5X40b Conducteurs d'engins de terrassement et de carrière
+B6X71a Techniciens et agents de maîtrise des études BTP, des études géologiques et du contrôle et diag
+B6X71d Techniciens et agents de maîtrise du métré de la construction
+B7X92e Cadres de la conduite de travaux du BTP et de la direction en entretien des infrastructures et 
+B7X92f Cadres en Direction de chantier du BTP
+B7X92g Cadres en Direction et ingénierie d'exploitation de gisements et de carrières
+C0X30a Ouvriers peu qualifiés de l'électricité et de l'électronique
+C0X30b Ouvriers qualifiés de l'électricité et de l'électronique
+D1X30a Ouvriers peu qualifiés en chaudronnerie et tôlerie
+D1X30b Ouvriers qualifiés en chaudronnerie et tôlerie
+D1X33a Ouvriers peu qualifiés en soudage
+D1X33b Ouvriers qualifiés en soudage
+E1X30a Ouvriers peu qualifiés de l'industrie verrière, céramique et matériaux de construction
+E1X30b Ouvriers qualifiés de l'industrie verrière, céramique et matériaux de construction
+E4X32a Ouvriers peu qualifiés du conditionnement, du tri et de l'emballage
+E4X32b Ouvriers qualifiés du conditionnement, du tri et de l'emballage
+E5X70a Techniciens des industries de process
+E5X70c Techniciens intervention technique en laboratoire d'analyse industrielle et en formulation et a
+F1X31a Ouvriers peu qualifiés de la scierie, de l'assemblage et de la fabrication d'ouvrages en bois
+F1X31b Ouvriers qualifiés et techniciens de la scierie, de l'assemblage et de la fabrication d'ouvrage
+F2X30a Ouvriers de l'imprimerie
+F2X30b Techniciens et agents de maîtrise de l'imprimerie
+G0A40a Ouvriers en réparation - montage en systèmes horlogers
+G0A40b Ouvriers en maintenance générale et mécanique industrielle
+G0A40c Ouvriers en installation maintenance en nautisme, mécanique de marine et aéronefs
+G0B40a Ouvriers peu qualifiés en réparation de carrosserie
+G0B40b Ouvriers qualifiés en réparation de carrosserie
+G0B41a Ouvriers peu qualifiés en maintenance d'engins de chantier, de levage, manutention et agricoles
+G0B41b Ouvriers peu qualifiés en mécanique automobile
+G0B41c Ouvriers qualifiés en Réparation de cycles, motocycles et motoculteurs de loisirs
+G0B41d Ouvriers qualifiés en Maintenance d'engins de chantier, de levage, manutention et agricoles
+G0B41e Ouvriers qualifiés en Mécanique automobile
+G1X71a Techniciens et agents de maîtrise en mécanique automobile, réparation de cycles, motocycles et 
+G1X71c Techniciens et agents de maîtrise en Maintenance d'engins de chantier, de levage, manutention e
+G1X72a Techniciens et agents de maîtrise en maintenance mécanique et entretien d'équipements industrie
+G1X72b Techniciens et agents de maîtrise en maintenance en nautisme, mécanique de marine et aéronefs
+G1X77a Techniciens et agents de maîtrise en maintenance électrique
+G1X77b Techniciens et agents de maîtrise en Installation et maintenance électronique
+G1X77c Techniciens et agents de maîtrise en études, conception et maintenance d'automatismes
+J3X40a Ambulanciers
+J3X40b Conducteurs de taxi, VTC
+J5X40a Agents d'exploitation des transports (hors ferroviaire)
+J5X40b Agents d'exploitation des transports ferroviaires
+J5X40c Responsable de circulation ferroviaire, chef de gare (non cadres)
+J6X90a Cadres des transports
+J6X90b Cadres du tourisme
+R0X60a Employés de magasins animateurs de vente
+R0X60b Employés de mise en rayon libre-service
+R1X60a Vendeurs en poissonnerie
+R1X60b Vendeurs en alimentation
+R1X60c Vendeurs en gros de produits frais
+R1X62a Vendeurs en Achat vente d'objets d'art, anciens ou d'occasion
+R1X62b Vendeurs de végétaux et vendeurs en animalerie
+R1X62d Vendeurs en articles de sport, de loisirs et de véhicules
+R1X62e Vendeurs en habillement et accessoires de la personne
+R2X80a Attachés commerciaux (hors médical)
+R2X80b Conseillers en information médicale
+R4X90a acheteurs
+R4X90b Cadres commerciaux et de la mercatique
+R4X93a Cadres agents immobiliers
+R4X93b Cadres chargés de gérance, de location et de projets immobiliers
+T0X60a Coiffeurs
+T0X60b Esthéticiens, manucure, hydrothérapie
+T2B60a Assistants maternels, assistants familiaux et gardes à domicile
+T2B60b Autres intervenants  auprès d'enfants (hors social)
+T2B60c Aide en puériculture
+T4X62a Agents d'entretien des espaces urbains
+T4X62b Agents d'entretien industriel
+T6X61a Personnels d'attraction, de structures de loisirs et personnels techniques des jeux
+T6X61b Chargés en développement personnel et en bien-être de la personne
+T6X61c Personnels des services funéraires
+T6X61d Artisans et ouvriers animaliers (toiletteurs, maréchaux-ferrants et taxidermistes)
+U0X92a Professionnels de l'édition
+U0X92b Journalistes et responsable de l'information média
+U1X80a Producteurs de spectacles et promoteurs d'artistes
+U1X80b Techniciens de la réalisation cinématographique et audiovisuelle
+U1X80c Techniciens de la préparation de spectacles
+U1X80d Techniciens du décor et de la régie
+U1X82a Concepteur-décorateur d’espaces
+U1X82b Concepteur-designer de produits
+U1X82c Concepteur et réalisateur multimédia
+U1X82d Concepteurs et réalisateurs de films d'animation
+U1X91a Artistes interprètes et metteurs en scène
+U1X91b Enseignants artistiques
