@@ -1,0 +1,1186 @@
+[
+{
+"nom": "LES MÉTIERS DE LA DIRECTION DES ACHATS                                                                                  66 %",
+"d1": 46,
+"med": 68,
+"d9": 105,
+"metiers": [
+"sommaire",
+"Directeur.rice des achats",
+"Responsable des achats",
+"Responsable qualité achats"
+]
+},
+{
+"nom": "LES MÉTIERS DES ACHATS",
+"d1": 41,
+"med": 54,
+"d9": 75,
+"metiers": [
+"Acheteur.euse                                 Acheteur.euse projets                   Acheteur.euse public.que",
+"Acheteur.euse BTP                             Acheteur.euse de prestations intel-     Assistant.e achats",
+"Acheteur.euse industriel.le                                                           Travel manager",
+"lectuelles"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ASSISTANAT DE DIRECTION                                                                                          36%",
+"d1": 35,
+"med": 47,
+"d9": 64,
+"metiers": [
+"Assistant.e de direction",
+"Assistant.e de gestion"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA GESTION IMMOBILIÈRE",
+"d1": 37,
+"med": 50,
+"d9": 78,
+"metiers": [
+"Directeur.rice immobilier.ère",
+"Gestionnaire de copropriété",
+"Gestionnaire immobilier.ère"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA SOUSCRIPTION ET GESTION EN ASSURANCES",
+"d1": 40,
+"med": 56,
+"d9": 88,
+"metiers": [
+"Consultant.e en assurance",
+"Expert.e d'assurances",
+"Gestionnaire de contrats d'assurance",
+"Gestionnaire de sinistres",
+"Souscripteur.euse assurance"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA TRÉSORERIE",
+"d1": 45,
+"med": 68,
+"d9": 106,
+"metiers": [
+"Responsable trésorerie",
+"Trésorier.ère d'entreprise"
+]
+},
+{
+"nom": "LES MÉTIERS DU CONSEIL EN ORGANISATION                                                                          55%",
+"d1": 40,
+"med": 57,
+"d9": 86,
+"metiers": [
+"Chef.fe de projet en organisation                                               Consultant.e en management d'entreprise",
+"Conseiller.ère développement économique                                         Consultant.e en organisation",
+"Consultant.e en management de l'innovation"
+]
+},
+{
+"nom": "LES MÉTIERS JURIDIQUES",
+"d1": 40,
+"med": 52,
+"d9": 80,
+"metiers": [
+"Assistant.e juridique                       Clerc de Notaire                         Juriste",
+"Avocat.e                                    Contract manager                         Notaire",
+"Chargé.e de recouvrement                    Fiscaliste                               Responsable juridique"
+]
+},
+{
+"nom": "LES MÉTIERS COMMERCIAUX DE LA BANQUE                                                         71%",
+"d1": 39,
+"med": 50,
+"d9": 69,
+"metiers": [
+"Conseiller.ère clientèle en banque",
+"Conseiller.ère en gestion de patrimoine",
+"Courtier.ère en banque",
+"Responsable d'agence bancaire"
+]
+},
+{
+"nom": "LES MÉTIERS COMMERCIAUX DANS LA SANTÉ                        82%",
+"d1": 44,
+"med": 59,
+"d9": 79,
+"metiers": [
+"Chargé.e d'affaires dans la santé",
+"Chef.fe de projet télémédecine",
+"Délégué.e médical.e",
+"Délégué.e vétérinaire",
+"Rémunération de la famille de métiers cadres                                                   2025"
+]
+},
+{
+"nom": "LES MÉTIERS COMMERCIAUX DANS L'ASSURANCE",
+"d1": 40,
+"med": 51,
+"d9": 76,
+"metiers": [
+"sommaire",
+"Agent.e général.e d'assurances",
+"Commercial.e en assurances",
+"Conseiller.ère clientèle en assurances",
+"Courtier.ère en assurances"
+]
+},
+{
+"nom": "LES MÉTIERS COMMERCIAUX DANS L'IMMOBILIER                     76%",
+"d1": 37,
+"med": 60,
+"d9": 101,
+"metiers": [
+"Agent.e immobilier.ière",
+"Commercial.e immobilier.ère",
+"Développeur.euse foncier",
+"Responsable d'agence immobilière",
+"Rémunération de la famille de métiers cadres                                                   2025"
+]
+},
+{
+"nom": "LES MÉTIERS COMMERCIAUX DANS L'INFORMATIQUE ET AUTRES SERVICES",
+"d1": 44,
+"med": 55,
+"d9": 73,
+"metiers": [
+"sommaire",
+"Chargé.e d'affaires dans la formation",
+"Directeur.rice de clientèle en communication",
+"Ingénieur.e d'affaires en informatique",
+"Ingénieur.e d'affaires en ingénierie"
+]
+},
+{
+"nom": "LES MÉTIERS COMMERCIAUX DANS L'INDUSTRIE ET LE BTP                                                              41%",
+"d1": 38,
+"med": 50,
+"d9": 66,
+"metiers": [
+"sommaire",
+"Chargé.e d'affaires dans le BTP",
+"Chargé.e d'affaires dans l'industrie",
+"Chargé.e d'affaires en environnement et énergie"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION COMMERCIALE                                                                                                                                                                                                                                                                                    77%",
+"d1": 55,
+"med": 85,
+"d9": 138,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION D'AGENCE COMMERCIALE ET DE SERVICES",
+"d1": 39,
+"med": 58,
+"d9": 83,
+"metiers": [
+"Responsable d'agence commerciale",
+"Responsable d'agence emploi",
+"Responsable d'agence services à la personne"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DISTRIBUTION ET DES POINTS DE VENTE                                                      73%",
+"d1": 37,
+"med": 49,
+"d9": 79,
+"metiers": [
+"Animateur.rice des ventes                        Chef.fe de secteur commercial",
+"Chef.fe de caisses                               Merchandiser",
+"Chef.fe de rayon"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA RELATION CLIENTS",
+"d1": 39,
+"med": 54,
+"d9": 91,
+"metiers": [
+"Animateur.rice SAV                                Gestionnaire CRM                            Responsable de la relation clients",
+"Chargé.e de relation client                       Responsable centre de la relation           Responsable service après-vente",
+"Directeur.rice de la relation clients",
+"clients"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA REPRÉSENTATION COMMERCIALE                                                       71%",
+"d1": 37,
+"med": 54,
+"d9": 87,
+"metiers": [
+"Assistant.e commercial.e                     Consultant.e commercial.e",
+"Commercial.e                                 Promoteur.rice des ventes"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ADMINISTRATION DES VENTES                                                   43%",
+"d1": 37,
+"med": 49,
+"d9": 66,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE L'AVANT-VENTE ET DU SUPPORT COMMERCIAL",
+"d1": 38,
+"med": 56,
+"d9": 92,
+"metiers": [
+"Chargé.e d'appels d'offres                  Ingénieur.e avant-vente",
+"Chargé.e de mission commerciale             Ingénieur.e support des ventes"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE D'AFFAIRES",
+"d1": 41,
+"med": 55,
+"d9": 80,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DU COMMERCE GRANDS COMPTES                                                               80%",
+"d1": 46,
+"med": 65,
+"d9": 100,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DU COMMERCE INTERNATIONAL                                                                           65%",
+"d1": 42,
+"med": 57,
+"d9": 100,
+"metiers": [
+"sommaire",
+"Commercial.e export",
+"Directeur.rice export"
+]
+},
+{
+"nom": "LES MÉTIERS DU DÉVELOPPEMENT COMMERCIAL                                                                                                                                                                                                                                         67%",
+"d1": 40,
+"med": 63,
+"d9": 115,
+"metiers": [
+"Business developer                                                                                                                                                                                                                             Responsable développement de franchise",
+"Business manager                                                                                                                                                                                                                               Responsable développement du réseau commercial",
+"Directeur.rice du développement commercial                                                                                                                                                                                                     Responsable mécénat"
+]
+},
+{
+"nom": "LES MÉTIERS DU MANAGEMENT COMMERCIAL                                                                              74%",
+"d1": 42,
+"med": 64,
+"d9": 100,
+"metiers": [
+"Directeur.rice commercial.e régional.e                                            Responsable commercial.e                                       Retour",
+"Directeur.rice de centre de profit                                                Responsable commercial.e régional.e                          sommaire"
+]
+},
+{
+"nom": "LES MÉTIERS DU MANAGEMENT COMMERCIAL                                                              53%",
+"d1": 37,
+"med": 50,
+"d9": 66,
+"metiers": [
+"Chef.fe de cuisine",
+"Responsable de développement touristique",
+"Responsable de restaurant",
+"Responsable d'hébergement touristique"
+]
+},
+{
+"nom": "LES MÉTIERS DU MANAGEMENT DE MAGASIN                                                        67%",
+"d1": 34,
+"med": 47,
+"d9": 79,
+"metiers": [
+"sommaire",
+"Responsable de magasin",
+"Retail manager"
+]
+},
+{
+"nom": "LES MÉTIERS DU MANAGEMENT DES VENTES                                                                                                       78%",
+"d1": 42,
+"med": 60,
+"d9": 89,
+"metiers": [
+"Chef.fe d'équipe commerciale",
+"Chef.fe des ventes",
+"Inspecteur.rice commercial.e",
+"Manager commercial"
+]
+},
+{
+"nom": "LES MÉTIERS DU TECHNICO-COMMERCIAL",
+"d1": 40,
+"med": 53,
+"d9": 75,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE LA COMMUNICATION",
+"d1": 33,
+"med": 44,
+"d9": 63,
+"metiers": [
+"Brand content manager                          Chargé.e des relations publiques               Community manager",
+"Chargé.e de communication                      Chef.fe de projet événementiel                 Consultant.e en communication",
+"Chargé.e de médiation culturelle               Chef.fe de publicité                           Planneur stratégique"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION DE LA COMMUNICATION",
+"d1": 38,
+"med": 53,
+"d9": 86,
+"metiers": [
+"Directeur.rice de la communication  Directeur.rice de la création"
+]
+},
+{
+"nom": "LES MÉTIERS EN ART, CRÉATION ET DESIGN                                    32%",
+"d1": 35,
+"med": 45,
+"d9": 60,
+"metiers": [
+"Créateur.rice audiovisuel.le                        Graphiste",
+"Designer                                            Infographiste 3D",
+"Designer industriel.le                              Styliste",
+"Directeur.rice artistique spectacle                 Web designer",
+"Gestionnaire de collection",
+"Rémunération de la famille de métiers cadres                                                   2025"
+]
+},
+{
+"nom": "LES MÉTIERS EN RÉDACTION TECHNIQUE ET DOCUMENTATION",
+"d1": 33,
+"med": 43,
+"d9": 65,
+"metiers": [
+"Documentaliste",
+"Rédacteur.rice technique"
+]
+},
+{
+"nom": "LES MÉTIERS EN RÉDACTION, ÉDITION, TRADUCTION",
+"d1": 32,
+"med": 48,
+"d9": 73,
+"metiers": [
+"Éditeur.rice",
+"Journaliste",
+"Rédacteur.rice",
+"Traducteur.rice"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION D'ENTREPRISE                                                                                   47%",
+"d1": 45,
+"med": 76,
+"d9": 150,
+"metiers": [
+"Adjoint.e de direction                                                            Directeur.trice général.e",
+"Directeur.trice de start-up"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA COMPTABILITÉ",
+"d1": 37,
+"med": 48,
+"d9": 67,
+"metiers": [
+"sommaire",
+"Chargé.e de facturation clients",
+"Comptable"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION ADMINISTRATIVE ET FINANCIÈRE",
+"d1": 49,
+"med": 80,
+"d9": 129,
+"metiers": [
+"sommaire",
+"Directeur.rice administratif.ve et financier.ère",
+"Directeur.rice comptable"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'AUDIT ET EXPERTISE COMPTABLE                                                                   67%",
+"d1": 45,
+"med": 58,
+"d9": 80,
+"metiers": [
+"sommaire",
+"Auditeur.rice externe",
+"Commissaire aux comptes",
+"Expert.e comptable"
+]
+},
+{
+"nom": "LES MÉTIERS DES OPÉRATIONS BANCAIRES ET DES MARCHÉS FINANCIERS 2025",
+"d1": 41,
+"med": 60,
+"d9": 92,
+"metiers": [
+"Analyste crédits                               Chargé.e de conformité bancaire            Gestionnaire back office",
+"Analyste financier.ère                         Chargé.e de financement de projet          Responsable middle office",
+"Asset manager                                  Consultant.e finance                       Risk manager bancaire",
+"Banquier.ère conseil M&A                       Expert.e MOA banque                        Trader"
+]
+},
+{
+"nom": "LES MÉTIERS DES RISQUES ET DU CONTRÔLE INTERNE                                                                            70%",
+"d1": 45,
+"med": 66,
+"d9": 94,
+"metiers": [
+"Auditeur.rice interne",
+"Chargé.e de conformité",
+"Risk manager"
+]
+},
+{
+"nom": "LES MÉTIERS DU CONTRÔLE DE GESTION",
+"d1": 42,
+"med": 54,
+"d9": 75,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DU MANAGEMENT ADMINISTRATIF ET FINANCIER",
+"d1": 40,
+"med": 56,
+"d9": 85,
+"metiers": [
+"Responsable administratif.ive et financier.ère                           Responsable du contrôle de gestion",
+"Responsable comptable"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION INFORMATIQUE                                                                                                                                                                                                                                                                                                     61%",
+"d1": 49,
+"med": 77,
+"d9": 130,
+"metiers": [
+"sommaire",
+"Directeur.rice des systèmes d'information",
+"Responsable informatique"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA GESTION DE PROJETS INFORMATIQUES                                                                44%",
+"d1": 41,
+"med": 57,
+"d9": 79,
+"metiers": [
+"Chef.fe de projet Agile                                                           Project management officer",
+"Chef.fe de projet informatique                                                    Webmaster",
+"Directeur.rice de projets informatiques"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA MAÎTRISE D'OUVRAGE ET DE L'URBANISME INFORMATIQUE 2025",
+"d1": 41,
+"med": 56,
+"d9": 85,
+"metiers": [
+"Chef.fe de projet fonctionnel Web                                 Responsable MOA",
+"Consultant.e maîtrise d'ouvrage                                   Urbaniste du système d'information",
+"Ingénieur.e méthode informatique"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA PRODUCTION ET MAINTENANCE INFORMATIQUE",
+"d1": 37,
+"med": 58,
+"d9": 99,
+"metiers": [
+"Incident manager                                           Ingénieur.e poste de travail",
+"Ingénieur.e de maintenance informatique                    Responsable de parc informatique",
+"Ingénieur.e de production informatique                     Responsable de production informatique"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA SÉCURITÉ INFORMATIQUE                                                       49%",
+"d1": 43,
+"med": 60,
+"d9": 99,
+"metiers": [
+"Analyste SOC                                                 Ingénieur.e sécurité informatique",
+"Délégué.e à la protection des données                        Responsable sécurité informatique"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ADMINISTRATION DE BASES DE DONNÉES                                40%",
+"d1": 40,
+"med": 55,
+"d9": 97,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DES TESTS ET RECETTES INFORMATIQUES",
+"d1": 38,
+"med": 50,
+"d9": 66,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE L'INFORMATIQUE INDUSTRIELLE ET TECHNIQUE",
+"d1": 39,
+"med": 51,
+"d9": 71,
+"metiers": [
+"Bioinformaticien.ne                                                Ingénieur.e informatique embarquée",
+"Chef.fe de projet informatique industrielle                        Ingénieur.e informatique industrielle",
+"Consultant.e PLM"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INTÉGRATION PROGICIELLE                                                            47%",
+"d1": 42,
+"med": 55,
+"d9": 75,
+"metiers": [
+"sommaire",
+"Consultant.e technique progiciel",
+"Ingénieur.e intégration progiciel"
+]
+},
+{
+"nom": "LES MÉTIERS DES INFRASTRUCTURES ET SYSTÈMES INFORMATIQUES",
+"d1": 41,
+"med": 55,
+"d9": 85,
+"metiers": [
+"Administrateur.rice Data center                Architecte système                                  Ingénieur.e système",
+"Administrateur.rice système                    Directeur.rice des infrastructures et",
+"Architecte infrastructures",
+"de la production informatique"
+]
+},
+{
+"nom": "LES MÉTIERS DES RÉSEAUX INFORMATIQUES ET TÉLÉCOMS                                                             34%",
+"d1": 38,
+"med": 51,
+"d9": 76,
+"metiers": [
+"Administrateur.rice réseaux               Ingénieur.e réseaux",
+"Architecte réseaux                        Ingénieur.e télécoms"
+]
+},
+{
+"nom": "LES MÉTIERS DU BIG DATA",
+"d1": 40,
+"med": 54,
+"d9": 98,
+"metiers": [
+"Architecte Big Data                                                      Data engineer",
+"Chercheur.euse en informatique et mathématiques                          Data scientist",
+"Chief Data officer                                                       Géomaticien.ne",
+"Data analyst"
+]
+},
+{
+"nom": "LES MÉTIERS DU BUSINESS INTELLIGENCE ET DU DÉCISIONNEL",
+"d1": 39,
+"med": 50,
+"d9": 75,
+"metiers": [
+"Architecte business intelligence",
+"Chef.fe de projet informatique décisionnelle",
+"Ingénieur.e développement BI"
+]
+},
+{
+"nom": "LES MÉTIERS DU DÉVELOPPEMENT INFORMATIQUE                                                                 34%",
+"d1": 38,
+"med": 50,
+"d9": 74,
+"metiers": [
+"sommaire",
+"Architecte développement",
+"Développeur.euse",
+"Ingénieur.e en études et développement informatiques"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION EN ÉTUDES, R&D                                                                          52%",
+"d1": 43,
+"med": 65,
+"d9": 104,
+"metiers": [
+"Directeur.rice études, recherche et développement                          Responsable de laboratoire d'analyses R&D",
+"Responsable de bureau d'études                                             Responsable R&D"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA GESTION DE PROJETS R&D                                                                   45%",
+"d1": 41,
+"med": 53,
+"d9": 79,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE L'ACTUARIAT",
+"d1": 48,
+"med": 64,
+"d9": 79,
+"metiers": [
+"Actuaire",
+"Chargé.e d'études actuarielles",
+"Rémunération de la famille de métiers cadres                                             2025"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ARCHITECTURE                   Part variable",
+"d1": null,
+"med": null,
+"d9": null,
+"metiers": [
+"Architecte (BTP)",
+"Architecte d'intérieur",
+"Architecte naval.e"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ÉCONOMIE DE LA CONSTRUCTION                              49%",
+"d1": 40,
+"med": 49,
+"d9": 63,
+"metiers": [
+"Économiste de la construction",
+"Ingénieur.e études de prix",
+"Rémunération de la famille de métiers cadres                              2025"
+]
+},
+{
+"nom": "LES MÉTIERS DES ÉTUDES TOPOGRAPHIQUES ET GÉOLOGIQUES",
+"d1": null,
+"med": null,
+"d9": null,
+"metiers": [
+"Ingénieur.e géologue",
+"Géomètre topographe",
+"Géophysicien.ne",
+"Géotechnicien.ne"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE CHIMIQUE, BIOLOGIQUE ET CLINIQUE",
+"d1": 37,
+"med": 49,
+"d9": 68,
+"metiers": [
+"Attaché.e de recherche clinique                                                Ingénieur.e biomédical.e",
+"Biostatisticien.ne                                                             Ingénieur.e chimiste",
+"Ingénieur.e agroalimentaire                                                    Ingénieur.e en biotechnologies",
+"Ingénieur.e biologiste                                                         Ingénieur.e formulation"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE DU BTP",
+"d1": 40,
+"med": 48,
+"d9": 66,
+"metiers": [
+"BIM manager                                                          Ingénieur.e d'études du BTP",
+"Chef.fe de projet R&D BTP                                            Ingénieur.e d'études réseaux d'énergie",
+"Diagnostiqueur.euse immobilier.ère"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE ÉLECTRIQUE ET ÉLECTRONIQUE",
+"d1": 40,
+"med": 50,
+"d9": 69,
+"metiers": [
+"Ingénieur.e développement de composants                                Ingénieur.e optique",
+"Ingénieur.e électronique                                               Ingénieur.e radio",
+"Ingénieur.e génie électrique                                           Ingénieur.e traitement du signal",
+"Ingénieur.e mécatronique"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE EN MATÉRIAUX                                                32%",
+"d1": 39,
+"med": 46,
+"d9": 63,
+"metiers": [
+"Ingénieur.e matériaux                         Ingénieur.e plasturgie",
+"Ingénieur.e métallurgiste                     Ingénieur.e soudeur"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE ÉNERGÉTIQUE ET ENVIRONNEMENTALE",
+"d1": 33,
+"med": 45,
+"d9": 62,
+"metiers": [
+"Acousticien.ne                                                                    Ingénieur.e d'études environnement",
+"Expert.e en environnement et écologie                                             Ingénieur.e en efficacité énergétique",
+"Hydraulicien.ne                                                                   Ingénieur.e énergies",
+"Ingénieur.e CVC                                                                   Ingénieur.e énergies renouvelables"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE MÉCANIQUE",
+"d1": 36,
+"med": 46,
+"d9": 59,
+"metiers": [
+"Ingénieur.e mécanique",
+"Ingénieur.e motoriste"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE R&D",
+"d1": 36,
+"med": 46,
+"d9": 63,
+"metiers": [
+"Ingénieur.e généraliste",
+"Ingénieur.e R&D"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INSTRUMENTATION ET DES ESSAIS                                                    35%",
+"d1": 38,
+"med": 49,
+"d9": 70,
+"metiers": [
+"Ingénieur.e instrumentation                                           Ingénieur.e test et essai",
+"Ingénieur.e intégration validation                                    Métrologue",
+"Ingénieur.e mise en service"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'URBANISME ET DES PROGRAMMES IMMOBILIERS",
+"d1": 37,
+"med": 50,
+"d9": 75,
+"metiers": [
+"Chef.fe de projet aménagement du territoire",
+"Responsable de programmes immobiliers",
+"Urbaniste"
+]
+},
+{
+"nom": "LES MÉTIERS DES ÉTUDES SOCIO-ÉCONOMIQUES ET DU MARKETING",
+"d1": 36,
+"med": 48,
+"d9": 76,
+"metiers": [
+"Cartographe                                                                             Chargé.e d'intelligence économique",
+"Chargé.e d'études marketing                                                             Responsable d'études marketing",
+"Chargé.e d'études socio-économiques                                                     Statisticien.ne"
+]
+},
+{
+"nom": "LES MÉTIERS DU CALCUL ET DE LA SIMULATION NUMÉRIQUE                                                                   39%",
+"d1": 38,
+"med": 47,
+"d9": 62,
+"metiers": [
+"Ingénieur.e calcul et structure",
+"Ingénieur.e en simulation numérique"
+]
+},
+{
+"nom": "LES MÉTIERS DU DESSIN INDUSTRIEL ET DU BTP                                24%",
+"d1": 33,
+"med": 42,
+"d9": 53,
+"metiers": [
+"Dessinateur.rice projeteur.rice",
+"Projeteur.rice BIM"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION DE LA SUPPLY CHAIN                                                        65%",
+"d1": 44,
+"med": 61,
+"d9": 97,
+"metiers": [
+"Directeur.rice de la supply chain",
+"Responsable d'entrepôt",
+"Responsable logistique"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA SUPPLY CHAIN",
+"d1": 39,
+"med": 52,
+"d9": 75,
+"metiers": [
+"Approvisionneur.euse                                     Gestionnaire de la supply chain         Responsable préparation réception",
+"Consultant.e logistique                                  Logisticien.ne                            expédition",
+"Gestionnaire de flux logistiques                         Responsable gestion des stocks"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE DES TRANSPORTS                                                    56%",
+"d1": 40,
+"med": 55,
+"d9": 80,
+"metiers": [
+"Affréteur.euse                                               Déclarant.e en douane",
+"Agent.e de transport                                         Responsable d'exploitation transport"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION MARKETING                                                                                                                                                           72%",
+"d1": 52,
+"med": 83,
+"d9": 140,
+"metiers": [
+"sommaire",
+"Directeur.rice commercial.e et marketing",
+"Directeur.rice marketing"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA GESTION DE PRODUIT (CHEF DE PRODUIT, ETC.)",
+"d1": 41,
+"med": 57,
+"d9": 85,
+"metiers": [
+"Category manager",
+"Chef.fe de produit"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA GESTION DE PROJET MARKETING                                                    62%",
+"d1": 38,
+"med": 53,
+"d9": 83,
+"metiers": [
+"Assistant.e marketing                         Chef.fe de projet marketing            Responsable marketing",
+"Brand manager                                 Ingénieur.e packaging"
+]
+},
+{
+"nom": "LES MÉTIERS DU MARKETING DIGITAL",
+"d1": 37,
+"med": 52,
+"d9": 74,
+"metiers": [
+"Chargé.e de référencement web                    Responsable marketing digital                  UX designer",
+"Chef.fe de produit digital                       Social media manager                           Web analyst",
+"Chef.fe de projet digital                        Traffic manager"
+]
+},
+{
+"nom": "LES MÉTIERS EN BUSINESS ANALYSE ET PRICING                                                54%",
+"d1": 41,
+"med": 54,
+"d9": 75,
+"metiers": [
+"Business analyst",
+"Pricing analyst",
+"Yield manager"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ORDONNANCEMENT ET DE LA PLANIFICATION",
+"d1": 39,
+"med": 54,
+"d9": 77,
+"metiers": [
+"Contrôleur.euse des coûts                                                          Responsable ordonnancement et planification",
+"Ingénieur.e planification                                                          Supply planner",
+"Prévisionniste de ventes"
+]
+},
+{
+"nom": "LES MÉTIERS DES BREVETS ET AFFAIRES RÉGLEMENTAIRES                                                               37%",
+"d1": 38,
+"med": 52,
+"d9": 75,
+"metiers": [
+"Chargé.e des affaires réglementaires",
+"Homologateur.rice",
+"Ingénieur.e brevets"
+]
+},
+{
+"nom": "LES MÉTIERS EN PROCESS, MÉTHODES ET INDUSTRIALISATION",
+"d1": 40,
+"med": 54,
+"d9": 77,
+"metiers": [
+"Ingénieur.e amélioration continue                                         Ingénieur.e process",
+"Ingénieur.e industrialisation                                             Responsable méthodes et industrialisation",
+"Ingénieur.e procédés"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION INDUSTRIELLE                                                                66%",
+"d1": 55,
+"med": 80,
+"d9": 133,
+"metiers": [
+"Directeur.rice d'unité de production                                      Directeur.rice technique de production industrielle",
+"Directeur.rice de production industrielle"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE EN PRODUCTION INDUSTRIELLE",
+"d1": 40,
+"med": 54,
+"d9": 76,
+"metiers": [
+"sommaire",
+"Chef.fe de projet sites et sols pollués",
+"Ingénieur.e de production industrielle"
+]
+},
+{
+"nom": "LES MÉTIERS DU PILOTAGE EN PRODUCTION INDUSTRIELLE                                                     51%",
+"d1": 41,
+"med": 57,
+"d9": 86,
+"metiers": [
+"Responsable conditionnement                                         Responsable de production industrielle",
+"Responsable d'atelier de production"
+]
+},
+{
+"nom": "LES MÉTIERS EN MAINTENANCE INDUSTRIELLE                                                                       62%",
+"d1": 40,
+"med": 59,
+"d9": 93,
+"metiers": [
+"Ingénieur.e en maintenance industrielle                                      Ingénieur.e travaux neufs",
+"Ingénieur.e maintenance équipements énergétiques                             Responsable maintenance industrielle"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA QUALITÉ",
+"d1": 38,
+"med": 51,
+"d9": 76,
+"metiers": [
+"Assureur.euse qualité                           Consultant.e qualité                            Responsable qualité",
+"Chargé.e de la qualité                          Ingénieur.e qualité",
+"Chargé.e de pharmacovigilance                   Pharmacien.ne assurance qualité"
+]
+},
+{
+"nom": "LES MÉTIERS EN HYGIÈNE-SÉCURITÉ-ENVIRONNEMENT (HSE)",
+"d1": 39,
+"med": 54,
+"d9": 79,
+"metiers": [
+"Directeur.rice développement durable                                     Ingénieur.e sûreté de fonctionnement",
+"Directeur.rice QHSE                                                      Ingénieur.e sûreté nucléaire",
+"Ingénieur.e HSE                                                          Responsable HSE"
+]
+},
+{
+"nom": "LES MÉTIERS EN MAINTENANCE-ENTRETIEN-SÉCURITÉ                                                   51%",
+"d1": 40,
+"med": 57,
+"d9": 82,
+"metiers": [
+"Gestionnaire parc automobile et matériel                          Responsable services généraux",
+"Responsable maintenance                                           Responsable support technique",
+"Responsable sécurité privée                                       Responsable technique maintenance et entretien"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION DES RESSOURCES HUMAINES",
+"d1": 54,
+"med": 89,
+"d9": 132,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE LA PAIE ET DE L'ADMINISTRATION DU PERSONNEL",
+"d1": 39,
+"med": 48,
+"d9": 79,
+"metiers": [
+"Gestionnaire de paie",
+"Responsable administration du personnel",
+"Responsable paie"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA RESPONSABILITÉ DES RESSOURCES HUMAINES",
+"d1": 41,
+"med": 56,
+"d9": 83,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE L'ENSEIGNEMENT ET DE LA FORMATION CONTINUE",
+"d1": 31,
+"med": 45,
+"d9": 68,
+"metiers": [
+"Enseignant.e",
+"Formateur.rice"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE DE LA FORMATION                                                                     41%",
+"d1": 36,
+"med": 51,
+"d9": 83,
+"metiers": [
+"Chargé.e de formation",
+"Directeur.rice centre de formation",
+"Responsable de formation"
+]
+},
+{
+"nom": "LES MÉTIERS DES CADRES RH GÉNÉRALISTES                                                                    46%",
+"d1": 35,
+"med": 45,
+"d9": 63,
+"metiers": [
+"Assistant.e RH",
+"Généraliste RH"
+]
+},
+{
+"nom": "LES MÉTIERS DES RELATIONS SOCIALES ET DE LA QUALITÉ DE VIE AU TRAVAIL 2025",
+"d1": 38,
+"med": 53,
+"d9": 78,
+"metiers": [
+"Chef.fe de projet ergonomie et pré-            Juriste social.e                         Responsable des relations sociales",
+"vention des risques professionnels           Psychologue du travail                   Responsable rémunérations",
+"Responsable de la diversité",
+"Contrôleur.euse de gestion sociale"
+]
+},
+{
+"nom": "LES MÉTIERS DES SIRH (SYSTÈMES D'INFORMATION RESSOURCES HUMAINES) 2025",
+"d1": 44,
+"med": 58,
+"d9": 86,
+"metiers": [
+"Consultant.e SIRH",
+"Responsable SIRH"
+]
+},
+{
+"nom": "LES MÉTIERS DU RECRUTEMENT ET DE LA GESTION DE CARRIÈRE",
+"d1": 36,
+"med": 49,
+"d9": 70,
+"metiers": [
+"Chargé.e de recrutement                                                Responsable du recrutement",
+"Conseiller.ère en évolution professionnelle                            Responsable mobilité internationale",
+"Consultant.e en recrutement",
+"Responsable de la gestion des carrières"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION DE STRUCTURES EN SANTÉ-SOCIAL",
+"d1": 36,
+"med": 54,
+"d9": 82,
+"metiers": [
+"Directeur.rice d'association                                 Directeur.rice d'établissement médico-social",
+"Directeur.rice de centre socio-culturel                      Directeur.rice d'établissement social",
+"Directeur.rice de maison de retraite                         Directeur.rice d'hôpital",
+"Directeur.rice d'établissement d'accueil de jeunes enfants"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA MÉDECINE",
+"d1": 33,
+"med": 54,
+"d9": 104,
+"metiers": [
+"Dentiste                                                     Médecin DIM",
+"Médecin coordonnateur.rice                                   Médecin généraliste",
+"Médecin de prévention                                        Médecin spécialiste",
+"Rémunération de la famille de métiers cadres                                          2025"
+]
+},
+{
+"nom": "LES MÉTIERS DES SOINS INFIRMIERS ET PARAMÉDICAUX                             59%",
+"d1": 34,
+"med": 42,
+"d9": 57,
+"metiers": [
+"Audioprothésiste                          Kinésithérapeute           Psychomotricien.ne",
+"Diététicien.ne                            Opticien.ne                Sage-femme",
+"Ergothérapeute                            Orthophoniste",
+"Infirmier.ère                             Orthoprothésiste"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA PHARMACIE ET DE LA BIOLOGIE MÉDICALE",
+"d1": 34,
+"med": 48,
+"d9": 70,
+"metiers": [
+"Médecin pharmacien.ne biologiste                                Pharmacien.ne de production",
+"Pharmacien.ne                                                   Pharmacien.ne gérant.e"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA PSYCHOLOGIE ET DE L'ACCOMPAGNEMENT SOCIAL",
+"d1": 25,
+"med": 37,
+"d9": 46,
+"metiers": [
+"Assistant.e social.e",
+"Conseiller.ère social.e",
+"Psychologue"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'ENCADREMENT MÉDICAL, SOCIAL ET PARAMÉDICAL",
+"d1": 34,
+"med": 45,
+"d9": 61,
+"metiers": [
+"Cadre de santé                                                Délégué.e de l'assurance maladie",
+"Cadre supérieur.e de santé                                    Directeur.rice de pôle médico-social",
+"Chargé.e de mission médico-social                             Directeur.rice des soins",
+"Chef.fe de service médical                                    Infirmier.ère coordinateur.rice",
+"Chef.fe de service socio-éducatif                             Médecin conseil en santé publique"
+]
+},
+{
+"nom": "LES MÉTIERS DE LA CONDUITE DE TRAVAUX                                                   41%",
+"d1": 39,
+"med": 50,
+"d9": 63,
+"metiers": []
+},
+{
+"nom": "LES MÉTIERS DE LA DIRECTION DU BTP",
+"d1": 46,
+"med": 65,
+"d9": 94,
+"metiers": [
+"Directeur.rice d'agence BTP",
+"Directeur.rice des travaux",
+"Directeur.rice d'exploitation BTP",
+"Directeur.rice d'exploitation énergie"
+]
+},
+{
+"nom": "LES MÉTIERS DE L'INGÉNIERIE DE TRAVAUX",
+"d1": 39,
+"med": 52,
+"d9": 76,
+"metiers": [
+"Chef.fe de chantier                                            Ingénieur.e travaux",
+"Chef.fe de projet travaux",
+"Conducteur.rice d'opérations",
+"Ingénieur.e génie civil"
+]
+}
+]

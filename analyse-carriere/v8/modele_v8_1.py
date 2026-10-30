@@ -44,27 +44,37 @@ def preparer(v):
     return w
 
 
-CLASSEMENTS = {
-    "France": [preparer(v) for v in M.V if v["resid"] == "FR"],
-    "Suisse": [preparer(v) for v in M.V if v["resid"] == "CH"],
-}
+def classements(V):
+    return {"France": [preparer(v) for v in V if v["resid"] == "FR"],
+            "Suisse": [preparer(v) for v in V if v["resid"] == "CH"]}
 
-out = {}
-for nom, V in CLASSEMENTS.items():
+
+def classer_et_tirer(nom, V):
+    """Classement d'un pays : echelle de revenu apres impot propre au classement, tirages variante A."""
     R, bornes = M.classer(V, "med_ai_ppa", "p80_ai_ppa")
     M.tirages(R)
-    out[nom] = dict(bornes=bornes, n_variantes=len(V), n_metiers=len(R), classement=R)
     print(f"== {nom} : {len(V)} variantes, {len(R)} métiers, bornes médiane {[round(x) for x in bornes['med']]}, "
           f"P80 {[round(x) for x in bornes['p80']]}, max P(1er) {max(v['p_1'] for v in R):.3f}")
-    if nom == "Suisse":
-        print("   métiers dont le revenu suisse vient d'un groupe CITP à 2 chiffres :",
-              sum(v["citp2"] for v in R), "sur", len(R))
-    for i, v in enumerate(sorted(R, key=lambda v: (-v["p_top"], -v["W"]))[:22], 1):
-        r, n = v["rev"], v["notes"]
-        print(f"{i:2} {v['metier']:7} {v['nom'][:60]:60} {v['kind']:6} W={v['W']:.3f} rang={v['rang_base']:3} "
-              f"P10={v['p_top']:.3f} P1={v['p_1']:.3f} | EP{n['EP']} IT{n['IT']} QT{n['QT']} ES{n['ES']} CA{n['CA']:.2f} "
-              f"PS{n['PS']} RE{v['RE']:.2f} | ai {r['med_ai']:,.0f} {r['cur']} (impôt {100 * r['taux_impot']:.1f} %)"
-              f"{' CITP2' if v['citp2'] else ''}".replace(",", " "))
+    return dict(bornes=bornes, n_variantes=len(V), n_metiers=len(R), classement=R)
 
-json.dump(out, open(os.path.join(ICI, "resultats_v8_1.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1,
-          default=float)
+
+def main():
+    out = {}
+    for nom, V in classements(M.V).items():
+        out[nom] = classer_et_tirer(nom, V)
+        R = out[nom]["classement"]
+        if nom == "Suisse":
+            print("   métiers dont le revenu suisse vient d'un groupe CITP à 2 chiffres :",
+                  sum(v["citp2"] for v in R), "sur", len(R))
+        for i, v in enumerate(sorted(R, key=lambda v: (-v["p_top"], -v["W"]))[:22], 1):
+            r, n = v["rev"], v["notes"]
+            print(f"{i:2} {v['metier']:7} {v['nom'][:60]:60} {v['kind']:6} W={v['W']:.3f} rang={v['rang_base']:3} "
+                  f"P10={v['p_top']:.3f} P1={v['p_1']:.3f} | EP{n['EP']} IT{n['IT']} QT{n['QT']} ES{n['ES']} CA{n['CA']:.2f} "
+                  f"PS{n['PS']} RE{v['RE']:.2f} | ai {r['med_ai']:,.0f} {r['cur']} (impôt {100 * r['taux_impot']:.1f} %)"
+                  f"{' CITP2' if v['citp2'] else ''}".replace(",", " "))
+    json.dump(out, open(os.path.join(ICI, "resultats_v8_1.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1,
+              default=float)
+
+
+if __name__ == "__main__":
+    main()
