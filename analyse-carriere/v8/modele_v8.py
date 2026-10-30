@@ -312,56 +312,70 @@ def echelle(vals):
     return lo, hi, (lambda x: max(1.0, min(5.0, 1 + 4 * (math.log(x) - math.log(lo)) / (math.log(hi) - math.log(lo)))))
 
 
-BM = echelle([v["rev"]["med_ppa"] for v in V])
-BP = echelle([v["rev"]["p80_ppa"] for v in V])
 DIMS6 = ("EP", "IT", "QT", "ES", "CA", "PS")
-for v in V:
-    v["RE"] = (BM[2](v["rev"]["med_ppa"]) + BP[2](v["rev"]["p80_ppa"])) / 2
-    v["W"] = (sum(v["notes"][d] for d in DIMS6) + v["RE"]) / 7
 
-MEILLEUR = {}
-for v in V:
-    b = MEILLEUR.get(v["metier"])
-    if b is None or v["W"] > b["W"] + 1e-12:
-        MEILLEUR[v["metier"]] = v
-R = sorted(MEILLEUR.values(), key=lambda v: -v["W"])
-for i, v in enumerate(R):
-    v["rang_base"] = 1 + sum(1 for w in R if w["W"] > v["W"] + 1e-12)
+
+def classer(V, cle_med="med_ppa", cle_p80="p80_ppa"):
+    """Revenu note sur l'echelle logarithmique des variantes du classement, score a poids egaux, meilleure
+    variante par metier (regle v7.1). Modifie les variantes (RE, W) et rend (classement, bornes)."""
+    BM = echelle([v["rev"][cle_med] for v in V])
+    BP = echelle([v["rev"][cle_p80] for v in V])
+    for v in V:
+        v["RE"] = (BM[2](v["rev"][cle_med]) + BP[2](v["rev"][cle_p80])) / 2
+        v["W"] = (sum(v["notes"][d] for d in DIMS6) + v["RE"]) / 7
+    meilleur = {}
+    for v in V:
+        b = meilleur.get(v["metier"])
+        if b is None or v["W"] > b["W"] + 1e-12:
+            meilleur[v["metier"]] = v
+    R = sorted(meilleur.values(), key=lambda v: -v["W"])
+    for v in R:
+        v["rang_base"] = 1 + sum(1 for w in R if w["W"] > v["W"] + 1e-12)
+    return R, dict(med=BM[:2], p80=BP[:2])
+
 
 # --- Monte Carlo, variante A de la v6 ------------------------------------------------------------------
 N, GRAINE, TOP = 10_000, 20261029, 10
-rng = np.random.default_rng(GRAINE)
-k = len(R)
-base = np.array([[v["notes"][d] for d in DIMS6] for v in R], dtype=float)
-re_ = np.array([v["RE"] for v in R])
-var = np.array([[v["prov"][d] == "estimée" for d in DIMS6] for v in R])
-var[:, DIMS6.index("CA")] = False
-p_top, p_1 = np.zeros(k), np.zeros(k)
-rangs = np.zeros((N, k), dtype=np.int32)
-for i in range(0, N, 500):
-    n = min(500, N - i)
-    ec = rng.integers(-1, 2, size=(n, k, len(DIMS6))).astype(float)
-    notes = np.clip(base[None] + ec * var[None], 1, 5)
-    s = (notes.sum(axis=2) + re_[None]) / 7
-    r = np.empty((n, k), dtype=np.int32)
-    for j in range(n):
-        srt = np.sort(s[j])[::-1]
-        r[j] = 1 + np.searchsorted(-srt, -s[j], side="left")
-    rangs[i:i + n] = r
-    p_top += (r <= TOP).sum(axis=0)
-    tete = np.isclose(s, s.max(axis=1, keepdims=True), rtol=0, atol=1e-12)
-    p_1 += (tete / tete.sum(axis=1, keepdims=True)).sum(axis=0)
-for j, v in enumerate(R):
-    v["p_top"], v["p_1"] = p_top[j] / N, p_1[j] / N
-    v["r_med"] = int(np.median(rangs[:, j]))
-    v["r_p5"], v["r_p95"] = int(np.percentile(rangs[:, j], 5)), int(np.percentile(rangs[:, j], 95))
-    v["n_var"] = int(var[j].sum())
 
-json.dump(dict(bornes=dict(med=BM[:2], p80=BP[:2]), n_variantes=len(V), classement=R), open(SORTIE, "w", encoding="utf-8"),
-          ensure_ascii=False, indent=1, default=float)
-print("variantes", len(V), "metiers", len(R), "bornes med", [round(x) for x in BM[:2]], "p80", [round(x) for x in BP[:2]])
-for v in sorted(R, key=lambda v: (-v["p_top"], -v["W"]))[:30]:
-    n = v["notes"]
-    print(f"{v['metier']:7} {v['nom'][:55]:55} {v['kind']:6} {v['resid']:5} W={v['W']:.3f} rang={v['rang_base']:3} "
-          f"P10={v['p_top']:.3f} P1={v['p_1']:.3f} | EP{n['EP']} IT{n['IT']} QT{n['QT']} ES{n['ES']} CA{n['CA']:.2f} PS{n['PS']} RE{v['RE']:.2f} "
-          f"| med {v['rev']['med_ppa']:,.0f}".replace(",", " "))
+
+def tirages(R, n_tot=N, graine=GRAINE, top=TOP):
+    rng = np.random.default_rng(graine)
+    k = len(R)
+    base = np.array([[v["notes"][d] for d in DIMS6] for v in R], dtype=float)
+    re_ = np.array([v["RE"] for v in R])
+    var = np.array([[v["prov"][d] == "estimée" for d in DIMS6] for v in R])
+    var[:, DIMS6.index("CA")] = False
+    p_top, p_1 = np.zeros(k), np.zeros(k)
+    rangs = np.zeros((n_tot, k), dtype=np.int32)
+    for i in range(0, n_tot, 500):
+        n = min(500, n_tot - i)
+        ec = rng.integers(-1, 2, size=(n, k, len(DIMS6))).astype(float)
+        notes = np.clip(base[None] + ec * var[None], 1, 5)
+        s = (notes.sum(axis=2) + re_[None]) / 7
+        r = np.empty((n, k), dtype=np.int32)
+        for j in range(n):
+            srt = np.sort(s[j])[::-1]
+            r[j] = 1 + np.searchsorted(-srt, -s[j], side="left")
+        rangs[i:i + n] = r
+        p_top += (r <= top).sum(axis=0)
+        tete = np.isclose(s, s.max(axis=1, keepdims=True), rtol=0, atol=1e-12)
+        p_1 += (tete / tete.sum(axis=1, keepdims=True)).sum(axis=0)
+    for j, v in enumerate(R):
+        v["p_top"], v["p_1"] = p_top[j] / n_tot, p_1[j] / n_tot
+        v["r_med"] = int(np.median(rangs[:, j]))
+        v["r_p5"], v["r_p95"] = int(np.percentile(rangs[:, j], 5)), int(np.percentile(rangs[:, j], 95))
+        v["n_var"] = int(var[j].sum())
+
+
+if __name__ == "__main__":
+    R, BORNES = classer(V)
+    tirages(R)
+    json.dump(dict(bornes=BORNES, n_variantes=len(V), classement=R), open(SORTIE, "w", encoding="utf-8"),
+              ensure_ascii=False, indent=1, default=float)
+    print("variantes", len(V), "metiers", len(R), "bornes med", [round(x) for x in BORNES["med"]],
+          "p80", [round(x) for x in BORNES["p80"]])
+    for v in sorted(R, key=lambda v: (-v["p_top"], -v["W"]))[:30]:
+        n = v["notes"]
+        print(f"{v['metier']:7} {v['nom'][:55]:55} {v['kind']:6} {v['resid']:5} W={v['W']:.3f} rang={v['rang_base']:3} "
+              f"P10={v['p_top']:.3f} P1={v['p_1']:.3f} | EP{n['EP']} IT{n['IT']} QT{n['QT']} ES{n['ES']} CA{n['CA']:.2f} PS{n['PS']} RE{v['RE']:.2f} "
+              f"| med {v['rev']['med_ppa']:,.0f}".replace(",", " "))
